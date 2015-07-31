@@ -1,3 +1,13 @@
+#### String with format
+```coffee
+print = """
+  1st line
+  2nd line
+  #{supports interpolation}
+  last line
+  """
+```
+
 
 # File
 

@@ -33,5 +33,6 @@ glob '**/*.ext', {cwd: dir}, (error, files)->
     # file: "\\sub folder\\1.ext"
     filePath = Path.join dir, file # -> "d:\\Test\\sub folder\\1.ext"
     filename = Path.basename file # -> "1.ext"
+    fileBasename = Path.basename file, '.ext' # => "1"
     
 ```

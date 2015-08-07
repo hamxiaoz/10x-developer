@@ -1,3 +1,5 @@
+# Coffee
+
 #### String with format
 ```coffee
 print = """
@@ -6,6 +8,20 @@ print = """
   #{supports interpolation}
   last line
   """
+```
+
+# Underscore
+
+#### how to union with array?
+```coffee
+a = [1, 2]
+b = [3, 4, 5]
+c = [6]
+
+console.log _.union(a, b, c)
+
+arr = [a, b, c]
+console.log _.union.apply(_, arr)
 ```
 
 

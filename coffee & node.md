@@ -1,4 +1,4 @@
-# Coffee
+# [Coffee](http://coffeescript.org/)
 
 #### String with format
 ```coffee
@@ -10,7 +10,7 @@ print = """
   """
 ```
 
-# Underscore
+# [Underscore](http://underscorejs.org/)
 
 #### how to union with array?
 ```coffee

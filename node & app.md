@@ -26,8 +26,18 @@ glob '**/*.ext', {cwd: dir}, (error, files)->
     
 ```
 
+---
+
+# Front
+
+#### How to get url of root with domain? 
+`var root = location.protocol + '//' + location.host;`
+http://bl.ocks.org/abernier/3070589 and http://stackoverflow.com/a/1368295/166286
+
 #### A way to generate and download CSV files client-side
 https://gist.github.com/hamxiaoz/a664f52e34c22f2be83f
+
+---
 
 # Guide
 http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynchronous-function-in-node-js

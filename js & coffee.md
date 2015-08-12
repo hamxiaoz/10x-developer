@@ -26,7 +26,7 @@ more coffeescript tricks: https://gist.github.com/dfurber/993584
 fat arrow in coffeescript: 
 - read [this](http://webapplog.com/understanding-fat-arrows-in-coffeescript/)
 - use => when we need @ to be the object in which method is written; use-> when we need @ to be the object in which method is executed.
-- 
+
 #### String with format
 ```coffee
 print = """

@@ -192,10 +192,80 @@ css related:
 
 # HTML
 
+#### Basics
+- file protocol has three forward slashes: `file:///`
+- Use <q> to mean quotes. It makes the content more structural than double quotes '"' as not in all language that the double quotes is used for quoting.
+- Use <blockquote> to quote a block of text. The default browser behavior is to indent the text block.
+- 对于 HTML，您无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。
+- `ul` `li` are block items
+  - how to use custom marker for bullet points? `list-style-image: url(image/backpack.gif)`
+- basic HTML5 structure
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    </body>
+</html>
+```
+
+URL Query String: ` http://server/path/program?query_string`
+
+Charater entity: 
+- &gt, &lt, &amp, &copy, or use &#100 (use number instead of names)
+- http://www.w3schools.com/tags/ref_entities.asp
+- JavaScript provides functions `encodeURIComponent` and `decodeURIComponent` to add these codes to strings and remove them again
+
+img
+- Jpeg:lossy information format
+- Png: lossless format
+- Gif: up t 256 colors. Only one color can be set to transparent.
+- always provide alternative `<img src="x“ alt="this should be the picture content" >`
+- <img> is a inline element. So if you have multiple images, they will be put side by side by default.
+- you can use css to always add a background image to any element:
+```css
+    background-image: url(images/background.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+```
+
+table
+- table cel has no margin property. Use border-spacing from table to specify the entire table.
+- use rowspan to span cell across rows. The spanned row therefore doesn't need to have the td cells.
+- DON'T use table to layout stuff! Think about my gift page, do I need to use table to layout? I think it's fine for table as they are tabular data. (p607)
+    - table in html tells your data is in the relationships of tabular data items. In general, table is not used for presentation.
+    - table in css gives you a way to display block-level elements. If you just want to use a table-like presentation, then use css table.
+    - table cannot be loaded faster, the whole thing has to be loaded for browser to determine layout. It cannot be easily cached either.
+- You can also use `dl` to display key/value pair, like table
+
+table css:
+```
+div.tableRow { display: table-row; }
+div.tableRow p { display: cell; }
+```
+<lable> use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
+
+html5 video tag: 
+- they are boolean attributes such as 'controls'
+- video = container (mp4/webm/ogg/flash) + video(encoded with H.264/VP8) + audio(encoded with AAC/Vorbis)
+```html
+    <video controls autoplay width="515" height="234" poster="image that displays when video is not playing">
+        <source src="sd/dsfsd.mp4">
+        <source src="sd/dsfsd.webm" type='video/ogg; codecs="theora, vorbis"'> <!-- NOTE use single quote to wrap double quotes -->
+        <object>this should be the fallback flash player</object>
+        <p>the text is displayed if your video is NOT supported</p>
+    </video>
+```
+
+
 # CSS
 
 ## SASS
-[SASS: differences between mixins, extends and placeholders](http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases))
+- [SASS: differences between mixins, extends and placeholders](http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases))
+- 使用Compass
+Compass不但讓SCSS的使用更方便，還有大量的module、helper可以使用，解決cross broswer的問題並且減少重複的程式碼，增加可讀性。
 
 # Examples
 - [Form control margin](http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit)

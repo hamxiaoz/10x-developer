@@ -68,6 +68,8 @@ examples:
     $("#orderedlist > li").addClass("blue"); // This selects all child lis of the element with the id orderedlist and adds the class "blue".
 ```
 
+---
+
 # DOM Related
 
 Concept/Thinking
@@ -185,3 +187,23 @@ in this case, to get the last element (not the node), use this:
 css related:
 - '-' is reserved keyword, so 'background-color' is illegal. Use cameralCase: backgroundColor.
 - use element.style **only** works if the style is directly set in html.
+
+---
+
+# HTML
+
+# CSS
+
+## SASS
+[SASS: differences between mixins, extends and placeholders](http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases))
+
+# Examples
+- [Form control margin](http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit)
+- [bootstrap row click and offmenu canvas] (http://jasny.github.io/bootstrap/javascript/#fileinput)
+
+# Bootstrap
+
+How to use scrollspy?
+- http://stackoverflow.com/questions/13134013/how-to-use-bootstrap-scroll-spy
+- http://stackoverflow.com/questions/14511045/twitter-bootstrap-scrollspy-not-working-at-all
+- http://stackoverflow.com/questions/12111004/how-to-activate-links-for-twitter-bootstrap-affix-component

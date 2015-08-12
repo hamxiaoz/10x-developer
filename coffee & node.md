@@ -12,6 +12,41 @@ print = """
   """
 ```
 
+#### Instance method, variables
+```coffee
+class Songs
+  _titles: 0    # instance var, Although it's directly accessible, the leading _ defines it by convention as private property.
+  get_count: ->
+    @_titles # access instance var
+  call_another_method: ->
+    return @get_count() # call another instance method
+```
+
+#### How to write function as a part of parameter
+```coffee
+Router.go 'home', -> 
+  this.render 'home'
+, 
+  name: 'h'
+  old: 'b'
+```
+
+#### Check string null or empty?
+`coffee: passwordNotEmpty = !!password (not empty)`
+
+CoffeeScript's existential operator ? returns true unless a variable is null or undefined, which makes it analogous to Ruby's nil?
+
+```js
+if (variable) ... comes close, 
+fails for zero, the empty string, and false. 
+```
+
+#### Add item to array?
+No such function in underscore, use array function
+```coffee
+arr.unshift 'a'
+```
+
 # [Underscore](http://underscorejs.org/)
 
 #### how to union with array?

@@ -3,6 +3,9 @@
 
 - Regex online tool for Ruby: http://rubular.com/
 
+# Checklist
+- Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
+
 # Examples
 
 #### How to replace `"name" : "basic"` to `"xxx" : "whatever you provided"`?

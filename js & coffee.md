@@ -23,6 +23,10 @@ $second.on('click',function(){ alert('hello everybody');})
 
 more coffeescript tricks: https://gist.github.com/dfurber/993584
 
+fat arrow in coffeescript: 
+- read [this](http://webapplog.com/understanding-fat-arrows-in-coffeescript/)
+- use => when we need @ to be the object in which method is written; use-> when we need @ to be the object in which method is executed.
+- 
 #### String with format
 ```coffee
 print = """
@@ -121,7 +125,14 @@ function is(type, obj) {
 is('String', 'test'); // true
 is('String', new String('test')); // true
 ```
-
+#### object detection
+- don't add '()'
+```
+    if(document.getElementsByName) {
+        // it means the 'getElementsByName' is supported
+    }
+```
+- object detection is favored than browser sniffing.
 
 #### Add item to array?
 No such function in underscore, use array function
@@ -148,5 +159,125 @@ for timestamp, count of json["#{projectName}"]
       total["#{timestamp}"] = existing + count
 ```
 
+#### How to get url of root with domain? 
+`var root = location.protocol + '//' + location.host;`
+http://bl.ocks.org/abernier/3070589 and http://stackoverflow.com/a/1368295/166286
 
 
+# DOM Related
+
+Concept/Thinking
+- progressive enhancement: make your core content first, don't add important content using JavaScript (search engine can't search)
+- graceful degration
+- don't use '#'?
+
+DOM
+- you can use element.src = 'ss' to replace element.setAttribute('src', 'ss'), **but it's old method and not DOM**. Stick with DOM API!
+- don't use psuedo-protocal like this:
+    `<a href="#" onclick="javascript:window.open();">example</a>`
+- don't use document.write()
+- use element.innerHTML wisely, as it's replacing the whole value inside the element. (no fine-grain control,
+
+```
+DOM CORE
+    pic.getAttribute("src")
+    document.getElementsByTagName("body").firstChild
+HTML-DOM
+    pic.src
+    document.body
+```
+
+
+
+event
+- eventName = "JavaScript Statement1; statement2;"
+- 'this' means the invoking element.
+- return false to prevent default behavior.
+- don't use inline javascript to add event:
+    `<a onlick="javascript code">`
+- don't use 'onclick', it's the same as inline, and the event becomes a property, which can be overritten.
+- use 'addEventListener' or 'attachevent', better yet, use JQuery.
+```
+    $('#id').on("click", function(event){alert($(this).text()); }); // JQeury
+    element.addEvent(type, fn); // MooTools
+```
+
+#### input
+- `input` (keyevents) and `change` (user has commmited, like blur) 
+- http://www.w3.org/TR/html5/forms.html#event-input-input]
+- get input content: `$().val()`
+- trigger change event on input/textarea/select: `$( ".target" ).change()` or `$( ".target" ).trigger('change')`
+
+#### checkbox:
+- how to check if it's checked: 
+`$('#checkbox').prop('checked')` or `$('#checkbox').is(':checked')` or select `$('#checkbox').filter(':checked')`
+or `$('#input[type="checkbox"]:checked')`
+
+- how to check: (it doesn't trigger event by default, use change() to trigger change event)
+`$('.myCheckbox').prop('checked', true)`
+
+
+getElementsByTagName can also work on the element:
+```
+    var table = document.getElementById("forecast-table"); 
+    var cells = table.getElementsByTagName("td");
+```
+
+childNodes
+```
+    var p = document.getElementById("testText"); // it's a p element
+    // p.nodeValue is null, the text is its first child's value
+    var text = p.childNodes[0].nodeValue;
+```
+- firstChild is the same as childNodes[0]
+
+- nodeValue: text of the node if textNode.
+- nodeType:
+  - element node (1)
+  - attribute node (2)
+  - text node (3)
+
+- className: set/get class for the html element.
+- createElement: create <p>
+- createTextNode: create text for <p>
+- appendChild
+```
+    <p>This is <em>my<em> content</p>
+                ||
+    text node(This is) + element node(em) + text node(content)
+                            |
+                        text node(my)
+```
+- insertBefore
+    `targetElement.parentNode.insertBefore(newElement, targetElement)`
+- why do we need parent node? Think about the function is telling the parent node to insert an element inside it.
+
+insertAfter (custom function)
+```
+    function insertAfter(newElement, targetElement) {
+        var parent = targetElement.parentNode;
+        if(parent.lastChild == targetElement) {
+            parent.appendChild(newElement);
+        } else {
+            parent.insertBefore(newElement, targetElement.nextSibling);
+        }
+    }
+```
+
+lastChild:
+- **don't assume the node is always an elment node**. For example, some browser might add a 'line break' text node:
+```
+        <blockquote>
+            sdfsdfdfsf <br>
+            2nd line <br>
+            this is <abbr title="abbriation">abbr</abbr>
+        </blockquote>
+```
+last child for blockquote is the line break.
+
+in this case, to get the last element (not the node), use this:
+    element.getElementsByTagName("*")[element.getElementsByTagName("*").length-1]
+
+css related:
+- '-' is reserved keyword, so 'background-color' is illegal. Use cameralCase: backgroundColor.
+- use element.style **only** works if the style is directly set in html.

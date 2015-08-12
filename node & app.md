@@ -28,3 +28,13 @@ glob '**/*.ext', {cwd: dir}, (error, files)->
 
 #### A way to generate and download CSV files client-side
 https://gist.github.com/hamxiaoz/a664f52e34c22f2be83f
+
+# Guide
+http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynchronous-function-in-node-js
+> It's important to understand that node isn't about functions being asynchronous all the time. It's about i/o being asynchronous and non-blocking. If your function doesn't do any i/o, node isn't going to help you make it asynchronous. It provides tools that will allow you to do that though. Like child processes. That's what felix's answer is getting at. Your function can spawn a child process to do your work and it will execute off of the main event loop.
+
+# Node-webkit
+Xml parser:
+- xml2js, uses libxml, slow!
+- easysax, pure js, faster
+- node-expat, uses native module, faster (The node-webkit has limitations on using native module: cannot rename, has to compile with hack version of gyp)

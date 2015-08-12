@@ -88,6 +88,15 @@ console.log _.union.apply(_, arr)
 
 # Hows and patterns
 
+#### value vs ref
+Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
+```js
+    var a = {};
+    var b = {name:'b'};
+    var a = b;
+    console.log(a.name == 'b')
+```
+
 #### Array
 ```js
 var a = Array(4); // []
@@ -118,9 +127,27 @@ for(var i = 0, l = list.length; i < l; i++) {console.log(list[i]); }
 #### number
 parseInt parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
 
+#### string
+- it's unicode of 16bit
+- can use '+' to concatenation.
+- can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
+- So, if you add a string to a number (or other value) everything is converted in to a string first
+```
+this year is " + 2013 => "this year is 2013"
+'3'+4+5 => '345'
+4+5+'3' => '93'
+```
+
+
 #### null/empty
 
-Check string:
+Special objects: `null` and `undefined`
+- `null`: most case it can be replaced by `undefined`;
+- `undefined`: it's like null in other program. 
+  - If you access a.name and a is {} then it returns `undefined`
+  - If arr[out_of_bound_index], it returns `undefined`
+
+Check string not empty:
 `coffee: passwordNotEmpty = !!password (not empty)`
 
 Check null:
@@ -128,20 +155,30 @@ Check null:
 - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
 CoffeeScript's existential operator ? returns true unless a variable is null or undefined, which makes it analogous to Ruby's nil?
 
-boolean result
+boolean: any value can be converted to boolean
 ```js
-// the following are false on boolean expressions
+// as false
 false 
 null
 undefined
-'' //the empty string
+'' //the empty string, for example var thisIsFlase = Boolean('')
 0 // the number
+NaN
 
-// true
-'0' the string
-[] the empty array
-{} the empty object
+// Anything except the above is true, for example:
+'0' // the string
+[] // the empty array
+{} // the empty object
 ```
+
+#### comparison
+- Equality operator `==`: doesn't compare type, i.e, it converts the type first (performs type coercion) then compare
+    `"" == false // returns true`
+- Strict Equality Operator `===`: doesnt' not perform type coercion **recommended**
+    `'' == false // return false`
+- when comparison includes reference type, the comparison (both == and ===) performs pointer comparison.
+    `{} != {}`
+
 #### get class of object, check if an object is a type
 http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
 check type: `Object.prototype.toString`

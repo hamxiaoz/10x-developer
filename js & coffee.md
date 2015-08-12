@@ -1,3 +1,20 @@
+# Style
+
+```js
+$second
+    .on('click',function(){ alert('hello everybody');})
+    .fadeIn('slow')
+    .animate({height:'120px'},500);
+vs 
+$second.on('click',function(){ alert('hello everybody');}).
+    fadeIn('slow').
+    animate({height:'120px'},500);
+vs
+$second.on('click',function(){ alert('hello everybody');})
+    .fadeIn('slow')
+    .animate({height:'120px'},500);
+```
+
 # [Coffee](http://coffeescript.org/)
 
 #### [coffeescript tricks](https://gist.github.com/dfurber/993584)
@@ -49,6 +66,15 @@ arr.unshift 'a'
 
 # [Underscore](http://underscorejs.org/)
 
+#### Difference between _.throttle and _.debounce?
+At most that fast vs wait till no change https://ruby-china.org/topics/22494
+
+#### Convert an object into a list of [key, value] pairs.
+```js
+_.pairs({one: 1, two: 2, three: 3});
+=> [["one", 1], ["two", 2], ["three", 3]]
+```
+
 #### how to union with array?
 ```coffee
 a = [1, 2]
@@ -64,30 +90,3 @@ console.log _.union.apply(_, arr)
 #### underscore.string: https://epeli.github.io/underscore.string/
 
 
-# File
-
-#### How to get the base file name: 'a.ext' -> 'a'?
-```coffee
-# If you know the ext name in advance:
-name = path.basename filename, '.ext'
-
-# otherwise
-name = path.basename(filename).slice 0, -path.extname(filename).length
-```
-
-#### How to glob in node?
-```coffee
-glob = require 'glob'
-dir = "d:\\Test"
-glob '**/*.ext', {cwd: dir}, (error, files)->
-  if error
-    console.log error
-    return
-
-  _.each files, (file)->
-    # file: "\\sub folder\\1.ext"
-    filePath = Path.join dir, file # -> "d:\\Test\\sub folder\\1.ext"
-    filename = Path.basename file # -> "1.ext"
-    fileBasename = Path.basename file, '.ext' # => "1"
-    
-```

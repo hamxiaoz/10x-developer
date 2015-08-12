@@ -15,9 +15,13 @@ $second.on('click',function(){ alert('hello everybody');})
     .animate({height:'120px'},500);
 ```
 
+- Don't use parentheses for unary operator such as delete, void, typeof
+- Prefer '' over "" for strings, from google js style guide.
+
+
 # [Coffee](http://coffeescript.org/)
 
-#### [coffeescript tricks](https://gist.github.com/dfurber/993584)
+more coffeescript tricks: https://gist.github.com/dfurber/993584
 
 #### String with format
 ```coffee
@@ -48,21 +52,10 @@ Router.go 'home', ->
   old: 'b'
 ```
 
-#### Check string null or empty?
-`coffee: passwordNotEmpty = !!password (not empty)`
+### reverse for loop
+coffeescript reverse for loop: `for i in [arr.length-1..0] by -1`
+[iterations in coffeescript](http://discontinuously.com/2012/05/iteration-in-coffeescript/)
 
-CoffeeScript's existential operator ? returns true unless a variable is null or undefined, which makes it analogous to Ruby's nil?
-
-```js
-if (variable) ... comes close, 
-fails for zero, the empty string, and false. 
-```
-
-#### Add item to array?
-No such function in underscore, use array function
-```coffee
-arr.unshift 'a'
-```
 
 # [Underscore](http://underscorejs.org/)
 
@@ -88,5 +81,72 @@ console.log _.union.apply(_, arr)
 ```
 
 #### underscore.string: https://epeli.github.io/underscore.string/
+
+# Hows and patterns
+
+#### null/empty
+
+Check string:
+`coffee: passwordNotEmpty = !!password (not empty)`
+
+Check null:
+- `typeof instance.currentPosition  !== 'undefined'` http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
+- coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
+CoffeeScript's existential operator ? returns true unless a variable is null or undefined, which makes it analogous to Ruby's nil?
+
+boolean result
+```js
+// the following are false on boolean expressions
+false 
+null
+undefined
+'' //the empty string
+0 // the number
+
+// true
+'0' the string
+[] the empty array
+{} the empty object
+```
+#### get class of object, check if an object is a type
+http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
+check type: `Object.prototype.toString`
+
+```js
+function is(type, obj) {
+    var clas = Object.prototype.toString.call(obj).slice(8, -1);
+    // [object String]
+    return obj !== undefined && obj !== null && clas === type;
+}
+is('String', 'test'); // true
+is('String', new String('test')); // true
+```
+
+
+#### Add item to array?
+No such function in underscore, use array function
+```coffee
+arr.unshift 'a'
+```
+
+#### Immediate functions
+All you do is add a set of parentheses after the function and this causes it to be executed right there. It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 
+**See above (in function section) on why it has a wrapping ()**
+```js
+ (function(){
+   var a = 1;
+   var b = 2;
+   alert(a + b);
+})();
+```
+
+#### default value if it doesn't exist
+Use ||
+```js
+for timestamp, count of json["#{projectName}"]
+      existing = total["#{timestamp}"] || 0
+      total["#{timestamp}"] = existing + count
+```
+
 
 

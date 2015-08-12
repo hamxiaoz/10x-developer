@@ -159,9 +159,6 @@ for timestamp, count of json["#{projectName}"]
       total["#{timestamp}"] = existing + count
 ```
 
-#### How to get url of root with domain? 
-`var root = location.protocol + '//' + location.host;`
-http://bl.ocks.org/abernier/3070589 and http://stackoverflow.com/a/1368295/166286
 
 
 

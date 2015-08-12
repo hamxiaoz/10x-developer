@@ -1,5 +1,5 @@
 # Links
-- Test tool for js: https://regex101.com/
+- Test tool for js: https://regex101.com/#javascript
 
 - Regex online tool for Ruby: http://rubular.com/
 

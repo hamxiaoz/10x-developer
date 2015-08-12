@@ -3,6 +3,20 @@
 
 - Regex online tool for Ruby: http://rubular.com/
 
+# Examples
+
+#### How to replace `"name" : "basic"` to `"xxx" : "whatever you provided"`?
+using grouping for everything: http://stackoverflow.com/a/6005637/166286
+```csharp
+// c#
+string input = "'name' : 'Basic'," ;
+string find = "('name'\\s:\\s')(?<text>.*)(')" ;
+string replace = "$1AA$2" ;
+string result = Regex.Replace (input, find, replace);
+Console.WriteLine(result);
+```
+
+
 #### Find the number after a certain word:
 ```regex
 (?<=%download%#)\d+

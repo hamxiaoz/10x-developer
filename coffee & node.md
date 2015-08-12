@@ -1,5 +1,7 @@
 # [Coffee](http://coffeescript.org/)
 
+#### [coffeescript tricks](https://gist.github.com/dfurber/993584)
+
 #### String with format
 ```coffee
 print = """

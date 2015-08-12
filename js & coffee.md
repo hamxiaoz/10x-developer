@@ -88,6 +88,36 @@ console.log _.union.apply(_, arr)
 
 # Hows and patterns
 
+#### Array
+```js
+var a = Array(4); // []
+var a = Array('4'); // returns [4]
+var a = Array()
+var a = Array('a', 'b');
+var a = ['a', 'b']
+```
+- can change length, like C# list: `a.push('c')`
+- can hold **different** data type
+- the length of the array is one more than the highest index. it's not **always** counting how many members in the array!
+```
+var arr = ['a', 'b', 'c'];
+arr.length // 3
+arr[100] = '100'
+arr.length == 101 // !!!`
+```
+- If you query a non-existent array index, you get `undefined`
+- `Array.prototype.reverse()` reverse the array **in place**
+- how to iterate the array? don't use `for in` as it's slow
+```
+for(var i = 0, l = list.length; i < l; i++) {console.log(list[i]); }
+// coffeescript
+- array: `for item in list` or `for item, index in list`
+- object: `for property, value of object` or `for own property, value of object` (use hasOwnProperty())
+```
+
+#### number
+parseInt parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
+
 #### null/empty
 
 Check string:

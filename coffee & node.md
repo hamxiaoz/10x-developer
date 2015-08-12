@@ -24,6 +24,8 @@ arr = [a, b, c]
 console.log _.union.apply(_, arr)
 ```
 
+#### underscore.string: https://epeli.github.io/underscore.string/
+
 
 # File
 

@@ -1,3 +1,8 @@
+# Links
+- Test tool for js: https://regex101.com/
+
+- Regex online tool for Ruby: http://rubular.com/
+
 #### Find the number after a certain word:
 ```regex
 (?<=%download%#)\d+

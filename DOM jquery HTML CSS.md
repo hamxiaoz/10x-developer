@@ -357,21 +357,21 @@ the pattern of the selector: context + element + pseudo-class/elements
 div#greentea > blockquote p:first-line // p is the element.
 ``` 
 
-#### pseudo-class select based on state `a:link { color: green; }`
-
-nth-child pseudo-class:
+pseudo-class
+- select based on state `a:link { color: green; }`
+- nth-child pseudo-class:
 ```css
     p:nth-child(2n) { color: green; }
 ```
-
-first-child:
+- first-child:
 ```css
     div.tableRow p:first-child {
         text-align: right;
     }
 ```
 
-#### pseudo-elements: select part of the text or line
+pseudo-elements
+- select part of the text or line
 ```css
     p:first-letter { font-size: 3em; }
 ```
@@ -424,7 +424,7 @@ width: it specifies the content width, **not including padding/margin.**
 
 text-align: it will align *all inline content* inside a block element.
 
-
+### Misc
 
 #### semantic css creates more problem (redundancy) than it solves.
 - what's semantic css: code what you mean, think about the structure. if it's important, put it as H1.

@@ -245,6 +245,11 @@ table css:
 div.tableRow { display: table-row; }
 div.tableRow p { display: cell; }
 ```
+css table, when you use it, make sure you add the following to the cell div, otherwise the cell content is aligned to middle or bottom! (p520)
+    vertical-align: top;
+
+
+
 <lable> use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
 
 form
@@ -300,6 +305,15 @@ html
 ```html
 <link type="text/css" rel="stylesheet" href="assets/css/my.css">
 <link href="mysite-mobile.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
+
+//- nav
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 ```
 
 css
@@ -384,7 +398,31 @@ to use it properly: (so it can be really easy to adjust whole font by just chang
 
 text-decoration: no need to use `,` for multiple value: `text-decoration: underline line-through;`
 
+### Box
 
+- padding, margin. Order matters! The last one takes precedence, overriding anyone specified before:
+```css
+    margin: 30px;
+    margin-left: 50px; // margin left will be 50px instead of 30px
+    or
+    margin-left: 50px; 
+    margin: 30px; // margin left will be 30px
+```
+- shortcuts: `top right bottom left` (how to remember: think as a clockwise direction: from 12 to 11)
+```css
+    margin: 30px 20px 30px 20px;
+    margin: 30px // means all sides have the same padding of 30px
+```
+- shortcuts2: top/bottom right/left `margin: 30px 20px;`
+- other shortcuts for border and background:
+```css
+    border: solid #009302 thin; // ... and border-width
+    background: white url(images/gift.gif) repeat-x; // color image repeat
+```
+
+width: it specifies the content width, **not including padding/margin.**
+
+text-align: it will align *all inline content* inside a block element.
 
 
 

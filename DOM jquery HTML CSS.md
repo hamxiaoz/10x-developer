@@ -247,6 +247,40 @@ div.tableRow p { display: cell; }
 ```
 <lable> use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
 
+form
+- radio has same name
+```html
+<form>
+<input type="radio" name="sex" value="male" checked>Male
+<br>
+<input type="radio" name="sex" value="female">Female
+</form> 
+```
+- select, name, option, value (select can have a `multiple` boolean attribute)
+```html
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+```
+- use 'required' boolean property to make sure the field is not empty when submitting.
+- How to style file input? [Wrap it under label and hide it](http://stackoverflow.com/a/25825731/166286)
+```html
+<label class="custom-file-upload">
+    <input type="file"/>
+    Custom Upload
+</label>
+```
+
+
+`<abbr>` use it instead of `<acronym>`, abbreviation is not a word (DOM is acronym).
+```html
+<p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
+```
+
+
 html5 video tag: 
 - they are boolean attributes such as 'controls'
 - video = container (mp4/webm/ogg/flash) + video(encoded with H.264/VP8) + audio(encoded with AAC/Vorbis)

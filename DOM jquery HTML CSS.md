@@ -411,6 +411,20 @@ Compass不但讓SCSS的使用更方便，還有大量的module、helper可以使
 
 # Bootstrap
 
+- “Flatten” a List: `ul.list-inline`
+- lead class: `<p class="lead">`
+- `img.img-responsive`
+
+This is the **BEST** article telling you about bootstrap's container/row/columns: http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works
+- don't nest container
+- always has columns inside row
+- columns should be direct child of row
+- columns can act as container
+
+Fixed table width: https://github.com/twbs/bootstrap/issues/863
+- set table css
+- have td using col-md-x
+
 How to use scrollspy?
 - http://stackoverflow.com/questions/13134013/how-to-use-bootstrap-scroll-spy
 - http://stackoverflow.com/questions/14511045/twitter-bootstrap-scrollspy-not-working-at-all

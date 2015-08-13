@@ -296,6 +296,110 @@ html5 video tag:
 
 # CSS
 
+html
+```html
+<link type="text/css" rel="stylesheet" href="assets/css/my.css">
+<link href="mysite-mobile.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
+```
+
+css
+```css
+// usually split in this way: layout.css color.css typography.css
+// use one parent css to include them:
+    @import url(layout.css);
+    @import url(color.css);
+    @import url(typography.css);
+    
+@media print {
+        body {
+            /* css text */
+        }
+    }
+```
+
+viewport `<meta name="viewport" content="width=device-width">`
+
+### selector
+
+Prefer class over id: id is only faster when id is the key selector, it's slower when `#home a`, because browser **read from right to left** so `#home a` is read as finding all `a` then pick `#home`.
+
+[css selector specificity](http://www.htmldog.com/guides/css/intermediate/specificity/)
+- `div p` win `p`
+- same style, last one win
+- you give every ID selector (“#whatever”) a value of 100, every class selector (“.whatever”) a value of 10 and every HTML selector (“whatever”) a value of 1. Then you add them all up and hey presto, you have the specificity value
+
+descendant selector 
+- `#id-name h2 { } /* it means select h2 under the id 'id-name' */`
+- by default, it selects all nested chilren no matter how deep they are.
+- to select the direct child: `#id-name > h2`
+
+select sibling using '+'
+```css
+    h1+p{} // select all p comes after h1
+```
+
+the pattern of the selector: context + element + pseudo-class/elements
+``` css
+div#greentea > blockquote p:first-line // p is the element.
+``` 
+
+#### pseudo-class select based on state `a:link { color: green; }`
+
+nth-child pseudo-class:
+```css
+    p:nth-child(2n) { color: green; }
+```
+
+first-child:
+```css
+    div.tableRow p:first-child {
+        text-align: right;
+    }
+```
+
+#### pseudo-elements: select part of the text or line
+```css
+    p:first-letter { font-size: 3em; }
+```
+
+### Font
+```css
+font-family: Verdana, Arial, "Courier New", sans-serif;
+
+// how to use web font (web open font format 'WOFF')?
+@font-face { font-family: "name"; src: url("font.woff"), url("font.ttf"); }
+```
+
+font-size: `px` (old IE doesn't support it!), `%` (relative to the parent element), `em` (scaling to the parent element) or keywords (small/medium etc.)
+
+to use it properly: (so it can be really easy to adjust whole font by just changing the base font)
+- choose a keyword for body to define the whole page size as a basement.
+- use em or %
+
+`line-height`: it can use number only to specify the size to its *own* size.
+```css
+#gift { line-height: 1em; } // all elements inside gift is the same size of the element of gift, h1 size will be the same as h2! (which inherits from body)
+#gift { line-height: 1; } // all elements inside gift is the same size as their own size. So h1 will be h1's size and h2 will be h2's size.
+```
+
+text-decoration: no need to use `,` for multiple value: `text-decoration: underline line-through;`
+
+
+
+
+
+#### semantic css creates more problem (redundancy) than it solves.
+- what's semantic css: code what you mean, think about the structure. if it's important, put it as H1.
+- read last comment from: http://news.ycombinator.com/item?id=3653540
+- use less can solve the problem.
+- other css framework: blueprint, 960.
+
+#### Why element.style.left doesn't work?
+You need to set it to the object in Javascript or using inline style
+element.style is just a conversion of the element's style attribute into a scriptable object. If you haven't set any inline style on the element, you won't get anything back.
+`document.getElementById("convert").style.display = "block"` or `<a style="display: block;"></a>`
+
+
 ## SASS
 - [SASS: differences between mixins, extends and placeholders](http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases))
 - 使用Compass

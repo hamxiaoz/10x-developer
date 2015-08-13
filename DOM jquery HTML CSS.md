@@ -398,6 +398,16 @@ to use it properly: (so it can be really easy to adjust whole font by just chang
 
 text-decoration: no need to use `,` for multiple value: `text-decoration: underline line-through;`
 
+### Display
+
+- `display:none` means the browser will render the page as the element doesn't exist. 
+- `visibility:hidden` means **it renders as it's there** but not visible.
+
+`display:block` will stretch the element to left/right as far as possible.
+
+`width`: browser will create scrollbar if viewport is smaller, in this case, use max-width instead of width.
+
+
 ### Box
 
 - padding, margin. Order matters! The last one takes precedence, overriding anyone specified before:

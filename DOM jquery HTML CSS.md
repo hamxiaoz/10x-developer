@@ -116,11 +116,22 @@ event
 
 #### checkbox:
 - how to check if it's checked: 
-`$('#checkbox').prop('checked')` or `$('#checkbox').is(':checked')` or select `$('#checkbox').filter(':checked')`
-or `$('#input[type="checkbox"]:checked')`
+    - `$('#checkbox').prop('checked')`
+    - `$('#checkbox').is(':checked')`
+    - select `$('#checkbox').filter(':checked')`
+    - `$('#input[type="checkbox"]:checked')`
+    - `$('#input[type="checkbox"]:not(:checked)')`
 
 - how to check: (it doesn't trigger event by default, use change() to trigger change event)
 `$('.myCheckbox').prop('checked', true)`
+
+- how to disable:
+```coffee
+if disable
+    $('input[type="checkbox"]:not(:checked)').attr 'disabled', true
+else
+    $('input[type="checkbox"]:not(:checked)').removeAttr 'disabled'
+```
 
 
 getElementsByTagName can also work on the element:

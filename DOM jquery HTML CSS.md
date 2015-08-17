@@ -263,7 +263,7 @@ css table, when you use it, make sure you add the following to the cell div, oth
 
 <lable> use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
 
-form
+#### form
 - radio has same name
 ```html
 <form>
@@ -288,6 +288,17 @@ form
     <input type="file"/>
     Custom Upload
 </label>
+```
+- how to access elements of a form?
+```html
+<form name="myForm">  
+    <input type="text" name="foo" id="foo" />
+```
+```js
+document.getElementById('foo'); // preferred
+document.getElementById("myform").elements["foo"];
+document.myForm.foo; // note it might return foo property of the form instead of foo element.
+// http://stackoverflow.com/questions/2435525/best-practice-access-form-elements-by-html-id-or-name-attribute
 ```
 
 

@@ -1,4 +1,4 @@
 # Summary
 
-* [chp1] (angularjs.md)
+* [chp1](angularjs.md)
 

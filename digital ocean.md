@@ -21,3 +21,5 @@ sudo update-alternatives --config editor
 # follow the guide on mup readme: NOPASSWD:ALL
 # or https://www.digitalocean.com/community/articles/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
 ```
+
+If you want nginx support, see [mup doc](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts)

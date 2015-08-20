@@ -1,12 +1,14 @@
-# Links
+# Regex
+
+## Links
 - Test tool for js: https://regex101.com/#javascript
 
 - Regex online tool for Ruby: http://rubular.com/
 
-# Checklist
+## Checklist
 - Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
 
-# Examples
+## Examples
 
 #### How to replace `"name" : "basic"` to `"xxx" : "whatever you provided"`?
 using grouping for everything: http://stackoverflow.com/a/6005637/166286

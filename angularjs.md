@@ -25,7 +25,7 @@ app.directive("leave", function () {
 });
 ```
 
-- During the linking phase, interpolation has not been evaluated yet, so if the value of a directive contains `{{ }}`, it is necessary to call attrs.$observe() in order to properly evaluate the value, otherwise it will return as undefined.
+- During the linking phase, interpolation has not been evaluated yet, so if the value of a directive contains "{{ }}", it is necessary to call attrs.$observe() in order to properly evaluate the value, otherwise it will return as undefined.
 - They share **attri** object, which is really useful in directive (http://docs.angularjs.org/guide/directive#Attributes)
 
 #### **Service**

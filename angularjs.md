@@ -8,7 +8,7 @@ You can bind to html class attributes too!
     <input type="text" ng-model="data.message">
     <div class="{{data.message}}">
 
-#### element
+#### Element
 All element references in Angular are always wrapped with jQuery or jqLite; they are never raw DOM references.
 
 API: http://docs.angularjs.org/api/angular.element
@@ -45,7 +45,8 @@ Do not use controllers for:
 * Sharing stateless or stateful code across controllers — Use angular services instead.
 * Managing the life-cycle of other components (for example, to create service instances).
 
-#### directive (http://docs.angularjs.org/guide/directive)
+#### directive
+[guide](http://docs.angularjs.org/guide/directive)
 A directive is just a function which executes when the compiler encounters it in the DOM.
 
 Define directive using camel cased names such as ngBind. Write directive in html by translating the camel case name into snake case with these special characters :, -, or _. 

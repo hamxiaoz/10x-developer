@@ -63,12 +63,14 @@ Filter should do text manipulation ONLY. If you want to add color, use directive
 Available Filters: json (convert js object to json string), limitTo (return a new array) ?? why the logic is not in controller?
 
 #### $scope.$apply()
-When and why? http://jimhoskins.com/2012/12/17/angularjs-and-apply.html
+When and why?  
+http://jimhoskins.com/2012/12/17/angularjs-and-apply.html
+
 Directives Talking to Controllers, use scope.apply('method name on the scope()')
 
 
-## view
+#### view
 
-#### Where to put 'view did load' init functions?
+Where to put 'view did load' init functions?  
 Put in controller init code. See http://stackoverflow.com/questions/16150289
 

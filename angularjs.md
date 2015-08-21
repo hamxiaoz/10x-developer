@@ -45,15 +45,16 @@ Do not use controllers for:
 * Sharing stateless or stateful code across controllers — Use angular services instead.
 * Managing the life-cycle of other components (for example, to create service instances).
 
-#### directive
-[guide](http://docs.angularjs.org/guide/directive)
+#### Directive
+http://docs.angularjs.org/guide/directive
+
 A directive is just a function which executes when the compiler encounters it in the DOM.
 
 Define directive using camel cased names such as ngBind. Write directive in html by translating the camel case name into snake case with these special characters :, -, or _. 
 
 Directive can talk to each other via other's controllers injected in link function through `require`
 
-What's the difference between `@` and `=`?
+What's the difference between `@` and `=`?  
 http://stackoverflow.com/questions/14050195
 
 #### filter

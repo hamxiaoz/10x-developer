@@ -1,10 +1,10 @@
 # Ruby (todo)
 
-## Links
+### Links
 - Style Guide https://github.com/styleguide/ruby
 - Were to find tools/library: https://www.ruby-toolbox.com/
 
-## Debug
+### Debug
 - pry + http://cirw.in/blog/pry-to-the-rescue (debug your ruby code live)
 - letters: http://lettersrb.com/api
 

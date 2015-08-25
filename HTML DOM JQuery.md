@@ -318,3 +318,10 @@ examples:
     $("#orderedlist > li").addClass("blue"); // This selects all child lis of the element with the id orderedlist and adds the class "blue".
 ```
 
+#### Console & Debug
+
+`debugger;`
+
+If the result is 0, the elements are not in the DOM:
+ `console.log($(".theElements").length);`
+

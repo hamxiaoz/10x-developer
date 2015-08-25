@@ -273,8 +273,9 @@ constructor:
 
 $(callback); is a shortcut for $(document).ready(callback).
 
-#### What is end() and $(this)?
-[ ] 
+#### What is `end()`?
+
+Use [.end()](http://api.jquery.com/end/) to pop up stack: end the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
 ```js
     $(document).ready(function() {
        $('#faq').find('dd').hide().end().find('dt').click(function() {

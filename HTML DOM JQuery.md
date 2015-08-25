@@ -324,4 +324,6 @@ examples:
 
 If the result is 0, the elements are not in the DOM:
  `console.log($(".theElements").length);`
+ 
+Debug JQuery: http://fixingthesejquery.com/#slide23
 

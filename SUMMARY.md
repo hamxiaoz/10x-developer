@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [HTML DOM Jquery](HTML DOM Jquery.md)
+* [HTML DOM Jquery](HTML DOM JQuery.md)
 * [CSS](CSS.md)
 * [Bootstrap](Bootstrap.md)
 * [javascript coffeescript](js & coffee.md)

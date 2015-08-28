@@ -25,3 +25,6 @@ sudo update-alternatives --config editor
 If you want nginx support:
 - [mup doc](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts)
 - [digital ocean guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-14-04-lts)
+
+More security setup from this [linux workstation checklist](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md):
+- [Make sure root mail is forwarded to an account you check](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md#root-mail)

@@ -10,8 +10,8 @@ https://gist.github.com/hamxiaoz
 ## Performance
 
 Do the following:
-- add index, [read this](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster)
-- enable db oplog
+- When setup db, enable db oplog
+- [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
 - limit fields on publication
-- [Mongodb aggregation](http://docs.mongodb.org/manual/applications/aggregation/)
+- [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
 

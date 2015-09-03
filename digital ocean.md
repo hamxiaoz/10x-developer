@@ -32,7 +32,7 @@ More security setup from this [linux workstation checklist](https://github.com/l
 
 ## MongoDB
 
-Script to backup:
+#### automatic backup
 
 ```bash
 #!/bin/bash
@@ -68,9 +68,16 @@ crontab:
 ```
 
 
-[How to manually backup or restore](http://stackoverflow.com/questions/11024888/is-there-a-simple-way-to-export-the-data-from-a-meteor-deployed-app/16380978#16380978):
+#### How to manually backup or restore
+http://stackoverflow.com/questions/11024888/is-there-a-simple-way-to-export-the-data-from-a-meteor-deployed-app/16380978#16380978
 ```
 mongodump -d dbname 
 #or 
 mongodump --port 3001 --username meteor mongorestore --port 3001
 ```
+
+#### Oplog
+ref:
+- https://github.com/meteor/meteor/wiki/Oplog-Observe-Driver
+- (outdated: it's using mongodb 2.4) https://gentlenode.com/journal/meteor-10-set-up-oplog-tailing-on-ubuntu/17
+- https://www.digitalocean.com/community/tutorials/how-to-implement-replication-sets-in-mongodb-on-an-ubuntu-vps

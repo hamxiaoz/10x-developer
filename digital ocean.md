@@ -77,6 +77,8 @@ mongodump --port 3001 --username meteor mongorestore --port 3001
 ```
 
 #### Oplog
+How to enable oplog if the db is already in use?
+
 ref:
 - https://github.com/meteor/meteor/wiki/Oplog-Observe-Driver
 - (outdated: it's using mongodb 2.4) https://gentlenode.com/journal/meteor-10-set-up-oplog-tailing-on-ubuntu/17

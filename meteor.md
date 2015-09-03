@@ -7,9 +7,11 @@ https://gist.github.com/hamxiaoz
 
 [meteor-ddp-analyzer](https://github.com/arunoda/meteor-ddp-analyzer)
 
+## Performance
 
-## DB
-[scale](http://blog.differential.com/scaling-meteor-to-20000-users-in-7-days/?utm_content=17998748&utm_medium=social&utm_source=twitter)
-- index
-- oplog
-- limit fields
+Do the following:
+- add index, [read this](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster)
+- enable db oplog
+- limit fields on publication
+- [Mongodb aggregation](http://docs.mongodb.org/manual/applications/aggregation/)
+

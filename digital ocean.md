@@ -74,7 +74,7 @@ http://stackoverflow.com/questions/11024888/is-there-a-simple-way-to-export-the-
 mongodump -d dbname 
 #or 
 mongodump --port 3001 --username meteor 
-mongorestore --port 3001
+mongorestore --port 3001 -d meteor FOLDER_THAT_HAS_BSON_FILES
 ```
 
 #### Oplog

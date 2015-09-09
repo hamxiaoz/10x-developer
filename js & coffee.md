@@ -156,7 +156,7 @@ Check string not empty:
 Check null:
 - `typeof instance.currentPosition  !== 'undefined'` http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
 - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
-CoffeeScript's existential operator ? returns true unless a variable is null or undefined, which makes it analogous to Ruby's nil?
+CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
 
 boolean: any value can be converted to boolean
 ```js

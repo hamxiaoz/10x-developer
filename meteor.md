@@ -4,7 +4,7 @@ see also https://gist.github.com/hamxiaoz
 
 ## Guide
 [Kadira Academy](https://kadira.io/academy)
-- routing
+- routing (don't do data management and auth on route level)
 - performance
 - bulletproof
 

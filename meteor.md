@@ -1,6 +1,12 @@
 # Meteor
 
-https://gist.github.com/hamxiaoz
+see also https://gist.github.com/hamxiaoz
+
+## Guide
+[Kadira Academy](https://kadira.io/academy)
+- routing
+- performance
+- bulletproof
 
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)

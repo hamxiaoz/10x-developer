@@ -15,9 +15,14 @@ _ [Kadira Academy](https://kadira.io/academy)
 
 ## Performance
 
-Do the following:
+DB
 - When setup db, enable db oplog
 - [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
-- limit fields on publication
+
+Publication
+- limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) on publication:
+`Users.find({}, {fields: {password: 0, hash: 0}})`
+
+Counting on the server side
 - [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
 

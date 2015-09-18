@@ -16,7 +16,9 @@ _ [Kadira Academy](https://kadira.io/academy)
 ## Performance
 
 DB
-- When setup db, enable db oplog
+- When setup db, enable db oplog   
+    - If your query has a limit but not a sort specifier, your query can't take advantage of oplog
+`Posts.find({category: "meteor"}, {limit: 10});`
 - _ [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
 
 Publication

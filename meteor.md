@@ -39,6 +39,8 @@ _ Observer
 Reduce wait time: `this.unblock()`
 - `this.unblock` will allow the next available DDP message to process without waiting for the current method. 
 - Use it when your **methods** and subscriptions (enabled via this package: `meteor add meteorhacks:unblock`) don't depend on others
+- Do not use it when a method will cause side effects and subsequent methods will depend on those side effects.    
+_For example you have a method to update name and another method to send notification emails about the updated name, if unblock is used, the email might contain the old name._
 - This is all on a per client basis: there no blocking involved globally.
 
 

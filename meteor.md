@@ -36,4 +36,9 @@ Counting on the server side
 _ Observer
 - https://kadira.io/academy/meteor-performance-101/content/improve-cpu-and-network-usage
 
+Reduce wait time: `this.unblock()`
+- `this.unblock` will allow the next available DDP message to process without waiting for the current method. 
+- Use it when your **methods** and subscriptions (enabled via this package: `meteor add meteorhacks:unblock`) don't depend on others
+- This is all on a per client basis: there no blocking involved globally.
+
 

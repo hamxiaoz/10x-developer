@@ -35,6 +35,7 @@ Counting on the server side
 
 _ Observer
 - https://kadira.io/academy/meteor-performance-101/content/improve-cpu-and-network-usage
+- https://kadira.io/academy/meteor-performance-101/content/know-your-observers
 
 Reduce wait time: `this.unblock()`
 - `this.unblock` will allow the next available DDP message to process without waiting for the current method. 

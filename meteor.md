@@ -17,12 +17,21 @@ _ [Kadira Academy](https://kadira.io/academy)
 
 DB
 - When setup db, enable db oplog
-- [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
+- _ [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
 
 Publication
 - limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) on publication:
 `Users.find({}, {fields: {password: 0, hash: 0}})`
+- _ pagination: [1](http://www.meteorpedia.com/read/Infinite_Scrolling) [2](https://www.discovermeteor.com/blog/pagination-problems-meteor/)
+
+Subscription
+- Use [subscription manager](https://github.com/kadirahq/subs-manager) to avoid re-sub when route changes
 
 Counting on the server side
-- [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
+- _ [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
+- _ https://kadira.io/academy/meteor-performance-101/content/reducing-pubsub-data-usage#counting-on-the-server-side
+
+_ Observer
+- https://kadira.io/academy/meteor-performance-101/content/improve-cpu-and-network-usage
+
 

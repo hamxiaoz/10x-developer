@@ -44,3 +44,6 @@ _For example you have a method to update name and another method to send notific
 - This is all on a per client basis: there no blocking involved globally.
 
 
+Try [CPU profiling](https://kadira.io/academy/meteor-performance-101/content/meteor-cpu-profiling)
+
+

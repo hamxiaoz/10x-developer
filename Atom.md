@@ -6,3 +6,7 @@
 and any familiar language syntax file, for example, [Ruby](https://github.com/atom/language-ruby/blob/master/grammars/ruby.cson)
 - Use dev tool to find out class names
 - Open two window: one for dev and one for preview the syntax; Ctrl+Alt+r on preview window to reload.
+- Don't forget to escape `\` in the regex string in the cson file:
+```
+'match': '\\s*(defined)\\b(?![?!])'
+```

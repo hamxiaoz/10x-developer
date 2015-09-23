@@ -129,6 +129,16 @@ text-decoration: no need to use `,` for multiple value: `text-decoration: underl
 ```
 
 width: it specifies the content width, **not including padding/margin.**
+```css
+div {
+  border: 6px solid #949599;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+}
+```
+![](http://learn.shayhowe.com/assets/images/courses/html-css/opening-the-box-model/box-model.png)
 
 text-align: it will align *all inline content* inside a block element.
 

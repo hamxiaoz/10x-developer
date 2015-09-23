@@ -31,7 +31,10 @@ css
 
 viewport `<meta name="viewport" content="width=device-width">`
 
-### selector
+## Tag
+- `strong` vs `b` (style only)
+
+## selector
 
 Prefer class over id: id is only faster when id is the key selector, it's slower when `#home a`, because browser **read from right to left** so `#home a` is read as finding all `a` then pick `#home`.
 
@@ -74,7 +77,7 @@ pseudo-elements
     p:first-letter { font-size: 3em; }
 ```
 
-### Font
+## Font
 ```css
 font-family: Verdana, Arial, "Courier New", sans-serif;
 
@@ -96,7 +99,7 @@ to use it properly: (so it can be really easy to adjust whole font by just chang
 
 text-decoration: no need to use `,` for multiple value: `text-decoration: underline line-through;`
 
-### Display
+## Display
 
 - `display:none` means the browser will render the page as the element doesn't exist. 
 - `visibility:hidden` means **it renders as it's there** but not visible.
@@ -106,7 +109,7 @@ text-decoration: no need to use `,` for multiple value: `text-decoration: underl
 `width`: browser will create scrollbar if viewport is smaller, in this case, use max-width instead of width.
 
 
-### Box
+## Box
 
 - padding, margin. Order matters! The last one takes precedence, overriding anyone specified before:
 ```css
@@ -142,15 +145,15 @@ div {
 
 text-align: it will align *all inline content* inside a block element.
 
-### Misc
+## Misc
 
-#### semantic css creates more problem (redundancy) than it solves.
+### semantic css creates more problem (redundancy) than it solves.
 - what's semantic css: code what you mean, think about the structure. if it's important, put it as H1.
 - read last comment from: http://news.ycombinator.com/item?id=3653540
 - use less can solve the problem.
 - other css framework: blueprint, 960.
 
-#### Why element.style.left doesn't work?
+### Why element.style.left doesn't work?
 You need to set it to the object in Javascript or using inline style
 element.style is just a conversion of the element's style attribute into a scriptable object. If you haven't set any inline style on the element, you won't get anything back.
 `document.getElementById("convert").style.display = "block"` or `<a style="display: block;"></a>`
@@ -162,7 +165,7 @@ element.style is just a conversion of the element's style attribute into a scrip
 - 使用Compass
 Compass不但讓SCSS的使用更方便，還有大量的module、helper可以使用，解決cross broswer的問題並且減少重複的程式碼，增加可讀性。
 
-# Examples
+## Examples
 - [Form control margin](http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit)
 - [bootstrap row click and offmenu canvas] (http://jasny.github.io/bootstrap/javascript/#fileinput)
 

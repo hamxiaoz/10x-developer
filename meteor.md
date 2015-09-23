@@ -21,6 +21,10 @@ DB
 `Posts.find({category: "meteor"}, {limit: 10});`
 - _ [add index](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#learn-indexing)
 
+Counting on the server side
+- _ [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
+- _ https://kadira.io/academy/meteor-performance-101/content/reducing-pubsub-data-usage#counting-on-the-server-side
+
 Publication
 - limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) on publication:
 `Users.find({}, {fields: {password: 0, hash: 0}})`
@@ -28,10 +32,6 @@ Publication
 
 Subscription
 - Use [subscription manager](https://github.com/kadirahq/subs-manager) to avoid re-sub when route changes
-
-Counting on the server side
-- _ [Mongodb aggregation](https://kadira.io/academy/meteor-performance-101/content/make-your-app-faster#do-server-side-aggregations)
-- _ https://kadira.io/academy/meteor-performance-101/content/reducing-pubsub-data-usage#counting-on-the-server-side
 
 _ Observer
 - https://kadira.io/academy/meteor-performance-101/content/improve-cpu-and-network-usage

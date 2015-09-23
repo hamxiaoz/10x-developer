@@ -159,6 +159,21 @@ div {
 
 text-align: it will align *all inline content* inside a block element.
 
+## Layout
+
+### float
+- Origin: was originally designed to float image to allow content to wrap around images. NOT intended for positioning or layout.
+- A floated box is positioned within the normal flow, then taken out of the flow and shifted to the left or right as far as possible.
+- Being taken out, this causes the width of that element to default to the width of the content within it. 
+- `float` might change the element's `display` property
+- `float` usually come with `clear`: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
+
+### Layout Examples
+- [2 columns using float left and right](http://codepen.io/hamxiaoz/pen/WQGOZm)
+- How about 3 columns? float left for all and assign width.
+- layout using inline-block
+
+
 ## Misc
 
 ### semantic css creates more problem (redundancy) than it solves.

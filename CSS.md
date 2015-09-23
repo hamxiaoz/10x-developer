@@ -167,6 +167,7 @@ text-align: it will align *all inline content* inside a block element.
 - Being taken out, this causes the width of that element to default to the width of the content within it. 
 - `float` might change the element's `display` property
 - `float` usually come with `clear`: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
+- If two elements are float, they are positioned next to each other unless there is no space in the same row.
 
 REF
 - http://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/

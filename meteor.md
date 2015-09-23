@@ -48,4 +48,32 @@ _For example you have a method to update name and another method to send notific
 
 Try [CPU profiling](https://kadira.io/academy/meteor-performance-101/content/meteor-cpu-profiling) [analysis](https://kadira.io/academy/meteor-performance-101/content/analyze-meteor-cpu-profile)
 
+## Client Side
 
+### Store data in template instance using ReactiveVar
+You can store [ReactiveVar](http://docs.meteor.com/#/full/reactivevar) in the [template instance](http://docs.meteor.com/#/full/template_inst). A ReactiveVar is similar to a Session variable, with a few differences:
+- ReactiveVars don't have global names, like the "foo" in Session.get("foo"). Instead, they may be created and used locally, for example attached to a template instance, as in: `this.foo.get(). // 'this' is the template instance`
+- ReactiveVars are not automatically migrated across hot code pushes, whereas Session state is.
+- ReactiveVars can hold any value, while Session variables are limited to JSON or EJSON.
+
+```js
+if (Meteor.isClient) {  
+  Template.hello.created = function () {
+    // counter starts at 0
+    this.counter = new ReactiveVar(0);
+  };
+
+  Template.hello.helpers({
+    counter: function () {
+      return Template.instance().counter.get();
+    }
+  });
+
+  Template.hello.events({
+    'click button': function (event, template) {
+      // increment the counter when button is clicked
+      template.counter.set(template.counter.get() + 1);
+    }
+  });
+}
+```

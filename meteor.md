@@ -26,8 +26,8 @@ Counting on the server side
 - _ https://kadira.io/academy/meteor-performance-101/content/reducing-pubsub-data-usage#counting-on-the-server-side
 
 Publication
-- limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) on publication:
-`Users.find({}, {fields: {password: 0, hash: 0}})`
+- limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) (cannot do both inclusion/exclusion) on publication:
+`Users.find({}, {fields: {password: 0, hash: 0}})` 
 - _ pagination: [1](http://www.meteorpedia.com/read/Infinite_Scrolling) [2](https://www.discovermeteor.com/blog/pagination-problems-meteor/)
 
 Subscription

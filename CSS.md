@@ -168,10 +168,16 @@ text-align: it will align *all inline content* inside a block element.
 - `float` might change the element's `display` property
 - `float` usually come with `clear`: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
 
-### Layout Examples
+REF
+- http://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/
+- 
+
+### Layout Examples using float or inline-block
 - [2 columns using float left and right](http://codepen.io/hamxiaoz/pen/WQGOZm)
 - How about 3 columns? float left for all and assign width.
 - layout using inline-block
+
+### Precisely Position using `position`
 
 
 ## Misc

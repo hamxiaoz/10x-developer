@@ -172,14 +172,30 @@ text-align: it will align *all inline content* inside a block element.
 
 REF
 - http://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/
-- http://www.cnblogs.com/iyangyuan/archive/2013/03/27/2983813.html
+- [经验分享：CSS浮动(float,clear)通俗讲解](http://www.cnblogs.com/iyangyuan/archive/2013/03/27/2983813.html)
 
 Layout Examples using float or inline-block
 - [2 columns using float left and right](http://codepen.io/hamxiaoz/pen/WQGOZm)
 - How about 3 columns? float left for all and assign width.
 - layout using inline-block
 
-### Precisely Position using `position`
+Other usage:
+- you can float li in ul so 4 lis will be in the same row ( http://dashinsky.com/designer-news-statistics/)
+- or float the badge: see gist revision number.
+
+### position
+
+### float和position的区别, 等
+>原来是用float来在一排并列各个div的, 但是现在可以用display:inline-block来做, 更简单.
+注意: inline-block elements are affected by the vertical-align property, which you probably want set to top.
+
+> 我们常说的文档流其实是指默认文档流。基本显示模型block和inline分别是块狀换行和连续多行模型，前者可以设定尺寸，后者不可以设定尺寸（根据内容决定尺寸和折行）。
+不过我们总是遇到固定尺寸，或者固定部分尺寸且不折行的场景，这个时候我们马上会想到使用float来做布局，因为float会触发shrink to fit特性，实现根据内容决定尺寸，float还不会产生折行，我们通过clear来手工模拟折行。
+很多时候我们希望控制的布局流问题不需要float和position实现，而应该通过显示模型定义来解决。比如现在的column layout、flex box等等，都是在这个角度解决我们遇到的问题，它们应该才是正解。
+
+> Mobile上面那么你就知道为啥**float很少在布局上使用**。Android和iOS里面的flex box已经非常稳定了，很低版本（Android 1.6，iOS 3）就已经很好支持了，用这些布局模型在窄小且多样的手机屏幕上面相当可靠，而float在这些情况下则问题层出不穷。所以我现在相信mobile first，也相信移动设备的Web能够更好的推广CSS3的众多新特性的采用。比如新的CSS3 background and box module在移动设备里面几乎是必备的，因为background-size是retina display必用的，**而border-image则是解决复杂的按钮和面板的最佳解决方案**。如果你做Mobile Web，那么你就会爱上CSS3新特性，也会享受它带来的标准化的世界的好处。
+
+
 
 
 ## Misc

@@ -28,7 +28,8 @@ Counting on the server side
 Publication
 - limit [fields](http://docs.meteor.com/#/full/fieldspecifiers) (cannot do both inclusion/exclusion) on publication:
 `Users.find({}, {fields: {password: 0, hash: 0}})` 
-- _ pagination: [1](http://www.meteorpedia.com/read/Infinite_Scrolling) [2](https://www.discovermeteor.com/blog/pagination-problems-meteor/)
+- [Infinite Scrolling using limit](http://www.meteorpedia.com/read/Infinite_Scrolling)
+- [Pagination](https://www.discovermeteor.com/blog/pagination-problems-meteor/)
 
 Subscription
 - Use [subscription manager](https://github.com/kadirahq/subs-manager) to avoid re-sub when route changes

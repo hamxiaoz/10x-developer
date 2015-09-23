@@ -161,6 +161,8 @@ text-align: it will align *all inline content* inside a block element.
 
 ## Layout
 
+无论多么复杂的布局，其基本出发点均是：“如何在一行显示多个div元素”
+
 ### float
 - Origin: was originally designed to float image to allow content to wrap around images. NOT intended for positioning or layout.
 - A floated box is positioned within the normal flow, then taken out of the flow and shifted to the left or right as far as possible.

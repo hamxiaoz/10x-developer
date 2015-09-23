@@ -3,10 +3,10 @@
 see also https://gist.github.com/hamxiaoz
 
 ## Guide
-_ [Kadira Academy](https://kadira.io/academy)
-- routing (don't do data management and auth on route level)
-- performance
-- bulletproof
+Kadira Academy
+- _ [routing guide: flow router](https://kadira.io/academy/meteor-routing-guide) (don't do data management and auth on route level)
+- _ [Meteor Performance 101](https://kadira.io/academy/meteor-performance-101)
+- _ [bulletproof](https://bulletproofmeteor.com/)
 
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)

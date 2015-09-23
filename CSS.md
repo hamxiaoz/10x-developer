@@ -171,9 +171,9 @@ text-align: it will align *all inline content* inside a block element.
 
 REF
 - http://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/
-- 
+- http://www.cnblogs.com/iyangyuan/archive/2013/03/27/2983813.html
 
-### Layout Examples using float or inline-block
+Layout Examples using float or inline-block
 - [2 columns using float left and right](http://codepen.io/hamxiaoz/pen/WQGOZm)
 - How about 3 columns? float left for all and assign width.
 - layout using inline-block

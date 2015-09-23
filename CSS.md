@@ -1,5 +1,19 @@
 # CSS
 
+Basic structure
+```jade
+<!DOCTYPE html>
+html
+  head
+  body
+    header
+      nav
+    section
+     article
+    aside
+    footer
+```
+
 html
 ```html
 <link type="text/css" rel="stylesheet" href="assets/css/my.css">

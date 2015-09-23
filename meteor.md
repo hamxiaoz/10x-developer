@@ -5,7 +5,7 @@ see also https://gist.github.com/hamxiaoz
 ## Guide
 Kadira Academy
 - _ [routing guide: flow router](https://kadira.io/academy/meteor-routing-guide) (don't do data management and auth on route level)
-- _ [Meteor Performance 101](https://kadira.io/academy/meteor-performance-101)
+- x [Meteor Performance 101](https://kadira.io/academy/meteor-performance-101)
 - _ [bulletproof](https://bulletproofmeteor.com/)
 
 ## DDP

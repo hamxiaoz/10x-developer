@@ -115,19 +115,22 @@ text-decoration: no need to use `,` for multiple value: `text-decoration: underl
 
 ## Background
 
-Background shortcut: `background-color`, `background-image`, `background-position` and `background-repeat`
+- Background shortcut: `background-color`, `background-image`, `background-position` and `background-repeat`
 ```
 div {
   background: #b2b2b2 url("alert.png") 20px 10px no-repeat;
 }
 ```
 
-Linear gradient [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+- Linear gradient is background-image 
+    - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+    - [degrees!](http://www.quirksmode.org/css/images/angles.html)
 ```
 div {
     background: linear-gradient( 45deg, blue, red ); 
 }
 ```
+- `background-size`
 
 ## Display
 

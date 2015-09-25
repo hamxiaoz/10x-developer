@@ -91,6 +91,10 @@ pseudo-elements
     p:first-letter { font-size: 3em; }
 ```
 
+## Good to know
+- `dl` `dd`
+- List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the <li> element
+
 ## Font
 ```css
 font-family: Verdana, Arial, "Courier New", sans-serif;

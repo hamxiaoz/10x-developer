@@ -186,11 +186,18 @@ Other usage:
 - or float the badge: see gist revision number.
 
 ### position
-- (default) `position:static` means it's **not positioned**.
-- `position:relative` it's still static, where **it can be offset** by adding other property such as top:-20px etc
-- `position:fixed` 脱离文件流 means it's always staying in the same place, even the page is scrolled.
+- `position:static`
+    - default
+    - means it's **not positioned**.
+- `position:relative` 
+    - it's still static, where **it can be offset** by adding other property such as top:-20px etc
+- `position:fixed` 
+    - 脱离文件流 
+    - means it's always staying in the same place, even the page is scrolled.
     - 应用:比如onboard时做tutorial, 又比如nav-top-fixed, 又比如[知乎专栏的logo, 那个'知'字](http://zhuanlan.zhihu.com/intelligence/19874517)
-- `position:absolute` 脱离文件流  is the trickiest position value. absolute behaves like fixed **except relative to the document, or to the nearest absolute or relative parent.**
+- `position:absolute` 
+    - 脱离文件流  
+    - is the trickiest position value. absolute behaves like fixed **except relative to the document, or to the nearest absolute or relative parent.**
     - absolute是基于父级元素的定位，当父级元素是relative的时候，absolute的元素就会是基于它的定位了。比如你可以让一个按钮始终显示在一个元素的右下角。
 
 

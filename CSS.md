@@ -122,6 +122,13 @@ div {
 }
 ```
 
+Linear gradient [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+```
+div {
+    background: linear-gradient( 45deg, blue, red ); 
+}
+```
+
 ## Display
 
 - `display:none` means the browser will render the page as the element doesn't exist. 

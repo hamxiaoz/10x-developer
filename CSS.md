@@ -207,6 +207,7 @@ Layout Examples using float or inline-block
 
 Other usage:
 - you can float li in ul so 4 lis will be in the same row ( http://dashinsky.com/designer-news-statistics/)
+    - or `li { display: inline-block;}`
 - or float the badge: see gist revision number.
 
 ### position

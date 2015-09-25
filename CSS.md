@@ -179,6 +179,7 @@ REF
 Layout Examples using float or inline-block
 - [2 columns using float left and right](http://codepen.io/hamxiaoz/pen/WQGOZm)
 - How about 3 columns? float left for all and assign width.
+- Use `overflow: auto` on parent container to accommodate its floating children. [See here](http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/)
 - layout using inline-block
 
 Other usage:

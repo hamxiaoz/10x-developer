@@ -86,9 +86,15 @@ pseudo-class
 ```
 
 pseudo-elements
-- select part of the text or line
+- When setting margin, often you want to reset the last one
 ```css
-    p:first-letter { font-size: 3em; }
+.nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav li:last-child {
+    margin-right: 0;
+}
 ```
 
 ## Good to know

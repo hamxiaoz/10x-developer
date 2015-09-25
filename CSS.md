@@ -113,6 +113,15 @@ to use it properly: (so it can be really easy to adjust whole font by just chang
 
 text-decoration: no need to use `,` for multiple value: `text-decoration: underline line-through;`
 
+## Background
+
+Background shortcut: `background-color`, `background-image`, `background-position` and `background-repeat`
+```
+div {
+  background: #b2b2b2 url("alert.png") 20px 10px no-repeat;
+}
+```
+
 ## Display
 
 - `display:none` means the browser will render the page as the element doesn't exist. 

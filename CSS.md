@@ -170,7 +170,7 @@ text-align: it will align *all inline content* inside a block element.
 - `float` might change the element's `display` property
 - `float` usually come with `clear`: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
     - `clear` affects the applying element, not other elements
-- If two elements are float, they are positioned next to each other unless there is no space in the same row.
+- 假如某个div元素A是浮动的，如果A元素上一个元素也是浮动的，那么A元素会跟随在上一个元素的后边(如果一行放不下这两个元素，那么A元素会被挤到下一行)；如果A元素上一个元素是标准流中的元素，那么A的相对垂直位置不会改变，也就是说A的顶部总是和上一个元素的底部对齐
 
 REF
 - http://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/

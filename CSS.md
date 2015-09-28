@@ -140,7 +140,7 @@ div {
     background: linear-gradient( 45deg, blue, red ); 
 }
 ```
-- `background-size`
+- [`{background-size: cover/curtain/etc}`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 
 ## Image
 - By default it's inline element

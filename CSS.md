@@ -109,6 +109,7 @@ pseudo-elements
       Please <a href="jazz.mp3" download>download</a> the audio file.
 </audio>
 ```
+- HTML5: `figure`+`figcaption`, `mark` for highlight, 
 
 ## Font
 ```css

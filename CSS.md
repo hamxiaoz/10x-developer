@@ -276,6 +276,7 @@ float能让元素从文档流中抽出，它并不占文档流的空间，典型
 
 ## Coding Standard
 - try to avoid id in css
+- remove units for 0
 
 ## Misc
 

@@ -100,6 +100,15 @@ pseudo-elements
 ## Good to know
 - `dl` `dd`
 - List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the `<li>` element
+- `audio`
+```
+<audio controls>
+      <source src="jazz.ogg" type="audio/ogg">
+      <source src="jazz.mp3" type="audio/mpeg">
+      <source src="jazz.wav" type="audio/wav">
+      Please <a href="jazz.mp3" download>download</a> the audio file.
+</audio>
+```
 
 ## Font
 ```css

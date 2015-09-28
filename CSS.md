@@ -275,6 +275,8 @@ float能让元素从文档流中抽出，它并不占文档流的空间，典型
 > 比较可以发现，float和position最大的区别其实是是否占据文档流空间的问题。虽然position有absolute和fixed这两个同样不会占据文档流的属性，但是这两个并不适合被用来给整个网页做布局。为什么？因为这样你就得为页面上的每一个元素设置一个xy坐标来定位。
 
 ## Coding Standard
+- [Google HTML/CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+- [Github](http://primercss.io/guidelines/)
 - try to avoid id in css
 - remove units for 0
 - When using vendor prefixes we need to make sure to **place an unprefixed version of our property and value last, after any prefixed versions.** 

@@ -198,6 +198,7 @@ text-align: it will align *all inline content* inside a block element.
 ### float
 - Origin: was originally designed to float image to allow content to wrap around images. NOT intended for positioning or layout.
 - A floated box is positioned within the normal flow, then taken out of the flow and shifted to the left or right as far as possible.
+- 尽管它被taken out了, 但是其他元素还是会尊重它的box model. 不会有重叠, 这也是float最初用来图文排版的初衷.
 - Being taken out, this causes the width of that element to default to the width of the content within it. 
 - `float` might change the element's `display` property
 - `float` usually come with `clear`: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.

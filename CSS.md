@@ -99,7 +99,7 @@ pseudo-elements
 
 ## Good to know
 - `dl` `dd`
-- List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the <li> element
+- List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the `<li>` element
 
 ## Font
 ```css

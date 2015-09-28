@@ -201,7 +201,9 @@ div {
 ```
 ![](http://learn.shayhowe.com/assets/images/courses/html-css/opening-the-box-model/box-model.png)
 
-text-align: it will align *all inline content* inside a block element.
+### Alighment
+- `vertical-align` CSS property specifies the vertical alignment of an inline or table-cell box.
+- `text-align`: it will align *all inline content* inside a block element.
 
 ## Layout
 

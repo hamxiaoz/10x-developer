@@ -277,6 +277,17 @@ float能让元素从文档流中抽出，它并不占文档流的空间，典型
 ## Coding Standard
 - try to avoid id in css
 - remove units for 0
+- When using vendor prefixes we need to make sure to **place an unprefixed version of our property and value last, after any prefixed versions.** 
+```css
+div {
+    background: -webkit-linear-gradient(#a1d3b0, #f6f1d3);
+    background:    -moz-linear-gradient(#a1d3b0, #f6f1d3);
+    background:         linear-gradient(#a1d3b0, #f6f1d3);
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+```
 
 ## Misc
 

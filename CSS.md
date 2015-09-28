@@ -231,6 +231,7 @@ Other usage:
 - you can float li in ul so 4 lis will be in the same row ( http://dashinsky.com/designer-news-statistics/)
     - or `li { display: inline-block;}`
 - or float the badge: see gist revision number.
+- [Why do we need to float the 'stay signed in' label?](http://codepen.io/shayhowe/pen/dCehs)
 
 ### position
 - `position:static`

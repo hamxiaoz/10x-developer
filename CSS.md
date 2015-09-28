@@ -142,6 +142,9 @@ div {
 ```
 - `background-size`
 
+## Image
+- By default it's inline element
+
 ## Display
 
 - `display:none` means the browser will render the page as the element doesn't exist. 

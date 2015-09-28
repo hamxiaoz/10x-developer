@@ -45,8 +45,6 @@ css
 
 viewport `<meta name="viewport" content="width=device-width">`
 
-## Tag
-- `strong` vs `b` (style only)
 
 ## selector
 
@@ -98,6 +96,7 @@ pseudo-elements
 ```
 
 ## Good to know
+- `strong` vs `b` (style only)
 - `dl` `dd`
 - List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the `<li>` element
 - `audio`
@@ -275,7 +274,8 @@ float能让元素从文档流中抽出，它并不占文档流的空间，典型
 
 > 比较可以发现，float和position最大的区别其实是是否占据文档流空间的问题。虽然position有absolute和fixed这两个同样不会占据文档流的属性，但是这两个并不适合被用来给整个网页做布局。为什么？因为这样你就得为页面上的每一个元素设置一个xy坐标来定位。
 
-
+## Coding Standard
+- try to avoid id in css
 
 ## Misc
 

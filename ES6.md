@@ -23,6 +23,18 @@ Object.keys(obj).forEach(function (key, index) {
 _.keys(obj, function (value, key) {
 });
 ```
+
+CoffeeScript -> ES6:
+
+```js
+// coffee
+for prop, value of obj
+
+// ES6
+_.keys(obj, (value, key)=>{
+});
+```
+
 - ES6: Iterate over values: `for .. of`
  
 ```js
@@ -39,7 +51,7 @@ _.keys(arr, function (element, index) {
 });
 ```
 
-From coffeescript to ES6:
+CoffeeScript -> ES6:
 
 ```js
 // coffee

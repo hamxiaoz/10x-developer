@@ -6,6 +6,7 @@ References:
 - Coffeescript to ES6:
     - https://gist.github.com/danielgtaylor/0b60c2ed1f069f118562
     - https://robots.thoughtbot.com/replace-coffeescript-with-es6
+    - `for .. in arr` -> `arr.forEach(function (element, index))`
     
 ## Iterate
 - Iterate over property name:

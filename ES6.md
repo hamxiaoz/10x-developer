@@ -11,7 +11,7 @@ References:
 - JavaScript原有的for...in循环，只能获得对象的键名，不能直接获取键值: Iterate over property name:
 
 ```js
-for (let propertyName in obj) {
+for (let prop in obj) {
 }
 
 // use Object.keys

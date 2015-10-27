@@ -152,6 +152,10 @@ div {
 }
 ```
 - [`{background-size: cover/curtain/etc}`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+```css
+    background-image: url(https://example.com);
+    background-size: cover;
+```
 
 ## Image
 - By default it's inline element

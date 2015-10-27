@@ -20,7 +20,7 @@ Object.keys(obj).forEach(function (key, index) {
 }
 
 // underscore
-_.keys(obj, function (value, key) {
+_.each(obj, function (value, key) {
 });
 ```
 
@@ -31,7 +31,7 @@ CoffeeScript -> ES6:
 for prop, value of obj
 
 // ES6
-_.keys(obj, (value, key)=>{
+_.each(obj, (value, key)=>{
 });
 ```
 
@@ -47,7 +47,7 @@ arr.forEach(function (element, index) {
 });
 
 // underscore
-_.keys(arr, function (element, index) {
+_.each(arr, function (element, index) {
 });
 ```
 

@@ -8,7 +8,7 @@ References:
     - https://robots.thoughtbot.com/replace-coffeescript-with-es6
     
 ## Iterate
-- Iterate over property name:
+- JavaScript原有的for...in循环，只能获得对象的键名，不能直接获取键值: Iterate over property name:
 
 ```js
 for (let propertyName in obj) {
@@ -23,7 +23,7 @@ Object.keys(obj).forEach(function (key, index) {
 _.keys(obj, function (value, key) {
 });
 ```
-- Iterate over values:
+- ES6: Iterate over values: `for .. of`
  
 ```js
 for (let value of arr) {

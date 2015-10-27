@@ -6,6 +6,39 @@ References:
 - Coffeescript to ES6:
     - https://gist.github.com/danielgtaylor/0b60c2ed1f069f118562
     - https://robots.thoughtbot.com/replace-coffeescript-with-es6
+    
+## Iterate
+- Iterate over property name:
+
+```js
+for (let propertyName in obj) {
+}
+
+// use Object.keys
+Object.keys(obj).forEach(function (key, index) {
+    console.log(obj[key]);
+}
+
+// underscore
+_.keys(obj, function (value, key) {
+});
+```
+- Iterate over values:
+ 
+```js
+for (let value of arr) {
+}
+
+// use forEach
+arr.forEach(function (element, index) {
+    console.log(element); 
+});
+
+// underscore
+_.keys(arr, function (element, index) {
+});
+```
+- 
 
 ## Module
 

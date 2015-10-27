@@ -4,7 +4,7 @@ more coffeescript tricks: https://gist.github.com/dfurber/993584
 
 #### iterate
 - loop array: `for .. in`
-- loop object: `for .. of`
+- loop object: `for prop, value of obj`
 
 #### fat arrow in coffeescript 
 - read [this](http://webapplog.com/understanding-fat-arrows-in-coffeescript/)

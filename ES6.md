@@ -1,5 +1,12 @@
 # ES6
 
+References:
+- http://exploringjs.com/es6/ch_modules.html
+- http://es6.ruanyifeng.com/
+- Coffeescript to ES6:
+    - https://gist.github.com/danielgtaylor/0b60c2ed1f069f118562
+    - https://robots.thoughtbot.com/replace-coffeescript-with-es6
+
 ## Module
 
 http://exploringjs.com/es6/ch_modules.html
@@ -37,6 +44,9 @@ console.log(diag(4, 3)); // 5
 import * as lib from 'lib';
 console.log(lib.square(11)); // 121
 console.log(lib.diag(4, 3)); // 5
+
+// import from node package
+import fs from 'fs';
 ```
 
 Default exports
@@ -50,10 +60,13 @@ myFunc();
 // class
 
 //------ MyClass.js ------
-export default class { ··· } // no semicolon!
+export default class MyClass { ··· } // no semicolon!
+
+// or 
+export { MyClass };
 
 //------ main2.js ------
-import MyClass from 'MyClass';
+import {MyClass} from 'MyClass';
 let inst = new MyClass();
 ```
 

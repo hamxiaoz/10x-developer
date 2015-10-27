@@ -105,3 +105,29 @@ let inst = new MyClass();
 ```
 
 Programmatic loader API: to configure how modules are loaded and to conditionally load modules
+
+### Block
+- ES5只有全局作用域和函数作用域，没有块级作用域
+- ES6: let实际上为JavaScript新增了块级作用域。
+
+```js
+// 内层作用域可以定义外层作用域的同名变量。
+
+{{{{
+  let insane = 'Hello World';
+  {let insane = 'Hello World';}
+}}}};
+
+// 立即执行匿名函数（IIFE）不再必要了
+// IIFE写法
+(function () {
+  var tmp = ...;
+  ...
+}());
+
+// 块级作用域写法
+{
+  let tmp = ...;
+  ...
+}
+```

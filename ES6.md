@@ -108,7 +108,7 @@ Programmatic loader API: to configure how modules are loaded and to conditionall
 
 ### Block
 - ES5只有全局作用域和函数作用域，没有块级作用域
-- ES6: let实际上为JavaScript新增了块级作用域。
+- ES6: let实际上为JavaScript新增了块级作用域; 函数本身的作用域，在其所在的块级作用域之内。
 
 ```js
 // 内层作用域可以定义外层作用域的同名变量。
@@ -130,4 +130,6 @@ Programmatic loader API: to configure how modules are loaded and to conditionall
   let tmp = ...;
   ...
 }
+
+// ES6也规定，函数本身的作用域，在其所在的块级作用域之内。
 ```

@@ -181,7 +181,10 @@ All you do is add a set of parentheses after the function and this causes it to 
 ```
 
 #### default value if it doesn't exist
-Use ||
+Use ||  
+NOTE this pattern doesn't work if the value is ''.  
+Use ES6 default parameter instead.
+
 ```js
 for timestamp, count of json["#{projectName}"]
       existing = total["#{timestamp}"] || 0

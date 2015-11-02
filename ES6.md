@@ -5,9 +5,6 @@ References:
 - http://exploringjs.com/es6/ch_modules.html
 - http://es6.ruanyifeng.com/
 - https://github.com/lukehoban/es6features
-- Coffeescript to ES6:
-    - https://gist.github.com/danielgtaylor/0b60c2ed1f069f118562
-    - https://robots.thoughtbot.com/replace-coffeescript-with-es6
     
 ## Iteration
 - JavaScript原有的for...in循环，只能获得对象的键名，不能直接获取键值: Iterate over property name:

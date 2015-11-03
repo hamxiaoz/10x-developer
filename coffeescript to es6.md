@@ -44,7 +44,7 @@ arr.forEach(function(ele){
 
 ## Misc
 - Replace `==`/`!=` with `===`/`!==`
-- There is no concept of class variable in ES6
+- [There is no concept of class variable in ES6](http://stackoverflow.com/questions/22528967/es6-class-variable-alternatives), you might want to just turn that to a static method:
 
 ```js
 // coffee

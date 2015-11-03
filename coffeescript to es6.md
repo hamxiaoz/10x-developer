@@ -43,4 +43,18 @@ arr.forEach(function(ele){
 ```
 
 ## Misc
-- replace `==`/`!=` with `===`/`!==`
+- Replace `==`/`!=` with `===`/`!==`
+- There is no concept of class variable in ES6
+
+```js
+// coffee
+class MyFile
+    @EXT = '.myfile'
+    
+// es6
+class MyFile {
+  static Ext() {
+    return '.myfile';
+  }
+}
+```

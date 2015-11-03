@@ -41,3 +41,6 @@ arr.forEach(function(ele){
     //  this is the function
 });
 ```
+
+## Misc
+- replace `==`/`!=` with `===`/`!==`

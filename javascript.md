@@ -74,8 +74,8 @@ arr[100] = '100'
 arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
-- `Array.prototype.reverse()` reverse the array **in place**
-- `Array.prototype.push.apply(a,b)` appends b into array a
+- Reverse the array **in place**:   `Array.prototype.reverse()` 
+- Merge array **in place (append to a)**: `Array.prototype.push.apply(a,b)`
 - how to iterate the array? don't use `for in` as it's slow
 
 ```

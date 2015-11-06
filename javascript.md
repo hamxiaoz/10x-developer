@@ -18,6 +18,16 @@ $second.on('click',function(){ alert('hello everybody');})
 - Don't use parentheses for unary operator such as delete, void, typeof
 - Prefer '' over "" for strings, from google js style guide.
 
+# JSON Style Guide
+Ref: 
+- https://google.github.io/styleguide/jsoncstyleguide.xml
+
+Highlights:
+- No comments
+- All property names must be surrounded by double quotes
+- Property names must be camel-cased, ascii strings.
+
+
 
 
 # [Underscore](http://underscorejs.org/)

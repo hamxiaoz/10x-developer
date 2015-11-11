@@ -15,6 +15,10 @@ for prop, value of obj
 // ES6
 _.each(obj, (value, key)=>{
 });
+
+// or
+for (let prop in obj) {
+}
 ```
 
 - On collection (array):

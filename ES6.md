@@ -5,6 +5,28 @@ References:
 - http://exploringjs.com/es6/ch_modules.html
 - http://es6.ruanyifeng.com/
 - https://github.com/lukehoban/es6features
+
+## How to run ES6 in Node
+index.js
+```js
+// run ES6 in node: http://blog.andrewray.me/how-to-use-es6-in-nodejs/
+require('babel-core/register');
+require('./es6code');
+
+// To run this file, do
+// `node index.js`
+```
+
+es6code.js
+```js
+import path from 'path';
+class car {
+  startEngine() {
+    console.log('Ignition on');
+  }
+}
+```
+
     
 ## Iteration
 - JavaScript原有的for...in循环，只能获得对象的键名，不能直接获取键值: Iterate over property name:

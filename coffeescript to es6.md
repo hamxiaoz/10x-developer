@@ -16,7 +16,7 @@ for prop, value of obj
 _.each(obj, (value, key)=>{
 });
 
-// or
+// or (NOTE don't use it for array)
 for (let prop in obj) {
 }
 ```

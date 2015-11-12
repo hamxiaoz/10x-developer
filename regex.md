@@ -2,8 +2,8 @@
 
 ## Links
 - Test tool for js: https://regex101.com/#javascript
-
-- Regex online tool for Ruby: http://rubular.com/
+- For Ruby: http://rubular.com/
+- Cheat Sheet: http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/
 
 ## Checklist
 - Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)

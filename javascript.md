@@ -106,7 +106,6 @@ Check string not empty:
 Check null:
 - use `typeof instance.currentPosition  !== 'undefined'` 
 - Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
-- http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
 -  CoffeeScript:
     - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
     - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
@@ -127,10 +126,10 @@ NaN
 {} // the empty object
 ```
 
-#### comparison
+### comparison
 - Equality operator `==`: doesn't compare type, i.e, it converts the type first (performs type coercion) then compare
     `"" == false // returns true`
-- Strict Equality Operator `===`: doesnt' not perform type coercion **recommended**
+- Strict Equality Operator `===`: doesn't not perform type coercion **recommended**
     `'' == false // return false`
 - when comparison includes reference type, the comparison (both == and ===) performs pointer comparison.
     `{} != {}`

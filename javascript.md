@@ -1,4 +1,4 @@
-# JSON Style Guide
+## JSON Style Guide
 Ref: 
 - https://google.github.io/styleguide/jsoncstyleguide.xml
 
@@ -7,10 +7,9 @@ Highlights:
 - All property names must be surrounded by double quotes
 - Property names must be camel-cased, ascii strings.
 
+---
 
-
-
-# [Underscore](http://underscorejs.org/)
+## [Underscore](http://underscorejs.org/) and [underscore.string](https://epeli.github.io/underscore.string/)
 
 #### Difference between _.throttle and _.debounce?
 At most that fast vs wait till no change https://ruby-china.org/topics/22494
@@ -33,7 +32,7 @@ arr = [a, b, c]
 console.log _.union.apply(_, arr)
 ```
 
-#### underscore.string: https://epeli.github.io/underscore.string/
+---
 
 ## Hows and patterns
 

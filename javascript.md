@@ -35,10 +35,12 @@ console.log _.union.apply(_, arr)
 
 #### underscore.string: https://epeli.github.io/underscore.string/
 
-# Hows and patterns
+## Hows and patterns
 
-#### value vs ref
-Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
+### value vs ref
+- String is value type
+- ref type: function, object, array
+- Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
 ```js
     var a = {};
     var b = {name:'b'};
@@ -91,7 +93,7 @@ this year is " + 2013 => "this year is 2013"
 ```
 
 
-#### null/empty
+### null/empty
 
 Special objects: `null` and `undefined`
 - `null`: most case it can be replaced by `undefined`;
@@ -103,9 +105,12 @@ Check string not empty:
 `coffee: passwordNotEmpty = !!password (not empty)`
 
 Check null:
-- `typeof instance.currentPosition  !== 'undefined'` http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
-- coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
-CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
+- use `typeof instance.currentPosition  !== 'undefined'` 
+- Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
+- http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
+-  CoffeeScript:
+    - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
+    - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
 
 boolean: any value can be converted to boolean
 ```js

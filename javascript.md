@@ -149,9 +149,9 @@ is('String', new String('test')); // true
     }
 ```
 
-#### Immediate functions
-All you do is add a set of parentheses after the function and this causes it to be executed right there. It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 
-**See above (in function section) on why it has a wrapping ()**
+### immediately-invoked function expression (IIFE)
+- Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 
+- How? It's used to avoid hoisting and creating scope. A function creates a scope.
 ```js
  (function(){
    var a = 1;

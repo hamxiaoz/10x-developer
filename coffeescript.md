@@ -3,8 +3,9 @@
 more coffeescript tricks: https://gist.github.com/dfurber/993584
 
 #### iterate
-- loop array: `for .. in`
-- loop object: `for prop, value of obj`
+- loop array: `for item in arr` or `for item, index in arr`
+- loop object: `for prop, value of obj` or `for own property, value of object` (use hasOwnProperty())
+
 
 #### fat arrow in coffeescript 
 - read [this](http://webapplog.com/understanding-fat-arrows-in-coffeescript/)

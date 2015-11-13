@@ -58,10 +58,14 @@ class car {
 
     
 ## Iteration
-- JavaScript原有的for...in循环，只能获得对象的键名，不能直接获取键值: Iterate over property name:
+- `for...in`: Iterate over property name:
 
 ```js
 for (let prop in obj) {
+}
+
+// when using in array, it iterates on index
+for (let index in arr) {
 }
 
 // use Object.keys

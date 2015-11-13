@@ -147,14 +147,15 @@ function is(type, obj) {
 is('String', 'test'); // true
 is('String', new String('test')); // true
 ```
-#### object detection
+### object detection
 - don't add '()'
-```
+- object detection is favored than browser sniffing.
+```js
+    // or typeof document.getElementsByName !=== 'undefined'
     if(document.getElementsByName) {
         // it means the 'getElementsByName' is supported
     }
 ```
-- object detection is favored than browser sniffing.
 
 #### Add item to array?
 No such function in underscore, use array function
@@ -174,9 +175,9 @@ All you do is add a set of parentheses after the function and this causes it to 
 ```
 
 #### default value if it doesn't exist
-Use ||  
-NOTE this pattern doesn't work if the value is ''.  
 Use ES6 default parameter instead.
+
+Previously: Use ||   NOTE this pattern doesn't work if the value is ''.  
 
 ```js
 for timestamp, count of json["#{projectName}"]

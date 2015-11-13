@@ -71,7 +71,8 @@ arr.length == 101 // !!!`
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 
 #### number
-parseInt parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
+- `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
+- always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
 
 #### string
 - it's unicode of 16bit

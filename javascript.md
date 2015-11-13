@@ -94,7 +94,6 @@ this year is " + 2013 => "this year is 2013"
 
 
 ### null/empty
-
 Special objects: `null` and `undefined`
 - `null`: most case it can be replaced by `undefined`;
 - `undefined`: it's like null in other program. 

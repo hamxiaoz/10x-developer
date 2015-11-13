@@ -15,6 +15,25 @@ const goSportsTeam = true;
 const dragonball = 'z';
 ```
 
+- new line
+```js
+$second
+    .on('click',function(){ alert('hello everybody');})
+    .fadeIn('slow')
+    .animate({height:'120px'},500);
+// vs 
+$second.on('click',function(){ alert('hello everybody');}).
+    fadeIn('slow').
+    animate({height:'120px'},500);
+// vs
+$second.on('click',function(){ alert('hello everybody');})
+    .fadeIn('slow')
+    .animate({height:'120px'},500);
+```
+
+- Don't use parentheses for unary operator such as `delete, void, typeof`
+- Use single quote '' for strings
+
 
 ## How to run ES6 in Node
 index.js

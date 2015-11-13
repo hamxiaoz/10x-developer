@@ -37,7 +37,7 @@ console.log _.union.apply(_, arr)
 
 ## Hows and patterns
 
-### value vs ref
+### Type: value/ref
 - String is value type
 - ref type: function, object, array
 - Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.

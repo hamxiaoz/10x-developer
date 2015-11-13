@@ -62,9 +62,14 @@ class car {
 
 ```js
 for (let prop in obj) {
+  // Check, in case prototype has customized properties
+  if (obj.hasOwnProperty(prop) {
+    // ...
+  }
 }
 
 // when using in array, it iterates on index
+// Don't use this
 for (let index in arr) {
 }
 

@@ -94,7 +94,6 @@ _.each(arr, function (element, index) {
 });
 ```
 
-- 
 
 ## Module
 
@@ -161,7 +160,8 @@ let inst = new MyClass();
 
 Programmatic loader API: to configure how modules are loaded and to conditionally load modules
 
-### Block
+
+## Block / Scope
 - ES5只有全局作用域和函数作用域，没有块级作用域
 - ES6: let实际上为JavaScript新增了块级作用域; 函数本身的作用域，在其所在的块级作用域之内。
 

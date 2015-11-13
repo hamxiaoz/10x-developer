@@ -1,10 +1,20 @@
 # ES6
-
 References:
-- Style guide: https://github.com/airbnb/javascript
 - http://exploringjs.com/es6/ch_modules.html
 - http://es6.ruanyifeng.com/
 - https://github.com/lukehoban/es6features
+
+## Style Guide
+Guide: https://github.com/airbnb/javascript
+
+- DON'T use 'single var pattern'
+```js
+// good
+const items = getItems();
+const goSportsTeam = true;
+const dragonball = 'z';
+```
+
 
 ## How to run ES6 in Node
 index.js

@@ -68,15 +68,8 @@ arr.length == 101 // !!!`
 - If you query a non-existent array index, you get `undefined`
 - Reverse the array **in place**:   `Array.prototype.reverse()` 
 - Merge array **in place (append to a)**: `Array.prototype.push.apply(a,b)`
-- how to iterate the array? don't use `for in` as it's slow
-
-```
-for(var i = 0, l = list.length; i < l; i++) {console.log(list[i]); }
-
-// coffeescript
-- array: `for item in list` or `for item, index in list`
-- object: `for property, value of object` or `for own property, value of object` (use hasOwnProperty())
-```
+- Add item to head: `arr.unshift('a')`
+- how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 
 #### number
 parseInt parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
@@ -155,12 +148,6 @@ is('String', new String('test')); // true
     if(document.getElementsByName) {
         // it means the 'getElementsByName' is supported
     }
-```
-
-#### Add item to array?
-No such function in underscore, use array function
-```coffee
-arr.unshift 'a'
 ```
 
 #### Immediate functions

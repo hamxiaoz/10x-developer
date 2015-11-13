@@ -160,9 +160,8 @@ is('String', new String('test')); // true
 })();
 ```
 
-#### default value if it doesn't exist
-Use ES6 default parameter instead.
-
+### default value if it doesn't exist
+Use ES6 default parameter instead.  
 Previously: Use ||   NOTE this pattern doesn't work if the value is ''.  
 
 ```js

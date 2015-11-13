@@ -127,10 +127,8 @@ NaN
 - when comparison includes reference type, the comparison (both == and ===) performs pointer comparison.
     `{} != {}`
 
-#### get class of object, check if an object is a type
-http://bonsaiden.github.io/JavaScript-Garden/#types.typeof
-check type: `Object.prototype.toString`
-
+### Object
+- Check if an object is a type
 ```js
 function is(type, obj) {
     var clas = Object.prototype.toString.call(obj).slice(8, -1);
@@ -140,15 +138,16 @@ function is(type, obj) {
 is('String', 'test'); // true
 is('String', new String('test')); // true
 ```
-### object detection
-- don't add '()'
-- object detection is favored than browser sniffing.
+
+- object detection
 ```js
     // or typeof document.getElementsByName !=== 'undefined'
     if(document.getElementsByName) {
         // it means the 'getElementsByName' is supported
     }
 ```
+
+- `JSON.stringify(obj, ['fliter', 'list])`
 
 ### immediately-invoked function expression (IIFE)
 - Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 

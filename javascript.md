@@ -66,7 +66,7 @@ arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
 - Reverse the array **in place**:   `Array.prototype.reverse()` 
-- Merge array **in place (append to a)**: `Array.prototype.push.apply(a,b)`
+- Concat array **in place (append to a)**: `Array.prototype.push.apply(a,b)`
 - Add item to head: `arr.unshift('a')`
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 

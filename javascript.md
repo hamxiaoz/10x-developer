@@ -73,7 +73,9 @@ Value
 - **in place** copy itself to itself, [start, end) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
 - Reverse **in place**:   `Array.prototype.reverse()` 
 - Sort **in place**: `arr.sort()`
+    - if no function is provided, element is **converted to string** to sort
 - Concat
+    - sort numbers: `arr.sort((a, b) => a - b);`
     - return new array: `arr.concat(arr2)`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Remove and return head, **mutate**: `arr.shift()`

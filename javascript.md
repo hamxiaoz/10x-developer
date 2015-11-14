@@ -93,16 +93,6 @@ Special objects: `null` and `undefined`
   - If you access a.name and a is {} then it returns `undefined`
   - If arr[out_of_bound_index], it returns `undefined`
 
-Check string not empty:
-`coffee: passwordNotEmpty = !!password (not empty)`
-
-Check null:
-- use `typeof instance.currentPosition  !== 'undefined'` 
-- Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
--  CoffeeScript:
-    - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
-    - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
-
 boolean: any value can be converted to boolean
 ```js
 // as false
@@ -118,6 +108,16 @@ NaN
 [] // the empty array
 {} // the empty object
 ```
+
+Check string not empty: `!!password` (it's converted to boolean first)
+
+Check null:
+- use `typeof instance.currentPosition  !== 'undefined'` 
+- Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
+-  CoffeeScript:
+    - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
+    - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
+
 
 ### comparison
 - Equality operator `==`: doesn't compare type, i.e, it converts the type first (performs type coercion) then compare

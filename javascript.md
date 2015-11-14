@@ -54,6 +54,7 @@ var a = Array('4'); // returns [4]
 var a = Array()
 var a = Array('a', 'b');
 var a = ['a', 'b']
+let arr = Array.from($('a')); // from nodelist
 ```
 - can change length, like C# list: `a.push('c')`
 - can hold **different** data type

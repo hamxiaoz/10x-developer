@@ -72,6 +72,7 @@ arr.length == 101 // !!!`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Add item to head: `arr.unshift('a')`
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
+- Test all: `_.all` or `_.every` or `arr.every((element) => true)`
 
 ### number
 - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.

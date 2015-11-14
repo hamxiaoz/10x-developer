@@ -65,13 +65,23 @@ arr[100] = '100'
 arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
+
 - **in place** copy itself to itself, [start, end) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
 - Reverse **in place**:   `Array.prototype.reverse()` 
 - Concat
     - return new array: `arr.concat(arr2)`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Add item to head: `arr.unshift('a')`
+- Fill with value, [start, end) `arr.fill`
+
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
+
+
+Transform
+- Filter: `array.filter or _.filter or _.select`
+
+
+Test
 - Test all: `_.all` or `_.every` or `arr.every((element) => true)`
 
 ### number

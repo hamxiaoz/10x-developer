@@ -83,7 +83,7 @@ Value
 
 Transform
 - Filter: `array.filter or _.filter or _.select`
-
+- Join to string: `arr.join`
 
 Query/Test
 - Test all: `_.all` or `_.every` or `arr.every((element) => true)`

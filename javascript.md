@@ -65,7 +65,8 @@ arr[100] = '100'
 arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
-- Reverse the array **in place**:   `Array.prototype.reverse()` 
+- **in place** copy itself to itself: `copyWithin(targetIndex, startIndex, endIndex) // not include endIndex`
+- Reverse **in place**:   `Array.prototype.reverse()` 
 - Concat
     - return new array: `arr.concat(arr2)`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`

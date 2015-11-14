@@ -66,15 +66,17 @@ arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
 - Reverse the array **in place**:   `Array.prototype.reverse()` 
-- Concat array **in place (append to a)**: `Array.prototype.push.apply(a,b)`
+- Concat
+    - return new array: `arr.concat(arr2)`
+    - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Add item to head: `arr.unshift('a')`
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 
-#### number
+### number
 - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
 - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
 
-#### string
+### string
 - it's unicode of 16bit
 - can use '+' to concatenation.
 - can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.

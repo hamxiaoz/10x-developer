@@ -74,14 +74,15 @@ Value
 - Concat
     - return new array: `arr.concat(arr2)`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
+- Remove and return head, **mutate**: `arr.shift()`
 - Add item to head: `arr.unshift('a')`
 - Fill with value, [start, end) `arr.fill`
-- Do for each, **cannot break unless throw an exception** `arr.forEach`
+- Slice [start, end): `arr.slice`
 
 Iterate
 - for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 - values(): `for (let elem in arr.values())`
-
+- Do for each, **cannot break unless throw an exception** `arr.forEach`
 
 Transform
 - Filter: `array.filter or _.filter or _.select`

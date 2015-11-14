@@ -88,6 +88,7 @@ Transform
 Query/Test
 - Test all: `_.all` or `_.every` or `arr.every((element) => true)`
 - Find first, else return `undefined`: `array.find or array.findIndex`
+- Includes (ES7): `arr.includes or _.contains`
 
 
 ### number

@@ -66,6 +66,7 @@ arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
 
+Value
 - **in place** copy itself to itself, [start, end) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
 - Reverse **in place**:   `Array.prototype.reverse()` 
 - Concat
@@ -81,8 +82,10 @@ Transform
 - Filter: `array.filter or _.filter or _.select`
 
 
-Test
+Query/Test
 - Test all: `_.all` or `_.every` or `arr.every((element) => true)`
+- Find first, else return `undefined`: `array.find or array.findIndex`
+
 
 ### number
 - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.

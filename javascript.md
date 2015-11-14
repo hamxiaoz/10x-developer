@@ -109,7 +109,7 @@ NaN
 {} // the empty object
 ```
 
-Check string not empty: `!!password` (it's converted to boolean first)
+(**TODO**) Check string not empty: `!!password` (it's converted to boolean first)
 
 Check null:
 - use `typeof instance.currentPosition  !== 'undefined'` 
@@ -128,7 +128,7 @@ Check null:
     `{} != {}`
 
 ### Object
-- Check if an object is a type
+- (**TODO**) Check if an object is a type
 ```js
 function is(type, obj) {
     var clas = Object.prototype.toString.call(obj).slice(8, -1);

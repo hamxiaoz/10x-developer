@@ -78,7 +78,9 @@ Value
 - Fill with value, [start, end) `arr.fill`
 - Do for each, **cannot break unless throw an exception** `arr.forEach`
 
-- how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
+Iterate
+- for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
+- values(): `for (let elem in arr.values())`
 
 
 Transform

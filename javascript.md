@@ -71,6 +71,7 @@ Callback is usually: `element, index, array` while `element` is required
 Value
 - **in place** copy itself to itself, [start, end) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
 - Reverse **in place**:   `Array.prototype.reverse()` 
+- Sort **in place**: `arr.sort()`
 - Concat
     - return new array: `arr.concat(arr2)`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
@@ -78,6 +79,7 @@ Value
 - Add item to head: `arr.unshift('a')`
 - Fill with value, [start, end) `arr.fill`
 - Slice [start, end): `arr.slice`
+- Remove and insert: `arr.splice(start, deleteCount[, insert args])`
 
 Iterate
 - for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
@@ -91,7 +93,8 @@ Transform
     - if no initial value given, first call, previousValue is arr[0] and currentValue is arr[1]
 
 Query/Test
-- Test all: `_.all` or `_.every` or `arr.every((element) => true)`
+- Test all: `arr.every((element) => true)` or `_.all or _.every`
+- Test some: `arr.some` or `_.some or _.any`
 - Find first, else return `undefined`: `array.find or array.findIndex`
 - Includes (ES7): `arr.includes or _.contains`
 - `indexOf or lastIndexOf`

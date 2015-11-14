@@ -86,6 +86,8 @@ Iterate
 Transform
 - Filter: `array.filter or _.filter or _.select`
 - Join to string: `arr.join`
+- Reduce: `arr.reduce((previousValue, currentValue, index, array)=> {})`
+    - if no initial value given, first call, previousValue is arr[0] and currentValue is arr[1]
 
 Query/Test
 - Test all: `_.all` or `_.every` or `arr.every((element) => true)`

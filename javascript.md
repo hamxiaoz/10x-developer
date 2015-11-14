@@ -66,6 +66,8 @@ arr.length == 101 // !!!`
 ```
 - If you query a non-existent array index, you get `undefined`
 
+Callback is usually: `element, index, array` while `element` is required
+
 Value
 - **in place** copy itself to itself, [start, end) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
 - Reverse **in place**:   `Array.prototype.reverse()` 
@@ -74,6 +76,7 @@ Value
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Add item to head: `arr.unshift('a')`
 - Fill with value, [start, end) `arr.fill`
+- Do for each, **cannot break unless throw an exception** `arr.forEach`
 
 - how to iterate the array? `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
 

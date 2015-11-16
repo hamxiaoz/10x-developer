@@ -164,7 +164,10 @@ Check null:
 
 ### Object
 - (**TODO**) Check if an object is a type
-- For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)
+    - Why not `instanceof`?
+    - Why not `typeof`?
+        - For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)
+    
 ```js
 function is(type, obj) {
     var clas = Object.prototype.toString.call(obj).slice(8, -1);

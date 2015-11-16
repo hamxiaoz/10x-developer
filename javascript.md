@@ -96,6 +96,8 @@ Transform
     - if no initial value given, first call, previousValue is arr[0] and currentValue is arr[1]
 
 Query/Test
+- Check if it's array: `Array.isArray()`
+    - polyfill: `return Object.prototype.toString.call(arg) === '[object Array]';`
 - Test all: `arr.every((element) => true)` or `_.all or _.every`
 - Test some: `arr.some` or `_.some or _.any`
 - Find first, else return `undefined`: `array.find or array.findIndex`
@@ -162,6 +164,7 @@ Check null:
 
 ### Object
 - (**TODO**) Check if an object is a type
+- For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)
 ```js
 function is(type, obj) {
     var clas = Object.prototype.toString.call(obj).slice(8, -1);

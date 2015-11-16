@@ -7,3 +7,10 @@
 - `$$(selector)` 
     - returns `NodeList`, is alias of `docuemnt.querySelectorAll()`
     - `NodeList` is not array, to convert to array: `Array.prototype.slice.call(div_list)` or `[...div_list]`
+    
+
+Debug Help
+- `dir(object)`
+- `keys(object)`
+- `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
+- `monitorEvents(window, "resize")`

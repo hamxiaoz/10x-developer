@@ -36,9 +36,11 @@ $second.on('click',function(){ alert('hello everybody');})
 
 
 ## How to run ES6 in Node
+- https://cnodejs.org/topic/56460e0d89b4b49902e7fbd3
+- http://blog.andrewray.me/how-to-use-es6-in-nodejs/
+
 index.js
 ```js
-// run ES6 in node: http://blog.andrewray.me/how-to-use-es6-in-nodejs/
 require('babel-core/register');
 require('./es6code');
 

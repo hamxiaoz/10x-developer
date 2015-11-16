@@ -14,3 +14,11 @@ Debug Help
 - `keys(object)`
 - `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
 - `monitorEvents(window, "resize")`
+- `table(data)`
+```js
+var names = {
+	0: { firstName: "John", lastName: "Smith" },
+	1: { firstName: "Jane", lastName: "Doe" }
+};
+table(names);
+```

@@ -49,12 +49,12 @@ console.log _.union.apply(_, arr)
 
 #### Array
 ```js
-var a = Array(4); // []
+var a = Array(4); // array length of 4, but elements are all undefined
 var a = Array('4'); // returns [4]
 var a = Array()
 var a = Array('a', 'b');
 var a = ['a', 'b']
-let arr = Array.from($('a')); // from nodelist
+let arr = Array.from($('a')); // create from nodelist
 ```
 - can change length, like C# list: `a.push('c')`
 - can hold **different** data type

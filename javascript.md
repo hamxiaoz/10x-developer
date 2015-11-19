@@ -81,7 +81,7 @@ Value
 - Remove and return head, **mutate**: `arr.shift()`
 - Add item to head: `arr.unshift('a')`
 - Fill with value, [start, end) `arr.fill`
-- Slice [start, end): `arr.slice`
+- Slice, return shallow copy [start, end): `arr.slice`
 - Remove and insert: `arr.splice(start, deleteCount[, insert args])`
 
 Iterate

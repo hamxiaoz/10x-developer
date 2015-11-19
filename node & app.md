@@ -74,6 +74,9 @@ require(__dirname+'/../dist/my-cli')
 
 Reference: 
 - https://github.com/bevry/cson
+- https://docs.npmjs.com/files/package.json
+- http://javascriptplayground.com/blog/2015/03/node-command-line-tool/
+- https://docs.npmjs.com/misc/scripts
 
 ---
 

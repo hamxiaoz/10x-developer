@@ -186,7 +186,7 @@ NaN // the number
 {} // the empty object
 ```
 
-(**TODO**) Check string not empty: `!!password` (it's converted to boolean first)
+Check string not null or empty: `!!password` (it's converted to boolean first)
 
 Check null:
 - use `typeof instance.currentPosition  !== 'undefined'` 

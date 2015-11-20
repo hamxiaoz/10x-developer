@@ -142,6 +142,9 @@ Query/Test
         - `Number('0x1') === 1`
     - `parseInt`
         - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
+            - `parseInt('    1') === 1`
+            - `parseInt('') === NaN` returns NaN if cannot convert
+            - `parseInt('   123abc4') === 123`
         - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
     - `paserFloat`
 

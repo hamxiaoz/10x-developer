@@ -60,7 +60,7 @@ class car {
 
     
 ## Iteration
-- `for...in`: Iterate over property name, **in arbitrary order**
+- `for...in`: Iterate over property name, **in arbitrary order (because property doesn't have order)**
 
 ```js
 for (let prop in obj) {

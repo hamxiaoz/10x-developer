@@ -142,10 +142,9 @@ this year is " + 2013 => "this year is 2013"
 4+5+'3' => '93'
 ```
 
-
 ### null/empty
 Special objects: `null` and `undefined`
-- `null`: most case it can be replaced by `undefined`; NOTE `typeof null // 'object'`
+- `null`: a pointer to nothing (that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`; 
 - `undefined`: it's like null in other program. 
   - If you access a.name and a is {} then it returns `undefined`
   - If arr[out_of_bound_index], it returns `undefined`

@@ -138,6 +138,7 @@ Query/Test
         - `Number(null) === 0`
         - `Number(undefined) === NaN`
         - `Number('') === 0`
+        - `Number('a') === NaN`
     - `parseInt`
         - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
         - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0

@@ -147,6 +147,7 @@ Query/Test
             - `parseInt('   123abc4') === 123`
         - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
     - `paserFloat`
+        - It always convert to oct. If starts with 0x, it returns 0.
 
 ### string
 - it's unicode of 16bit

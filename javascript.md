@@ -51,7 +51,7 @@ console.log _.union.apply(_, arr)
 ```js
 function setName(obj) {
     obj.name = 'Andrew';
-    obj = new Object();
+    obj = new Object(); // local copy of obj now points to new object
     obj.name = 'Bella';
 }
 

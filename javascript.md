@@ -157,7 +157,7 @@ null
 undefined
 '' //the empty string, for example var thisIsFlase = Boolean('')
 0 // the number
-NaN
+NaN // the number
 
 // Anything except the above is true, for example:
 '0' // the string

@@ -39,7 +39,7 @@ console.log _.union.apply(_, arr)
 JavaScript = ECMAScript + DOM + BOM
 
 ### Type: value/ref
-- Value type: `Undefined, Null, Boolean, Number, String`
+- Value type (includes string): `Undefined, Null, Boolean, Number, String`
 - Ref type: `function, Object, Array`
 - Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
 ```js

@@ -46,6 +46,19 @@ console.log _.union.apply(_, arr)
     var a = b;
     console.log(a.name == 'b')
 ```
+- Arguments are always copied **by value**. Even if the type is reference.
+
+```js
+function setName(obj) {
+    obj.name = 'Andrew';
+    obj = new Object();
+    obj.name = 'Bella';
+}
+
+let obj = {};
+setName(obj);
+console.log(obj.name); // 'Andrew'
+```
 
 #### Array
 ```js

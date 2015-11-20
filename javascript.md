@@ -149,11 +149,10 @@ Query/Test
     - `paserFloat`
         - It always convert to oct. If starts with 0x, it returns 0.
 
-### string
-- it's unicode of 16bit
+### string (value type)
+- It's unicode of 16bit
 - `unnnn` is unicode nnnn
-- can use '+' to concatenation.
-- can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
+- Can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
 - So, if you add a string to a number (or other value) everything is converted in to a string first
 ```
 this year is " + 2013 => "this year is 2013"

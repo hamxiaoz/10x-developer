@@ -36,6 +36,8 @@ console.log _.union.apply(_, arr)
 
 ## Hows and patterns
 
+JavaScript = ECMAScript + DOM + BOM
+
 ### Type: value/ref
 - String is value type
 - ref type: function, object, array

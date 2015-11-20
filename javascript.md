@@ -159,6 +159,9 @@ this year is " + 2013 => "this year is 2013"
 '3'+4+5 => '345'
 4+5+'3' => '93'
 ```
+- To convert to string, use either `toString` or `String()`
+    - `String(null) === 'null'`
+    - `String(undefined) === 'undefined'`
 
 ### null/empty
 Special objects: `null` and `undefined`

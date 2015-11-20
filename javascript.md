@@ -130,6 +130,8 @@ Query/Test
 ### number
 - `parseInt` parses until found invalid character, + simply convert the string to int/float and it returns NaN if there is ANY invalid character.
 - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
+- if number starts with 0 and is a valid octal number, it'll be a octal number: `var octalNum = 070; // 56`
+- hex number: `var hexNum = 0xA2 or 0xf1`
 
 ### string
 - it's unicode of 16bit

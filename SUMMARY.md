@@ -10,6 +10,7 @@
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
 * [node & app](node & app.md)
    * [Atom](Atom.md)
+   * NW.js (node-webkit)
 * [meteor](meteor.md)
    * [digital ocean](digital ocean.md)
 * [angular.js](angularjs.md)

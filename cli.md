@@ -1,3 +1,4 @@
+# CLI
 
 #### How to create a package that can be used as cli (and package)?
 - use the above generator

@@ -1,7 +1,9 @@
 # CLI
 
-#### How to create a package that can be used as cli (and package)?
-- use the above generator
+## How to create a package that can be used as cli (and package)?
+
+### Folder Structure
+- use the generator: https://github.com/yeoman/generator-node
 - create a `bin` folder, create a file called: 'my-cli'
 ```js
 #!/usr/bin/env node
@@ -29,3 +31,5 @@ Reference:
 - https://docs.npmjs.com/files/package.json
 - http://javascriptplayground.com/blog/2015/03/node-command-line-tool/
 - https://docs.npmjs.com/misc/scripts
+
+### Useful Libs

@@ -39,5 +39,6 @@ Reference:
     - so you can have a make file like this: https://github.com/madrobby/zepto/blob/master/make
     - to run, do `coffee make testName`
 - color in cli: https://www.npmjs.com/package/chalk
+![](https://github.com/chalk/ansi-styles/raw/master/screenshot.png)
 
 A list of cli tools: https://github.com/sindresorhus/awesome-nodejs#command-line-apps

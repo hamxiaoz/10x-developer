@@ -33,3 +33,11 @@ Reference:
 - https://docs.npmjs.com/misc/scripts
 
 ### Useful Libs
+- interactive input https://github.com/SBoudrias/Inquirer.js
+- full blown: https://github.com/tj/commander.js
+- shell commands, and make tool in js: https://github.com/shelljs/shelljs
+    - so you can have a make file like this: https://github.com/madrobby/zepto/blob/master/make
+    - to run, do `coffee make testName`
+- color in cli: https://www.npmjs.com/package/chalk
+
+A list of cli tools: https://github.com/sindresorhus/awesome-nodejs#command-line-apps

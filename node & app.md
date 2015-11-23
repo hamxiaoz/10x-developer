@@ -78,10 +78,3 @@ Reference:
 - http://javascriptplayground.com/blog/2015/03/node-command-line-tool/
 - https://docs.npmjs.com/misc/scripts
 
----
-
-# Node-webkit
-Xml parser:
-- xml2js, uses libxml, slow!
-- easysax, pure js, faster
-- node-expat, uses native module, faster (The node-webkit has limitations on using native module: cannot rename, has to compile with hack version of gyp)

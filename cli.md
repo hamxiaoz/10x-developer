@@ -34,6 +34,7 @@ Reference:
 
 ### Useful Libs
 - interactive input https://github.com/SBoudrias/Inquirer.js
+- cli helper: https://www.npmjs.com/package/meow
 - full blown: https://github.com/tj/commander.js
 - shell commands, and make tool in js: https://github.com/shelljs/shelljs
     - so you can have a make file like this: https://github.com/madrobby/zepto/blob/master/make

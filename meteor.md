@@ -88,3 +88,4 @@ if (Meteor.isClient) {
     - go directly to S3
     - authorization via S3
 - Meteor-files https://github.com/VeliovGroup/Meteor-Files/
+- Upload to any path in server: https://github.com/tomitrescak/meteor-uploads

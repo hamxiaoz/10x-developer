@@ -8,6 +8,9 @@ Kadira Academy
 - x [Meteor Performance 101](https://kadira.io/academy/meteor-performance-101)
 - _ [bulletproof](https://bulletproofmeteor.com/)
 
+Little Projects
+- https://themeteorchef.com/snippets/importing-csvs/
+
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)
 

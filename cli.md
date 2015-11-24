@@ -22,9 +22,10 @@ require(__dirname+'/../dist/my-cli')
 },
 
 ```
-- To develop:
-    - Write code in `lib` folder
-    - Make sure the 'prepublish' script will babel your source to `dist` folder
+- So the flow is: 
+    - We tell package the bin file is in the `bin` folder
+    - The bin file invokes the actual script in `dist` folder
+    - We develop the script in `lib` folder and babel the source ('prepublish') to `dist` folder
 
 Reference: 
 - https://github.com/bevry/cson

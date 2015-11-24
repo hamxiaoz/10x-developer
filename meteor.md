@@ -87,6 +87,7 @@ if (Meteor.isClient) {
 
 ### fs
 - collection-fs
+    - tips: http://blog.zipboard.co/2015/11/23/cfs-tips-and-tricks-for-meteorjs/
 - slingshot: https://atmospherejs.com/edgee/slingshot
     - go directly to S3
     - authorization via S3

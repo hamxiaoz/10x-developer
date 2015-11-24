@@ -87,5 +87,5 @@ if (Meteor.isClient) {
 - slingshot: https://atmospherejs.com/edgee/slingshot
     - go directly to S3
     - authorization via S3
-- Meteor-files https://github.com/VeliovGroup/Meteor-Files/
+- Upload and download in server https://github.com/VeliovGroup/Meteor-Files/
 - Upload to any path in server: https://github.com/tomitrescak/meteor-uploads

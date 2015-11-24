@@ -77,3 +77,13 @@ if (Meteor.isClient) {
   });
 }
 ```
+
+---
+
+## Packages
+
+### fs
+- collection-fs
+- slingshot: https://atmospherejs.com/edgee/slingshot
+    - go directly to S3
+    - authorization via S3

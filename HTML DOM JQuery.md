@@ -22,6 +22,7 @@
 URL Query String:
 - ` http://server/path/program?search=ruby&results=10`
 - `/shoes?order=desc&shoe[color]=blue&shoe[type]=converse`
+- some browser has max length limit: http://stackoverflow.com/a/812962/166286
 
 Charater entity: 
 - &gt, &lt, &amp, &copy, or use &#100 (use number instead of names)

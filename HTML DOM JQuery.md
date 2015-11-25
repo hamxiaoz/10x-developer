@@ -24,6 +24,10 @@ URL Query String:
 - `/shoes?order=desc&shoe[color]=blue&shoe[type]=converse`
 - some browser has max length limit: http://stackoverflow.com/a/812962/166286
 
+URL Encoding
+- everything not ASCII will be encoded
+- Eg, `%920` is space
+
 Charater entity: 
 - &gt, &lt, &amp, &copy, or use &#100 (use number instead of names)
 - http://www.w3schools.com/tags/ref_entities.asp

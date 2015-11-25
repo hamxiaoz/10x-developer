@@ -19,7 +19,9 @@
 </html>
 ```
 
-URL Query String: ` http://server/path/program?search=ruby&results=10`
+URL Query String:
+- ` http://server/path/program?search=ruby&results=10`
+- `/shoes?order=desc&shoe[color]=blue&shoe[type]=converse`
 
 Charater entity: 
 - &gt, &lt, &amp, &copy, or use &#100 (use number instead of names)

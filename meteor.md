@@ -90,6 +90,10 @@ if (Meteor.isClient) {
     - tips: http://blog.zipboard.co/2015/11/23/cfs-tips-and-tricks-for-meteorjs/
 - slingshot: https://atmospherejs.com/edgee/slingshot
     - go directly to S3
-    - authorization via S3
+    - Set ACL to 'private' so only your meteor app can download the file
+    - Use S3 sdk to generate pre-signed url for public download
+        - https://github.com/peerlibrary/meteor-aws-sdk
+        - http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-services.html
+        - http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getSignedUrl-property
 - Upload and download in server https://github.com/VeliovGroup/Meteor-Files/
 - Upload to any path in server: https://github.com/tomitrescak/meteor-uploads

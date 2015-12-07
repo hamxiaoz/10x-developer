@@ -151,6 +151,7 @@ Query/Test
         - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
     - `paserFloat`
         - It always convert to oct. If starts with 0x, it returns 0.
+- Get digits: `String(321)split('')`
 
 ### string (value type)
 - It's unicode of 16bit
@@ -165,6 +166,7 @@ this year is " + 2013 => "this year is 2013"
 - To convert to string, use either `toString` or `String()`
     - `String(null) === 'null'`
     - `String(undefined) === 'undefined'`
+- In place sort string with numbers: `'8902'.split('').sort().join('')`
 
 ### null/empty
 Special objects: `null` and `undefined`

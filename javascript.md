@@ -114,8 +114,11 @@ Iterate
 Transform
 - Filter: `array.filter or _.filter or _.select`
 - Join to string: `arr.join`
-- Reduce: `arr.reduce((previousValue, currentValue, index, array)=> {})`
+- Reduce: `arr.reduce(callback, initial) # call back is (previousValue, currentValue, index, array)=> {})`
     - if no initial value given, first call, previousValue is arr[0] and currentValue is arr[1]
+    ```
+    [1,2,3].reduce((pre, cur)=> pre+cur); // 6
+    ```
 
 Query/Test
 - Check if it's array: `Array.isArray()`

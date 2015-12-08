@@ -102,8 +102,9 @@ Query/Test
 - Test all: `arr.every((element) => true)` or `_.all or _.every`
 - Test some: `arr.some` or `_.some or _.any`
 - Find first, else return `undefined`: `array.find or array.findIndex`
-- Includes (ES7): `arr.includes or _.contains`
-- `indexOf or lastIndexOf`
+- Includes:
+    - (ES7): `arr.includes or _.contains`
+    - `indexOf or lastIndexOf`
 
 
 ### number

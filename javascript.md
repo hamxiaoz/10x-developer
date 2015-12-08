@@ -148,7 +148,8 @@ this year is " + 2013 => "this year is 2013"
 
 ### Date ([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
 - `new Date()`
-- `Date.utc(2005, 0, 3)` year and month is required, month is 0 index
+- `new Date(2005, 0, 3)` local time; year and month is required, month is 0 index
+- `Date.UTC(2005, 0, 3)` UTC time; year and month is required, month is 0 index
 
 ### null/empty
 Special objects: `null` and `undefined`

@@ -80,7 +80,7 @@ Value
 - Add item to head: `arr.unshift('a')`
 - Fill with value, [start, end) `arr.fill`
 - Slice, return shallow copy [start, end): `arr.slice`
-- Remove and insert: `arr.splice(start, deleteCount[, insert args])`, it will return the removed
+- Remove and insert (when delteCount is 0): `arr.splice(start, deleteCount[, insert args])`, it will return the removed
 
 Iterate
 - for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`

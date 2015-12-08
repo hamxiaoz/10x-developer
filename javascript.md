@@ -147,9 +147,10 @@ this year is " + 2013 => "this year is 2013"
 - In place sort string with numbers: `'8902'.split('').sort().join('')`
 
 ### Date ([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
+Only using new will return the objet; Others return the number or string.
 - `new Date()`
 - `new Date(2005, 0, 3)` local time; year and month is required, month is 0 index
-- `Date.UTC(2005, 0, 3)` UTC time; year and month is required, month is 0 index
+- `Date.UTC(2005, 0, 3)` UTC time; Return number; year and month is required, month is 0 index
 
 ### null/empty
 Special objects: `null` and `undefined`

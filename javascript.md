@@ -148,10 +148,11 @@ Query/Test
             - `parseInt('    1') === 1`
             - `parseInt('') === NaN` returns NaN if cannot convert
             - `parseInt('   123abc4') === 123`
-        - always use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
+        - **always** use radix: `parseInt('09', 10)` Otherwise '09' will be treated as hex and result as 0
     - `paserFloat`
         - It always convert to oct. If starts with 0x, it returns 0.
 - Get digits: `String(321)split('')`
+- Check if it's integer: `Number.isInteger` [polyfill on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
 
 ### string (value type)
 - It's unicode of 16bit

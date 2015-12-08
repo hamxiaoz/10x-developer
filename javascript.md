@@ -237,7 +237,8 @@ is('String', new String('test')); // true
 
 ### Function
 - Always has 'arguments' for it's arguments, it's array like
-- Because of 'arguemnts', there is no function overloading.
+- Because of 'arguments', there is no function overloading.
+- arguments are **always pass by value**
 
 ### immediately-invoked function expression (IIFE)
 - Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 

@@ -211,8 +211,9 @@ Check null:
     `{} != {}`
 
 ### Object
-- `typeof`, check if it's a **basic type**, it only returns those 5 types: 'string', 'number', 'object', etc.
+- `typeof`, check if it's a **basic type**, it only returns those types: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol'
     - so `typeof [] === 'object`
+    - `typeof null === 'object';` See (MDN explanation)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof]
 - `a instance of Constructor`, check if it's a **reference type**
     - It's constructor, so `[] instanceof Object`, not 'object'
 - (**TODO**) Check if an object is a type

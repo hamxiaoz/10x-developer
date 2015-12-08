@@ -146,6 +146,10 @@ this year is " + 2013 => "this year is 2013"
     - `String(undefined) === 'undefined'`
 - In place sort string with numbers: `'8902'.split('').sort().join('')`
 
+### Date ([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
+- `new Date()`
+- `Date.utc(2005, 0, 3)` year and month is required, month is 0 index
+
 ### null/empty
 Special objects: `null` and `undefined`
 - `null`: a pointer to nothing (that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`; 

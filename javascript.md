@@ -151,6 +151,7 @@ Only **using new will return the object**; Others will return the number or stri
 - `new Date()`
 - `new Date(2005, 0, 3)` local time; year and month is required, month is 0 index
 - `Date.UTC(2005, 0, 3)` UTC time; Return number; year and month is required, month is 0 index
+- Use [moment.js](http://momentjs.com/)
 
 ### null/empty
 Special objects: `null` and `undefined`

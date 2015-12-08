@@ -74,6 +74,7 @@ Value
     - sort numbers: `arr.sort((a, b) => a - b);`
 - Concat
     - return new array: `arr.concat(arr2)`
+        - has flatten effect: `[1].concat(2, [3,4]) -> [1,2,3,4]`
     - **in place (append b to a)**: `Array.prototype.push.apply(a,b)`
 - Remove and return head, **mutate**: `arr.shift()`
 - Add item to head: `arr.unshift('a')`

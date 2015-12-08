@@ -152,6 +152,11 @@ Only **using new will return the object**; Others will return the number or stri
 - `new Date(2005, 0, 3)` local time; year and month is required, month is 0 index
 - `Date.UTC(2005, 0, 3)` UTC time; Return number; year and month is required, month is 0 index
 - Use [moment.js](http://momentjs.com/)
+```js
+const now = moment();
+const future = moment('2030-03-30');
+const diffInDays = now.diff(future, 'days');
+```
 
 ### null/empty
 Special objects: `null` and `undefined`

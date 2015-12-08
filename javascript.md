@@ -41,33 +41,8 @@ JavaScript = ECMAScript + DOM + BOM
 ### Type: value/ref
 - Value type (includes string): `Undefined, Null, Boolean, Number, String`
 - Ref type: `function, Object, Array`
-- `typeof` returns following string:
-    - `undefined`
-    - `boolean`
-    - `string`
-    - `number`
-    - `object` NOTE typeof null is object
-    - `function`
-- Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
-```js
-    var a = {};
-    var b = {name:'b'};
-    var a = b;
-    console.log(a.name == 'b')
-```
-- Arguments are always copied **by value**. Even if the type is reference.
+- `typeof` returns following string, see below
 
-```js
-function setName(obj) {
-    obj.name = 'Andrew';
-    obj = new Object(); // local copy of obj now points to new object
-    obj.name = 'Bella';
-}
-
-let obj = {};
-setName(obj);
-console.log(obj.name); // 'Andrew'
-```
 
 #### Array
 ```js
@@ -243,7 +218,26 @@ is('String', new String('test')); // true
 ### Function
 - Always has 'arguments' for it's arguments, it's array like
 - Because of 'arguments', there is no function overloading.
-- arguments are **always pass by value**
+- Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
+```js
+    var a = {};
+    var b = {name:'b'};
+    var a = b;
+    console.log(a.name == 'b')
+```
+- Arguments are always copied **by value**. Even if the type is reference.
+
+```js
+function setName(obj) {
+    obj.name = 'Andrew';
+    obj = new Object(); // local copy of obj now points to new object
+    obj.name = 'Bella';
+}
+
+let obj = {};
+setName(obj);
+console.log(obj.name); // 'Andrew'
+```
 
 ### immediately-invoked function expression (IIFE)
 - Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 

@@ -211,9 +211,9 @@ Check null:
     `{} != {}`
 
 ### Object
-- `typeof`, returns only 5 types: 'string', 'number', 'object', etc.
+- `typeof`, check if it's a **basic type**, it only returns those 5 types: 'string', 'number', 'object', etc.
     - so `typeof [] === 'object`
-- `a instance of Constructor`
+- `a instance of Constructor`, check if it's a **reference type**
     - It's constructor, so `[] instanceof Object`, not 'object'
 - (**TODO**) Check if an object is a type
     - Why not `instanceof`?

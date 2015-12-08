@@ -213,6 +213,8 @@ Check null:
 ### Object
 - `typeof`, returns only 5 types: 'string', 'number', 'object', etc.
     - so `typeof [] === 'object`
+- `a instance of Constructor`
+    - It's constructor, so `[] instanceof Object`, not 'object'
 - (**TODO**) Check if an object is a type
     - Why not `instanceof`?
     - Why not `typeof`? Because typeof returns only those 5 types, and array is Object type. For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)

@@ -88,9 +88,9 @@ Iterate
 - Do for each, **cannot break unless throw an exception** `arr.forEach`
 
 Transform
-- Filter: `array.filter or _.filter or _.select`
-- Join to string: `arr.join`
-- Reduce: `arr.reduce(callback, initial) # call back is (previousValue, currentValue, index, array)=> {})`
+- filter: `array.filter or _.filter or _.select`
+- join to string: `arr.join`
+- reduce and reduceRight(from end): `arr.reduce(callback, initial) # call back is (previousValue, currentValue, index, array)=> {})`
     - if no initial value given, first call, previousValue is arr[0] and currentValue is arr[1]
     ```
     [1,2,3].reduce((pre, cur)=> pre+cur); // 6

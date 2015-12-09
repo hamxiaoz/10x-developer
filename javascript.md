@@ -245,25 +245,41 @@ is('String', new String('test')); // true
 - Always has 'arguments' for it's arguments, it's array like
 - Because of 'arguments', there is no function overloading.
 - Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
-```js
+
+    ```js
     var a = {};
     var b = {name:'b'};
     var a = b;
     console.log(a.name == 'b')
-```
+    ```
 - Arguments are always copied **by value**. Even if the type is reference.
 
-```js
-function setName(obj) {
-    obj.name = 'Andrew';
-    obj = new Object(); // local copy of obj now points to new object
-    obj.name = 'Bella';
-}
+    ```js
+    function setName(obj) {
+        obj.name = 'Andrew';
+        obj = new Object(); // local copy of obj now points to new object
+        obj.name = 'Bella';
+    }
+    
+    let obj = {};
+    setName(obj);
+    console.log(obj.name); // 'Andrew'
+    ```
+- Declaration (will be hoisted) vs Expression
 
-let obj = {};
-setName(obj);
-console.log(obj.name); // 'Andrew'
-```
+    ```js
+    alert(sum(10,10));
+    function sum(num1, num2) {
+        return num1 + num2;
+    }
+    
+    // error: alert(sum(10,10));
+    let sum = function(num1, num2) {
+        return num1 + num2;
+    };
+    alert(sum(10,10));
+    
+    ```
 
 ### immediately-invoked function expression (IIFE)
 - Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 

@@ -26,6 +26,21 @@ require(__dirname+'/../dist/my-cli')
     - We tell package the bin file is in the `bin` folder
     - The bin file invokes the actual script in `dist` folder
     - We develop the script in `lib` folder and babel the source ('prepublish') to `dist` folder
+    - To test locally on dev machine
+    
+    ```sh
+    npm link
+    # then start using the cli version
+    ```
+    - To publish internally, do
+    
+    ```sh
+    npm version minor # update version
+    npm pack # this will create the abc-1.0.0.tgz file
+    
+    # to install and use
+    npm install -g abc-1.0.0.tgz
+    ```
 
 Reference: 
 - https://github.com/bevry/cson

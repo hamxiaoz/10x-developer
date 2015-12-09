@@ -144,6 +144,7 @@ Query/Test
 - It's unicode of 16bit
 - `u1235` is unicode nnnn
 - `charAt(index), indexOf`
+- `match(regex)` returns matches
 - `substr(index, length) vs substring(index, endIndex)` not including endIndex`
     - if negative number: 
         - `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`
@@ -185,7 +186,7 @@ const diffInDays = now.diff(future, 'days');
 ```
 
 ### Regex
-- match: return null or array (like)
+- `match`: return null or array (like)
 
     ```js
     const pattern = /.b(c)/
@@ -194,7 +195,7 @@ const diffInDays = now.diff(future, 'days');
     matches[1] // 'c' the 1st group
     // if with global, exec returns different mathes on multiple calls
     ```
-- test: return boolean
+- `test`: return boolean
 
 ### null/empty
 Special objects: `null` and `undefined`

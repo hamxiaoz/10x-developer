@@ -211,6 +211,16 @@ Check null:
     - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
     - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
 
+### Special reference type: String, Boolean, Number
+- it's created on the fly then get destroyed.
+```js
+var a = 'abc';
+a.subString(0); // a is value type, why it has methods?
+// It's doing something like this:
+var tmp = new String('abc');
+var s = tmp.subString(0);
+tmp = null;
+```
 
 ### comparison
 - Equality operator `==`: doesn't compare type, i.e, it converts the type first (performs type coercion) then compare

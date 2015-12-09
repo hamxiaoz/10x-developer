@@ -242,7 +242,7 @@ is('String', new String('test')); // true
 - `JSON.stringify(obj, ['fliter', 'list])`
 
 ### Function
-- Always has 'arguments' for it's arguments, it's array like
+- Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like
 - Because of 'arguments', there is no function overloading.
 - Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
 

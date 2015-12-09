@@ -253,8 +253,8 @@ is('String', new String('test')); // true
     console.log(a.name == 'b')
     ```
 - `function.length` required params length
-- `funnction.apply(scope, paramsArr)`
-- `protottype.call(scope, param1, param2)` the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+- `Funnction.prototype.apply(scope, paramsArr)`
+- `Function.prototype.call(scope, param1, param2)` the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
 - Arguments are always copied **by value**. Even if the type is reference.
 
     ```js

@@ -268,6 +268,12 @@ is('String', new String('test')); // true
 
 - `JSON.stringify(obj, ['fliter', 'list])`
 
+### Global object
+Methods: 
+- `isNaN, etc`
+- `encodeURI()` replace space to %20
+- `encodeURIComponent()` replace space and others such as '/' and '.', so don't use it for uri, only use it for uri component (thus its name)
+
 ### Function
 - Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like
 - Because of 'arguments', there is no function overloading.

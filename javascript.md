@@ -142,7 +142,8 @@ Query/Test
     b.x // will be 'x'
     ```
 - It's unicode of 16bit
-- `unnnn` is unicode nnnn
+- `u1235` is unicode nnnn
+- `charAt(index)`
 - Can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
 - So, if you add a string to a number (or other value) everything is converted in to a string first
     ```
@@ -154,6 +155,17 @@ Query/Test
     - `String(null) === 'null'`
     - `String(undefined) === 'undefined'`
 - In place sort string with numbers: `'8902'.split('').sort().join('')`
+
+### Special reference type: String, Boolean, Number
+- it's created on the fly then get destroyed.
+```js
+var a = 'abc';
+a.subString(0); // a is value type, why it has methods?
+// It's doing something like this:
+var tmp = new String('abc');
+var s = tmp.subString(0);
+tmp = null;
+```
 
 ### Date ([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
 Only **using new will return the object**; Others will return the number or string.
@@ -210,17 +222,6 @@ Check null:
 -  CoffeeScript:
     - coffeescript: ? or ?. (the latter can soak up so a.address?.zip returns undefined instead of typeerror)
     - CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
-
-### Special reference type: String, Boolean, Number
-- it's created on the fly then get destroyed.
-```js
-var a = 'abc';
-a.subString(0); // a is value type, why it has methods?
-// It's doing something like this:
-var tmp = new String('abc');
-var s = tmp.subString(0);
-tmp = null;
-```
 
 ### comparison
 - Equality operator `==`: doesn't compare type, i.e, it converts the type first (performs type coercion) then compare

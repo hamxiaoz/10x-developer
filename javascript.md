@@ -143,7 +143,7 @@ Query/Test
     ```
 - It's unicode of 16bit
 - `u1235` is unicode nnnn
-- `charAt(index)`
+- `charAt(index), indexOf`
 - `substr(index, length) vs substring(index, endIndex)` not including endIndex`
     - if negative number: 
         - `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`

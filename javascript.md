@@ -159,13 +159,16 @@ const diffInDays = now.diff(future, 'days');
 ```
 
 ### Regex
-```js
-const pattern = /.b(c)/
-const matches = pattern.exec('input text: abc bbc');
-matches[0] // 'abc' the whole match
-matches[1] // 'c' the 1st group
-// if with global, exec returns different mathes on multiple calls
-```
+- match: return null or array (like)
+
+    ```js
+    const pattern = /.b(c)/
+    const matches = pattern.exec('input text: abc bbc');
+    matches[0] // 'abc' the whole match
+    matches[1] // 'c' the 1st group
+    // if with global, exec returns different mathes on multiple calls
+    ```
+- test: return boolean
 
 ### null/empty
 Special objects: `null` and `undefined`

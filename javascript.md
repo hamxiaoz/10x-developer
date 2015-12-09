@@ -144,7 +144,7 @@ Query/Test
 - It's unicode of 16bit
 - `u1235` is unicode nnnn
 - `charAt(index)`
-- `substr(index, length) vs substring(index, endIndex) // not including endIndex`
+- `substr(index, length) vs substring(index, endIndex)` not including endIndex`
 - Can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
 - So, if you add a string to a number (or other value) everything is converted in to a string first
     ```

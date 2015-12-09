@@ -145,7 +145,10 @@ Query/Test
 - `u1235` is unicode nnnn
 - `charAt(index)`
 - `substr(index, length) vs substring(index, endIndex)` not including endIndex`
-    - if negative number: `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`
+    - if negative number: 
+        - `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`
+        - `substr(index, length)` index becomes index+length; length will become 0
+        - `substring` will treat negative as 0
 - Can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
 - So, if you add a string to a number (or other value) everything is converted in to a string first
     ```

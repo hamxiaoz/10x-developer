@@ -145,7 +145,7 @@ Query/Test
 - `u1235` is unicode nnnn
 - `charAt(index), indexOf`
 - `match(regex)` returns matches
-- `replace(regex/g, 'to replace')`
+- `replace(regex/g, 'to replace')` specials '$1', etc.
 - `substr(index, length) vs substring(index, endIndex)` not including endIndex`
     - if negative number: 
         - `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`

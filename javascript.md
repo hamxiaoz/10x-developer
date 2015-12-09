@@ -252,6 +252,8 @@ is('String', new String('test')); // true
     var a = b;
     console.log(a.name == 'b')
     ```
+- `function.length` required params length
+- `funnction.apply(scope, paramsArr)`
 - Arguments are always copied **by value**. Even if the type is reference.
 
     ```js

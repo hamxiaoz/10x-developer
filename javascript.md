@@ -132,15 +132,24 @@ Query/Test
 - Check if it's integer: `Number.isInteger` [polyfill on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
 
 ### string (value type)
+- string is value tpye. 
+    ```js
+    var a = 'a';
+    a.x = 'x';
+    a.x // will be undefined
+    var b = new String('b');
+    b.x = 'x';
+    b.x // will be 'x'
+    ```
 - It's unicode of 16bit
 - `unnnn` is unicode nnnn
 - Can mix different type using '+' since JavaScript is weak typed. The non-string type is auto converted to string.
 - So, if you add a string to a number (or other value) everything is converted in to a string first
-```
-this year is " + 2013 => "this year is 2013"
-'3'+4+5 => '345'
-4+5+'3' => '93'
-```
+    ```
+    this year is " + 2013 => "this year is 2013"
+    '3'+4+5 => '345'
+    4+5+'3' => '93'
+    ```
 - To convert to string, use either `toString` or `String()`
     - `String(null) === 'null'`
     - `String(undefined) === 'undefined'`

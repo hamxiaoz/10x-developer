@@ -268,7 +268,8 @@ is('String', new String('test')); // true
     }
 ```
 
-- `JSON.stringify(obj, ['fliter', 'list])`
+- `JSON.stringify(obj, ['fliter', 'list])` can filter 
+- [`defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) can set 'writable' and custom setter/getter
 
 ### Global object
 Methods: 

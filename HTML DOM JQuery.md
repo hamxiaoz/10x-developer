@@ -252,6 +252,9 @@ css related:
 - '-' is reserved keyword, so 'background-color' is illegal. Use cameralCase: backgroundColor.
 - use element.style **only** works if the style is directly set in html.
 
+#### scroll
+- element.scrollTop: the scrollbar offset to top, >=0. `$(document).scrollTop()`
+
 ---
 
 # JQuery

@@ -254,6 +254,7 @@ css related:
 
 #### scroll
 - element.scrollTop: the scrollbar offset to top, >=0. `$(document).scrollTop()`
+- `$(e).offset()` the {top, left} to document
 
 ---
 

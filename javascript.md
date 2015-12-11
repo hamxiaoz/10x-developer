@@ -241,11 +241,11 @@ Check null:
     `{} != {}`
 
 ### Object
-- `typeof`, check if it's a **basic type**, it only returns those types: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
+- `typeof`, check if it's a **basic type plus others**, it only returns those types: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`
     - `typeof null === 'object';` See (MDN explanation)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof]
 - `a instance of Constructor`, check if it's a **reference type**
-    - It's constructor, so `[] instanceof Object`, not 'object'
+    - Use constructor, not string: so `[] instanceof Object`, not 'object'
 - (**TODO**) Check if an object is a type
     - Why not `instanceof`?
     - Why not `typeof`? Because typeof returns only those 5 types, and array is Object type. For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)

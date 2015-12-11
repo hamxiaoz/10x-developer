@@ -13,7 +13,7 @@ Highlights:
 
 #### Difference between _.throttle and _.debounce?
 https://ruby-china.org/topics/22494
-- throttle: At most that fast. Such as when typing to seach, don't send too many requests.
+- throttle: At most that fast, usually used when invoking soure happens really frequently. Such as when typing to seach, don't send too many requests, scroll, mouse move, etc.
 - debounce: wait till no change. Such as calc layout when resize is finished.
 
 #### Convert an object into a list of [key, value] pairs.

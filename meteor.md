@@ -11,6 +11,9 @@ Kadira Academy
 Little Projects
 - https://themeteorchef.com/snippets/importing-csvs/
 
+Tools:
+- admin for mongo db: http://www.drmongo.com/
+
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)
 

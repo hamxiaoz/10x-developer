@@ -255,6 +255,8 @@ css related:
 #### scroll
 - element.scrollTop: the scrollbar offset to top, >=0. `$(document).scrollTop()`
 - `$(e).offset()` the {top, left} to document
+- scroll to do something: [pen](http://codepen.io/hamxiaoz/pen/yeYYrm)
+    - compare scrollTop to the object's offset
 
 ---
 

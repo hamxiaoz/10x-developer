@@ -12,7 +12,9 @@ Highlights:
 ## [Underscore](http://underscorejs.org/) and [underscore.string](https://epeli.github.io/underscore.string/)
 
 #### Difference between _.throttle and _.debounce?
-At most that fast vs wait till no change https://ruby-china.org/topics/22494
+https://ruby-china.org/topics/22494
+- throttle: At most that fast. Such as when typing to seach, don't send too many requests.
+- debounce: wait till no change. Such as calc layout when resize is finished.
 
 #### Convert an object into a list of [key, value] pairs.
 ```js

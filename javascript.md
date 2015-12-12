@@ -244,7 +244,8 @@ Check null:
 - `typeof`, check if it's a **basic type plus others**, it only returns those types: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`
     - `typeof null === 'object';` See (MDN explanation)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof]
-- `a instance of Constructor`, check if it's a **reference type**
+    - usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
+- `a instanceof Constructor`, check if it's a **reference type**
     - Use constructor, not string: so `[] instanceof Object`, not 'object'
 - (**TODO**) Check if an object is a type
     - Why not `instanceof`?

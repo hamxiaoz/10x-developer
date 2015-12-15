@@ -8,31 +8,32 @@ References:
 Guide: https://github.com/airbnb/javascript
 
 - DON'T use 'single var pattern'
-```js
-// good
-const items = getItems();
-const goSportsTeam = true;
-const dragonball = 'z';
-```
+    ```js
+    // good
+    const items = getItems();
+    const goSportsTeam = true;
+    const dragonball = 'z';
+    ```
 
 - new line
-```js
-$second
-    .on('click',function(){ alert('hello everybody');})
-    .fadeIn('slow')
-    .animate({height:'120px'},500);
-// vs 
-$second.on('click',function(){ alert('hello everybody');}).
-    fadeIn('slow').
-    animate({height:'120px'},500);
-// vs
-$second.on('click',function(){ alert('hello everybody');})
-    .fadeIn('slow')
-    .animate({height:'120px'},500);
-```
-
+    ```js
+    $second
+        .on('click',function(){ alert('hello everybody');})
+        .fadeIn('slow')
+        .animate({height:'120px'},500);
+    // vs 
+    $second.on('click',function(){ alert('hello everybody');}).
+        fadeIn('slow').
+        animate({height:'120px'},500);
+    // vs
+    $second.on('click',function(){ alert('hello everybody');})
+        .fadeIn('slow')
+        .animate({height:'120px'},500);
+    ```
+    
 - Don't use parentheses for unary operator such as `delete, void, typeof`
 - Use single quote '' for strings
+- Use function declarations instead of function expressions.
 
 
 ## How to run ES6 in Node

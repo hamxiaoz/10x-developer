@@ -18,5 +18,5 @@
 * [regex](regex.md)
 * [ruby](Ruby.md)
 * [Cheatsheets](Cheatsheets/README.md)
-   * ASCII
+   * [ASCII](Cheatsheets/ascii.gif)
 

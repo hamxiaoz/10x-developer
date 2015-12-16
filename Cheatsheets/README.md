@@ -1,3 +1,4 @@
 A collection of cheatsheets.
 
-![](ascii.gif)
+#### ASCII
+![ASCII](ascii.gif)

@@ -17,5 +17,5 @@
 * [angular.js](angularjs.md)
 * [regex](regex.md)
 * [ruby](Ruby.md)
-* Cheatsheets
+* [Cheatsheets](/Cheatsheets/README.md)
 

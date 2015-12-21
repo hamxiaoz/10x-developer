@@ -263,13 +263,14 @@ Check null:
     is('String', new String('test')); // true
     ```
     
-- object detection
+- object detection, check if it has property or method
 
     ```js
-        // or typeof document.getElementsByName !=== 'undefined'
-        if(document.getElementsByName) {
-            // it means the 'getElementsByName' is supported
-        }
+        if (document.getElementsByName)
+        
+        // or
+        if (typeof document.getElementsByName === 'function')
+        if (typeof document.getElementsByName !== 'undefined')
     ```
 
 - `JSON.stringify(obj, ['fliter', 'list])` can filter 
@@ -283,6 +284,7 @@ Methods:
 - `let id = setTimeout(()=>console.log('future'), 1000)`, `clearTimeout(id)`
 - `let id = setInterval(()=>console.log('again'), 1000)`, `clearInterval(id)` Use setTimout to emulate interval, as timeout is pushed to the queue, where interval might run in overlap.
 - `window.print` display print window
+- `location`: window.location is the same as document.location
 
 ### Function
 - Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like

@@ -281,7 +281,7 @@ Methods:
 - `encodeURI()` replace space to %20
 - `encodeURIComponent()` replace space and others such as '/' and '.', so don't use it for uri, only use it for uri component (thus its name)
 - `let id = setTimeout(()=>console.log('future'), 1000)`, `clearTimeout(id)`
-- `let id = setInterval(()=>console.log('again'), 1000)`, `clearInterval(id)`
+- `let id = setInterval(()=>console.log('again'), 1000)`, `clearInterval(id)` Use setTimout to emulate interval, as timeout is pushed to the queue, where interval might run in overlap.
 
 ### Function
 - Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like

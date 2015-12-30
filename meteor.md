@@ -14,6 +14,28 @@ Little Projects
 Tools:
 - admin for mongo db: http://www.drmongo.com/
 
+## Logging via winston and loggly
+Inspired from this guide: https://meteorhacks.com/logging-support-for-meteor
+1. Sign up [loggly](loggly.com)
+2. add 'winston' and 'winston-loggly' to package.json
+3. code
+
+```coffee
+# Setup logging in lib/config.js
+@LOGGER = Meteor.npmRequire 'winston'
+Meteor.npmRequire 'winston-loggly'
+LOGGER.add(LOGGER.transports.Loggly, {
+  token: "YOUR-TOKEN",
+  subdomain: "YOUR-DOMAIN",
+  tags: ["YOUR-TAG"],
+  json:true,
+  handleExceptions: true, # handle exception in logger
+  humanReadableUnhandledException: true
+});
+LOGGER.existOnError = false # don't exit on error
+LOGGER.info 'logger started'
+```
+
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)
 

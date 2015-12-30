@@ -18,10 +18,10 @@ Tools:
 Inspired from this guide: https://meteorhacks.com/logging-support-for-meteor
 1. Sign up [loggly](loggly.com)
 2. add 'winston' and 'winston-loggly' to package.json
-3. code
+3. code Don't forget Meteor.npmRequire is only available on **server side**
 
 ```coffee
-# Setup logging in lib/config.js
+# Setup logging in server/config.js
 @LOGGER = Meteor.npmRequire 'winston'
 Meteor.npmRequire 'winston-loggly'
 LOGGER.add(LOGGER.transports.Loggly, {

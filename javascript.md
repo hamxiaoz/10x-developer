@@ -276,6 +276,10 @@ Check null:
 - `JSON.stringify(obj, ['fliter', 'list])` can filter 
 - [`defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) can set 'writable' and custom setter/getter
 
+### Map and Set
+- Set: unique values of any type
+- Map: dictionary, any type can be key, `size`, `get/set`
+
 ### Global object
 Methods: 
 - `isNaN, etc`

@@ -1,5 +1,6 @@
 # Atom
 
+[electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 
 ## How to build custom syntax file
 - Reference this: https://github.com/lee-dohm/language-generic-config

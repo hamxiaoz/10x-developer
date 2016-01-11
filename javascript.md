@@ -147,6 +147,7 @@ Query/Test
 - `u1235` is unicode nnnn
 - `charAt(index), indexOf`
 - `match(regex)` returns matches
+    - NOTE if regex has /g: 1. it'll return first match; 2. you can match multiple times. See http://www.2ality.com/2013/08/regexp-g.html
 - `replace(regex/g, 'to replace')` specials '$1', etc.
 - `substr(index, length) vs substring(index, endIndex)` not including endIndex`
     - if negative number: 

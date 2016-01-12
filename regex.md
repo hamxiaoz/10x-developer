@@ -6,6 +6,7 @@
 - Cheat Sheet: http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/
 
 ## Usage
+See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 ```js
 'str'.search(/pattern/) // check
 /pattern/.exec('str') // return matches array

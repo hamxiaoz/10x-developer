@@ -5,6 +5,12 @@
 - For Ruby: http://rubular.com/
 - Cheat Sheet: http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/
 
+## Usage
+```js
+'str'.search(/pattern/) // check
+/pattern/.exec('str') // return matches array
+```
+
 ## Checklist
 - Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
 

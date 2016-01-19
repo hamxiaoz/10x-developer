@@ -3,7 +3,8 @@ Some notes, unfinished.
 
 
 #### How to convert a details array to a map?
-Collection reduces to a single object. Borrowed from: https://github.com/rackt/react-router/blob/master/examples/sidebar/data.js
+This is a collection reduces to a single object. Use `reduce`.  
+Borrowed from: https://github.com/rackt/react-router/blob/master/examples/sidebar/data.js
 
 ```js
 const data = [

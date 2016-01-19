@@ -20,5 +20,5 @@
 * [Cheatsheets](Cheatsheets/README.md)
 * [Git](git.md)
 * [React.js](reactjs.md)
-* Functional Programming
+* [Functional Programming](functional_programming.md)
 

@@ -1,8 +1,11 @@
+# [Electron](http://electron.atom.io/)
+
+- [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
+- [awesome-electron](https://github.com/sindresorhus/awesome-electron)
+
+
 # Atom
-
-[electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
-
-## How to build custom syntax file
+#### How to build custom syntax file for Atom Editor
 - Reference this: https://github.com/lee-dohm/language-generic-config
 and any familiar language syntax file, for example, [Ruby](https://github.com/atom/language-ruby/blob/master/grammars/ruby.cson)
 - Use dev tool to find out class names

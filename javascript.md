@@ -213,10 +213,10 @@ NaN // the number
 ```
 
 Check string not null or empty:
-    ```js
-    function isNullOrEmpty(str) {
-        return !!str || str.length !== 0; // !! means it's converted to boolean first
-    ```
+```js
+function isNullOrEmpty(str) {
+    return !!str || str.length !== 0; // !! means it's converted to boolean first
+```
 
 Check null:
 - use `typeof instance.currentPosition  !== 'undefined'` 

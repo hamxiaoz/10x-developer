@@ -212,7 +212,11 @@ NaN // the number
 {} // the empty object
 ```
 
-Check string not null or empty: `!!password` (it's converted to boolean first)
+Check string not null or empty:
+    ```js
+    function isNullOrEmpty(str) {
+        return !!str || str.length !== 0; // !! means it's converted to boolean first
+    ```
 
 Check null:
 - use `typeof instance.currentPosition  !== 'undefined'` 

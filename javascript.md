@@ -212,10 +212,14 @@ NaN // the number
 {} // the empty object
 ```
 
-Check string not null or empty:
+Check is null or empty:
 ```js
 function isNullOrEmpty(str) {
-    return !!str || str.length !== 0; // !! means it's converted to boolean first
+    return !str;
+}
+function isNullOrEmpty(arr) {
+    return !arr || arr.length === 0; 
+}
 ```
 
 Check null:

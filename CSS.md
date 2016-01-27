@@ -246,7 +246,7 @@ Other usage:
     - it's still static, where **it can be offset** by adding other property such as top:-20px etc
 - `position:fixed` 
     - 脱离文件流 
-    - means it's always staying in the same place, even the page is scrolled.
+    - fixed relative to the viewport, means it's always staying in the same place, even the page is scrolled.
     - 应用:比如onboard时做tutorial, 又比如nav-top-fixed, 又比如[知乎专栏的logo, 那个'知'字](http://zhuanlan.zhihu.com/intelligence/19874517)
 - `position:absolute` 
     - 脱离文件流  

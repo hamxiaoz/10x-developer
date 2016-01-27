@@ -192,7 +192,7 @@ div {
     background: white url(images/gift.gif) repeat-x; // color image repeat
 ```
 
-width: it specifies the content width, **not including padding/margin.**
+width: it specifies the content width, **not including padding/margin.**, unless it's `box-sizing: border-box;`
 ```css
 div {
   border: 6px solid #949599;

@@ -250,7 +250,7 @@ Other usage:
     - 应用:比如onboard时做tutorial, 又比如nav-top-fixed, 又比如[知乎专栏的logo, 那个'知'字](http://zhuanlan.zhihu.com/intelligence/19874517)
 - `position:absolute` 
     - 脱离文件流  
-    - It behaves like `fixed` **except not relative to viewport, but relative to the document, or to the nearest absolute or relative parent.**
+    - It behaves like `fixed` **except not relative to viewport, but relative to the document, or to the nearest absolute or relative parent (when the parent is body, the element will still scroll (unlike fixed) **
     - absolute是基于父级元素的定位，当父级元素是relative的时候，absolute的元素就会是基于它的定位了。比如你可以让一个按钮始终显示在一个元素的右下角。
 
 

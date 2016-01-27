@@ -247,7 +247,11 @@ Other usage:
 - `position:fixed` 
     - 脱离文件流 
     - fixed relative to the viewport, means it's always staying in the same place, even the page is scrolled.
-    - 应用:比如onboard时做tutorial, 又比如nav-top-fixed, 又比如[知乎专栏的logo, 那个'知'字](http://zhuanlan.zhihu.com/intelligence/19874517)
+    - 应用:
+        - 比如onboard时做tutorial
+        - 又比如nav-top-fixed
+        - 又比如[知乎专栏的logo, 那个'知'字](http://zhuanlan.zhihu.com/intelligence/19874517)
+        - 比如fixed footer (由于脱离文件流,注意给body margin-bottom)
 - `position:absolute` 
     - 脱离文件流  
     - It behaves like `fixed` **except not relative to viewport, but relative to the document, or to the nearest absolute or relative parent (when the parent is body, the element will still scroll (unlike fixed)) **

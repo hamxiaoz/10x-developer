@@ -3,6 +3,15 @@
 - [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 - [awesome-electron](https://github.com/sindresorhus/awesome-electron)
 
+#### How to use bootstrap?
+```js
+// use jquery
+import $ from 'jquery';
+
+// use bootstrap with jqeury
+global.jQuery = require('jquery');
+require('bootstrap');
+```
 
 # Atom
 #### How to build custom syntax file for Atom Editor

@@ -180,8 +180,8 @@ tmp = null;
 ### Date ([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
 Only **using new will return the object**; Others will return the number or string.
 - `new Date()`
-- `new Date(2005, 0, 3)` local time; year and month is required, month is 0 index
-- `Date.UTC(2005, 0, 3)` UTC time; Return number; year and month is required, month is 0 index
+- `new Date(2005, 0, 3)` local time; year and month is required, month is **0 based**
+- `Date.UTC(2005, 0, 3)` UTC time; Return number; year and month is required, month is **0 based**
 - Use [moment.js](http://momentjs.com/)
 ```js
 const now = moment();

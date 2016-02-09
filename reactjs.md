@@ -21,3 +21,4 @@ Use this template, or see this issue [Discuss Conditional JSX Expression](https:
 ## Redux
 - Designing a Redux app often begins by thinking about the application state data structure. This is what describes what's going on in your application at any given time.
 - In Redux, the application state is all stored in **one single tree structure.**
+- Think about the application state in isolation from the application's behavior

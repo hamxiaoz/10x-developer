@@ -23,3 +23,4 @@ Use this template, or see this issue [Discuss Conditional JSX Expression](https:
 - In Redux, the application state is all stored in **one single tree structure.**
 - Think about the application state in isolation from the application's behavior
 - It is generally a good idea in these state transformation functions to always morph the old state into the new one instead of building the new state completely from scratch.
+- It's becomes the job of our **reducer** to pick apart the state so that it gives only the relevant part to the function

@@ -30,6 +30,11 @@ This is generally how we'll manage user input and actions with pure components: 
 ---
 
 ## Redux
+- The big idea of react-redux is to take our pure components and wire them up into a Redux Store by doing two things:
+    - Mapping the Store state into component input props.
+    - Mapping actions into component output callback props.
+    
+    
 - Designing a Redux app often begins by thinking about the application state data structure. This is what describes what's going on in your application at any given time.
 - In Redux, the application state is all stored in **one single tree structure.**
 - Think about the application state in isolation from the application's behavior

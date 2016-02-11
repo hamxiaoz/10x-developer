@@ -21,6 +21,12 @@ Use this template, or see this issue [Discuss Conditional JSX Expression](https:
 #### Key
 Remember that the key only has to be unique among its siblings, not globally unique.
 
+#### User action to callback props in pure components
+```js
+<button key={entry} onClick={() => this.props.vote(entry)}>
+```
+This is generally how we'll manage user input and actions with pure components: The components don't try to do much about those actions themselves. They merely invoke callback props.
+
 ---
 
 ## Redux

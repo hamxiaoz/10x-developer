@@ -48,6 +48,9 @@ This is generally how we'll manage user input and actions with pure components: 
 - `store.getState()`
 - you can dispatch actions to it `store.dispatch({type: 'NEXT'});`
 - It's created with reducer: `const store = createStore(reducer);`
+
+### connect
+- connect action functions to component props (as a callback)
 - `connect(mapStateToProps)(SomeComponent);`
     - It takes a mapping function as an argument and returns another function that takes a React component class
     - The role of the mapping function is to map the state from the Redux Store into an object of props.

@@ -43,10 +43,33 @@ This is generally how we'll manage user input and actions with pure components: 
 
 - It's becomes the job of our **reducer** to pick apart the state so that it gives only the relevant part to the function. The main reducer function only hands parts of the state to lower-level reducer functions. We separate the job of finding the right location in the state tree from applying the update to that location.
 
-- *Store* stores your applicaiton state over time, you can dispatch actions to it `store.dispatch({type: 'NEXT'});`
+### Store
+- *Store* stores your applicaiton state over time, a single tree
+- `store.getState()`
+- you can dispatch actions to it `store.dispatch({type: 'NEXT'});`
+- It's created with reducer: `const store = createStore(reducer);`
 - `connect(mapStateToProps)(SomeComponent);`
     - It takes a mapping function as an argument and returns another function that takes a React component class
     - The role of the mapping function is to map the state from the Redux Store into an object of props.
+    
+### Action
+- it's just JS object
+- `{ type: INCREASE_COUNTER }`
+
+### Reducer
+- morph state to another state
+- store calls it and udpates itself with the result
+- Reducer gets which part of state?
+    - Depending on the key in the combinedReducers
+    - See [here](http://redux.js.org/docs/basics/Reducers.html) and [here](https://github.com/rackt/redux/issues/428#issuecomment-129223274)
+    ```js
+    const reducer = combineReducers({
+          a: doSomethingWithA, // will pass state.a to that reducer function
+          b: processB, // will pass state.b to the reducer function
+          c: c
+    });
+    ```
+    
     
     
 ### When will React refresh?

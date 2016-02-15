@@ -120,11 +120,17 @@ font-family: Verdana, Arial, "Courier New", sans-serif;
 @font-face { font-family: "name"; src: url("font.woff"), url("font.ttf"); }
 ```
 
-font-size: `px` (old IE doesn't support it!), `%` (relative to the parent element), `em` (scaling to the parent element) or keywords (small/medium etc.)
+### font-size
+- `px` (old IE doesn't support it!)
+- `%` (relative to the parent element)
+- `em` (scaling to the parent element) or keywords (small/medium etc.)
+- `rem` (scaling relative to the root elment 'html')
 
 to use it properly: (so it can be really easy to adjust whole font by just changing the base font)
 - choose a keyword for body to define the whole page size as a basement.
 - use em or %
+- use rem
+
 
 `line-height`: it can use number only to specify the size to its *own* size.
 ```css

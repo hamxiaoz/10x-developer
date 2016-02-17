@@ -3,6 +3,16 @@
 - [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 - [awesome-electron](https://github.com/sindresorhus/awesome-electron)
 
+#### Build Error `npm ERR! Failed at the nslog@3.0.0 install script 'node-gyp rebuild'.`
+NOTE: if you see the error after `npm install`, it's because there is a problem when building node-gyp on some Windows machines.
+
+Try to delete the 'node_modules' folder, and call `npm install` from a "VS2013 x86 Native Tools Command Prompt" window (found in VS2013 installation).
+
+See related issue on [Github](https://github.com/nodejs/node-gyp/issues/733)
+
+
+
+
 #### How to use bootstrap?
 ```js
 // use jquery

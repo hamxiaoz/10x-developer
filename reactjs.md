@@ -72,6 +72,7 @@ This is generally how we'll manage user input and actions with pure components: 
           c: c
     });
     ```
+    - See [why we split reducers](http://redux.js.org/docs/basics/Reducers.html#splitting-reducers)
     
     
     
@@ -81,7 +82,7 @@ React: if I just update a part of itwizm, why it won't refresh? Is it because it
 http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html
 > If the props of a component are all immutable values, and the props keep pointing to the same values between renders, there can be no reason to re-render the component, and it can be skipped completely!
 
-That means we'll jsut need to render props.
+That means we'll just need to render props.
 Check test/components/Voting_spec.jsx
 It's REPLACEING the props, not just change someting inside of the props.
 

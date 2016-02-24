@@ -299,6 +299,9 @@ Methods:
     console.log(a.name == 'b')
     ```
 - `function.length` required params length
+- `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+    - so 'this' is always 'thisArgs'
+    - use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
 - `Funnction.prototype.apply(scope, paramsArr)`
 - `Function.prototype.call(scope, param1, param2)` the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
 - Arguments are always copied **by value**. Even if the type is reference.

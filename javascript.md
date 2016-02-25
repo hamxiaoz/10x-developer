@@ -240,9 +240,9 @@ Check null:
 ### Object
 - the property name will always be string, even you created like this `{a:'b'}`
 - `for .. in` will iterate all enumerable props (including the prototype ones) in arbitrar order
-- `typeof`, check if it's a **basic type plus others**, it only returns those types: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
+- `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`
-    - `typeof null === 'object';` See (MDN explanation)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof]
+    - `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
     - usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
 - `a instanceof Constructor`, check if it's a **reference type**
     - Use constructor, not string: so `[] instanceof Object`, not 'object'

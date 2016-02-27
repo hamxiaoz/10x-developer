@@ -41,6 +41,9 @@ console.log _.union.apply(_, arr)
 JavaScript = ECMAScript + DOM + BOM
 
 ### Type: value/ref
+- JavaScript Types = primitive types + Object
+    - Primitive types: `Null, Undefined, Boolean, Number, String, Symbol (ES6)`
+    - Object: everything else, such as Function, Array, Date, etc
 - Value type (includes string): `Undefined, Null, Boolean, Number, String`
 - Ref type: `function, Object, Array`
 - `typeof` returns following string, see below

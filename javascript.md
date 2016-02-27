@@ -291,8 +291,14 @@ Methods:
 - `location`: window.location is the same as document.location
 
 ### Function
-- Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like
+- Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like, to convert it to array: `Array.prototype.slice.call(arguments)`
 - Because of 'arguments', there is no function overloading.
+- `function.length` required params length
+- `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+    - so 'this' is always 'thisArgs'
+    - use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
+- `Funnction.prototype.apply(scope, paramsArr)` apply takes array as second args: **a**pply/**a**rray
+- `Function.prototype.call(scope, param1, param2)` the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
 - Assignment makes a copy of the value only if it's a primitive type (like Number, Boolean, String, etc...). Otherwise, assignment just copies a reference to the same object (Object, Array, etc...). A new object is not created with assignment.
 
     ```js
@@ -301,12 +307,6 @@ Methods:
     var a = b;
     console.log(a.name == 'b')
     ```
-- `function.length` required params length
-- `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
-    - so 'this' is always 'thisArgs'
-    - use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
-- `Funnction.prototype.apply(scope, paramsArr)` apply takes array as second args: **a**pply/**a**rray
-- `Function.prototype.call(scope, param1, param2)` the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
 - Arguments are always copied **by value**. Even if the type is reference.
 
     ```js

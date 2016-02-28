@@ -291,7 +291,7 @@ Methods:
 - `location`: window.location is the same as document.location
 
 ### Function
-- Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like, to convert it to array: `Array.prototype.slice.call(arguments)`
+- Always has `arguments` (note it's not `this.arguments`) for it's arguments, it's array like, to [convert it to array](http://stackoverflow.com/a/960870/166286): `Array.prototype.slice.call(arguments)`
 - Because of 'arguments', there is no function overloading.
 - `function.length` required params length
 - `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.

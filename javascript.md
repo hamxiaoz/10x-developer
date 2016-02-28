@@ -245,7 +245,7 @@ Check null:
 - `for .. in` will iterate all enumerable props (including the prototype ones) in arbitrar order
 - `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`
-    - `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+    - **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
     - usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
 - `a instanceof Constructor`, check if it's a **reference type**
     - Use constructor, not string: so `[] instanceof Object`, not 'object'

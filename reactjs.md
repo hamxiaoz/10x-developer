@@ -73,6 +73,14 @@ This is generally how we'll manage user input and actions with pure components: 
     });
     ```
     - See [why we split reducers](http://redux.js.org/docs/basics/Reducers.html#splitting-reducers)
+- Don't forget to have reducer for every key in your store, otherwise you'll see error: 'Unexpected keys':
+    ```js
+    const rootReducer = combineReducers({
+      counter, // you have a corresponding reducer function with the same name
+      b, // you have a corresponding reducer function with the same name
+      c: (state=[], action) => state // you don't have the reducer function yet you have the key 'c' in your store tree
+    });
+    ```
     
     
     

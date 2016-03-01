@@ -242,6 +242,17 @@ Check null:
 
 ### Object
 - the property name will always be string, even you created like this `{a:'b'}`
+    -  Use dot notation when accessing properties
+    -  Use subscript notation [] when accessing properties with a variable.
+    
+    ```js
+    const isJedi = luke.jedi;
+    // dynamic
+    funciton getProp(obj, prop) { return obj[prop]; }
+    const isJedi = getProp(luke, prop);
+    
+    ```
+    
 - `for .. in` will iterate all enumerable props (including the prototype ones) in arbitrar order
 - `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`

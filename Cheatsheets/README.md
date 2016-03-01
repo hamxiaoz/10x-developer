@@ -1,5 +1,7 @@
 A collection of cheatsheets.
 
+- [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet/)
+
 ## ASCII
 ![ASCII](ascii.gif)
 

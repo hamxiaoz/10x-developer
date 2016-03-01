@@ -58,6 +58,7 @@ This is generally how we'll manage user input and actions with pure components: 
 ### Action
 - it's just JS object
 - `{ type: INCREASE_COUNTER }`
+- ?? Action will be available as props
 
 ### Reducer
 - morph state to another state

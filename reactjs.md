@@ -58,7 +58,19 @@ This is generally how we'll manage user input and actions with pure components: 
 ### Action
 - it's just JS object
 - `{ type: INCREASE_COUNTER }`
-- ?? Action will be available as props
+- Action will be available as props only if you do [bindActionCreators](http://redux.js.org/docs/api/bindActionCreators.html)
+
+    ```js
+    function mapStateToProps(state) {
+        return state;
+    }
+    
+    function mapDispatchToProps(dispatch) {
+      return bindActionCreators(actions, dispatch);
+    }
+
+    export default connect(mapStateToProps, mapDispatchToProps)(YOUR_COMPONENT);
+    ```
 
 ### Reducer
 - morph state to another state

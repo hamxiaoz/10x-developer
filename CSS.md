@@ -305,6 +305,12 @@ div {
 }
 ```
 
+## Repaint/Reflow
+To check:
+> 因此，我们在写动画的时候因该规避这些属性：width, height, margin, padding, border, display, top, right, bottom ,left, position, float, overflow等。
+不会出发重新布局的属性有：transform(其中的translate, rotate, scale), color, background等。
+所以，我们平时在写css动画时，应该优先使用不触发重新布局的属性，这样可以使我们所展示动画效果的更加流畅。
+
 ## Misc
 
 ### semantic css creates more problem (redundancy) than it solves.

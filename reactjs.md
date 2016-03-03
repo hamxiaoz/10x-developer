@@ -105,8 +105,10 @@ http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html
 
 That means we'll just need to render props.  
 Check test/components/Voting_spec.jsx  
-It's REPLACEING the props, not just change someting inside of the props.
+It's REPLACING the props, not just change something inside of the props.
 
+### How to handle temp state and redirect?
+Still in discussion: [Best practice on handling data flow for login / signup pages with redirect](https://github.com/reactjs/redux/issues/297)
 
     
     

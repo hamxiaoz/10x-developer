@@ -6,6 +6,22 @@ http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynch
 
 ## Node Package
 
+### How to use local (private) package?
+Use git submodule and use npm link
+
+```bash
+x
+```
+
+NOTE the other way is to use local pakcage, but `npm update` doesn't work with local package now, see [NPM #7426](https://github.com/npm/npm/issues/7426)
+```js
+"my-package": "file:./my-package",
+```
+
+
+Reference:
+- http://stackoverflow.com/a/17371987/166286
+
 ### File
 
 #### How to get the base file name: 'a.ext' -> 'a'?

@@ -7,16 +7,22 @@ http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynch
 ## Node Package
 
 ### How to use local (private) package?
-Use git submodule and use npm link
+Use git submodule
 
 ```bash
-x
+# when clone, remember to clone with submodules
+git clone --recursive git@REPO-URL
+
+# to update
+git submodule update --remote
+npm install
 ```
 
-NOTE the other way is to use local pakcage, but `npm update` doesn't work with local package now, see [NPM #7426](https://github.com/npm/npm/issues/7426)
+NOTE there is a bug for `npm update`: it doesn't work with local package now, see [NPM #7426](https://github.com/npm/npm/issues/7426)
 ```js
 "my-package": "file:./my-package",
 ```
+So my workaroud for now is, go to node_moduels folder and delete the package folder, then npm install again.
 
 
 Reference:

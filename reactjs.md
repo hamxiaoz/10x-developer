@@ -113,5 +113,5 @@ Still in discussion: [Best practice on handling data flow for login / signup pag
     
     
 ### Question:
-If it's all functional and immutable, do I create helper methods for things like `hasError()`, or store the computed data in store?
-
+Q:If it's all functional and immutable, do I create helper methods for things like `hasError()`, or store the computed data in store?  
+A: One way to do is create a class being a wrapper of a immutable instance.

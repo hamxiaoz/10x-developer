@@ -262,6 +262,7 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
     
 - `for .. in` will iterate all enumerable props (including the prototype ones) in arbitrar order
     - use `hasOwnProperty(key)` to check
+- The [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) returns true if the specified property is in the specified object.
 - `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
     - so `typeof [] === 'object`
     - **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

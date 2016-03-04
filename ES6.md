@@ -146,6 +146,7 @@ import fs from 'fs';
 ```
 
 Default exports
+If you want to export only a single function, you have to use `export default` then you can do `import a from 'MyClass'`
 ```js
 export default function () { ··· } // no semicolon!
 

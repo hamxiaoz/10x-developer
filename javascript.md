@@ -243,7 +243,7 @@ Check null:
 ### Boolean
 Sometimes you'll need to check boolean, it's better to force converting to boolean by:
 ```js
-// if you don't do !! you'll get undefined
+// if you don't do !! you'll get undefined because you're accessing something doesn't exist
 const hasMissingChannels = !!this.props.channels.missingChannels && this.props.channels.missingChannels.length > 0;
 ```
 

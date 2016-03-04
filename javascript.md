@@ -240,6 +240,13 @@ Check null:
 - when comparison includes reference type, the comparison (both == and ===) performs pointer comparison.
     `{} != {}`
 
+### Boolean
+Sometimes you'll need to check boolean, it's better to force converting to boolean by:
+```js
+// if you don't do !! you'll get undefined
+const hasMissingChannels = !!this.props.channels.missingChannels && this.props.channels.missingChannels.length > 0;
+```
+
 ### Object
 - the property name will always be string, even you created like this `{a:'b'}`
     -  Use dot notation when accessing properties

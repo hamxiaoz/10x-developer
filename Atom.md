@@ -23,6 +23,14 @@ global.jQuery = require('jquery');
 require('bootstrap');
 ```
 
+#### How to use Select2 or Jquery?
+1. install npm package: `npm install select2`
+2. reference css file in app.html: `<link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css" />
+3. require the package so webpack will pack it: `import S2 from 'select2'`
+
+---
+
+
 # Atom
 #### How to build custom syntax file for Atom Editor
 - Reference this: https://github.com/lee-dohm/language-generic-config

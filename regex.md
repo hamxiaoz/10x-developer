@@ -3,6 +3,7 @@
 ## Links
 - Test tool for js: https://regex101.com/#javascript
 - For Ruby: http://rubular.com/
+- Debug regex: https://www.debuggex.com/
 - Cheat Sheet: http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/
 
 ## Usage

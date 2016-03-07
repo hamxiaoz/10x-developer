@@ -110,6 +110,14 @@ if (Meteor.isClient) {
 
 ## Packages
 
+### email
+Send email using SendGrid
+- regiter sendgrid
+- create different user with (Mail capability): https://app.sendgrid.com/settings/credentials
+- `meter add email`
+- Then you can use the mail package to send email: https://gist.github.com/aaronthorp/8410571
+- Reference: https://themeteorchef.com/snippets/using-the-email-package/
+
 ### fs
 - collection-fs
     - tips: http://blog.zipboard.co/2015/11/23/cfs-tips-and-tricks-for-meteorjs/

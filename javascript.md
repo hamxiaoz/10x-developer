@@ -37,6 +37,8 @@ console.log _.union.apply(_, arr)
 #### _.each cannot break out
 > It's also good to note that an each loop cannot be broken out of — to break, use _.find instead.
 
+use `_.find` for array and `_.findKey(obj, (v, k)=>())` for object
+
 ---
 
 ## Hows and patterns

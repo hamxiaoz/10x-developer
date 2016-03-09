@@ -44,37 +44,46 @@ This is generally how we'll manage user input and actions with pure components: 
 - It's becomes the job of our **reducer** to pick apart the state so that it gives only the relevant part to the function. The main reducer function only hands parts of the state to lower-level reducer functions. We separate the job of finding the right location in the state tree from applying the update to that location.
 
 ### Store
-- *Store* stores your applicaiton state over time, a single tree
+- *Store* stores your application state over time, a single tree
 - `store.getState()`
 - you can dispatch actions to it `store.dispatch({type: 'NEXT'});`
 - It's created with reducer: `const store = createStore(reducer);`
 
-### connect
-- connect action functions to component props (as a callback)
-- `connect(mapStateToProps)(SomeComponent);`
-    - It takes a mapping function as an argument and returns another function that takes a React component class
-    - The role of the mapping function is to map the state from the Redux Store into an object of props.
-    
+  
 ### Action
 - it's just JS object
 - `{ type: INCREASE_COUNTER }`
-- Action will be available as props only if you do [bindActionCreators](http://redux.js.org/docs/api/bindActionCreators.html)
+- Action will be available as props only if you do [bindActionCreators](http://redux.js.org/docs/api/bindActionCreators.html). See connect.
 
-    ```js
-    function mapStateToProps(state) {
-        return state;
-    }
-    
-    function mapDispatchToProps(dispatch) {
-      return bindActionCreators(actions, dispatch);
-    }
+### connect
+connect function will do:
+1. map state in store (there is only one app state) to component props
+2. make action functions as available as component props
 
-    export default connect(mapStateToProps, mapDispatchToProps)(YOUR_COMPONENT);
-    ```
+```js
+// Map the app state (in store) to props
+function mapStateToProps(state) {
+    return {
+      allChannels: state.loadedFile.channels,
+      channelTypes: state.loadedFile.channelTypes
+    }
+}
+
+// Map dispatch so that actions are available as props
+// So let's say you have a selectChannel action function, you can
+// just call this.props.selectChannel to dispatch the action
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(YOUR_COMPONENT);
+```
+
+
 
 ### Reducer
 - morph state to another state
-- store calls it and udpates itself with the result
+- store calls it and updates itself with the result
 - Reducer gets which part of state?
     - Depending on the key in the combinedReducers
     - See [here](http://redux.js.org/docs/basics/Reducers.html) and [here](https://github.com/rackt/redux/issues/428#issuecomment-129223274)

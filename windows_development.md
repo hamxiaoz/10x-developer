@@ -19,7 +19,9 @@
 ### Build
 - Inno Setup, installer builder. Much better than the default windows one: http://www.jrsoftware.org/isinfo.php
 - Inno Script Studio, GUI for inno: https://www.kymoto.org/products/inno-script-studio
-- Rake
+- Albacore, task runner so you can do one click build: http://albacorebuild.net/
+  - It requires ruby: http://rubyinstaller.org/
+  - Install ruby add-on DevKit too: http://rubyinstaller.org/add-ons/devkit/
 - Bat file
 
 ### Network

@@ -6,7 +6,7 @@
 - Shell/Console
     - ConEmu2
     - [Gow - The lightweight alternative to Cygwin](https://github.com/bmatzelle/gow)
-    - [Clink](https://github.com/mridgers/clink)
+    - [Clink](https://github.com/mridgers/clink) - windows shell enhancements
 
 ### Editor
 - vim

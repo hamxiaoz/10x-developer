@@ -17,7 +17,8 @@
 - AnkhSVN, svn in Visual Stuio: https://ankhsvn.open.collab.net/
 - Productivity Power Tools: https://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef/
 - ViEmu, bring vim mode home: http://www.viemu.com/
-- ReSharper, write C# code more happy: https://www.jetbrains.com/resharper/ 
+- ReSharper, write C# code more happy: https://www.jetbrains.com/resharper/
+- TestDriven.net, unit tests: http://www.testdriven.net/ 
 
 ### Build
 - Inno Setup, installer builder. Much better than the default windows one: http://www.jrsoftware.org/isinfo.php

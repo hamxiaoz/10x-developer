@@ -22,5 +22,5 @@
 * [Git](git.md)
 * [React.js](reactjs.md)
 * [Functional Programming](functional_programming.md)
-* [Development Tools](windows_development.md)
+* [Development Tools](development_tools.md)
 

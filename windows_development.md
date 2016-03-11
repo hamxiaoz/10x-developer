@@ -18,6 +18,7 @@
 
 ### Build
 - Inno Setup, installer builder. Much better than the default windows one: http://www.jrsoftware.org/isinfo.php
+- Inno Script Studio, GUI for inno: https://www.kymoto.org/products/inno-script-studio
 - Rake
 - Bat file
 

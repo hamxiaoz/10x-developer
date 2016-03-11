@@ -23,5 +23,5 @@
 * [React.js](reactjs.md)
 * [Functional Programming](functional_programming.md)
 * [Development Tools](development_tools.md)
-* Vim
+* [Vim](vim.md)
 

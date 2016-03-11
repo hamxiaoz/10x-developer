@@ -53,4 +53,7 @@
 - Virtual Box: https://www.virtualbox.org/wiki/Downloads
 - VMWare (commercial)
 
-Find more tools from [Scott Hanselman's 2014 Ultimate Developer and Power Users Tool List for Windows](http://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx)
+### More
+Find more tools from 
+- [Scott Hanselman's 2014 Ultimate Developer and Power Users Tool List for Windows](http://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx)
+- https://github.com/RiseLedger/awesome-windows

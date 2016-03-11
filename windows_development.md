@@ -22,7 +22,7 @@
 - Albacore, task runner so you can do one click build: http://albacorebuild.net/
   - It requires ruby: http://rubyinstaller.org/
   - Install ruby add-on DevKit too: http://rubyinstaller.org/add-ons/devkit/
-- Use batch file to call rake tasks so you can do **one click** build.
+- Use batch file to call rake tasks so you can do **one click** build. See [bat examples](https://github.com/hamxiaoz/my-scripts)
   
     ```bat
     @ECHO OFF

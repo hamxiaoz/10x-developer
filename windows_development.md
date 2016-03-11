@@ -39,6 +39,10 @@
   - NOTE if you use WinSCP to transfter the script to the server, be sure to use "text" transfer settins, otherwise the script might contain dos CRLF line endings, see http://stackoverflow.com/questions/2920416/configure-bin-shm-bad-interpreter
 - SuperPuTTY: https://github.com/jimradford/superputty
 
+### Tools
+- Paint.net, best photo editing tool on Windows: http://www.getpaint.net/index.html
+- 
+
 ### VM
 - FREE VM machines (all platform) from [Microsoft](https://dev.windows.com/en-us/microsoft-edge/tools/vms/windows/)
 - Virtual Box: https://www.virtualbox.org/wiki/Downloads

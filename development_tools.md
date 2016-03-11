@@ -1,14 +1,22 @@
 # Development Tools
 
-## Online
+## Universal
 - Pixlr, Photoshop online: https://pixlr.com/
+- Sublime
+  - See preferences and used packages: https://github.com/hamxiaoz/my-scripts
+  - The following looks good but not tested
+  - https://github.com/vkocubinsky/SublimeTableEditor
+  - https://github.com/noklesta/SublimeQuickFileCreator
+  - https://github.com/twolfson/FindPlusPlus
+  - https://github.com/dzhibas/SublimePrettyJson
 
+---
 
 ## Mac
 
 ### Network
 - inject data to web: http://www.charlesproxy.com/
-- 
+
 ### VM
 - https://github.com/xdissent/ievms/
 

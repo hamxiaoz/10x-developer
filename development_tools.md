@@ -1,6 +1,20 @@
 # Development Tools
 
-## Essential Tools for Developer on Windows
+## Online
+- Pixlr, Photoshop online: https://pixlr.com/
+
+
+## Mac
+
+### Network
+- inject data to web: http://www.charlesproxy.com/
+- 
+### VM
+- https://github.com/xdissent/ievms/
+
+---
+
+## Windows
 
 ### Shell
 - Shell/Console

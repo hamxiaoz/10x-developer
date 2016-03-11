@@ -41,7 +41,8 @@
 
 ### Tools
 - Paint.net, best photo editing tool on Windows: http://www.getpaint.net/index.html
-- 
+- TotalCommander, 10x better than file explorer: http://www.ghisler.com/
+- AHK, add global hotkey: https://autohotkey.com/
 
 ### VM
 - FREE VM machines (all platform) from [Microsoft](https://dev.windows.com/en-us/microsoft-edge/tools/vms/windows/)

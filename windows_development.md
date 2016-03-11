@@ -45,6 +45,7 @@
 
 ### Tools
 - Paint.net, best photo editing tool on Windows: http://www.getpaint.net/index.html
+- LICEcap, make .gif, it's also available on Mac: http://www.cockos.com/licecap/
 - TotalCommander, 10x better than file explorer: http://www.ghisler.com/
 - AHK, add global hotkey: https://autohotkey.com/
 

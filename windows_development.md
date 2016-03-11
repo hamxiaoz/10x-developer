@@ -17,9 +17,9 @@
 ..
 
 ### Build
-Inno
-Rake
-Bat file
+- Inno Setup, installer builder. Much better than the default windows one: http://www.jrsoftware.org/isinfo.php
+- Rake
+- Bat file
 
 ### Network
 - WinSCP: https://winscp.net/eng/download.php

@@ -4,7 +4,7 @@
 
 ### Shell
 - Shell/Console
-    - ConEmu2
+    - ConEmu: https://conemu.github.io/
     - [Gow - The lightweight alternative to Cygwin](https://github.com/bmatzelle/gow)
     - [Clink](https://github.com/mridgers/clink) - windows shell enhancements
 

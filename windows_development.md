@@ -22,7 +22,17 @@
 - Albacore, task runner so you can do one click build: http://albacorebuild.net/
   - It requires ruby: http://rubyinstaller.org/
   - Install ruby add-on DevKit too: http://rubyinstaller.org/add-ons/devkit/
-- Bat file
+- Use batch file to call rake tasks so you can do **one click** build.
+  
+    ```bat
+    @ECHO OFF
+
+    REM call rake
+    call rake target=internal
+
+    PAUSE
+    ```
+
 
 ### Network
 - WinSCP: https://winscp.net/eng/download.php

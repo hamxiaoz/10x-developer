@@ -14,7 +14,7 @@ Little Projects
 Tools:
 - admin for mongo db: http://www.drmongo.com/
 
-## Logging via winston and loggly
+### How to do logging via winston and loggly
 Inspired from this guide: https://meteorhacks.com/logging-support-for-meteor
 1. Sign up [loggly](loggly.com)
 2. add 'winston' and 'winston-loggly' to package.json
@@ -36,6 +36,17 @@ LOGGER.add(LOGGER.transports.Loggly, {
 LOGGER.existOnError = false # don't exit on error
 LOGGER.info 'logger started'
 ```
+
+### How to send email using SendGrid
+Or see my [Medium post](https://medium.com/@hamxiaoz/meteor-how-to-send-email-using-sendgrid-25cba3b4bc7d#.c7dnzbf4h)
+- regiter [sendgrid](https://sendgrid.com/)
+- create different user with (Mail capability): https://app.sendgrid.com/settings/credentials
+- `meter add email`
+- Then you can use the mail package to send email: https://gist.github.com/aaronthorp/8410571
+- Reference: https://themeteorchef.com/snippets/using-the-email-package/
+- [Why not Mandrill?](https://news.ycombinator.com/item?id=11203056)
+- [Why SendGrid?](https://www.inboxtrail.com/compare)
+
 
 ## DDP
 [DDP Spec](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md)
@@ -111,15 +122,6 @@ if (Meteor.isClient) {
 
 ## Packages
 
-### email
-Send email using SendGrid
-- regiter [sendgrid](https://sendgrid.com/)
-- create different user with (Mail capability): https://app.sendgrid.com/settings/credentials
-- `meter add email`
-- Then you can use the mail package to send email: https://gist.github.com/aaronthorp/8410571
-- Reference: https://themeteorchef.com/snippets/using-the-email-package/
-- [Why not Mandrill?](https://news.ycombinator.com/item?id=11203056)
-- [Why SendGrid?](https://www.inboxtrail.com/compare)
 
 
 ### fs

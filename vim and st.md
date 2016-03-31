@@ -8,6 +8,7 @@ The following looks good but not tested
 - https://github.com/twolfson/FindPlusPlus
 - https://github.com/dzhibas/SublimePrettyJson
 
+---
 
 ## Vim
 

@@ -1,5 +1,5 @@
 ## Mac
-ALt to jump to word
+`ALT` to jump to word
 
 ---
 

@@ -9,6 +9,7 @@ See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 Open with sublime: 
 - export application, following [this guide](http://hohonuuli.blogspot.com/2013/07/open-filesfolder-selected-in-finder.html)
 - hold down `Option+Command` and then start dragging the desired icon to the toolbar.
+- You can use icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
 
 ### Pane Management
 - `ALT+CMD+num`: open number of panes

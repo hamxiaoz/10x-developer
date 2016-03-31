@@ -2,13 +2,7 @@
 
 ## Universal
 - Pixlr, Photoshop online: https://pixlr.com/
-- Sublime
-  - See preferences and used packages: https://github.com/hamxiaoz/my-scripts
-  - The following looks good but not tested
-  - https://github.com/vkocubinsky/SublimeTableEditor
-  - https://github.com/noklesta/SublimeQuickFileCreator
-  - https://github.com/twolfson/FindPlusPlus
-  - https://github.com/dzhibas/SublimePrettyJson
+- Sublime, see [this note](vim and st.md)
 
 ---
 

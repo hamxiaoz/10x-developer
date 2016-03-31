@@ -7,9 +7,9 @@ ALt to jump to word
 See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 
 ### Pane Management
-ALT+CMD+num: number of panes
-CTRL+num: switch to pane
-CTRL+SHIT+num: move tab to pane
+- `ALT+CMD+num`: open number of panes
+- `CTRL+num`: switch to pane
+- `CTRL+SHIT+num`: move tab to pane
 
 # Search
 symbol search in ST3

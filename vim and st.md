@@ -11,12 +11,18 @@ Open with sublime:
 - hold down `Option+Command` and then start dragging the desired icon to the toolbar.
 - You can use icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
 
-### Pane Management
+Theme: https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz
+
+### Shortcuts/Tips
+#### core
+http://www.cheatography.com/ducondez/cheat-sheets/core-sublimetext/
+
+#### Pane Management
 - `ALT+CMD+num`: open number of panes
 - `CTRL+num`: switch to pane
 - `CTRL+SHIT+num`: move tab to pane
 
-### Search
+#### Search
 symbol search in ST3
 
 

@@ -11,7 +11,7 @@ See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 - `CTRL+num`: switch to pane
 - `CTRL+SHIT+num`: move tab to pane
 
-# Search
+### Search
 symbol search in ST3
 
 

@@ -40,7 +40,7 @@ LOGGER.info 'logger started'
 ### How to send email using SendGrid
 Or see my [Medium post](https://medium.com/@hamxiaoz/meteor-how-to-send-email-using-sendgrid-25cba3b4bc7d#.c7dnzbf4h)
 - regiter [sendgrid](https://sendgrid.com/)
-- create different user with (Mail capability): https://app.sendgrid.com/settings/credentials
+- [create different user](https://app.sendgrid.com/settings/credentials) with (Mail capability): https://app.sendgrid.com/settings/credentials
 - `meter add email`
 - Then you can use the mail package to send email: https://gist.github.com/aaronthorp/8410571
 - Reference: https://themeteorchef.com/snippets/using-the-email-package/

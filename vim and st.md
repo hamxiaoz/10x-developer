@@ -46,3 +46,18 @@ Do this chanllege: https://www.shortcutfoo.com/app/dojos/vim
 Cheatsheet:
 
 - `H/M/L` Move to first/middle/last line of screen
+
+---
+
+## How
+
+### How to remove 1./2./3. for multiple lines?
+Old way in vim: line by line.
+- delete on 1st line then j0.
+- or q to record to 1 then 10@1
+
+New way in vim/ST: multiple line editing:
+- select all lines
+- split lines selection: `SHIFT+CMD+L`
+- v to exit v mode then 0dw
+

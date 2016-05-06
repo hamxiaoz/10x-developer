@@ -13,6 +13,7 @@
    * [DevTools](DevTools.md)
 * Angular.js
    * [angular.js](angularjs.md)
+   * jasmine
 * React.js
    * [React.js](reactjs.md)
 * Node
@@ -25,12 +26,12 @@
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
 * Skills
-  * [regex](regex.md)
-  * [Ruby](Ruby.md)
-  * [Functional Programming](functional_programming.md)
+   * [regex](regex.md)
+   * [Ruby](Ruby.md)
+   * [Functional Programming](functional_programming.md)
 * Tools
-  * [Development Setup/Tools](development_tools.md)
-  * [Git](git.md)
-  * [Linux](linux.md)
+   * [Development Setup/Tools](development_tools.md)
+   * [Git](git.md)
+   * [Linux](linux.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

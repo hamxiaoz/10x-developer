@@ -5,7 +5,7 @@
 * [HTML DOM Jquery](HTML DOM JQuery.md)
 * [CSS](CSS.md)
 * [Bootstrap](Bootstrap.md)
-* [javascript](javascript.md)
+* [JavaScript](javascript.md)
    * [ES6](ES6.md)
    * [coffeescript](coffeescript.md)
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)

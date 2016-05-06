@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Cheatsheets](Cheatsheets/README.md)
 * [HTML DOM Jquery](HTML DOM JQuery.md)
 * [CSS](CSS.md)
 * [Bootstrap](Bootstrap.md)
@@ -24,5 +23,6 @@
 * [Git](git.md)
 * [Functional Programming](functional_programming.md)
 * [Development Tools](development_tools.md)
+* [Cheatsheets](Cheatsheets/README.md)
 * [Linux](linux.md)
 

@@ -9,7 +9,7 @@
    * [ES6](ES6.md)
    * [coffeescript](coffeescript.md)
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
-* [DevTools](DevTools.md)
+   * [DevTools](DevTools.md)
 * [node & app](node & app.md)
    * [CLI command line tool](cli.md)
    * [Atom / Electron](Atom.md)

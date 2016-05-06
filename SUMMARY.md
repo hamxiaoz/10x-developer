@@ -22,7 +22,7 @@
 * [ruby](Ruby.md)
 * [Git](git.md)
 * [Functional Programming](functional_programming.md)
-* [Development Tools](development_tools.md)
+* [Development Setup/Tools](development_tools.md)
 * [Linux](linux.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

@@ -14,6 +14,7 @@
 * Angular.js
    * [angular.js](angularjs.md)
    * [Jasmine](jasmine.md)
+   * Angular2
 * React.js
    * [React.js](reactjs.md)
 * Node

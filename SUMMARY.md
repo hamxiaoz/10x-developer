@@ -13,8 +13,8 @@
    * [DevTools](DevTools.md)
 * Angular.js
    * [Angular](angularjs.md)
-   * [Jasmine](jasmine.md)
    * [Angular2](angular2.md)
+   * [Jasmine](jasmine.md)
 * React.js
    * [React.js](reactjs.md)
 * Node

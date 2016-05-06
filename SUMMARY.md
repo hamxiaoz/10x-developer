@@ -10,7 +10,7 @@
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
    * [DevTools](DevTools.md)
 * Node
-   * [node](node & app.md)
+   * [node](node.md)
    * [CLI command line tool](cli.md)
    * [Atom / Electron](Atom.md)
    * [NW.js (node-webkit)](nw.md)

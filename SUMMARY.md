@@ -11,6 +11,10 @@
    * [coffeescript](coffeescript.md)
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
    * [DevTools](DevTools.md)
+* Angular.js
+   * [angular.js](angularjs.md)
+* React.js
+   * [React.js](reactjs.md)
 * Node
    * [node](node.md)
    * [CLI command line tool](cli.md)
@@ -20,12 +24,10 @@
    * [Meteor](meteor.md)
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
-* Angular.js
-   * [angular.js](angularjs.md)
-* [React.js](reactjs.md)
-* [regex](regex.md)
-* [Ruby](Ruby.md)
-* [Functional Programming](functional_programming.md)
+* Skills
+  * [regex](regex.md)
+  * [Ruby](Ruby.md)
+  * [Functional Programming](functional_programming.md)
 * Tools
   * [Development Setup/Tools](development_tools.md)
   * [Git](git.md)

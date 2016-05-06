@@ -12,7 +12,7 @@
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
    * [DevTools](DevTools.md)
 * Angular.js
-   * [angular.js](angularjs.md)
+   * [Angular](angularjs.md)
    * [Jasmine](jasmine.md)
    * [Angular2](angular2.md)
 * React.js

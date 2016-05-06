@@ -23,6 +23,6 @@
 * [Git](git.md)
 * [Functional Programming](functional_programming.md)
 * [Development Tools](development_tools.md)
-* [Cheatsheets](Cheatsheets/README.md)
 * [Linux](linux.md)
+* [Cheatsheets](Cheatsheets/README.md)
 

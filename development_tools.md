@@ -1,4 +1,4 @@
-# Development Tools
+# Development Setup/Tools
 
 ## Universal
 - Pixlr, Photoshop online: https://pixlr.com/

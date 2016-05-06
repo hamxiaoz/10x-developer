@@ -19,7 +19,7 @@
 * [angular.js](angularjs.md)
 * [React.js](reactjs.md)
 * [regex](regex.md)
-* [ruby](Ruby.md)
+* [Ruby](Ruby.md)
 * [Git](git.md)
 * [Functional Programming](functional_programming.md)
 * [Development Setup/Tools](development_tools.md)

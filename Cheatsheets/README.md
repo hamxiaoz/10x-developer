@@ -1,7 +1,7 @@
 A collection of cheatsheets.
 
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet/)
-- [SemVer](http://semver.npmjs.com/)
+- [SemVer calculator](http://semver.npmjs.com/)
 
 ## ASCII
 ![ASCII](ascii.gif)

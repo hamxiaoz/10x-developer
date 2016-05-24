@@ -36,7 +36,7 @@ img
 - Jpeg:lossy information format
 - Png: lossless format
 - Gif: up t 256 colors. Only one color can be set to transparent.
-- always provide alternative `<img src="x“ alt="this should be the picture content" >`
+- always provide alternative `<img src="x“ alt="this should be the picture content`
 - <img> is a inline element. So if you have multiple images, they will be put side by side by default.
 - you can use css to always add a background image to any element:
 ```css

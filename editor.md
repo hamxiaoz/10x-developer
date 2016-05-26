@@ -6,7 +6,7 @@
 ## SublimeText
 See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 
-Open with sublime: 
+Open with sublime icon in Finder toolbar: 
 - export application, following [this guide](http://hohonuuli.blogspot.com/2013/07/open-filesfolder-selected-in-finder.html)
 - hold down `Option+Command` and then start dragging the desired icon to the toolbar.
 - You can use icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
@@ -46,10 +46,11 @@ Do this chanllege: https://www.shortcutfoo.com/app/dojos/vim
 Cheatsheet:
 
 - `H/M/L` Move to first/middle/last line of screen
+- `:x` is same as `:wq`
 
 ---
 
-## How
+## Editing Tips
 
 ### How to remove 1./2./3. for multiple lines?
 Old way in vim: line by line.

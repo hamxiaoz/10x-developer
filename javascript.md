@@ -382,5 +382,39 @@ for timestamp, count of json["#{projectName}"]
 ```
 
 
+#### Console & Debug
+
+`debugger;`
+
+If the result is 0, the elements are not in the DOM:
+ `console.log($(".theElements").length);`
+ 
+_ Debug JQuery: http://fixingthesejquery.com/#slide23
+
+#### How to open a new window without being blocked?
+If the window is not a user click resullt, it'll be blocked.
+
+```
+var win = window.open('', 'Window Name'); // given a name so it'll always refresh this window instead of opening new every time.
+win.document.body.innerHTML = '<p>loading...</p>';
+
+// do async work
+async.do().then(()=> {
+  // Replace the content
+  win.document.body.innerHTML = images;
+  win.focus();
+});
+```
+
+Reference:
+- http://stackoverflow.com/questions/2587677/avoid-browser-popup-blockers
+- http://stackoverflow.com/questions/4602964/how-do-i-prevent-google-chrome-from-blocking-my-popup
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+
+
+#### How to read binary file from the browser?
+https://github.com/jDataView/jDataView
+
+
 
 

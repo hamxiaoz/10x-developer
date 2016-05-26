@@ -31,6 +31,7 @@
    * [Ruby](Ruby.md)
    * [Functional Programming](functional_programming.md)
 * Tools
+   * [Editor (vi/sublime)](editor.md) 
    * [Development Setup/Tools](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)

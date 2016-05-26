@@ -11,6 +11,9 @@ Open with sublime icon in Finder toolbar:
 - hold down `Option+Command` and then start dragging the desired icon to the toolbar.
 - You can use icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
 
+Open current folder in command line, do this [setup](Open current folder in command line, do this [setup](x) and do `subl .`
+) and do `subl .`
+
 Theme: https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz
 
 ### Shortcuts/Tips

@@ -135,3 +135,6 @@ Reference:
 )
 - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04
 - https://forums.meteor.com/t/setting-up-ssl-with-letsencrypt-and-meteorup/14457
+
+Additional:
+- [How to create a self-signed SSL Certificate](http://www.akadia.com/services/ssh_test_certificate.html)

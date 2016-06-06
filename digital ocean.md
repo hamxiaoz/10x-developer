@@ -86,7 +86,7 @@ ref:
 - https://www.digitalocean.com/community/tutorials/how-to-implement-replication-sets-in-mongodb-on-an-ubuntu-vps
 
 
-## SSL using mupx and Let’s Encrypt
+## Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
 Steps:
 - Make sure A record is already updated for your domain first
 - On server:

@@ -22,7 +22,7 @@
    * [CLI command line tool](cli.md)
    * [Atom / Electron](Atom.md)
    * [NW.js (node-webkit)](nw.md)
-* Meteor Development
+* Full Stack Development
    * [Meteor](meteor.md)
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)

@@ -3,8 +3,6 @@
 Use this [link](https://m.do.co/c/ddb021b2d64b) to register Digital Ocean with $10 credit.
 
 ## Setup
-
-
 - follow https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 - Follow mup guide:
 ```
@@ -20,11 +18,16 @@ And you also need to add NOPASSWD to your sudoers file. Open it with:
     - https://www.digitalocean.com/community/questions/what-is-the-effect-of-permitrootlogin-no
 - follow https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers
 - add fail2ban by: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
+- Don't need to add swap when using SSD
 
+####Optional: 
+change editor to use vi `sudo update-alternatives --config editor`
 
-Optional: change editor to use vi `sudo update-alternatives --config editor`
+#### References:
+- http://julian.io/how-do-i-host-multiple-meteor-apps-on-one-digitalocean-droplet/
+- https://gist.github.com/jamiewilson/4e1d28f9a200cb34ad59#add-some-swap-space
 
-If you want nginx support:
+#### If you want nginx support:
 - [mup doc](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts) (which automatically use nginx, you don't need to setup anything)
 - [digital ocean guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-14-04-lts)
 

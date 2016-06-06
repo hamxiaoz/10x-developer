@@ -84,3 +84,47 @@ ref:
 - https://github.com/meteor/meteor/wiki/Oplog-Observe-Driver
 - (outdated: it's using mongodb 2.4) https://gentlenode.com/journal/meteor-10-set-up-oplog-tailing-on-ubuntu/17
 - https://www.digitalocean.com/community/tutorials/how-to-implement-replication-sets-in-mongodb-on-an-ubuntu-vps
+
+
+## SSL using mupx and Let’s Encrypt
+Steps:
+- Make sure A record is already updated for your domain first
+- On server:
+
+
+  ```bash
+  # ssh to your server
+  git clone https://github.com/letsencrypt/letsencrypt
+  ./letsencrypt-auto certonly --standalone --agree-tos --email YOUR_EMAIL -d YOURDOMAIN.COM -d www.YOURDOMAIN.COM
+  # 4 files will be generated in the folder: etc/letsencrypt/live/YOURDOMAIN.COM
+
+  # copy those files to your local machine:
+  sudo tar -cvvf letsencrypt_2016_06_05.tar /etc/letsencrypt/live/YOURDOMAIN.COM
+  # then on your local terminal, use scp to get the above file
+  scp USER@IP:/etc/letsencrypt_2016_06_05.tar ~
+  ```
+- Put the downloaded two files (fullchain.pem and privkey.pem) in your local folder where mup can access (see mup.json)
+- Update mup.json
+
+  ```
+   “ROOT_URL”: “https://yourdomain.com",
+   ...
+   "ssl": {
+    "certificate": "PATH_TO/fullchain.pem", // this is a bundle of certificates
+    "key": "PATH_TO/privkey.pem", // this is the private key of the certificate
+    "port": 443 // 443 is the default value and it's the standard HTTPS port
+  },
+  ```
+
+- Update meteor app by: `meteor add force-ssl`
+- Let’s Encrypt expires 90 days, so we create cron job to automatically update:
+  ```
+  30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
+  ```
+
+
+Reference: 
+- this [guide](https://medium.com/@getdrizzle/deploying-meteor-app-with-free-ssl-certificate-mupx-letsencrypt-digital-ocean-7c85d90cc731#.ty1lahoh9
+)
+- https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04
+- https://forums.meteor.com/t/setting-up-ssl-with-letsencrypt-and-meteorup/14457

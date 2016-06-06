@@ -26,7 +26,7 @@
    * [Meteor](meteor.md)
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
-   * Web Dev Resources
+   * [Web Dev Resources](web_dev_resources.md)
 * Skills
    * [regex](regex.md)
    * [Ruby](Ruby.md)

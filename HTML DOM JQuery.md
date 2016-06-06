@@ -8,6 +8,7 @@
 - `ul` `li` are block items
   - how to use custom marker for bullet points? `list-style-image: url(image/backpack.gif)`
 - basic HTML5 structure
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@ URL Encoding
 - Eg, `%920` is space
 
 Charater entity: 
-- &gt, &lt, &amp, &copy, or use &#100 (use number instead of names)
+- `&gt, &lt, &amp, &copy, or use &#100 (use number instead of names)`
 - http://www.w3schools.com/tags/ref_entities.asp
 - JavaScript provides functions `encodeURIComponent` and `decodeURIComponent` to add these codes to strings and remove them again
 
@@ -37,13 +38,15 @@ img
 - Png: lossless format
 - Gif: up t 256 colors. Only one color can be set to transparent.
 - always provide alternative `<img src="x“ alt="this should be the picture content`
-- <img> is a inline element. So if you have multiple images, they will be put side by side by default.
+- `<img>` is a inline element. So if you have multiple images, they will be put side by side by default.
 - you can use css to always add a background image to any element:
+
 ```css
     background-image: url(images/background.gif);
     background-repeat: no-repeat;
     background-position: top left;
 ```
+
 
 table
 - table cel has no margin property. Use border-spacing from table to specify the entire table.
@@ -64,7 +67,7 @@ css table, when you use it, make sure you add the following to the cell div, oth
 
 
 
-<lable> use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
+`<lable>` use label and property 'for' with id: `<label for="id of the lable points to">text</label>`
 
 #### form
 - radio has same name
@@ -111,7 +114,7 @@ document.myForm.foo; // note it might return foo property of the form instead of
 ```
 
 
-<video> tag: 
+`<video>` tag: 
 - they are boolean attributes such as 'controls'
 - video = container (mp4/webm/ogg/flash) + video(encoded with H.264/VP8) + audio(encoded with AAC/Vorbis)
 ```html
@@ -330,6 +333,7 @@ examples:
     $("a[name]").css("background", "#eee" ); // add a background color to all anchor elements with a name attribute.
     $("#orderedlist > li").addClass("blue"); // This selects all child lis of the element with the id orderedlist and adds the class "blue".
 ```
+
 
 
 

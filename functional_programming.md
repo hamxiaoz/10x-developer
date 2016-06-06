@@ -1,8 +1,12 @@
 # Functional Programming
 Some notes, unfinished.
 
+### Lodash
+Chaining:
+- explicit, similar to underscore: `_.chain(numbers).map(n => n/2 === 0).value()`
+- implicit, if result is a single value: `_(numbers).map(n => n/2 === 0).sum()`
 
-#### How to convert a details array to a map?
+### How to convert a details array to a map?
 This is a collection reduces to a single object. Use `reduce`.  
 Borrowed from: https://github.com/rackt/react-router/blob/master/examples/sidebar/data.js
 

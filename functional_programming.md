@@ -4,7 +4,7 @@ Some notes, unfinished.
 ### Lodash
 Chaining:
 - explicit, similar to underscore: `_.chain(numbers).map(n => n/2 === 0).value()`
-- implicit, if result is a single value: `_(numbers).map(n => n/2 === 0).sum()`
+- implicit, if [the result is a single value](https://lodash.com/docs#_): `_(numbers).map(n => n/2 === 0).sum()`
 
 ### How to convert a details array to a map?
 This is a collection reduces to a single object. Use `reduce`.  

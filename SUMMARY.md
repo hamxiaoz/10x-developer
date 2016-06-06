@@ -26,12 +26,13 @@
    * [Meteor](meteor.md)
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
+   * Web Dev Resources
 * Skills
    * [regex](regex.md)
    * [Ruby](Ruby.md)
    * [Functional Programming](functional_programming.md)
 * Tools
-   * [Editor (vi/sublime)](editor.md) 
+   * [Editor (vi/sublime)](editor.md)
    * [Development Setup/Tools](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)

@@ -1,34 +1,37 @@
 # Digital Ocean
 
-Use [mup](https://github.com/arunoda/meteor-up)
+Use this [link](https://m.do.co/c/ddb021b2d64b) to register Digital Ocean with $10 credit.
 
 ## Setup
-1. http://stackoverflow.com/questions/13444105/how-to-deploy-a-rails-app-to-a-vps-or-dedicated-server/13444106#13444106
-2. See below
 
-```shell
-sudo addduser USER # then fill info
-sudo adduser USER sudo # add to sudo group
 
-# (optional) add to ssh 
-# http://askubuntu.com/questions/16650/create-a-new-ssh-user-on-ubuntu-server
-sudo vi /etc/ssh/sshd_config
-  # insert AllowUsers USER, then wq
-  
-# change editor to use vi
-sudo update-alternatives --config editor
-# edit visudo with vim
-# follow the guide on mup readme: NOPASSWD:ALL
-# or https://www.digitalocean.com/community/articles/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
+- follow https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
+- Follow mup guide:
 ```
+And you also need to add NOPASSWD to your sudoers file. Open it with:
+
+    sudo visudo
+    Then, replace the line that says %sudo ALL=(ALL) ALL with
+
+    %sudo ALL=(ALL) NOPASSWD:ALL
+```
+- Add Public Key to New Remote User, by follow https://gist.github.com/jamiewilson/4e1d28f9a200cb34ad59#set-up-ssl
+  - disable root access, change port(using the same guide by editing '/etc/ssh/sshd_config')
+    - https://www.digitalocean.com/community/questions/what-is-the-effect-of-permitrootlogin-no
+- follow https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers
+- add fail2ban by: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
+
+
+Optional: change editor to use vi `sudo update-alternatives --config editor`
 
 If you want nginx support:
-- [mup doc](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts)
+- [mup doc](https://github.com/arunoda/meteor-up/wiki/Using-Meteor-Up-with-NginX-vhosts) (which automatically use nginx, you don't need to setup anything)
 - [digital ocean guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-14-04-lts)
 
 More security setup from this [linux workstation checklist](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md):
 - [Make sure root mail is forwarded to an account you check](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md#root-mail)
 
+---
 
 ## MongoDB
 
@@ -85,6 +88,7 @@ ref:
 - (outdated: it's using mongodb 2.4) https://gentlenode.com/journal/meteor-10-set-up-oplog-tailing-on-ubuntu/17
 - https://www.digitalocean.com/community/tutorials/how-to-implement-replication-sets-in-mongodb-on-an-ubuntu-vps
 
+---
 
 ## Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
 Steps:

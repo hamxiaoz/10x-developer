@@ -11,6 +11,7 @@
    * [coffeescript](coffeescript.md)
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
    * [DevTools](DevTools.md)
+   * TypeScript
 * Angular.js
    * [Angular](angularjs.md)
    * [Angular2](angular2.md)

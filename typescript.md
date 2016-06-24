@@ -8,6 +8,7 @@
 - Do we put return type when defining function?
 - Do we have `constant` `readonly` concepts? Given we have `static`
 - Function overloading, it's not supported by JavaScript, is it dangerous to use extensively?
+- Do we have default parameters?
 
 
 

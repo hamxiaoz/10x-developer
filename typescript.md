@@ -1,9 +1,10 @@
 # TypeScript
 
-Is this similar to Swift??
+- Is this similar to Swift??
 
 #### Notes
 - By default members in a class are public
+- Do we put return type when defining function?
 
 
 

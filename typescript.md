@@ -20,5 +20,9 @@ var message: string;
 myFunc(count:number, message:string): number {
 }
 
+// interface
+class ServiceTax implements ITax {
+}
+
 cla
 ```

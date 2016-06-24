@@ -4,7 +4,7 @@
 
 #### Notes
 - [Learn TypeScript in Y Minutes](https://learnxinyminutes.com/docs/typescript/)
-- By default members in a class are public
+- Class: by default members in a class are public
 - Do we put return type when defining function?
 
 

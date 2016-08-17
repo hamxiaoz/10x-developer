@@ -10,6 +10,8 @@ Spy cheatsheet: http://tobyho.com/2011/12/15/jasmine-spy-cheatsheet/
 
 
 
+---
 
 #### Read Istanbul Report
-See http://stackoverflow.com/a/36697606
+- http://stackoverflow.com/a/36697606
+- https://github.com/dwyl/learn-istanbul

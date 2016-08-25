@@ -4,11 +4,13 @@
 
 #### Notes
 - [Learn TypeScript in Y Minutes](https://learnxinyminutes.com/docs/typescript/)
-- Class: by default members in a class are public
-- Do we put return type when defining function?
+- Class: by default members in a class are __public__
+- __Enum__: an enum is a way of giving more friendly names to sets of numeric values
+- Do we put return type when defining function? Yes
+- Type assertion: `(<string>someValue).length;`
 - Do we have `constant` `readonly` concepts? Given we have `static`
 - Function overloading, it's not supported by JavaScript, is it dangerous to use extensively?
-- Do we have default parameters?
+- Do we have default parameters? Yes
 
 
 

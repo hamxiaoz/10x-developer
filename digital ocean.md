@@ -93,7 +93,13 @@ ref:
 
 ---
 
-## Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
+## SSL
+
+### How to check?
+- on server, use ssl-cert-check. [link](https://community.letsencrypt.org/t/it-there-a-command-to-show-how-many-days-certificate-you-have/11351/4)
+- https://www.sslshopper.com/ssl-checker.html
+
+### Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
 Steps:
 - Make sure A record is already updated for your domain first
 - On server:
@@ -103,12 +109,14 @@ Steps:
   # ssh to your server
   git clone https://github.com/letsencrypt/letsencrypt
   ./letsencrypt-auto certonly --standalone --agree-tos --email YOUR_EMAIL -d YOURDOMAIN.COM -d www.YOURDOMAIN.COM
-  # 4 files will be generated in the folder: etc/letsencrypt/live/YOURDOMAIN.COM
+  # 4 files will be generated in the folder: /etc/letsencrypt/archive/YOURDOMAIN.COM
+  # note the ones in /etc/letsencrypt/live/YOURDOMAIN.COM is symlinked to archive folder
 
-  # copy those files to your local machine:
-  sudo tar -cvvf letsencrypt_2016_06_05.tar /etc/letsencrypt/live/YOURDOMAIN.COM
-  # then on your local terminal, use scp to get the above file
-  scp USER@IP:/etc/letsencrypt_2016_06_05.tar ~
+  # Now we want to copy those files to your local machine:
+  sudo tar -cvvf letsencrypt_YYYY_MM_DD.tar /etc/letsencrypt/archive/YOURDOMAIN.COM
+  # then on your local terminal, use scp to get the above file, copy to home folder
+  scp -P 22 USER@IP:/etc/letsencrypt_2016_06_05.tar ~
+  # or 
   ```
 - Put the downloaded two files (fullchain.pem and privkey.pem) in your local folder where mup can access (see mup.json)
 - Update mup.json
@@ -129,9 +137,12 @@ Steps:
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
   ```
 
+Key points:
+- if cert is expired, you need to run `mpux setup` again
+
 
 Reference: 
-- this [guide](https://medium.com/@getdrizzle/deploying-meteor-app-with-free-ssl-certificate-mupx-letsencrypt-digital-ocean-7c85d90cc731#.ty1lahoh9
+- first read this [guide](https://medium.com/@getdrizzle/deploying-meteor-app-with-free-ssl-certificate-mupx-letsencrypt-digital-ocean-7c85d90cc731#.ty1lahoh9
 )
 - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04
 - https://forums.meteor.com/t/setting-up-ssl-with-letsencrypt-and-meteorup/14457

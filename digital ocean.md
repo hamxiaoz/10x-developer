@@ -139,6 +139,11 @@ Steps:
 
 Key points:
 - if cert is expired, you need to run `mpux setup` again
+- if you run letsencrypt renew, new files will be generated (such as cert2.pem)
+  - cert.pem: Your domain's certificate
+  - chain.pem: The Let's Encrypt chain certificate
+  - fullchain.pem: cert.pem and chain.pem combined
+  - privkey.pem: Your certificate's private key
 
 
 Reference: 

@@ -138,6 +138,7 @@ Steps:
   ```
 
 Key points:
+- You need to stop server before running renew.
 - if cert is expired, you need to run `mpux setup` again
 - if you run letsencrypt renew, new files will be generated (such as cert2.pem)
   - cert.pem: Your domain's certificate

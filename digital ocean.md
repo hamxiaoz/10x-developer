@@ -132,9 +132,20 @@ Steps:
   ```
 
 - Update meteor app by: `meteor add force-ssl`
-- Let’s Encrypt expires 90 days, so we create cron job to automatically update:
+- **NOTE this will NOT work because the server has to be stopped** Let’s Encrypt expires 90 days, so we create cron job to automatically update:
   ```
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
+  ```
+- to renew maually:
+  ```bash
+  # on dev machine, stop server:
+  mupx stop
+  # on server
+  /home/USER/letsencrypt/letsencrypt-auto renew
+  # above command will generate new files (cert2.pem etc), get the files to local machine
+  # by doing the same steps above: 'sudo tar -cvvf ...' (see above)
+  mupx setup
+  mupx deploy
   ```
 
 Key points:

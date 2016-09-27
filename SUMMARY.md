@@ -28,6 +28,7 @@
    * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
    * [Web Dev Resources](web_dev_resources.md)
+   * Sketch
 * Skills
    * [regex](regex.md)
    * [Ruby](Ruby.md)

@@ -37,10 +37,10 @@
    * [Editor: VS Code](editor_vs_code.md)
    * [Editor: Sublime](editor.md)
    * [Editor: Vim](editor_vim.md)
+   * [Editor: Atom](editor_atom.md)
    * [Windows](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)
    * [Mac](mac.md)
-   * [Editor: Atom](editor_atom.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

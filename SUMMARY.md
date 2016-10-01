@@ -40,5 +40,6 @@
    * [Git](git.md)
    * [Linux](linux.md)
    * [Mac](mac.md)
+   * Editor: VS Code
 * [Cheatsheets](Cheatsheets/README.md)
 

@@ -12,7 +12,8 @@ Open with sublime icon in Finder toolbar:
 Open current folder in command line, do this [setup](Open current folder in command line, do this [setup](x) and do `subl .`
 ) and do `subl .`
 
-Theme: https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz
+## Theme
+[Monokai-Soda](https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz)
 
 ---
 

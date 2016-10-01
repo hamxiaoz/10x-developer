@@ -35,10 +35,10 @@
    * [Functional Programming](functional_programming.md)
 * Tools
    * [Editor: Sublime](editor.md)
+   * [Editor: Vim](editor_vim.md)
    * [Development Setup/Tools](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)
-   * [Editor: Vim](editor_vim.md)
    * [Mac](mac.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

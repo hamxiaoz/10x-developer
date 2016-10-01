@@ -10,7 +10,9 @@ My bad habit:
 - Move to first non whitespace char: `0w` **->** `^`
 
 Good to use:
-- Go to line number 12: `12G`
+- Good to navigate based on error message:
+  - Go to line number 12: `12G`
+  - Go to column 20: `20l`
 - `H/M/L` Move to first/middle/last line of screen
 
 

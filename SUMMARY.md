@@ -35,8 +35,8 @@
 * Tools
    * [Chrome DevTools](DevTools.md)
    * [Editor: VS Code](editor_vs_code.md)
-   * [Editor: Sublime](editor.md)
    * [Editor: Vim](editor_vim.md)
+   * [Editor: Sublime](editor.md)
    * [Editor: Atom](editor_atom.md)
    * [Windows](development_tools.md)
    * [Git](git.md)

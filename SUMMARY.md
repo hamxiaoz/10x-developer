@@ -40,7 +40,7 @@
    * [Git](git.md)
    * [Linux](linux.md)
    * [Mac](mac.md)
-   * Editor: VS Code
+   * [Editor: VS Code](editor_vs_code.md)
    * [Editor: Atom](editor_atom.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

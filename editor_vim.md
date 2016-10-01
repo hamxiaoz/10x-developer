@@ -15,7 +15,7 @@ Good to use:
   - Go to column 20: `20l`
 - Move line in current screen: `H/M/L` first/middle/last
 - Scroll current line to top of window: `zt`
-
+- Go to last location: <code>``</code> (two backticks)
 
 Good to know:
 - move screen: `CTRL+e` or `CTRL+y`

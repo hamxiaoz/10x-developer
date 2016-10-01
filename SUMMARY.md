@@ -10,7 +10,6 @@
    * [ES6](ES6.md)
    * [coffeescript](coffeescript.md)
    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
-   * [DevTools](DevTools.md)
    * [TypeScript](typescript.md)
 * Angular.js
    * [Angular](angularjs.md)
@@ -34,6 +33,7 @@
    * [Ruby](Ruby.md)
    * [Functional Programming](functional_programming.md)
 * Tools
+   * [DevTools](DevTools.md)
    * [Editor: Sublime](editor.md)
    * [Editor: Vim](editor_vim.md)
    * [Development Setup/Tools](development_tools.md)

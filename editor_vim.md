@@ -16,7 +16,8 @@ Good to use:
   - Go to column 20: `20l`
 - Move line in current screen: `H/M/L` first/middle/last
 - Scroll current line to top of window: `zt`
-- Go to last location: <code>``</code> (two backticks)
+- Go to previous location: <code>``</code> (two backticks)
+- Use bookmark: `ma` (mark with a) then <code>`a</code> (go to a)
 
 Good to know:
 - Swap case: `~` (can do it in normal mode)

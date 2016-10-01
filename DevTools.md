@@ -28,7 +28,7 @@ table(names);
 
 ---
 
-### Chrome Extensions
+## Chrome Extensions
 - https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn
 - https://chrome.google.com/webstore/detail/merge-windows/adjadgadeebehakpgamlnafmdkegkmph
 - https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp

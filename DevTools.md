@@ -28,3 +28,14 @@ table(names);
 
 ---
 
+### Chrome Extensions
+- https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn
+- https://chrome.google.com/webstore/detail/merge-windows/adjadgadeebehakpgamlnafmdkegkmph
+- https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp
+- http://chrispederick.com/work/web-developer/
+- http://chengyinliu.com/whatfont.html
+- https://chrome.google.com/webstore/detail/emmet-review/epejoicbhllgiimigokgjdoijnpaphdp
+- https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall
+- postman: https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo
+- https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj
+- feedly, evernote

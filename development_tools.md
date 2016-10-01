@@ -18,17 +18,11 @@
 
 ---
 
-## Mac
 
-### Network
-- inject data to web: http://www.charlesproxy.com/
-
-### VM
-- https://github.com/xdissent/ievms/
 
 ---
 
-## Windows
+## Windows Development Tools
 
 ### Shell
 - Shell/Console

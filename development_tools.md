@@ -1,7 +1,3 @@
-
-
-
-
 # Windows Development Tools
 
 ### Shell

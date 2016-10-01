@@ -25,3 +25,6 @@ var names = {
 };
 table(names);
 ```
+
+---
+

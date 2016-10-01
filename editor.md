@@ -28,6 +28,7 @@ http://www.cheatography.com/ducondez/cheat-sheets/core-sublimetext/
 #### Search
 symbol search in ST3
 
+----
 
 ### Packages
 - vim ex mode: http://www.sublimetext.com/docs/2/vintage.html 
@@ -42,14 +43,6 @@ The following looks good but not tested
 
 ---
 
-## Vim
-
-Do this chanllege: https://www.shortcutfoo.com/app/dojos/vim
-
-Cheatsheet:
-
-- `H/M/L` Move to first/middle/last line of screen
-- `:x` is same as `:wq`
 
 ---
 

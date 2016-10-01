@@ -39,5 +39,6 @@
    * [Git](git.md)
    * [Linux](linux.md)
    * [Editor: Vim](editor_vim.md)
+   * Mac
 * [Cheatsheets](Cheatsheets/README.md)
 

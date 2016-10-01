@@ -38,6 +38,6 @@
    * [Development Setup/Tools](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)
-   * Editor: Vim
+   * [Editor: Vim](editor_vim.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

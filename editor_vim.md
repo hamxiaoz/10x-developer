@@ -13,7 +13,8 @@ Good to use:
 - Good to navigate based on error message:
   - Go to line number 12: `12G`
   - Go to column 20: `20l`
-- `H/M/L` Move to first/middle/last line of screen
+- Move line in current screen: `H/M/L` first/middle/last
+- Scroll current line to top of window: `zt`
 
 
 Good to know:

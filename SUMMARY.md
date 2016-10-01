@@ -41,5 +41,6 @@
    * [Linux](linux.md)
    * [Mac](mac.md)
    * Editor: VS Code
+   * Editor: Atom
 * [Cheatsheets](Cheatsheets/README.md)
 

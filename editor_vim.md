@@ -4,5 +4,12 @@ Do this chanllege: https://www.shortcutfoo.com/app/dojos/vim
 
 ## Cheatsheet
 
+To improve, try the following:
 - `H/M/L` Move to first/middle/last line of screen
-- `:x` is same as `:wq`
+- Edit at the first of the line: `0i` -> `I`
+- 
+- 
+- 
+- 
+- 
+- - `:x` is same as `:wq`

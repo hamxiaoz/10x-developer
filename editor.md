@@ -1,9 +1,9 @@
 ## Mac
-`ALT` to jump to word
+`ALT+arrow` to jump to word
 
 ---
 
-## SublimeText
+# SublimeText
 See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 
 Open with sublime icon in Finder toolbar: 
@@ -16,8 +16,10 @@ Open current folder in command line, do this [setup](Open current folder in comm
 
 Theme: https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz
 
-### Shortcuts/Tips
-#### core
+---
+
+## Shortcuts/Tips
+
 http://www.cheatography.com/ducondez/cheat-sheets/core-sublimetext/
 
 #### Pane Management
@@ -30,7 +32,7 @@ symbol search in ST3
 
 ----
 
-### Packages
+## Packages
 - vim ex mode: http://www.sublimetext.com/docs/2/vintage.html 
 - git gutter: https://github.com/jisaacks/GitGutte
 - sidebarenhancement
@@ -40,8 +42,6 @@ The following looks good but not tested
 - https://github.com/noklesta/SublimeQuickFileCreator
 - https://github.com/twolfson/FindPlusPlus
 - https://github.com/dzhibas/SublimePrettyJson
-
----
 
 
 ---

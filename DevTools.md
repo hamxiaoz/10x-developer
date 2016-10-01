@@ -2,6 +2,14 @@
 
 _ http://www.cnblogs.com/Wayou/p/chrome-console-tips-and-tricks.html
 
+## Hotkey
+Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CMD`:
+- `ALT+CMD+arrow`: go to left or right tab
+- `ALT+CMD+0`: go to first tab
+- `ALT+CMD+9`: go to last tab
+- `ALT+CMD+C`: inspect element
+- `ALT+CMD+i`: Dev Tools
+
 ## API
 [Command Line API Reference for Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en)
 

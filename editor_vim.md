@@ -9,6 +9,7 @@ My bad habit:
 - `t` and `f` is different: `t` is to **before the character** where `f` **includes the character**. That's why when you copy to quote you should use `vf'` instead of `vt'` (this will miss the last character before `'`)
 - Move to first non whitespace char: `0w` **->** `^`
 
+
 Good to use:
 - Good to navigate based on error message:
   - Go to line number 12: `12G`
@@ -18,5 +19,6 @@ Good to use:
 - Go to last location: <code>``</code> (two backticks)
 
 Good to know:
+- Swap case: `~` (can do it in normal mode)
 - move screen: `CTRL+e` or `CTRL+y`
 - `:x` is same as `:wq`

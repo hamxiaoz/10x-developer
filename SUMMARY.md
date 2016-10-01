@@ -36,7 +36,7 @@
    * [Chrome DevTools](DevTools.md)
    * [Editor: Sublime](editor.md)
    * [Editor: Vim](editor_vim.md)
-   * [Development Setup/Tools](development_tools.md)
+   * [Windows](development_tools.md)
    * [Git](git.md)
    * [Linux](linux.md)
    * [Mac](mac.md)

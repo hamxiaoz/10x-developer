@@ -47,7 +47,7 @@ The following looks good but not tested
 
 ## Editing Tips
 
-### How to remove 1./2./3. for multiple lines?
+### How to remove the bullet points '1./2./3.' for multiple lines?
 Old way in vim: line by line.
 - delete on 1st line then j0.
 - or q to record to 1 then 10@1

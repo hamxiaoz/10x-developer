@@ -21,10 +21,24 @@ Open current folder in command line, do this [setup](Open current folder in comm
 
 http://www.cheatography.com/ducondez/cheat-sheets/core-sublimetext/
 
-#### Pane Management
+### Pane Management
 - `ALT+CMD+num`: open number of panes
 - `CTRL+num`: switch to pane
 - `CTRL+SHIT+num`: move tab to pane
+
+### Selections / Multiple line editing
+`CMD+D` 
+- select the whole word even you're in the middle
+- hit multiple times will add up selections (multiple edit)
+
+`CMD+G`: find next (cmd+D first), similar to it but it has visual
+
+`CTRL+CMD+G`: select all current highlight
+
+`CMD+SHIFT+L`: **split lines** in selection, then v to exit visual mode
+
+`SHIFT+CMD+SPACE`: select parent scope, can I do it in vintage without telling the parent?
+
 
 #### Search
 symbol search in ST3

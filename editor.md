@@ -26,6 +26,17 @@ http://www.cheatography.com/ducondez/cheat-sheets/core-sublimetext/
 - `CTRL+num`: switch to pane
 - `CTRL+SHIT+num`: move tab to pane
 
+Inside pane:
+- `CMD+1/2/3`: go to tab, most avtive to tabs
+- `SHIFT+CMD+[/]`: go to next tab
+
+Use Origami: `super+k` to start:
+- `super+z` to zoom, `shift+super+z` to reset
+- use arrow to switch to panes
+  - press `shift` to carry file.
+  - press `alt` to clone file.
+
+
 ### Selections / Multiple line editing
 `CMD+D` 
 - select the whole word even you're in the middle

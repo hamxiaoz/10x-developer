@@ -71,3 +71,20 @@ New way in vim/ST: multiple line editing:
 - split lines selection: `SHIFT+CMD+L`
 - v to exit v mode then 0dw
 
+Example:
+
+```
+# FROM:
+- US Patent No. 4,136,359: "Microcomputer for use with video display"[41]—for which he was inducted into the National Inventors Hall of Fame.
+- US Patent No. 4,210,959: "Controller for magnetic disc, recorder, or the like"[42]
+- US Patent No. 4,217,604: "Apparatus for digitally controlling PAL color display"[43]
+- US Patent No. 4,278,972: "Digitally-controlled color signal generation means for use with display"[44]
+
+# TO:
+US Patent No. 4,136,359: "Microcomputer for use with video display"[41]—for which he was inducted into the National Inventors Hall of Fame.
+US Patent No. 4,210,959: "Controller for magnetic disc, recorder, or the like"[42]
+US Patent No. 4,217,604: "Apparatus for digitally controlling PAL color display"[43]
+US Patent No. 4,278,972: "Digitally-controlled color signal generation means for use with display"[44]
+
+# answer (with vi mode): V -> } -> CMD+SHIFT+L -> v -> 0 -> dw -> ESC
+```

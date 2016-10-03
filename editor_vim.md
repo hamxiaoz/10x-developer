@@ -5,6 +5,7 @@ Do this chanllege: https://www.shortcutfoo.com/app/dojos/vim
 ## Cheatsheet (that I don't know)
 
 My bad habit (mostly motion):
+- use `3j` or `3k` instead of hitting `jjjj` or `kkkk`
 - Edit at the first of the line: `0i` **->** `I`
 - Move to first non whitespace char: `0w` **->** `^`
 - Move line in current screen: `H/M/L` first/middle/last

@@ -1,7 +1,8 @@
 # Mac
 
 ## Hotkeys
-`ALT+arrow` to jump to word
+- Jump to word: `ALT+arrow`
+- Zoom in quick look: hold down `ALT/Option` (it seems you can zoom by guesture on El Capitan)
 
 ---
 

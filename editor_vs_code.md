@@ -12,3 +12,36 @@ Search:
 
 ## Packages
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+- TSLint
+- Monokai theme
+- VSCodeVim
+
+## User Settings
+```json
+// Place your settings in this file to overwrite the default settings
+{
+
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 2,
+    "editor.renderIndentGuides": true,
+    "files.trimTrailingWhitespace": true,
+
+    "files.exclude": {
+      "**/*.js": {"when": "$(basename).ts"},
+      "**/*.js.map": true
+    },
+
+    "files.autoSave": "off",
+    "editor.renderWhitespace": "boundary",
+    "editor.lineNumbers": "relative",
+    
+    
+    // OPTIONAL
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/build": true
+  }
+}
+```

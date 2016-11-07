@@ -9,4 +9,7 @@
 
 ---
 
-Pixlr, Photoshop online: https://pixlr.com/
+# Links
+- Pixlr, Photoshop online: https://pixlr.com/
+- Colors scheme generator: https://coolors.co/
+- Random data generator: https://www.mockaroo.com/

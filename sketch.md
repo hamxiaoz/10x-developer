@@ -3,7 +3,7 @@
 ## Hotkeys
 - `CTRL+C`: pick color
 
-### How to create your own hotkey?
+### How to create your own hotkey in Sketch?
 - Go to "keyboard" in system preference
 - Choose "App Shortcuts" in sidebar
 - Click "+"

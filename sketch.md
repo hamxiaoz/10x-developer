@@ -26,7 +26,7 @@ Credits to this post [Shortcuts, Hotkeys, and Gestures: 5 Ways to Become a Desig
 
 ---
 
-# Links
+# Helpful Tools
 - Pixlr, Photoshop online: https://pixlr.com/
 - Colors scheme generator: https://coolors.co/
 - Random data generator: https://www.mockaroo.com/

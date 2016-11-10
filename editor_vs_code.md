@@ -10,6 +10,8 @@ Focus
 Search:
 - Switch search history: `ALT+UP/DOWN` 
 
+Terminal: "ctrl+`"
+
 ## Packages
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 - TSLint
@@ -33,7 +35,7 @@ Search:
 
     "files.autoSave": "off",
     "editor.renderWhitespace": "boundary",
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     
     
     // OPTIONAL

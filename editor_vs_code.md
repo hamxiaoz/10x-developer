@@ -1,12 +1,6 @@
 # Editor: VS Code
 
-## Hotkeys
-
-Navigation
-- Toggle side pane: `CMD+B`
-- Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
-- Switch to focus group 1/2: `CMD+1/2`
-- open in new pane: `CMD+\`
+## [Learning](http://code.visualstudio.com/docs)
 
 **Advanced**
 - navigate back:
@@ -16,7 +10,27 @@ Navigation
 - Go to line: `:20`
 - Code reformatting: `CMD+K, CMD+F`
 - Code folding: `SHIFT+CMD+[ or ]`
+- Trigger Intellisense: `CTRL+SPACE`
 - Trim trailing whitespace: `CMD+SHIFT+X`
+
+_ [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runner)
+
+_ custom snippets
+
+_ [Emmet](http://code.visualstudio.com/docs/languages/html#_emmet-snippets)
+
+_ Debug
+
+
+## Hotkeys
+
+Navigation
+- Toggle side pane: `CMD+B`
+- Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
+- Switch to focus group 1/2: `CMD+1/2`
+- open in new pane: `CMD+\`
+
+
 
 Search:
 - Switch search history: `ALT+UP/DOWN` 

@@ -7,7 +7,10 @@ Navigation
 - Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
 - Switch to focus group 1/2: `CMD+1/2`
 - open in new pane: `CMD+\`
+
+**Advanced**
 - navigate back to last position/file: `CTRL+-`
+- find by symbol (instead of find by text): `CMD+SHIFT+o`
 
 Search:
 - Switch search history: `ALT+UP/DOWN` 

@@ -14,6 +14,7 @@ Navigation
   - to last position: `CMD+U`
 - find by symbol (instead of find by text): `CMD+SHIFT+o`
 - Go to line: `:20`
+- Trim trailing whitespace: `CMD+SHIFT+X`
 
 Search:
 - Switch search history: `ALT+UP/DOWN` 

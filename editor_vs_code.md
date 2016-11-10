@@ -11,6 +11,7 @@ Navigation
 **Advanced**
 - navigate back to last position/file: `CTRL+-`
 - find by symbol (instead of find by text): `CMD+SHIFT+o`
+- Go to line: `:20`
 
 Search:
 - Switch search history: `ALT+UP/DOWN` 

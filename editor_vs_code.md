@@ -24,11 +24,14 @@ _ Debug
 
 ## Hotkeys
 
-Navigation
+Sidebar
 - Toggle side pane: `CMD+B`
 - Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
+
+Navigation in Editor
 - Switch to focus group 1/2: `CMD+1/2`
 - open in new pane: `CMD+\`
+- Move from group 1 to group 2?
 
 
 
@@ -36,6 +39,25 @@ Search:
 - Switch search history: `ALT+UP/DOWN` 
 
 Terminal: "ctrl+`"
+
+### Custom Hotkeys
+```json
+// Place your key bindings in this file to overwrite the defaults
+[
+  // Maximize current editor
+  {
+    "key": "cmd+k cmd+m",
+    "command": "workbench.action.maximizeEditor",
+    "when": "editorTextFocus"
+  },
+  // Exit Maximize current editor
+  {
+    "key": "cmd+k cmd+n",
+    "command": "workbench.action.evenEditorWidths",
+    "when": "editorTextFocus"
+  }
+]
+```
 
 ## Packages
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)

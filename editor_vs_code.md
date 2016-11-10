@@ -9,7 +9,9 @@ Navigation
 - open in new pane: `CMD+\`
 
 **Advanced**
-- navigate back to last position/file: `CTRL+-`
+- navigate back:
+  - to last file: `CTRL+-`
+  - to last position: `CMD+U`
 - find by symbol (instead of find by text): `CMD+SHIFT+o`
 - Go to line: `:20`
 

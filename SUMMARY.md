@@ -32,7 +32,7 @@
    * [regex](regex.md)
    * [Ruby](Ruby.md)
    * [Functional Programming](functional_programming.md)
-* Tools
+* Know Your Tools
    * [Chrome DevTools](DevTools.md)
    * [Editor: VS Code](editor_vs_code.md)
    * [Editor: Vim](editor_vim.md)

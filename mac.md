@@ -4,9 +4,14 @@
 - Jump to word: `ALT+arrow`
 - Zoom in quick look: hold down `ALT/Option` (it seems you can zoom by guesture on El Capitan)
 
+
+## Setup
+Enable touchpad tap to click:`System Preferences > Trackpad，Point & Click: check Tap to click`
+
 Enable `System Preferences > Keyboard -> Shortcuts: check All controls` then you can use `SPACE` to choose file dialog:
 
 ![](img/save-dialog.png)
+
 
 ---
 

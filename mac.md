@@ -4,7 +4,7 @@
 - Jump to word: `ALT+arrow`
 - Zoom in quick look: hold down `ALT/Option` (it seems you can zoom by guesture on El Capitan)
 
-Enable `System Preferences > Keyboard -> Shortcuts: check All controls` then you can use `SPACE` to choose file dialog:![](Screen Shot 2016-11-13 at 13.03.50.png)
+Enable `System Preferences > Keyboard -> Shortcuts: check All controls` then you can use `SPACE` to choose file dialog:![](img/save-dialog.png)
 
 ---
 

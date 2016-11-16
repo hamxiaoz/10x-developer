@@ -31,7 +31,11 @@ Sidebar
 Navigation in Editor
 - Switch to focus group 1/2: `CMD+1/2`
 - open in new pane: `CMD+\`
-- Move from group 1 to group 2?
+- Move active editor to left/right group: `CTRL+CMD+LEFT/RIGHT`
+  ```
+  { "key": "ctrl+cmd+right",        "command": "workbench.action.moveEditorToNextGroup" },
+  { "key": "ctrl+cmd+left",         "command": "workbench.action.moveEditorToPreviousGroup" }
+```
 
 
 

@@ -96,8 +96,13 @@ ref:
 ## SSL
 
 ### How to check?
-- on server, use ssl-cert-check. [link](https://community.letsencrypt.org/t/it-there-a-command-to-show-how-many-days-certificate-you-have/11351/4)
-- https://www.sslshopper.com/ssl-checker.html
+Online tool: https://www.sslshopper.com/ssl-checker.html
+
+Or use `ssl-cert-check` on server ([reference](https://community.letsencrypt.org/t/it-there-a-command-to-show-how-many-days-certificate-you-have/11351/4)):  
+```
+sudo ssl-cert-check -c /etc/letsencrypt/live/yourdomain.tld/cert.pem
+```
+
 
 ### Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
 Steps:

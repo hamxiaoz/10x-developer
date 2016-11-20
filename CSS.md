@@ -169,7 +169,8 @@ div {
 ## Display
 
 - `display:none` means the browser will render the page as the element doesn't exist. 
-- `visibility:hidden` means **it renders as it's there** but not visible.
+- `visibility:hidden` means **it renders as it's there** but not visible, like **invisibe cloak**.
+- `opacity:0`: when focus on it, iOS will show keyboard. The other two won't.
 
 `display:block` will stretch the element to left/right as far as possible.
 

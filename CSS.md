@@ -96,7 +96,10 @@ pseudo-elements
 ```
 
 ## Good to know
-- `strong` vs `b` (style only)
+- `strong` vs `em` vs `b` 
+  - `em` emphasis 
+  - `strong` added importance
+  - `b` (style only)
 - `dl` `dd`
 - List:  the only element we can place as a direct child of the `<ul>` and `<ol>` elements is the `<li>` element
 - `audio`

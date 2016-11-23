@@ -114,6 +114,7 @@ pseudo-elements
 - `figure`+`figcaption`
 - `mark` for highlight
 - `<progress value="70" max="100">70 %</progress>`
+- `<ruby>` and `<rt>` for 中文注音： http://codepen.io/hamxiaoz/pen/Nbjjjm
 
 ## Font
 ```css

@@ -1,19 +1,32 @@
-
----
-
 # SublimeText
-See preferences and used packages: https://github.com/hamxiaoz/my-scripts
 
-Open with sublime icon in Finder toolbar: 
+## Packages
+My preferences and used packages: https://github.com/hamxiaoz/my-scripts
+
+- vim ex mode: http://www.sublimetext.com/docs/2/vintage.html 
+- git gutter: https://github.com/jisaacks/GitGutte
+- sidebarenhancement
+
+The following looks good but not tested
+- https://github.com/vkocubinsky/SublimeTableEditor
+- https://github.com/noklesta/SublimeQuickFileCreator
+- https://github.com/twolfson/FindPlusPlus
+- https://github.com/dzhibas/SublimePrettyJson
+
+## Theme
+[Monokai-Soda](https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz)
+
+## Setup
+
+#### How to have an "Open with sublime" icon in Finder toolbar? 
 - export application, following [this guide](http://hohonuuli.blogspot.com/2013/07/open-filesfolder-selected-in-finder.html)
 - hold down `Option+Command` and then start dragging the desired icon to the toolbar.
 - You can use icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
 
-Open current folder in command line, do this [setup](Open current folder in command line, do this [setup](x) and do `subl .`
-) and do `subl .`
+#### How to open current folder in command line?
+- do this [setup](Open current folder in command line, do this [setup](x)
+- then you can use like this: `subl .`
 
-## Theme
-[Monokai-Soda](https://github.com/hamxiaoz/Monokai-Soda-hamxiaoz)
 
 ---
 
@@ -54,25 +67,13 @@ Use Origami: `super+k` to start:
 #### Search
 symbol search in ST3
 
-----
-
-## Packages
-- vim ex mode: http://www.sublimetext.com/docs/2/vintage.html 
-- git gutter: https://github.com/jisaacks/GitGutte
-- sidebarenhancement
-
-The following looks good but not tested
-- https://github.com/vkocubinsky/SublimeTableEditor
-- https://github.com/noklesta/SublimeQuickFileCreator
-- https://github.com/twolfson/FindPlusPlus
-- https://github.com/dzhibas/SublimePrettyJson
 
 
 ---
 
-## Editing Tips
+### Editing Tips
 
-### How to remove the bullet points '1./2./3.' for multiple lines?
+#### How to remove the bullet points '1./2./3.' for multiple lines?
 Old way in vim: line by line.
 - delete on 1st line then j0.
 - or q to record to 1 then 10@1

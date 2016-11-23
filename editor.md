@@ -20,14 +20,7 @@ The following looks good but not tested
 
 #### How to have an "Open with sublime" icon in Finder toolbar? 
 ![](/img/sublime-open-folder-from-toolbar.gif)
-- Download this app: x
-- Move to your Applications folder (or any folder that you won't mistakenly delete the app)
-- hold down `Option+Command` and then start dragging the desired icon to the toolbar.
-
-
-Or if you prefer to do it own your own:
-- Follow [this guide](http://hohonuuli.blogspot.com/2013/07/open-filesfolder-selected-in-finder.html).
-- Replace the default icon with icons from [this theme](https://github.com/jamiewilson/predawn/tree/master/dock-icons)
+Go to my repo [open-folder-with-sublime](https://github.com/hamxiaoz/open-folder-with-sublime) and follow the instructions.
 
 #### How to open current folder in command line?
 - do this [setup](Open current folder in command line, do this [setup](x)

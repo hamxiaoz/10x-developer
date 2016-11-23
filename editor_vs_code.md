@@ -98,3 +98,9 @@ Terminal: "ctrl+`"
   }
 }
 ```
+
+## Setup
+
+#### How to add an "Open with VS Code" icon in Finder toolbar? 
+
+Go to my repo [open-folder-with-vs-code](https://github.com/hamxiaoz/open-folder-with-vs-code) and follow the instructions.

@@ -301,11 +301,11 @@ float能让元素从文档流中抽出，它并不占文档流的空间，典型
 .container {
   display: flex;
   
-  // vertically center (cross-axis)
+  // center on cross-axis (default: vertically)
   align-items: center;
   
-  // horizontally center
-  
+  // center on main axis (default: horizontally)
+  justify-content: center;
 }
 ```
 

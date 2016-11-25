@@ -156,7 +156,7 @@ Don't forget to add `force-ssl` package:  `meteor add force-ssl`
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
   ```
 
-#### To renew maually
+#### To renew manually
   ```bash
   # on dev machine, stop server:
   mupx stop

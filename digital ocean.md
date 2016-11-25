@@ -150,8 +150,11 @@ Update mup.json
 Don't forget to add `force-ssl` package:  `meteor add force-ssl`
 
 #### Renew automatically
-- **NOTE this will NOT work because the server has to be stopped** Let’s Encrypt expires 90 days, so we create cron job to automatically update:
-- **maybe try this? https://cuonic.com/posts/automating-lets-encrypt-certificate-renewal**
+> NOTE this will **NOT** work because the server has to be stopped
+> - [ ] maybe try this? https://cuonic.com/posts/automating-lets-encrypt-certificate-renewal
+
+Let’s Encrypt expires 90 days, so we create cron job to automatically update:
+
   ```
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
   ```

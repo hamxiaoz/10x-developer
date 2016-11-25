@@ -142,7 +142,8 @@ Steps:
   ```
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
   ```
-- to renew maually:
+
+To renew maually:
   ```bash
   # on dev machine, stop server:
   mupx stop

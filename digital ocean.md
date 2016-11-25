@@ -115,9 +115,16 @@ SSH to server:
   git clone https://github.com/letsencrypt/letsencrypt
   ./letsencrypt-auto certonly --standalone --agree-tos --email YOUR_EMAIL -d YOURDOMAIN.COM -d www.YOURDOMAIN.COM
   ```
-4 files will be generated in the archive folder: `/etc/letsencrypt/archive/YOURDOMAIN.COM`
-> Note the ones in `/etc/letsencrypt/live/YOURDOMAIN.COM` is symlinked to archive folder
-  
+The following 4 files will be generated in the archive folder: `/etc/letsencrypt/archive/YOURDOMAIN.COM`    
+(Note the ones in `/etc/letsencrypt/live/YOURDOMAIN.COM` is symlinked to archive folder)
+- cert1.pem
+- chain1.pem
+- fullchain1.pem
+- privkey1.pem
+
+
+
+
   
 Now we want to copy those files to your local machine:
 

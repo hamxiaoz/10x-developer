@@ -122,9 +122,6 @@ The following 4 files will be generated in the archive folder: `/etc/letsencrypt
 - fullchain1.pem
 - privkey1.pem
 
-
-
-
   
 Now we want to copy those files to your local machine:
 

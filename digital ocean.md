@@ -129,7 +129,7 @@ Now we want to copy those files to your local machine:
   # compress them on server first
   sudo tar -cvvf letsencrypt_YYYY_MM_DD.tar /etc/letsencrypt/archive/YOURDOMAIN.COM
   # then on your local terminal, use scp to get the above file, copy to home folder
-  scp -P 22 USER@IP:/etc/letsencrypt_2016_06_05.tar ~
+  scp -P 22 USER@IP:/home/USER/letsencrypt_YYYY_MM_DD.tar ~
   # or 
   ```
 

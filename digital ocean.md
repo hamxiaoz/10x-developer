@@ -105,26 +105,33 @@ sudo ssl-cert-check -c /etc/letsencrypt/live/yourdomain.tld/cert.pem
 
 
 ### Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
-Steps:
-- Make sure A record is already updated for your domain first
-- On server:
+#### Steps
+Make sure A record is already updated for your domain first
 
+SSH to server:
 
   ```bash
   # ssh to your server
   git clone https://github.com/letsencrypt/letsencrypt
   ./letsencrypt-auto certonly --standalone --agree-tos --email YOUR_EMAIL -d YOURDOMAIN.COM -d www.YOURDOMAIN.COM
-  # 4 files will be generated in the folder: /etc/letsencrypt/archive/YOURDOMAIN.COM
-  # note the ones in /etc/letsencrypt/live/YOURDOMAIN.COM is symlinked to archive folder
+  ```
+4 files will be generated in the archive folder: `/etc/letsencrypt/archive/YOURDOMAIN.COM`
+> Note the ones in `/etc/letsencrypt/live/YOURDOMAIN.COM` is symlinked to archive folder
+  
+  
+Now we want to copy those files to your local machine:
 
-  # Now we want to copy those files to your local machine:
+  ```
+  # compress them on server first
   sudo tar -cvvf letsencrypt_YYYY_MM_DD.tar /etc/letsencrypt/archive/YOURDOMAIN.COM
   # then on your local terminal, use scp to get the above file, copy to home folder
   scp -P 22 USER@IP:/etc/letsencrypt_2016_06_05.tar ~
   # or 
   ```
-- Put the downloaded two files (fullchain.pem and privkey.pem) in your local folder where mup can access (see mup.json)
-- Update mup.json
+
+Put the downloaded two files (fullchain.pem and privkey.pem) in your local folder where mup can access (see mup.json)
+
+Update mup.json
 
   ```
    “ROOT_URL”: “https://yourdomain.com",
@@ -136,14 +143,16 @@ Steps:
   },
   ```
 
-- Update meteor app by: `meteor add force-ssl`
+Don't forget to add `force-ssl` package:  `meteor add force-ssl`
+
+#### Renew automatically
 - **NOTE this will NOT work because the server has to be stopped** Let’s Encrypt expires 90 days, so we create cron job to automatically update:
 - **maybe try this? https://cuonic.com/posts/automating-lets-encrypt-certificate-renewal**
   ```
   30 2 * * 1 /home/USER/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
   ```
 
-To renew maually:
+#### To renew maually
   ```bash
   # on dev machine, stop server:
   mupx stop
@@ -165,7 +174,7 @@ Key points:
   - privkey.pem: Your certificate's private key
 
 
-Reference: 
+#### Reference: 
 - first read this [guide](https://medium.com/@getdrizzle/deploying-meteor-app-with-free-ssl-certificate-mupx-letsencrypt-digital-ocean-7c85d90cc731#.ty1lahoh9
 )
 - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04

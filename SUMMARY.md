@@ -24,8 +24,8 @@
    * [NW.js (node-webkit)](nw.md)
 * Full Stack Development
    * [Meteor](meteor.md)
-   * [Digital Ocean](digital ocean.md)
    * [MongoDB](mongodb.md)
+   * [Digital Ocean](digital ocean.md)
    * [Web Dev Resources](web_dev_resources.md)
    * [Sketch](sketch.md)
 * Skills

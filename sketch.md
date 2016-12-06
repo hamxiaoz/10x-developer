@@ -1,7 +1,12 @@
-# Sketch
+# Sketch App
 
-## Hotkeys
+## Tips/Hotkeys
+- `R`: (rectangle) to create `<hr>`
+- `S`: (slice) to create slice for export
 - `CTRL+C`: pick color
+- `CMD+1`: for artboard overview
+- `CMD+2`: zoom to selected artboard
+- Hold `ALT` and use mouse to see space between elements
 
 ### How to create your own hotkey in Sketch?
 - Go to "keyboard" in system preference
@@ -20,9 +25,7 @@ For example, I create a hotkey `^i` (Ctrl+i) for inserting images, and here is t
 
 Credits to this post [Shortcuts, Hotkeys, and Gestures: 5 Ways to Become a Design Ferrari in Sketch](https://medium.com/ux-power-tools/shortcuts-hotkeys-and-gestures-5-ways-to-become-a-design-ferrari-in-sketch-or-blazingly-fast-in-389929e89115#.u7ttq71tc).
 
-## Tips
-- Use R (rectangle) to create `<hr>`
-- Use S (slice) to create slice for export
+
 
 ---
 

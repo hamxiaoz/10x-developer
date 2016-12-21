@@ -17,13 +17,14 @@ References:
 * We have `static`, `readonly`
   * If you want to express **constant**, use `readonly` or `static readonly`.
 * Function overload, this is possible in TypeScript but it's not supported by JavaScript.
-* Do we have default parameters? Yes.
-  `getSum(data: number[], skipNegative: boolean = false)`
+* Default paramter: `getSum(data: number[], skipNegative: boolean = false)`
 
 * Destructing
-  \`\`\`js
-
-\`\`\``// pick some valu`
+  ```typescript
+  // pick only the data we need using destructing
+  // Function signature: getAccountInfo(): {balance: number; cardStatus: string; cardNumber: string; cardHolder: string}
+  const {balance, cardStatus} = this.getAccountInfo();
+  ```
 
 
 

@@ -259,6 +259,12 @@ function isNullOrEmpty(arr) {
 }
 ```
 
+\_.isEmpty\(\):
+
+* check the length of array or string
+* CANNOT check number: \_.isEmpty\(10\) === true
+* check if object has enumerable own-properties
+
 Check null:
 
 * use `typeof instance.currentPosition  !== 'undefined'` 
@@ -306,9 +312,11 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
 * The [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) returns true if the specified property is in the specified object.
 
 * `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
+
   * so `typeof [] === 'object`
   * **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
   * usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
+
 * `a instanceof Constructor`, check if it's a **reference type**
   * Use constructor, not string: so `[] instanceof Object`, not 'object'
 * \(**TODO**\) Check if an object is a type

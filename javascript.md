@@ -250,7 +250,7 @@ function isNullOrEmpty(str) {
     return _.isEmpty(str); // it's actually checking str.length
 }
 
-// Be carefule with _.isEmpty as it's checking length, so don't use it to check number 
+// Be careful with _.isEmpty as it's checking length, so don't use it to check number 
 _.isEmpty(10) === true;
 
 
@@ -304,6 +304,7 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
   * use `hasOwnProperty(key)` to check
 
 * The [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) returns true if the specified property is in the specified object.
+
 * `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
   * so `typeof [] === 'object`
   * **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

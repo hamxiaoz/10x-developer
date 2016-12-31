@@ -5,7 +5,7 @@
 **Spy \(for methods, can track calls or specify return value\)**
 
 ```js
-// Spy method
+// Spy on existing method
 beforeEach(function() {
     foo = {
       setBar: function(value) {
@@ -21,6 +21,25 @@ beforeEach(function() {
 
     // Throw error
     spyOn(foo, "setBar").and.throwError("404");
+});
+
+// Create spy to stub method
+beforeEach(function() {
+    foo = {
+      setBar: jasmine.createSpy('setBar')
+    };
+
+    // Test
+    expect(foo.setBar).toHaveBeenCalled();
+});
+
+// Create a spy for a bare method
+beforeEach(function() {
+    let foo = jasmine.createSpy('foo');
+
+    // Test
+    foo('you can pass any', 'args');
+    expect(foo).toHaveBeenCalledWith('you can pass any', 'args');
 });
 ```
 

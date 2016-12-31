@@ -52,7 +52,21 @@ beforeEach(function() {
     expect($window.open).toHaveBeenCalled();
 });
 
-// Use spy to create an object containing methods and property
+// Use spy to create an object containing both methods and property
+// You cannot use createSpyObj as it's for methods only
+beforeEach(function() {
+    foo = {
+      bar: {},
+      setBar: jasmine.createSpy('setBar')
+    };
+
+    // Test
+    foo.setBar();
+    expect(foo.bar).toEqual({});
+    expect(foo.setBar).toHaveBeenCalled();
+});
+
+
 ```
 
 **Matcher**

@@ -89,11 +89,9 @@ expect(foo).toEqual(jasmine.objectContaining({
 * Remember to call `$scope.$apply();` when testing promise. [Why?](http://davideguida.altervista.org/the-importance-of-scope-apply-when-testing-promises/)
 * Call `done()` to instruct the spec is done for Asynchronous tests.
 
-
-
 ## Jasmine + Angular
 
-```TypeScript
+```js
 describe('My Tests', () => {
   let $scope: angular.IScope,
     $q: angular.IQService
@@ -113,7 +111,6 @@ describe('My Tests', () => {
     pending();
   });
 });
-
 ```
 
 ---

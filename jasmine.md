@@ -15,14 +15,13 @@ beforeEach(function() {
 
     // Spy method
     spyOn(foo, 'setBar');
-    
+
     // Return specified value
     spyOn(foo, "getBar").and.returnValue(745);
-    
+
     // Throw error
     spyOn(foo, "setBar").and.throwError("404");
 });
-
 ```
 
 **Matcher**
@@ -35,9 +34,10 @@ expect(123).toEqual(jasmine.any(Number));
 // Match function, useful to test callback function
 expect(service.registerCallback).toHaveBeenCalledWith('key', jasmine.any(Function));
 
-// Match object
+// Match partial object
 expect(foo).toEqual(jasmine.objectContaining({
-  bar: "baz"
+  bar: "baz",
+  fooFunc: jasmine.any(Function)
 }));
 ```
 

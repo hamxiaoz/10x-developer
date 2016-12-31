@@ -1,8 +1,8 @@
-# Jasmine
+# JavaScript Testing
 
 ## Jasmine Cheatsheet
 
-**Spy**
+**Spy \(for methods, can track calls or specify return value\)**
 
 ```js
 // Spy method

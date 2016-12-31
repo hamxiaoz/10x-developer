@@ -23,7 +23,7 @@ beforeEach(function() {
     spyOn(foo, "setBar").and.throwError("404");
 });
 
-// Create spy to stub method
+// Use spy to stub a method
 beforeEach(function() {
     foo = {
       setBar: jasmine.createSpy('setBar')
@@ -33,7 +33,7 @@ beforeEach(function() {
     expect(foo.setBar).toHaveBeenCalled();
 });
 
-// Create a spy for a bare method
+// Use spy to create bare method
 beforeEach(function() {
     let foo = jasmine.createSpy('foo');
 
@@ -41,6 +41,18 @@ beforeEach(function() {
     foo('you can pass any', 'args');
     expect(foo).toHaveBeenCalledWith('you can pass any', 'args');
 });
+
+// Use spy to create an object containing multiple methods
+// Useful for mocking Angular service
+beforeEach(function() {
+    let $window = jasmine.createSpyObj<angular.IWindowService>('$window', ['open']);
+
+    // Test
+    $window.open();
+    expect($window.open).toHaveBeenCalled();
+});
+
+// Use spy to create an object containing methods and property
 ```
 
 **Matcher**

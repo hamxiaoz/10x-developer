@@ -65,8 +65,6 @@ beforeEach(function() {
     expect(foo.bar).toEqual({});
     expect(foo.setBar).toHaveBeenCalled();
 });
-
-
 ```
 
 **Matcher**
@@ -90,6 +88,33 @@ expect(foo).toEqual(jasmine.objectContaining({
 
 * Remember to call `$scope.$apply();` when testing promise. [Why?](http://davideguida.altervista.org/the-importance-of-scope-apply-when-testing-promises/)
 * Call `done()` to instruct the spec is done for Asynchronous tests.
+
+
+
+## Jasmine + Angular
+
+```TypeScript
+describe('My Tests', () => {
+  let $scope: angular.IScope,
+    $q: angular.IQService
+    $componentController: angular.IComponentControllerService;
+
+  beforeEach(() => {
+    angular.mock.module('module name');
+
+    inject(($injector : angular.auto.IInjectorService)=> {
+      $scope = $injector.get<angular.IRootScopeService>('$rootScope');
+      $q = $injector.get<angular.IQService>('$q');
+      $componentController = $injector.get<angular.IComponentControllerService>('$componentController');
+    });
+  });
+
+  it('should skip', () => {
+    pending();
+  });
+});
+
+```
 
 ---
 

@@ -29,7 +29,7 @@
     * [Sketch](sketch.md)
     * [Web Dev Resources](web_dev_resources.md)
 * Skills
-    * [regex](regex.md)
+    * [Regex](regex.md)
     * [Ruby](Ruby.md)
     * [Functional Programming](functional_programming.md)
 * Know Your Tools

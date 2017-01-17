@@ -91,6 +91,8 @@ expect(foo).toEqual(jasmine.objectContaining({
 
 ## Jasmine + Angular
 
+Test component:
+
 ```js
 describe('My Tests', () => {
   let $scope: angular.IScope,
@@ -112,6 +114,55 @@ describe('My Tests', () => {
   });
 });
 ```
+
+Test Service itself: mock http
+
+```ts
+import {MyService} from './my-service';
+
+import IHttpService = angular.IHttpService;
+//import IQService = angular.IQService;
+import IHttpBackendService = angular.IHttpBackendService;
+//import IRootScopeService = angular.IRootScopeService;
+
+describe('My Service', ()=> {
+
+  let myService: MyService,
+      $http: IHttpService,
+      $httpBackend: IHttpBackendService,
+      $q: IQService,
+      $rootScope: IRootScopeService;
+
+  beforeEach(()=> {
+    angular.mock.module('myModule');
+
+    inject(($injector: angular.auto.IInjectorService)=> {
+      $q = $injector.get<angular.IQService>('$q');
+      $http = $injector.get<angular.IHttpService>('$http');
+      $httpBackend = $injector.get<angular.IHttpBackendService>('$httpBackend');
+      $rootScope = $injector.get<angular.IRootScopeService>('$rootScope');
+    });
+
+    myService = new MyService($http);
+  });
+
+  it('Should make HTTP call', (done)=> {
+    $httpBackend.expectGET(`/URL/URL`).respond(200, 'fake data');
+
+    myService.getData()
+      .then(done);
+    $httpBackend.flush();
+  });
+});
+```
+
+Test service in component:
+
+```ts
+let myService = jasmine.createSpyObj('myService', ['getData']);
+(<jasmine.Spy>myService.getData).and.returnValue($q.when({}));
+```
+
 
 ---
 

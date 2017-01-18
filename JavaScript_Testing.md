@@ -88,6 +88,14 @@ expect(foo).toEqual(jasmine.objectContaining({
 
 * Remember to call `$scope.$apply();` when testing promise. [Why?](http://davideguida.altervista.org/the-importance-of-scope-apply-when-testing-promises/)
 * Call `done()` to instruct the spec is done for Asynchronous tests.
+* Call the following methods when you testing $httpBackend. See [doc](https://docs.angularjs.org/api/ngMock/service/$httpBackend) and [source code](https://github.com/angular/angular.js/blob/master/src/ngMock/angular-mocks.js#L1860)
+
+    ```typescript
+    afterEach(()=> {
+      $httpBackend.verifyNoOutstandingRequest();
+      (<any>$httpBackend).verifyNoOutstandingExpectation(false);
+    });
+    ```
 
 ## Jasmine + Angular
 

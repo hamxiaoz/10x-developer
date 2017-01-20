@@ -20,7 +20,7 @@
 * Node
     * [Node.js](node.md)
     * [CLI command line tool](cli.md)
-    * [Electron](Electron.md)
+    * [Electron / Atom](Electron.md)
     * [NW.js \(node-webkit\)](nw.md)
 * Full Stack Development
     * [Meteor](meteor.md)

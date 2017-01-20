@@ -40,7 +40,7 @@
     * [Editor: Atom](editor_atom.md)
     * [Windows](development_tools.md)
     * [Git](git.md)
-    * [Linux](linux.md)
+    * [Linux / Bash](linux_bash.md)
     * [Mac](mac.md)
 * [Cheatsheets](Cheatsheets/README.md)
 

@@ -86,20 +86,21 @@ Callback is usually: `element, index, array` while `element` is required
 
 Value
 
-* **in place** copy itself to itself, \[start, end\) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
-* **in place** Reverse:   `Array.prototype.reverse()` 
-* **in place** Sort: `arr.sort()`
+- **in place** copy itself to itself, \[start, end\) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
+- **in place** Reverse:   `Array.prototype.reverse()` 
+- **in place** Sort: `arr.sort()`
   * if no function is provided, element is **converted to string** to sort, so `[10, 5].sort() is still [10, 5]`
   * sort numbers: `arr.sort((a, b) => a - b);`
-* Concat
+- Concat
   * return new array: `arr.concat(arr2)`
     * has flatten effect: `[1].concat(2, [3,4]) -> [1,2,3,4]`
   * **in place \(append b to a\)**: `Array.prototype.push.apply(a,b)`
-* **mutate** Remove and return head: `arr.shift()`
-* Add item to head: `arr.unshift('a')`
-* Fill with value, \[start, end\) `arr.fill`
-* Slice, return shallow copy \[start, end\): `arr.slice`
-* **mutate** Remove and insert in the middle \(when deleteCount is 0\): `arr.splice(start, deleteCount[, insert args])`, it will return the removed
+- **mutate** Remove and return head: `arr.shift()`
+- Add item to head: `arr.unshift('a')`
+- Fill with value, \[start, end\) `arr.fill`
+- Slice, return shallow copy \[start, end\): `arr.slice`
+- **mutate** Remove and insert in the middle \(when deleteCount is 0\): `arr.splice(start, deleteCount[, insert args])`, it will return the removed
+- **clear content** `arr.length = 0;` or `arr.splice(0, arr.length)`;
 
 Iterate
 

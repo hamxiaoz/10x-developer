@@ -12,9 +12,9 @@
     * [JavaScript Testing](JavaScript_Testing.md)
     * [coffeescript](coffeescript.md)
     * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
-* Angular
-    * [Angular 1.x](angularjs.md)
-    * [Angular](angular2.md)
+* Angular.js
+    * [Angular 1.x](angular_js_1.x.md)
+    * [Angular](angular.md)
 * React.js
     * [React.js](reactjs.md)
 * Node

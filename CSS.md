@@ -407,5 +407,5 @@ element.style is just a conversion of the element's style attribute into a scrip
 ## Cookbook
 
 ### How to center ul?
-Make `ul` `display: inline-block`, See http://codepen.io/hamxiaoz/pen/egLOwV
+Make `ul` `display: inline-block` in a `text-align: center` div: http://codepen.io/hamxiaoz/pen/egLOwV
 

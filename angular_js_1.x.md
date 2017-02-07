@@ -1,4 +1,4 @@
-# AngularJS
+# Angular.js 1.x
 https://github.com/jmcunningham/AngularJS-Learning
 
 `ng-app` tells this div belongs to this angular app.

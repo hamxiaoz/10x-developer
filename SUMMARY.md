@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * HTML
-    * [HTML DOM Jquery](HTML DOM JQuery.md)
+    * [HTML DOM Jquery](HTML_DOM_JQuery.md)
     * [CSS](CSS.md)
     * [CSS/LESS/SASS Cookbook](CSS_Cookbook.md)
     * [Bootstrap](Bootstrap.md)
@@ -12,7 +12,7 @@
     * [TypeScript](typescript.md)
     * [JavaScript Testing](JavaScript_Testing.md)
     * [coffeescript](coffeescript.md)
-    * [coffeescript to ES6 cheatsheet](coffeescript to es6.md)
+    * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
 * Angular.js
     * [Angular 1.x](angular_js_1.x.md)
     * [Angular](angular.md)
@@ -26,7 +26,7 @@
 * Full Stack Development
     * [Meteor](meteor.md)
     * [MongoDB](mongodb.md)
-    * [Digital Ocean](digital ocean.md)
+    * [Digital Ocean](DigitalOcean.md)
     * [Sketch](sketch.md)
     * [Web Dev Resources](web_dev_resources.md)
 * Skills

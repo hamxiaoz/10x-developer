@@ -404,11 +404,3 @@ element.style is just a conversion of the element's style attribute into a scrip
 
 ## 中文
 ［中文文案排版指北］（https://github.com/sparanoid/chinese-copywriting-guidelines）
-
----
-
-## Cookbook
-
-### How to center ul?
-Make `ul` `display: inline-block` in a `text-align: center` div: http://codepen.io/hamxiaoz/pen/egLOwV
-

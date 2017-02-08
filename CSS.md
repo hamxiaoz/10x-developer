@@ -402,6 +402,9 @@ element.style is just a conversion of the element's style attribute into a scrip
 * [Form control margin](http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit)
 * \[bootstrap row click and offmenu canvas\] \([http://jasny.github.io/bootstrap/javascript/\#fileinput](http://jasny.github.io/bootstrap/javascript/#fileinput)\)
 
+## 中文
+［中文文案排版指北］（https://github.com/sparanoid/chinese-copywriting-guidelines）
+
 ---
 
 ## Cookbook

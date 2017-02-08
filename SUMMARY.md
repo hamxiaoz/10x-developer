@@ -14,8 +14,10 @@
     * [coffeescript](coffeescript.md)
     * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
 * Angular.js
-    * [Angular 1.x](angular_js_1.x.md)
-    * [Angular](angular.md)
+    * [Angular](Angular.md)
+    * [Angular Cookbook](Angular_Cookbook.md)
+    * [Angular Mistakes I Made](Angular_MIM.md)
+    * [Angular 1.x](Angular_js_1.x.md)
 * React.js
     * [React.js](reactjs.md)
 * Node

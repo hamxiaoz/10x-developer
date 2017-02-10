@@ -1,4 +1,4 @@
-# Regex
+# RegEx
 
 ## Links
 

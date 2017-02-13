@@ -20,6 +20,8 @@ _ custom snippets
 _ [Emmet](http://code.visualstudio.com/docs/languages/html#_emmet-snippets)
 
 ## Task
+A task is shortcut to run pre-defined actions, such as build, test, etc.
+
 To use, press `CMD+P` and type: `task TASK_NAME`.
 
 Sample task:

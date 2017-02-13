@@ -6,7 +6,7 @@
 - navigate back:
   - to last file: `CTRL+-`
   - to last position: `CMD+U`
-- find by symbol (instead of find by text): `CMD+SHIFT+o`
+- find by symbol (instead of find by text): `CMD+SHIFT+O` (When viewing JSON file, it'll find by the key)
 - Go to line: `:20`
 - Code reformatting: `CMD+K, CMD+F`
 - Code folding: `SHIFT+CMD+[ or ]`
@@ -17,10 +17,11 @@ _ [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runn
 
 _ custom snippets
 
-_ [Emmet](http://code.visualstudio.com/docs/languages/html#_emmet-snippets)
+## HTML with Emmet
+http://code.visualstudio.com/docs/languages/html#_emmet-snippets
 
 ## Task
-A task is shortcut to run pre-defined actions, such as build, test, etc.
+A task is shortcut to run external action (grunt, shell) without leaving your editor, such as build, test, etc.
 
 To use, press `CMD+P` and type: `task TASK_NAME`.
 
@@ -47,6 +48,9 @@ You can press `F5` to debug any single file.
 
 
 ## Hotkeys
+
+Editing
+- Show IntelliSense: `CTRL+SPACE`
 
 Sidebar
 - Toggle side pane: `CMD+B`

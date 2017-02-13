@@ -19,7 +19,29 @@ _ custom snippets
 
 _ [Emmet](http://code.visualstudio.com/docs/languages/html#_emmet-snippets)
 
-_ Debug
+## Task
+To use, press `CMD+P` and type: `task TASK_NAME`.
+
+Sample task:
+
+```
+{
+    "version": "0.1.0",
+    "tasks": [
+        {
+          "taskName": "ks",
+          "command": "killall",
+          "args": ["-9", "grunt"],
+          "isShellCommand": true,
+          "suppressTaskName": true,
+          "showOutput": "never"
+        }
+    ]
+}
+```
+
+## Debug
+You can press `F5` to debug any single file.
 
 
 ## Hotkeys

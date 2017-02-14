@@ -51,26 +51,40 @@ You can press `F5` to debug any single file.
 
 ## Hotkeys
 
-Editing
-- Show IntelliSense: `CTRL+SPACE`
-
 Sidebar
 - Toggle side pane: `CMD+B`
+
+Explorer:
 - Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
 
+Search:
+- Swith to the search pane: `SHIFT+CMD+F` (simialr to Explorer pane: `SHIFT+CMD+E`)
+- Switch search history: `ALT+UP/DOWN`
+- Path glob pattern:
+  ```
+  Click on the toggle to the right to enable the glob pattern syntax:
+
+  * to match one or more characters in a path segment
+  ? to match on one character in a path segment
+  ** to match any number of path segments, including none
+  {} to group conditions (e.g. {**/*.html,**/*.txt} matches all HTML and text files)
+  [] to declare a range of characters to match (e.g., example.[0-9] to match on example.0, example.1, …)
+  ```
+
+
 Navigation in Editor
-- Switch to focus group 1/2: `CMD+1/2`
-- open in new pane: `CMD+\`
+- Switch editors p 1/2/3: `CMD+1/2`
+- in `CMD+P` Quick Open list, hit enter to open in current pane, hit `CMD+\` to open in next pane.
 - Move active editor to left/right group: `CTRL+CMD+LEFT/RIGHT`
+  
   ```
   { "key": "ctrl+cmd+right",        "command": "workbench.action.moveEditorToNextGroup" },
   { "key": "ctrl+cmd+left",         "command": "workbench.action.moveEditorToPreviousGroup" }
-```
+  ```
+- Switching files inside on editor: `SHIFT+ALT+TAB`  
 
-
-
-Search:
-- Switch search history: `ALT+UP/DOWN` 
+Editing
+- Show IntelliSense: `CTRL+SPACE`
 
 Terminal: "ctrl+`"
 

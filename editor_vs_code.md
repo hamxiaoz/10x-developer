@@ -1,6 +1,8 @@
 # Editor: VS Code
 
-## [Learning](http://code.visualstudio.com/docs)
+- [ ] intro
+- [ ] Editor
+- [ ] Customization
 
 **Advanced**
 - navigate back:

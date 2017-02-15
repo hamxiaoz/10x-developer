@@ -4,16 +4,6 @@
 - [ ] Editor
 - [ ] Customization
 
-**Advanced**
-- navigate back:
-  - to last file: `CTRL+-`
-  - to last position: `CMD+U`
-- find by symbol (instead of find by text): `CMD+SHIFT+O` (When viewing JSON file, it'll find by the key)
-- Go to line: `:20`
-- Code reformatting: `CMD+K, CMD+F`
-- Code folding: `SHIFT+CMD+[ or ]`
-- Trigger Intellisense: `CTRL+SPACE`
-- Trim trailing whitespace: `CMD+SHIFT+X`
 
 _ [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runner)
 
@@ -71,7 +61,6 @@ Search:
   [] to declare a range of characters to match (e.g., example.[0-9] to match on example.0, example.1, …)
   ```
 
-
 Navigation in Editor
 - Switch editors p 1/2/3: `CMD+1/2`
 - in `CMD+P` Quick Open list, hit enter to open in current pane, hit `CMD+\` to open in next pane.
@@ -85,6 +74,14 @@ Navigation in Editor
 
 Editing
 - Show IntelliSense: `CTRL+SPACE`
+- Find by symbol (instead of find by text): `CMD+SHIFT+O` (When viewing JSON file, it'll find by the key)
+- File navigation:
+  - Show list of files in one editor or go back and forth between files: `CTRL+TAB`
+  - `CTRL+-` to go back last file
+  - to last position: `CMD+U`
+- Code reformatting: `CMD+K, CMD+F`
+- Code folding: `SHIFT+CMD+[ or ]`
+- Trim trailing whitespace: `CMD+SHIFT+X`
 
 Terminal: "ctrl+`"
 

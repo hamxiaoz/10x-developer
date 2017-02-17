@@ -77,32 +77,14 @@ the pattern of the selector: context + element + pseudo-class/elements
 div#greentea > blockquote p:first-line // p is the element.
 ```
 
-pseudo-class
+pseudo-class `:hover`
+* Style for specific state: `a:link { color: green; }, :hover, :visited`
+* Style for specific position: `p:nth-child(2n) { color: green; }`
 
-* select based on state `a:link { color: green; }`
-* nth-child pseudo-class:
-  ```css
-  p:nth-child(2n) { color: green; }
-  ```
-* first-child:
-  ```css
-  div.tableRow p:first-child {
-        text-align: right;
-    }
-  ```
 
-pseudo-elements
-
-* When setting margin, often you want to reset the last one
-  ```css
-  .nav li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  .nav li:last-child {
-    margin-right: 0;
-  }
-  ```
+pseudo-elements `::before`
+* Style for certain parts of a element. It's applied to content.
+* Input elements have no content, that's why ::before is not applied.
 
 ## Good to know
 

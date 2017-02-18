@@ -1,7 +1,8 @@
 # CSS/LESS/SASS Cookbook
 
 ## How to center ul?
-Make `ul` `display: inline-block` in a `text-align: center` div: http://codepen.io/hamxiaoz/pen/egLOwV
+Make `ul` `display: inline-block` in a `text-align: center` div 
+http://codepen.io/hamxiaoz/pen/egLOwV
 
 ## How to reposition the class under specified parent in SASS/LESS?
 For example you have:
@@ -70,3 +71,9 @@ Usages of `&`:
     body.page-about & { }
   }
   ```
+
+# How to add search icon to input?
+http://codepen.io/hamxiaoz/pen/MJdXyo
+- Could not use ::before because input doesn't have content
+- Position icon in input, and make it vertically center with top and translateY
+- Padding left on input for space of the icon

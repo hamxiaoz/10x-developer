@@ -17,7 +17,7 @@ For example you have:
 }
 ```
 
-And you want to adjust the margin under the root class `.native`:
+And you want to adjust the margin under the **root class** `.native`:
 
 ```less
 .native {
@@ -63,12 +63,20 @@ Usages of `&`:
    }
   ```
   
-- Reposition the parent selector to specified class
+- Reposition the **root selector** to specified class
 
   ```less
   // -> body.page-about .button {}
   .button {
     body.page-about & { }
+  }
+  
+  .a {
+    .b {
+      body & {
+        // -> body .a .b (not .a body .b)
+      }
+    }
   }
   ```
 

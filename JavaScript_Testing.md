@@ -45,7 +45,8 @@ beforeEach(function() {
 // Use spy to create an object containing multiple methods
 // Useful for mocking Angular service
 beforeEach(function() {
-    let $window = jasmine.createSpyObj<angular.IWindowService>('$window', ['open']);
+    let $window = jasmine.createSpyObj<angular.IWindowService>('$window', ['open', 'alert']);
+    (<jasmine.Spy>$window.alert).and.returnValue({});
 
     // Test
     $window.open();

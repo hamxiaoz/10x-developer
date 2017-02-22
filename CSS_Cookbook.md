@@ -80,7 +80,7 @@ Usages of `&`:
   }
   ```
 
-# How to add search icon to input?
+## How to add search icon to input?
 http://codepen.io/hamxiaoz/pen/MJdXyo
 - Could not use ::before because input doesn't have content
 - Position icon in input, and make it vertically center with top and translateY

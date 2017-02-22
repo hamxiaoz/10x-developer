@@ -46,6 +46,7 @@ Sidebar
 
 Explorer:
 - Switch to file pane: `SHIFT+CMD+E` (How to remember? Same hotkey prefix for find: `SHIFT+CMD+F`)
+- Open file in next pane: Hold `CMD` while click the file or `CMD+ENTER`
 
 Search:
 - Swith to the search pane: `SHIFT+CMD+F` (simialr to Explorer pane: `SHIFT+CMD+E`)

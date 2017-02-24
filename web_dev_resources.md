@@ -22,3 +22,5 @@
 
 
 
+### Misc
+- screen size and view ports for different devices: http://mydevice.io/devices/

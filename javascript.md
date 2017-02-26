@@ -384,7 +384,7 @@ Methods:
     var a = b;
     console.log(a.name == 'b')
   ```
-
+* Function output: funciton always return a value. If no return statement or `return;`, it returns `undefined`.
 * Arguments are always copied **by value**. Even if the type is reference.
 
   ```js

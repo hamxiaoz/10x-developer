@@ -413,6 +413,24 @@ Methods:
     };
     alert(sum(10,10));
   ```
+*  Closure: when the inner function makes reference to a variable from the outer function, this is called closure.  
+ - closure captures live value:
+  ```javascript
+  function runningCounter(start) {
+    var val = start;
+
+    return function current(increment = 1){
+        val = val + increment;
+        return val;
+    };
+  }
+
+  var score = runningCounter( 0 );
+
+  score();                // 1
+  score();                // 2
+  ```
+
 
 ### immediately-invoked function expression \(IIFE\)
 
@@ -424,6 +442,11 @@ Methods:
    var b = 2;
    alert(a + b);
   })();
+  
+  // or use a named version
+  (function foo() {
+    alert('in foo');
+   })();
   ```
 
 ### default value if it doesn't exist

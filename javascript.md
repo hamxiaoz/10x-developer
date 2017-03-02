@@ -351,6 +351,24 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
 
 * [`defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) can set 'writable' and custom setter/getter
 
+* FP operations
+ - Freeze: `const frozen = Object.freeze(obj)`
+ - Create shallow copy:
+    ```js
+    var o = {
+      x: 1,
+      y: 2
+    };
+
+    // in ES2017+, using object spread:
+    var p = { ...o };
+    p.y = 3;
+
+    // in ES2015+:
+    var p = Object.assign( {}, o );
+    p.y = 3;
+    ```
+
 ### Map and Set
 
 * Set: unique values of any type

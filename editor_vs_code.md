@@ -75,7 +75,9 @@ Navigation in Editor
 
 Editing
 - Show IntelliSense: `CTRL+SPACE`
-- Find by symbol (instead of find by text): `CMD+SHIFT+O` (When viewing JSON file, it'll find by the key)
+- Find by symbol (instead of find by text): `CMD+SHIFT+O`
+    - When viewing JSON file, it'll find by the key.
+    - When viewing HTML, it'll find by class or id.
 - File navigation:
   - Show list of files in one editor or go back and forth between files: `CTRL+TAB`
   - `CTRL+-` to go back last file

@@ -94,7 +94,6 @@ Most of the operations will **mutate** the array.
 - Remove and return head: `arr.shift()`
 - Add item to head: `arr.unshift('a')`
 - Fill with value, \[start, end\) `arr.fill`
-- Slice, return shallow copy \[start, end\): `arr.slice`
 - *Remove and insert in the middle \(when deleteCount is 0\): `arr.splice(start, deleteCount[, insert args])`, it will return the removed
 - **clear content** `arr.length = 0;` or `arr.splice(0, arr.length)`;
 
@@ -103,6 +102,7 @@ Most of the operations will **mutate** the array.
   * return new array: `arr.concat(arr2)`
     * has flatten effect: `[1].concat(2, [3,4]) -> [1,2,3,4]`
   * We could make it mutating too: **in place \(append b to a\)**: `Array.prototype.push.apply(a,b)`
+- Slice, return shallow copy \[start, end\): `arr.slice`
 
 Iterate
 

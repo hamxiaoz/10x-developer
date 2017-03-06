@@ -36,8 +36,8 @@ Sample task:
 ```
 
 ## Debug
-You can press `F5` to debug any single file.
-
+- You can press `F5` to debug any single file.
+- Link to [doc](https://code.visualstudio.com/docs/editor/debugging)
 
 ## Hotkeys
 

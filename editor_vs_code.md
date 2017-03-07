@@ -1,13 +1,8 @@
 # Editor: VS Code
-
-- [ ] intro
-- [ ] Editor
 - [ ] Customization
-
-
-_ [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runner)
-
-_ custom snippets
+- [ ] Migrate my Atom theme
+- [ ] [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runner)
+- [ ] custom snippets
 
 ## HTML with Emmet
 http://code.visualstudio.com/docs/languages/html#_emmet-snippets

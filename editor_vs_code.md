@@ -98,6 +98,12 @@ Terminal: "ctrl+`"
     "key": "cmd+k cmd+n",
     "command": "workbench.action.evenEditorWidths",
     "when": "editorTextFocus"
+  },
+  // Similar to Sublime, convert selection into line selections
+  {
+    "key": "cmd+shift+l",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
   }
 ]
 ```

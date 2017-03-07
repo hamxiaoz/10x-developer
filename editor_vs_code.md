@@ -1,38 +1,11 @@
 # Editor: VS Code
+Misc links:
 - [ ] Customization
 - [ ] Migrate my Atom theme
 - [ ] [Everything git](https://github.com/Microsoft/vscode-tips-and-tricks#task-runner)
 - [ ] custom snippets
+- HTML with Emmet: http://code.visualstudio.com/docs/languages/html#_emmet-snippets
 
-## HTML with Emmet
-http://code.visualstudio.com/docs/languages/html#_emmet-snippets
-
-## Task
-A task is shortcut to run external action (grunt, shell) without leaving your editor, such as build, test, etc.
-
-To use, press `CMD+P` and type: `task TASK_NAME`.
-
-Sample task:
-
-```
-{
-    "version": "0.1.0",
-    "tasks": [
-        {
-          "taskName": "ks",
-          "command": "killall",
-          "args": ["-9", "grunt"],
-          "isShellCommand": true,
-          "suppressTaskName": true,
-          "showOutput": "never"
-        }
-    ]
-}
-```
-
-## Debug
-- You can press `F5` to debug any single file.
-- Link to [doc](https://code.visualstudio.com/docs/editor/debugging)
 
 ## Hotkeys
 
@@ -81,6 +54,11 @@ Editing
 - Code folding: `SHIFT+CMD+[ or ]`
 - Trim trailing whitespace: `CMD+SHIFT+X`
 
+Multi-cursor:
+- In normal mode, use default hotkey `ALT+CMD+DOWN`/`ALT+CMD+UP` to add cursors. Then you can press `V` to enter visual mode.
+- In Insert mode, select lines and use `SHIFT+CMD+L` to turn lines into selections. (Require custom keyboard setup, see eblow)
+
+
 Terminal: "ctrl+`"
 
 ### Custom Hotkeys
@@ -107,6 +85,33 @@ Terminal: "ctrl+`"
   }
 ]
 ```
+
+## Task
+A task is shortcut to run external action (grunt, shell) without leaving your editor, such as build, test, etc.
+
+To use, press `CMD+P` and type: `task TASK_NAME`.
+
+Sample task:
+
+```
+{
+    "version": "0.1.0",
+    "tasks": [
+        {
+          "taskName": "ks",
+          "command": "killall",
+          "args": ["-9", "grunt"],
+          "isShellCommand": true,
+          "suppressTaskName": true,
+          "showOutput": "never"
+        }
+    ]
+}
+```
+
+## Debug
+- You can press `F5` to debug any single file.
+- Link to [doc](https://code.visualstudio.com/docs/editor/debugging)
 
 ## Packages
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)

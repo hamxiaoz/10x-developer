@@ -79,7 +79,7 @@ Editing
     - When viewing JSON file, it'll find by the key.
     - When viewing HTML, it'll find by class or id.
 - File navigation:
-  - Show list of files in one editor or go back and forth between files: `CTRL+TAB`
+  - :punch: Show list of files in one editor or go back and forth between files: `CTRL+TAB`
   - `CTRL+-` to go back last file
   - to last position: `CMD+U`
 - Code reformatting: `CMD+K, CMD+F`

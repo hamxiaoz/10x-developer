@@ -131,6 +131,9 @@ Query/Test
   * \(ES7\): `arr.includes or _.contains`
   * `indexOf or lastIndexOf`
 
+Tips:
+- create array: `Array(length).fill().map((_,i)=>i+1)`
+
 ### number
 
 * If number starts with 0 and is a valid octal number, it'll be a octal number: `var octalNum = 070; // 56`

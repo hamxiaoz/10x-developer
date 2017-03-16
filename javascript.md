@@ -132,7 +132,7 @@ Query/Test
   * `indexOf or lastIndexOf`
 
 Tips:
-- create array: `Array(length).fill().map((_,i)=>i+1)`
+- create array: `Array(length).fill().map((_,i)=>i+1)` or `Array.from({length: 10}, (v, i) => i);`
 
 ### number
 

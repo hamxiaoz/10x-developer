@@ -12,7 +12,8 @@
 See [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/String/search](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)
 
 ```js
-'str'.search(/pattern/) // check
+'str'.search(/pattern/) // returns index
+/pattern/.test('str') // : boolean
 /pattern/.exec('str') // return null or matches array ([0] is full string, [1].. is group
 ```
 

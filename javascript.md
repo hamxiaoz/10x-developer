@@ -133,9 +133,9 @@ Query/Test
 
 Tips:
 - create array: 
- - ES6: `Array(length).fill().map((_,i)=>i+1)`
- - ES6: `Array.from({length: 10}, (v, i) => i);`
- - Lodash: `_.fill(Array(10), 1);`
+  - ES6: `Array(length).fill().map((_,i)=>i+1)`
+  - ES6: `Array.from({length: 10}, (v, i) => i);`
+  - Lodash: `_.fill(Array(10), 1);`
 
 ### number
 

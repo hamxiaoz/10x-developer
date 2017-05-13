@@ -45,6 +45,9 @@ Console.WriteLine(result);
 The lookbehind assertion \(?&lt;=foo\_bar\) is important because you don't want to include %download%\# in your results, only the numbers after it.   
 [http://stackoverflow.com/questions/4740984/c-sharp-regex-matches-example](http://stackoverflow.com/questions/4740984/c-sharp-regex-matches-example)
 
+Similar, let's say you want to make sure 'po box' is not in the test string:
+`/^(?!.*po\sBOX).*$/`
+
 #### Split using a maximum length \(Ruby\)
 
 ```

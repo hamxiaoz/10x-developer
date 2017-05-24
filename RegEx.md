@@ -20,6 +20,8 @@ See [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_O
 ## Checklist
 
 * Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
+* Positive lookahead: `(?=...)`
+* Negative lookahead: `(?!...)`
 
 ## Examples
 
@@ -45,8 +47,12 @@ Console.WriteLine(result);
 The lookbehind assertion \(?&lt;=foo\_bar\) is important because you don't want to include %download%\# in your results, only the numbers after it.   
 [http://stackoverflow.com/questions/4740984/c-sharp-regex-matches-example](http://stackoverflow.com/questions/4740984/c-sharp-regex-matches-example)
 
-Similar, let's say you want to make sure 'po box' is not in the test string:
+Similar, let's say you want to make sure 'po box' is not in the test string:  
 `/^(?!.*po\sBOX).*$/`
+
+Similar, let's say we want to find a pattern before a word:  
+Let's say we want to match and replace `:user` in the url `abc.com/:user/notebooks/:user-name/:userName`  
+We could use: `/:user(?=\b)/`, which will match the first `:user` and `:user-name` but not `:userName`.
 
 #### Split using a maximum length \(Ruby\)
 

@@ -22,6 +22,7 @@ See [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_O
 * Don't use `.*`, use `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
 * Positive lookahead: `(?=...)`
 * Negative lookahead: `(?!...)`
+* Positive lookbehind: `(?<=...)` **NOE JavaScript doens't have this**. You can use negative lookahead
 
 ## Examples
 

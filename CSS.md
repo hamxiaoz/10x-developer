@@ -323,20 +323,6 @@ position和float的区别:
 >
 > 比较可以发现，float和position最大的区别其实是是否占据文档流空间的问题。虽然position有absolute和fixed这两个同样不会占据文档流的属性，但是这两个并不适合被用来给整个网页做布局。为什么？因为这样你就得为页面上的每一个元素设置一个xy坐标来定位。
 
-## Flex
-
-```css
-.container {
-  display: flex;
-
-  // center on cross-axis (default: vertically)
-  align-items: center;
-
-  // center on main axis (default: horizontally)
-  justify-content: center;
-}
-```
-
 ## Coding Standard
 
 * [Google HTML/CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)

@@ -5,6 +5,7 @@
     * [HTML DOM Jquery](HTML_DOM_JQuery.md)
     * [HTML: Mobile](HTML_Mobile.md)
     * [CSS](CSS.md)
+    * [CSS FlexBox](CSS_FlexBox.md)
     * [CSS/LESS/SASS Cookbook](CSS_Cookbook.md)
     * [Bootstrap](Bootstrap.md)
 * JavaScript

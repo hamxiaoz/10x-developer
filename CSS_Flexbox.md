@@ -52,4 +52,4 @@ Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - practice: https://flexboxfroggy.com/
 
 Froggy level 24:
-
+![](img/flexbox_froggy_24.png)

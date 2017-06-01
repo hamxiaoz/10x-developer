@@ -14,9 +14,6 @@ Yes.
 ## Notes
 Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-## Other resources
-- practice: https://flexboxfroggy.com/
-
 #### Container
 - `display: flex`
 - `flex-direction`
@@ -50,3 +47,9 @@ Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - `flex` = `grow | shrink | basis` (default: 0 1 auto)
 
 :exclamation: Note that float, clear and vertical-align have no effect on a flex item.
+
+## Other resources
+- practice: https://flexboxfroggy.com/
+
+Froggy level 24:
+

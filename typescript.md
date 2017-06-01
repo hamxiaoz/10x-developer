@@ -1,9 +1,12 @@
 # TypeScript
 
-References:
+### References
 
 * [Learn TypeScript in Y Minutes](https://learnxinyminutes.com/docs/typescript/)
 * [TypeScript Deep Dive](https://www.gitbook.com/book/basarat/typescript/details)
+
+### Tools
+- [A minimal Yeoman Generator for creating NodeJS modules using TypeScript](https://github.com/ospatil/generator-node-typescript#readme)
 
 ### Notes
 

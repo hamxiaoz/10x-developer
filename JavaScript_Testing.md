@@ -172,6 +172,9 @@ let myService = jasmine.createSpyObj('myService', ['getData']);
 (<jasmine.Spy>myService.getData).and.returnValue($q.when({}));
 ```
 
+Mistakes to avoid:
+- Always to remember to return a promise!
+- In test, always do a $scope.$digest() after calling a promise so that it triggers the promise chain.
 
 ---
 

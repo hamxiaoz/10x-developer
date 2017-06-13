@@ -85,3 +85,9 @@ http://codepen.io/hamxiaoz/pen/MJdXyo
 - Could not use ::before because input doesn't have content
 - Position icon in input, and make it vertically center with top and translateY
 - Padding left on input for space of the icon
+
+## Form control margin
+http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit
+
+## Bootstrap: row click and offmenu canvas
+http://jasny.github.io/bootstrap/javascript/#fileinput

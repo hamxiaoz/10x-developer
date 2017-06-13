@@ -3,6 +3,17 @@
 - [Reference](#reference)
 - [Basic structure](#basic-structure)
 - [Selector](#selector)
+- [Good to know](#good-to-know)
+- [Font](#font)
+- [Background](#background)
+- [Image](#image)
+- [Display](#display)
+- [Box](#box)
+- [Layout](#layout)
+- [Coding Standard](#coding-standard)
+- [Repaint/Reflow](#repaintreflow)
+- [Misc](#misc)
+
 
 ---
 
@@ -60,7 +71,7 @@ css
 
 viewport `<meta name="viewport" content="width=device-width">`
 
-## selector
+## Selector
 
 Prefer class over id: id is only faster when id is the key selector, it's slower when `#home a`, because browser **read from right to left** so `#home a` is read as finding all `a` then pick `#home`.
 

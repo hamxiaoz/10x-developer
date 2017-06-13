@@ -379,16 +379,3 @@ To check:
 You need to set it to the object in Javascript or using inline style  
 element.style is just a conversion of the element's style attribute into a scriptable object. If you haven't set any inline style on the element, you won't get anything back.  
 `document.getElementById("convert").style.display = "block"` or `<a style="display: block;"></a>`
-
-## SASS
-
-* [style guide](http://css-tricks.com/sass-style-guide/)
-* [SASS: differences between mixins, extends and placeholders](http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases)\)
-* 使用Compass
-  Compass不但讓SCSS的使用更方便，還有大量的module、helper可以使用，解決cross broswer的問題並且減少重複的程式碼，增加可讀性。
-
-## Examples
-
-* [Form control margin](http://stackoverflow.com/questions/18562153/what-css-controls-the-right-and-left-margins-between-these-form-elements-in-twit)
-* \[bootstrap row click and offmenu canvas\] \([http://jasny.github.io/bootstrap/javascript/\#fileinput](http://jasny.github.io/bootstrap/javascript/#fileinput)\)
-

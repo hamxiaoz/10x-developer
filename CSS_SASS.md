@@ -8,9 +8,9 @@ http://krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-diff
 
 Mixin vs Extend
 - Mixin: composition (different kind of things composite together), similar to "has-a" in OO.
-  - _ex_: a .dance-on-hover-btn and a .dance-on-hover-link could both **mixin** the same .dance-on-hover behavior
+  - _ex_: a `.dance-on-hover-btn` and a `.dance-on-hover-link` could both **mixin** the same `.dance-on-hover` behavior
 - Extend is about inheritance (same kind of things in the inheritance chain), similar to "is-a" in OO.
-  - _ex_: a .round-secondary-btn **extends** from a .-secondary-btn
+  - _ex_: a `.round-secondary-btn` **extends** from a `.-secondary-btn`
 
  Real world example:
  ```LESS

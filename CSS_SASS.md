@@ -13,7 +13,7 @@ Mixin vs Extend
   - _ex_: a `.round-secondary-btn` **extends** from a `.-secondary-btn`
 
  Real world example:
- ```LESS
+ ```css
  .table-header {
   text-transform: uppercase;
   color: gray;

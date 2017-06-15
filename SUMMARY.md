@@ -28,6 +28,9 @@
     * [CLI command line tool](cli.md)
     * [Electron / Atom](Electron.md)
     * [NW.js \(node-webkit\)](nw.md)
+* Serverless
+    * [AWS Lambda](aws_lambda.md)
+    * [Google Cloud Function](google_cloud_function.md)
 * Full Stack Development
     * [Meteor](meteor.md)
     * [MongoDB](mongodb.md)

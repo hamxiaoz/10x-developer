@@ -1,7 +1,11 @@
 # Actions on Google / Google Assistant
 
 #### How does Actions on Google work?
-Voice -> API.AI -> Intents -> Entity (similar to enum) + Action (ex, `list.tasks`) -> Response: in API.AI or webhook (-> Lambda)
+10k view:   
+`voice -> parse (via API.AI) -> fullfillment (via API.AI or Lambda)`
+
+Detail view:   
+`Voice -> API.AI -> Intents -> Entity (similar to enum) + Action (ex, 'list.tasks') -> Response: in API.AI or webhook (-> Lambda)`
 
 ## Actions on Google
 Componenet:

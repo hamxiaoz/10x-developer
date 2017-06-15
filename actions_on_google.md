@@ -1,10 +1,18 @@
 # Actions on Google / Google Assistant
+
+#### How does Actions on Google work?
+Voice -> API.AI -> Intents -> Entity (similar to enum) + Action (ex, `list.tasks`) -> Response: in API.AI or webhook (-> Lambda)
+
+## Actions on Google
 Componenet:
 - https://github.com/actions-on-google/conversation-components-nodejs/blob/master/api-ai/index.js
 - https://developers.google.com/actions/reference/nodejs/Carousel
 
-API.AI (the doc is outdates, UI is different now)
-- https://docs.api.ai/docs/concept-events
-
 Sample with Lambda:
 - https://github.com/bradyholt/google-action-tiger/blob/master/lambda-function/index.js
+
+## API.AI 
+the doc is outdates, UI is different now
+- https://docs.api.ai/docs/concept-events
+
+

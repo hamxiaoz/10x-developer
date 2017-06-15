@@ -1,4 +1,4 @@
-# Actions on Google (Google Assistant)
+# Actions on Google / Google Assistant
 Componenet:
 - https://github.com/actions-on-google/conversation-components-nodejs/blob/master/api-ai/index.js
 - https://developers.google.com/actions/reference/nodejs/Carousel

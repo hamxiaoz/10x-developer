@@ -31,6 +31,7 @@
 * Serverless
     * [AWS Lambda](aws_lambda.md)
     * [Google Cloud Function](google_cloud_function.md)
+    * [Actions on Google / Google Assistant](actions_on_google.md)
 * Full Stack Development
     * [Meteor](meteor.md)
     * [MongoDB](mongodb.md)

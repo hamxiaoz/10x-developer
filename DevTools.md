@@ -10,7 +10,10 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 - `ALT+CMD+C`: inspect element
 - `ALT+CMD+i`: open dev tools
 
-## API
+## Network
+- filter the network by using `-domain:*.com`. See full list of filters by typing `-`.
+
+## Console
 [Command Line API Reference for Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en)
 
 - `$(selector)` 
@@ -33,6 +36,7 @@ var names = {
 };
 table(names);
 ```
+- store as global variable `temp1`: right click on an object in the console and press “store as global variable”
 
 ---
 

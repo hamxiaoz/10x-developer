@@ -36,6 +36,7 @@
     * [Meteor](meteor.md)
     * [MongoDB](mongodb.md)
     * [Digital Ocean](DigitalOcean.md)
+    * [UI](ui_domain.md)
     * [Sketch](sketch.md)
     * [Web Dev Resources](web_dev_resources.md)
 * Skills

@@ -46,7 +46,19 @@ Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   - 'auto' keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). 
 - `flex` = `grow | shrink | basis` (default: 0 1 auto)
 
-:exclamation: Note that float, clear and vertical-align have no effect on a flex item.
+Example on flex:
+```css
+.item1{ flex: 2 0 50px} 
+.item2{flex: 0 0 150px}
+.item3{flex: 1 0 50px}` 
+
+// if they take the whole container 600px, it'll ends up with this:
+// item 1: (600 - 50 - 150 - 50) / (2+1) * 2 + 50 = 250px
+// | item 1 250px | item 2 150px | item 3 15opx |
+```
+
+NOTE: float, clear and vertical-align have no effect on a flex item.
+
 
 ## Other resources
 - practice: https://flexboxfroggy.com/

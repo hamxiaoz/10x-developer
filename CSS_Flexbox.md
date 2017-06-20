@@ -12,7 +12,8 @@ Yes.
 - For `visible-xs`, use CSS `display:none` on different breakpoints. Note this has nothing to do with Flexbox
 
 ## Notes
-Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Good article: https://chriswrightdesign.com/experiments/flexbox-adventures/
 
 #### Container
 - `display: flex`

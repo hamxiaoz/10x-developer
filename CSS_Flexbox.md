@@ -29,7 +29,7 @@ Yes.
   - cross:
     - `align-items`
       - it determines how the items **as a whole** are aligned within the container
-      - interesting options: baseline, stretch 
+      - interesting options: baseline, stretch (use to achive same height items)
     - `align-content` (when there is more space/multiple lines on cross axis)
       - it determines the spacing between lines
 

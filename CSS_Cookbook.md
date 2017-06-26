@@ -32,7 +32,7 @@ And you want to adjust the margin under the **root class** `.native`:
 }
 ```
 
-You can use `&`:
+You can use `&` [LESS: Parent Selectors](http://lesscss.org/features/#parent-selectors-feature):
 
 ```less
 .parent1 {
@@ -49,36 +49,54 @@ You can use `&`:
 ```
 
 Usages of `&`:
-- Refer to the parent
+- When `&` is placed **before** an element, it refers to the immediate parent
 
-  ```less
-  // -> .some-class.another-class
-  .some-class {
-    &.another-class {}
-  }
+```less
+// -> .some-class.another-class
+.some-class {
+  &.another-class {}
+}
 
-  // -> .button:hover {}
-  .button {
-    &:hover {}
-   }
-  ```
-  
-- Reposition the **root selector** to specified class
-
-  ```less
-  // -> body.page-about .button {}
-  .button {
-    body.page-about & { }
+// -> .button:hover {}
+.button {
+  &:hover {}
   }
   
-  .a {
-    .b {
-      body & {
-        // -> body .a .b (not .a body .b)
-      }
+.a {
+  .b {
+    // -> .a .b.b1 (not .a.b1 .b)
+    &.b1 {
+      color: red;
     }
   }
-  ```
+}
+```
+  
+- When `&` is placed **after** an element, it represents the whole path and the whole path is repositioned to the **root selector**.
+
+```less
+// -> body.page-about .button {}
+.button {
+  body.page-about & { }
+}
+
+.a {
+  .b {
+    // -> .root .a .b 
+    .root & {
+      color: black;
+    }
+    // -> .a1.a .b
+    .a1& {
+      color: red;
+    }
+    // -> .a .b.b1
+    &.b1 {
+      color: yellow;
+    }
+  }
+}
+```
 
 ## How to add search icon to input?
 http://codepen.io/hamxiaoz/pen/MJdXyo

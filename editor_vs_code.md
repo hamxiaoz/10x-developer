@@ -120,32 +120,44 @@ Sample task:
 - VSCodeVim
 
 ## User Settings
-```json
+```
 // Place your settings in this file to overwrite the default settings
 {
-
     // The number of spaces a tab is equal to.
     "editor.tabSize": 2,
     "editor.renderIndentGuides": true,
     "files.trimTrailingWhitespace": true,
 
-    "files.exclude": {
-      "**/*.js": {"when": "$(basename).ts"},
-      "**/*.js.map": true
-    },
-
     "files.autoSave": "off",
     "editor.renderWhitespace": "boundary",
     "editor.lineNumbers": "on",
-    
-    
+
+
     // OPTIONAL
     // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/build": true
-  }
+  },
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.js.map": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/.meteor": true
+  },
+
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "vs-seti",
+
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": false,
+
+  "vim.disableAnnoyingNeovimMessage": true
 }
 ```
 

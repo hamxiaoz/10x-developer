@@ -48,7 +48,7 @@ You can use `&` [LESS: Parent Selectors](http://lesscss.org/features/#parent-sel
 }
 ```
 
-Usages of `&`:
+Usages of `&`: (also on my [Medium post](https://medium.com/zurassic/how-to-understand-in-sass-less-93a2ee504787))
 - When `&` is placed **before** a selector, it refers to the immediate parent.
 
 ```less

@@ -1,6 +1,7 @@
 # HTML: Form
 
-## HTML Spec about Form Submit
+## Hit `ENTER` to Submit Form
+Form Spec:
 - If a form has only one input field then hitting enter in this field triggers form submit (ngSubmit)
 - if a form has 2+ input fields and no buttons or input[type=submit] then hitting enter doesn't trigger submit
   - If the form has no submit button, then the implicit submission mechanism must do nothing if the form has more than one field that blocks implicit submission.

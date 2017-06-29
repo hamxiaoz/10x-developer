@@ -49,7 +49,7 @@ You can use `&` [LESS: Parent Selectors](http://lesscss.org/features/#parent-sel
 ```
 
 Usages of `&`:
-- When `&` is placed **before** an element, it refers to the immediate parent
+- When `&` is placed **before** a selector, it refers to the immediate parent.
 
 ```less
 // -> .some-class.another-class

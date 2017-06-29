@@ -72,7 +72,7 @@ Usages of `&`:
 }
 ```
   
-- When `&` is placed **after** an element, it represents the whole path and the whole path is repositioned to the **root selector**.
+- When `&` is placed **after** a selector, that selector becomes the root selector and `&` represents the whole path and the whole path is repositioned under the root selector.
 
 ```less
 // -> body.page-about .button {}

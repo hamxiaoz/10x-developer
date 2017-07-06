@@ -4,6 +4,9 @@
 
 [https://github.com/255kb/stack-on-a-budget](https://github.com/255kb/stack-on-a-budget)
 
+## Dev
+- [Requestly: Chrome extension to Modify network requests](http://www.requestly.in/)
+
 ## Data
 
 ### Generate fake data

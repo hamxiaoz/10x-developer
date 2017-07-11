@@ -22,6 +22,19 @@ myElement.style.marginLeft = '2em'
 
 // get all styles
 window.getComputedStyle(myElement).getPropertyValue('margin-left')
+
+// Animation
+const start = window.performance.now()
+const duration = 2000
+
+window.requestAnimationFrame(function fadeIn (now)) {
+  const progress = now - start
+  myElement.style.opacity = progress / duration
+
+  if (progress < duration) {
+    window.requestAnimationFrame(fadeIn)
+  }
+}
 ```
 
 ### Update
@@ -55,5 +68,26 @@ myElement.innerHTML = '<div>foo</div>'
 myElement.textContent = 'abc'
 ```
 
-### Events
+### [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 Don't use `onclick`: single property, essentially override it
+
+```js
+// add
+myElement.addEventListener('click', (event)=> {
+  console.log(event.type + ' got fired')
+})
+
+// remove
+myElement.addEventListener('change', function listener (event) {
+  console.log(event.type + ' got triggered on ' + this)
+  this.removeEventListener('change', listener)
+})
+
+// match all children (live too)
+myForm.addEventListener('change', function (event) {
+  const target = event.target
+  if (target.matches('input')) {
+    console.log(target.value)
+  }
+})
+```

@@ -4,6 +4,7 @@
 * HTML
     * [HTML DOM Jquery](HTML_DOM_JQuery.md)
     * [HTML: Form](html_form.md)
+    * [DOM](dom.md)
     * [CSS](CSS.md)
     * [CSS Flexbox](CSS_Flexbox.md)
     * [SASS/LESS](CSS_SASS.md)

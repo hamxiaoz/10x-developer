@@ -25,3 +25,7 @@ iOS:
 Android: 
 - Shows 'Go' for text inputs
 - SHows 'Next' to number inputs
+
+## Library
+- Address auto complete: https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+- persist form value between back: http://garlicjs.org/

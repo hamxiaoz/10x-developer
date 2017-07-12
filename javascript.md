@@ -106,9 +106,9 @@ Most of the operations will **mutate** the array.
 
 Iterate
 
-* for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`
-* values\(\): `for (let elem in arr.values())`
-* Do for each, **cannot break unless throw an exception** `arr.forEach`
+* for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`. Use `break` to break out.
+* for in `values()`: `for (let elem in arr.values())`
+* `arr.forEach`: **cannot break unless throw an exception** 
 
 Transform
 

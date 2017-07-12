@@ -1,55 +1,6 @@
-## JSON Style Guide
 
-Ref:
 
-* [https://google.github.io/styleguide/jsoncstyleguide.xml](https://google.github.io/styleguide/jsoncstyleguide.xml)
-
-Highlights:
-
-* No comments
-* All property names must be surrounded by double quotes
-* Property names must be camel-cased, ascii strings. They are always string.
-
----
-
-## [Underscore](http://underscorejs.org/) and [underscore.string](https://epeli.github.io/underscore.string/)
-
-#### Difference between _.throttle and _.debounce?
-
-[https://ruby-china.org/topics/22494](https://ruby-china.org/topics/22494)
-
-* throttle: At most that fast, usually used when invoking source happens really frequently. Such as when typing to seach, don't send too many requests, scroll, mouse move, etc.
-* debounce: wait till no change. Such as calc layout when resize is finished.
-
-#### Convert an object into a list of \[key, value\] pairs.
-
-```js
-_.pairs({one: 1, two: 2, three: 3});
-=> [["one", 1], ["two", 2], ["three", 3]]
-```
-
-#### how to union with array?
-
-```coffee
-a = [1, 2]
-b = [3, 4, 5]
-c = [6]
-
-console.log _.union(a, b, c)
-
-arr = [a, b, c]
-console.log _.union.apply(_, arr)
-```
-
-#### \_.each cannot break out
-
-> It's also good to note that an each loop cannot be broken out of — to break, use \_.find instead.
-
-use `_.find` for array and `_.findKey(obj, (v, k)=>())` for object
-
----
-
-## Hows and patterns
+# JavaScript
 
 JavaScript = ECMAScript + DOM + BOM
 

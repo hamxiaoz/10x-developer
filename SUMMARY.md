@@ -18,6 +18,8 @@
     * [JSON](json.md)
     * [coffeescript](coffeescript.md)
     * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
+    * [RegEx](RegEx.md)
+    * [Functional Programming](functional_programming.md)
 * Angular.js
     * [Angular](Angular.md)
     * [Angular Cookbook](Angular_Cookbook.md)
@@ -41,10 +43,8 @@
     * [UI](ui_domain.md)
     * [Sketch](sketch.md)
     * [Web Dev Resources](web_dev_resources.md)
-* Skills
-    * [RegEx](RegEx.md)
+* Other
     * [Ruby](Ruby.md)
-    * [Functional Programming](functional_programming.md)
 * Know Your Tools
     * [Chrome DevTools](DevTools.md)
     * [Editor: VS Code](editor_vs_code.md)

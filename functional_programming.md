@@ -1,12 +1,44 @@
 # Functional Programming
-Some notes, unfinished.
+WIP.
 
-### Lodash
-Chaining:
+## Underscore / Lodash
+
+Lodash Chaining:
 - explicit, similar to underscore: `_.chain(numbers).map(n => n/2 === 0).value()`
 - implicit, if [the result is a single value](https://lodash.com/docs#_): `_(numbers).map(n => n/2 === 0).sum()`
 
-### How to convert a details array to a map?
+
+#### Difference between _.throttle and _.debounce?
+* throttle: At most that fast, usually used when invoking source happens really frequently. Such as when typing to seach, don't send too many requests, scroll, mouse move, etc.
+* debounce: wait till no change. Such as calc layout when resize is finished.
+
+#### Convert an object into a list of \[key, value\] pairs.
+
+```js
+_.pairs({one: 1, two: 2, three: 3});
+=> [["one", 1], ["two", 2], ["three", 3]]
+```
+
+#### how to union with array?
+
+```coffee
+a = [1, 2]
+b = [3, 4, 5]
+c = [6]
+
+console.log _.union(a, b, c)
+
+arr = [a, b, c]
+console.log _.union.apply(_, arr)
+```
+
+#### \_.each cannot break out
+
+> It's also good to note that an each loop cannot be broken out of — to break, use \_.find instead.
+
+use `_.find` for array and `_.findKey(obj, (v, k)=>())` for object
+
+#### How to convert a details array to a map?
 This is a collection reduces to a single object. Use `reduce`.  
 Borrowed from: https://github.com/rackt/react-router/blob/master/examples/sidebar/data.js
 
@@ -50,3 +82,6 @@ const dataMap = data.reduce(function (map, category) {
   return map
 }, {})
 ```
+
+---
+

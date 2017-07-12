@@ -139,11 +139,14 @@ Tips:
 
 ### number
 
-* If number starts with 0 and is a valid octal number, it'll be a octal number: `var octalNum = 070; // 56`
-* hex number: `var hexNum = 0xA2 or 0xf1`
-* `NaN`
-  * any operation with NaN will rerturn Nan
-  * NaN doesn't equal to anything, including itself
+- Special Numbers:
+  - `Infinity` and `-Infinity`
+  - `NaN`
+    - any operation with NaN will rerturn Nan
+    - NaN doesn't equal to anything, including itself
+- Hex and Octal:
+  - If number starts with 0 and is a valid octal number, it'll be a octal number: `var octalNum = 070; // 56`
+  - hex number: `var hexNum = 0xA2 or 0xf1`
 * Convert anything to number:
   * `Number()`
     * `Number(null) === 0`

@@ -37,6 +37,7 @@
     * [Google Cloud Function](google_cloud_function.md)
     * [Actions on Google / Google Assistant](actions_on_google.md)
 * Full Stack Development
+    * [HTTP](http.md)
     * [Meteor](meteor.md)
     * [MongoDB](mongodb.md)
     * [Digital Ocean](DigitalOcean.md)

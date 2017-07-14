@@ -45,7 +45,7 @@
     * [Sketch](sketch.md)
     * [Web Dev Resources](web_dev_resources.md)
 * Other
-    * [Ruby](Ruby.md)
+    * [Ruby](ruby.md)
 * Know Your Tools
     * [Chrome DevTools](DevTools.md)
     * [Editor: VS Code](editor_vs_code.md)

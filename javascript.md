@@ -1,10 +1,23 @@
-
-
 # JavaScript
 
-JavaScript = ECMAScript + DOM + BOM
+JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, window.navigator, window.location, window.history, window.screen, etc`)
 
-### Type: value/ref
+
+- [Type](#type)
+- [Array](#array)
+- [Number](#number)
+- [String](#string)
+- [Date](#date)
+- [boolean](#boolean)
+- [Object](#object)
+- [null undefined](#null-undefined)
+- [Comparison](#comparison)
+- [Map Set](#map-set)
+- [Global Object](#object)
+- [Function](#function)
+- [Pattern](#pattern)
+
+## Type
 
 * JavaScript Types = primitive types + Object
   * Primitive types: `Null, Undefined, Boolean, Number, String, Symbol (ES6)`
@@ -13,7 +26,7 @@ JavaScript = ECMAScript + DOM + BOM
 * Ref type: `function, Object, Array`
 * `typeof` returns following string, see below
 
-#### Array
+## Array
 
 ```js
 var a = Array(4); // array length of 4, but elements are all undefined
@@ -88,7 +101,7 @@ Tips:
   - ES6: `Array.from({length: 10}, (v, i) => i);`
   - Lodash: `_.fill(Array(10), 1);`
 
-### number
+## Number
 
 - Special Numbers:
   - `Infinity` and `-Infinity`
@@ -116,7 +129,7 @@ Tips:
 * Get digits: `String(321)split('')`
 * Check if it's integer: `Number.isInteger` [polyfill on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
 
-### string \(value type\)
+## String
 
 * string is value tpye. 
   ```js
@@ -162,7 +175,7 @@ Tips:
   tmp = null;
   ```
 
-### Date \([mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)\)
+## Date
 
 Only **using new will return the object**; Others will return the number or string.
 
@@ -176,76 +189,7 @@ Only **using new will return the object**; Others will return the number or stri
   const diffInDays = now.diff(future, 'days');
   ```
 
-### null/empty
-
-Special objects: `null` and `undefined`
-
-* `null`: a pointer to nothing \(that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`; 
-* `undefined`: it's like null in other program. 
-  * If you access a.name and a is {} then it returns `undefined`
-  * If arr\[out\_of\_bound\_index\], it returns `undefined`
-
-boolean: any value can be converted to boolean
-
-```js
-// as false
-false 
-null
-undefined
-'' //the empty string, for example var thisIsFlase = Boolean('')
-0 // the number
-NaN // the number
-
-// Anything except the above is true, for example:
-'0' // the string
-[] // the empty array
-{} // the empty object
-```
-
-Check is null or empty:
-
-```js
-function isNullOrEmpty(str) {
-    return !str;
-}
-// if you can use lodash/underscore
-function isNullOrEmpty(str) {
-    return _.isEmpty(str); // it's actually checking str.length
-}
-
-// Be careful with _.isEmpty as it's checking length, so don't use it to check number 
-_.isEmpty(10) === true;
-
-
-function isNullOrEmpty(arr) {
-    return !arr || arr.length === 0; 
-}
-```
-
-\_.isEmpty\(\):
-
-* check the length of array or string
-* CANNOT check number: \_.isEmpty\(10\) === true
-* check if object has enumerable own-properties
-
-Check null:
-
-* use `typeof instance.currentPosition  !== 'undefined'` 
-* Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
-* CoffeeScript:
-  * coffeescript: ? or ?. \(the latter can soak up so a.address?.zip returns undefined instead of typeerror\)
-  * CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
-
-### comparison
-
-* Equality operator `==`: doesn't compare type, i.e, it converts the type first \(performs type coercion\) then compare
-    `"" == false // returns true`
-* Strict Equality Operator `===`: doesn't not perform type coercion **recommended**
-    `'' == false // return false`
-* when comparison includes reference type, the comparison \(both == and ===\) performs pointer comparison.
-    `{} != {}`
-
-### Boolean
+## Boolean
 
 Sometimes you'll need to check boolean, it's better to force converting to boolean by:
 
@@ -254,7 +198,7 @@ Sometimes you'll need to check boolean, it's better to force converting to boole
 const hasMissingChannels = !!this.props.channels.missingChannels && this.props.channels.missingChannels.length > 0;
 ```
 
-### Object
+## Object
 
 * the property name will always be string, even you created like this `{a:'b'}`
 
@@ -329,12 +273,82 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
     p.y = 3;
     ```
 
-### Map and Set
+
+## null undefined
+
+Special objects: `null` and `undefined`
+
+* `null`: a pointer to nothing \(that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`; 
+* `undefined`: it's like null in other program. 
+  * If you access a.name and a is {} then it returns `undefined`
+  * If arr\[out\_of\_bound\_index\], it returns `undefined`
+
+boolean: any value can be converted to boolean
+
+```js
+// as false
+false 
+null
+undefined
+'' //the empty string, for example var thisIsFlase = Boolean('')
+0 // the number
+NaN // the number
+
+// Anything except the above is true, for example:
+'0' // the string
+[] // the empty array
+{} // the empty object
+```
+
+Check is null or empty:
+
+```js
+function isNullOrEmpty(str) {
+    return !str;
+}
+// if you can use lodash/underscore
+function isNullOrEmpty(str) {
+    return _.isEmpty(str); // it's actually checking str.length
+}
+
+// Be careful with _.isEmpty as it's checking length, so don't use it to check number 
+_.isEmpty(10) === true;
+
+
+function isNullOrEmpty(arr) {
+    return !arr || arr.length === 0; 
+}
+```
+
+\_.isEmpty\(\):
+
+* check the length of array or string
+* CANNOT check number: \_.isEmpty\(10\) === true
+* check if object has enumerable own-properties
+
+Check null:
+
+* use `typeof instance.currentPosition  !== 'undefined'` 
+* Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
+* CoffeeScript:
+  * coffeescript: ? or ?. \(the latter can soak up so a.address?.zip returns undefined instead of typeerror\)
+  * CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
+
+## Comparison
+
+* Equality operator `==`: doesn't compare type, i.e, it converts the type first \(performs type coercion\) then compare
+    `"" == false // returns true`
+* Strict Equality Operator `===`: doesn't not perform type coercion **recommended**
+    `'' == false // return false`
+* when comparison includes reference type, the comparison \(both == and ===\) performs pointer comparison.
+    `{} != {}`
+
+## Map Set
 
 * Set: unique values of any type
 * Map: dictionary, any type can be key, `size`, `get/set`
 
-### Global object
+## Global Object
 
 Methods:
 
@@ -346,7 +360,7 @@ Methods:
 * `window.print` display print window
 * `location`: window.location is the same as document.location
 
-### Function
+## Function
 
 * Always has `arguments` \(note it's not `this.arguments`\) for it's arguments, it's array like, to [convert it to array](http://stackoverflow.com/a/960870/166286): `Array.prototype.slice.call(arguments)`
 * Because of 'arguments', there is no function overloading.
@@ -427,7 +441,9 @@ Methods:
   (function foo() {
     alert('in foo');
    })();
-  ```
+```
+
+## Pattern
 
 ### default value if it doesn't exist
 
@@ -440,7 +456,7 @@ for timestamp, count of json["#{projectName}"]
       total["#{timestamp}"] = existing + count
 ```
 
-#### Console & Debug
+### Console & Debug
 
 `debugger;`
 
@@ -449,7 +465,7 @@ If the result is 0, the elements are not in the DOM:
 
 \_ Debug JQuery: [http://fixingthesejquery.com/\#slide23](http://fixingthesejquery.com/#slide23)
 
-#### How to open a new window without being blocked?
+### How to open a new window without being blocked?
 
 If the window is not a user click resullt, it'll be blocked.
 
@@ -471,7 +487,7 @@ Reference:
 * [http://stackoverflow.com/questions/4602964/how-do-i-prevent-google-chrome-from-blocking-my-popup](http://stackoverflow.com/questions/4602964/how-do-i-prevent-google-chrome-from-blocking-my-popup)
 * [https://developer.mozilla.org/en-US/docs/Web/API/Window/open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
 
-#### How to read binary file from the browser?
+### How to read binary file from the browser?
 
 [https://github.com/jDataView/jDataView](https://github.com/jDataView/jDataView)
 

@@ -362,6 +362,7 @@ Methods:
 
 ## Function
 
+### Parameter
 * Always has `arguments` \(note it's not `this.arguments`\) for it's arguments, it's array like, to [convert it to array](http://stackoverflow.com/a/960870/166286): `Array.prototype.slice.call(arguments)`
 * Because of 'arguments', there is no function overloading.
 * `function.length` required params length
@@ -378,7 +379,7 @@ Methods:
     var a = b;
     console.log(a.name == 'b')
   ```
-* Function output: funciton always return a value. If no return statement or `return;`, it returns `undefined`.
+  
 * Arguments are always copied **by value**. Even if the type is reference.
 
   ```js
@@ -391,24 +392,48 @@ Methods:
     let obj = {};
     setName(obj);
     console.log(obj.name); // 'Andrew'
-  ```
+  ```  
+  
+### Return value
+* Function output: funciton always return a value. If no return statement or `return;`, it returns `undefined`.
 
-* Declaration \(will be hoisted\) vs Expression
-
-  ```js
+### Declaration vs Expression
+Declaration (will be hoisted)
+```js
   alert(sum(10,10));
-    function sum(num1, num2) {
-        return num1 + num2;
-    }
+  function sum(num1, num2) {
+      return num1 + num2;
+  }
 
-    // error: alert(sum(10,10));
-    let sum = function(num1, num2) {
-        return num1 + num2;
-    };
-    alert(sum(10,10));
-  ```
-*  Closure: when the inner function makes reference to a variable from the outer function, this is called closure.  
- - closure captures live value:
+  // error: alert(sum(10,10));
+  let sum = function(num1, num2) {
+      return num1 + num2;
+  };
+  alert(sum(10,10));
+```
+
+Expression:
+```js
+//anonymous function expression
+var a = function() {
+    return 3;
+}
+ 
+//named function expression
+var a = function bar() {
+    return 3;
+}
+ 
+//self invoking function expression
+(function sayHello() {
+    alert("hello!");
+})();
+```
+  
+### Closure
+Closure: when the inner function makes reference to a variable from the outer function, this is called closure.  
+- closure captures live value:
+
   ```javascript
   function runningCounter(start) {
     var val = start;

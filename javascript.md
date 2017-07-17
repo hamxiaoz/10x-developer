@@ -373,7 +373,7 @@ Methods:
   - To convert it to array:
     - `Array.from(arguments)`
     - `const a = [...arguments];`
-    -`Array.prototype.slice.call(arguments)`
+    - `Array.prototype.slice.call(arguments)`
 * Because of 'arguments', there is no function overloading.
 * `function.length` required params length
 * `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.

@@ -19,12 +19,17 @@ JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, windo
 
 ## Type
 
-* JavaScript Types = primitive types + Object
-  * Primitive types: `Null, Undefined, Boolean, Number, String, Symbol (ES6)`
-  * Object: everything else, such as Function, Array, Date, etc
-* Value type \(includes string\): `Undefined, Null, Boolean, Number, String`
-* Ref type: `function, Object, Array`
-* `typeof` returns following string, see below
+JavaScript Types = Primitive types + Reference Type
+
+Primitive type
+  - `null, undefined, boolean, number, string, symbol (ES6)`
+  - immutable, fixed size memory
+
+Reference Type
+  - `Object, array, function`
+  - dynamic size
+
+`typeof` returns string.
 
 ## Array
 
@@ -51,7 +56,7 @@ Callback is usually: `element, index, array` while `element` is required
 Value
 Most of the operations will **mutate** the array.
 - copy itself to itself, \[start, end\) not including the endIndex: `copyWithin(targetIndex, startIndex, endIndex)`
-- Reverse:   `Array.prototype.reverse()` 
+- Reverse:   `Array.prototype.reverse()`
 - Sort: `arr.sort()`
   * if no function is provided, element is **converted to string** to sort, so `[10, 5].sort() is still [10, 5]`
   * sort numbers: `arr.sort((a, b) => a - b);`
@@ -72,7 +77,7 @@ Iterate
 
 * for: `for(let i = 0, l = list.length; i < l; i++) {console.log(list[i]); }`. Use `break` to break out.
 * for in `values()`: `for (let elem in arr.values())`
-* `arr.forEach`: **cannot break unless throw an exception** 
+* `arr.forEach`: **cannot break unless throw an exception**
 
 Transform
 
@@ -96,7 +101,7 @@ Query/Test
   * `indexOf or lastIndexOf`
 
 Tips:
-- create array: 
+- create array:
   - ES6: `Array(length).fill().map((_,i)=>i+1)`
   - ES6: `Array.from({length: 10}, (v, i) => i);`
   - Lodash: `_.fill(Array(10), 1);`
@@ -131,7 +136,7 @@ Tips:
 
 ## String
 
-* string is value tpye. 
+* string is value tpye.
   ```js
   var a = 'a';
     a.x = 'x';
@@ -147,7 +152,7 @@ Tips:
   * NOTE if regex has /g: 1. it'll return first match; 2. you can match multiple times. See [http://www.2ality.com/2013/08/regexp-g.html](http://www.2ality.com/2013/08/regexp-g.html)
 * `replace(regex/g, 'to replace')` specials '$1', etc.
 * `substr(index, length) vs substring(index, endIndex)` not including endIndex\`
-  * if negative number: 
+  * if negative number:
     * `slice(index)` index will become index+length: `'abc'.slice(-1) -> 'abc'.slice(2) -> 'c'`
     * `substr(index, length)` index becomes index+length; length will become 0
     * `substring` will treat negative as 0
@@ -278,8 +283,8 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
 
 Special objects: `null` and `undefined`
 
-* `null`: a pointer to nothing \(that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`; 
-* `undefined`: it's like null in other program. 
+* `null`: a pointer to nothing \(that's why `typeof null === 'object'`. Most case it can be replaced by `undefined`;
+* `undefined`: it's like null in other program.
   * If you access a.name and a is {} then it returns `undefined`
   * If arr\[out\_of\_bound\_index\], it returns `undefined`
 
@@ -287,7 +292,7 @@ boolean: any value can be converted to boolean
 
 ```js
 // as false
-false 
+false
 null
 undefined
 '' //the empty string, for example var thisIsFlase = Boolean('')
@@ -311,12 +316,12 @@ function isNullOrEmpty(str) {
     return _.isEmpty(str); // it's actually checking str.length
 }
 
-// Be careful with _.isEmpty as it's checking length, so don't use it to check number 
+// Be careful with _.isEmpty as it's checking length, so don't use it to check number
 _.isEmpty(10) === true;
 
 
 function isNullOrEmpty(arr) {
-    return !arr || arr.length === 0; 
+    return !arr || arr.length === 0;
 }
 ```
 
@@ -328,8 +333,8 @@ function isNullOrEmpty(arr) {
 
 Check null:
 
-* use `typeof instance.currentPosition  !== 'undefined'` 
-* Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined) 
+* use `typeof instance.currentPosition  !== 'undefined'`
+* Why not using `instance.currentPosition === undefined`? it can [throw error](http://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined)
 * CoffeeScript:
   * coffeescript: ? or ?. \(the latter can soak up so a.address?.zip returns undefined instead of typeerror\)
   * CoffeeScript's existential operator `?` returns true unless a variable is `null` or `undefined`, which makes it analogous to Ruby's nil?
@@ -379,7 +384,7 @@ Methods:
     var a = b;
     console.log(a.name == 'b')
   ```
-  
+
 * Arguments are always copied **by value**. Even if the type is reference.
 
   ```js
@@ -392,8 +397,8 @@ Methods:
     let obj = {};
     setName(obj);
     console.log(obj.name); // 'Andrew'
-  ```  
-  
+  ```
+
 ### Return value
 * Function output: funciton always return a value. If no return statement or `return;`, it returns `undefined`.
 
@@ -418,20 +423,20 @@ Expression:
 var a = function() {
     return 3;
 }
- 
+
 //named function expression
 var a = function bar() {
     return 3;
 }
- 
+
 //self invoking function expression
 (function sayHello() {
     alert("hello!");
 })();
 ```
-  
+
 ### Closure
-Closure: when the inner function makes reference to a variable from the outer function, this is called closure.  
+Closure: when the inner function makes reference to a variable from the outer function, this is called closure.
 - closure captures live value:
 
   ```javascript
@@ -453,7 +458,7 @@ Closure: when the inner function makes reference to a variable from the outer fu
 
 ### immediately-invoked function expression \(IIFE\)
 
-* Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished. 
+* Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished.
 * How? It's used to avoid hoisting and creating scope. A function creates a scope.
   ```js
   (function(){
@@ -461,7 +466,7 @@ Closure: when the inner function makes reference to a variable from the outer fu
    var b = 2;
    alert(a + b);
   })();
-  
+
   // or use a named version
   (function foo() {
     alert('in foo');
@@ -472,7 +477,7 @@ Closure: when the inner function makes reference to a variable from the outer fu
 
 ### default value if it doesn't exist
 
-Use ES6 default parameter instead.  
+Use ES6 default parameter instead.
 Previously: Use \|\|   NOTE this pattern doesn't work if the value is ''.
 
 ```js
@@ -485,7 +490,7 @@ for timestamp, count of json["#{projectName}"]
 
 `debugger;`
 
-If the result is 0, the elements are not in the DOM:  
+If the result is 0, the elements are not in the DOM:
  `console.log($(".theElements").length);`
 
 \_ Debug JQuery: [http://fixingthesejquery.com/\#slide23](http://fixingthesejquery.com/#slide23)

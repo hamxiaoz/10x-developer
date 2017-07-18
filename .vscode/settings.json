@@ -1,4 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "workbench.colorTheme": "Default Light+"
+    "workbench.colorTheme": "Default Light+",
+
+    // When enabled, will trim trailing whitespace when saving a file.
+    "files.trimTrailingWhitespace": false
 }

@@ -440,10 +440,24 @@ var a = function bar() {
 })();
 ```
 
+IIFE: immediately-invoked function expression
+- Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished.
+- How? It's used to avoid hoisting and creating scope. A function creates a scope.
+  ```js
+    (function(){
+    var a = 1;
+    var b = 2;
+    alert(a + b);
+    })();
+
+    // or use a named version
+    (function foo() {
+      alert('in foo');
+    })();
+  ```
+
 ### Closure
 Closure: when the inner function makes reference to a variable from the outer function, this is called closure.
-- closure captures live value:
-
   ```javascript
   function runningCounter(start) {
     var val = start;
@@ -460,23 +474,51 @@ Closure: when the inner function makes reference to a variable from the outer fu
   score();                // 2
   ```
 
+- Usage: promise chain, currying function.
 
-### immediately-invoked function expression \(IIFE\)
+### Scope
 
-* Why? It's useful when you have some work to do, some initialization maybe. You need to do it only once and you don't want to leave any globals lying around after the work is finished.
-* How? It's used to avoid hoisting and creating scope. A function creates a scope.
+Who can create scope?
+- funciton creates scope. `var` is limited in the scope.
+- ES6: `let` creates variable that's local to the **block** scope, not the function scope.
+
+How does js lookup variable?  
+Similar to stack, look for local then global.
+
+### Hoisted
+
+What will be hoisted?
+- `var` (**only the declaration part**)
   ```js
-  (function(){
-   var a = 1;
-   var b = 2;
-   alert(a + b);
-  })();
+  console.log(a); // undefined
+  var a = 12;
 
-  // or use a named version
-  (function foo() {
-    alert('in foo');
-   })();
-```
+  // will become this:
+  var a;
+  console.log(a);
+  a = 12;
+  ```
+
+- function declaration: `function foo() {}`
+  ```js
+  hoisted(); // Output: "This function has been hoisted."
+
+  function hoisted() {
+    console.log('This function has been hoisted.');
+  };
+
+  // expression is NOT hoisted
+  expression(); //Output: "TypeError: expression is not a function
+
+  var expression = function() {
+    console.log('Will this work?');
+  };
+  ```
+
+### this
+
+---
+
 
 ## Pattern
 

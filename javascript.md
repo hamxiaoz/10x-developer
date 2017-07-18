@@ -470,8 +470,8 @@ Closure: when the inner function makes reference to a variable from the outer fu
 
   var score = runningCounter( 0 );
 
-  score();                // 1
-  score();                // 2
+  score(); // 1
+  score(); // 2
   ```
 
 - Usage: promise chain, currying function.

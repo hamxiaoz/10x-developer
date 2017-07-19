@@ -60,8 +60,8 @@ Most of the operations will **mutate** the array.
 - Sort: `arr.sort()`
   * if no function is provided, element is **converted to string** to sort, so `[10, 5].sort() is still [10, 5]`
   * sort numbers: `arr.sort((a, b) => a - b);`
-- Remove and return head: `arr.shift()`
-- Add item to head: `arr.unshift('a')`
+- head: `shift()` + `unshift()`
+- tail: `pop()`   +  `push()`
 - Fill with value, \[start, end\) `arr.fill`
 - *Remove and insert in the middle \(when deleteCount is 0\): `arr.splice(start, deleteCount[, insert args])`, it will return the removed
 - **clear content** `arr.length = 0;` or `arr.splice(0, arr.length)`;
@@ -133,6 +133,20 @@ Tips:
     * It always convert to oct. If starts with 0x, it returns 0.
 * Get digits: `String(321)split('')`
 * Check if it's integer: `Number.isInteger` [polyfill on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+
+Random number:
+- `Math.random()` -> [0, 1)
+```js
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+```
 
 ## String
 
@@ -217,11 +231,23 @@ const hasMissingChannels = !!this.props.channels.missingChannels && this.props.c
     const isJedi = getProp(luke, prop);
     ```
 
-* `for .. in` will iterate all enumerable props \(including the prototype ones\) in arbitrar order
+* `for (let prop in obj)` will iterate all enumerable props (including the prototype ones) in arbitrar order
 
   * use `hasOwnProperty(key)` to check
 
 * The [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) returns true if the specified property is in the specified object.
+  ```js
+  let obj = {
+    a: 'a'
+  };
+  console.log('a' in obj); // true
+
+  obj.a = undefined;
+  console.log('a' in obj); // true
+
+  delete obj.a;
+  console.log('a' in obj); // false
+  ```
 
 * `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
 
@@ -479,11 +505,24 @@ Closure: when the inner function makes reference to a variable from the outer fu
 ### Scope
 
 Who can create scope?
-- funciton creates scope. `var` is limited in the scope.
-- ES6: `let` creates variable that's local to the **block** scope, not the function scope.
+- function scope: created by funciton. 
+  - `var` is limited in the scope.
+  - the scope implicitly defines a reference to `this`
+- ES6: block scope
+  - `let` is local to the block scope, not the function scope.
+  - the scope **does not** implicitly defines a reference to `this`
+- ES6: lambda scope
+  - the scope **does not** implicitly defines a reference to `this`. So `this` refers to enclosing scope.
+
+Global scope: each global variable is present as a property of this object.
+```js
+var a = 10;
+console.log('a' in window); // true
+console.log(window.a); // 10
+```
 
 How does js lookup variable?  
-Similar to stack, look for local then global.
+Similar to stack, look for local then global. Local variables 'shallow' the global ones.
 
 ### Hoisted
 

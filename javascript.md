@@ -136,6 +136,7 @@ Tips:
 
 Random number:
 - `Math.random()` -> [0, 1)
+
 ```js
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;

@@ -1,5 +1,9 @@
 # JavaScript Testing
 
+- [Jasmine Cheatsheet](#jasmine-cheatsheet)
+
+---
+
 ## Jasmine Cheatsheet
 
 **Spy \(for methods, can track calls or specify return value\)**

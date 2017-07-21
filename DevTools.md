@@ -10,6 +10,9 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 - `ALT+CMD+C`: inspect element
 - `ALT+CMD+i`: open dev tools
 
+## Elements
+- `F2` to edit as HTML, press again to apply the changes.
+
 ## Network
 - filter the network by using `-domain:*.com`. See full list of filters by typing `-`.
 - How to capture network for new popup link? Go to `chrome://net-internals/#events`

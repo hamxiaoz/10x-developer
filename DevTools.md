@@ -13,6 +13,7 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 ## Network
 - filter the network by using `-domain:*.com`. See full list of filters by typing `-`.
 - How to capture network for new popup link? Go to `chrome://net-internals/#events`
+- See XHRs in console: settings -> console -> check 'Log XMLHttpRequests'.
 
 ## Console
 [Command Line API Reference for Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en)
@@ -22,9 +23,9 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 - `$$(selector)` 
     - returns `NodeList`, is alias of `docuemnt.querySelectorAll()`
     - `NodeList` is not array, to convert to array: `Array.prototype.slice.call(div_list)` or `[...div_list]`
-    
+- `$0` is the selected element    
 
-Debug Help
+## Debug
 - `dir(object)`
 - `keys(object)`
 - `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
@@ -38,6 +39,8 @@ var names = {
 table(names);
 ```
 - store as global variable `temp1`: right click on an object in the console and press “store as global variable”
+- Set breakpoints on events: sources -> Event Listener Breakpoints
+
 
 ---
 

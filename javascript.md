@@ -523,12 +523,36 @@ console.log(window.a); // 10
 ```
 
 How does js lookup variable?  
-Similar to stack, look for local then global. Local variables 'shallow' the global ones.
+- Similar to stack, look for local then global. Local variables 'shallow' the global ones.
+- If there is a **local same name identifier**, the search will stop.
+
+Examples:
+
+```js
+x = "global";
+
+// function scope:
+(function() {
+    console.log(x); // undefined (x get hoisted, search will stop)
+
+    var x = 'local';
+}());
+
+// block scope
+{
+    console.log(x); // ReferenceError: x is not defined (x get hoisted but it's not initialized)
+    let x = 'local';
+}
+```
 
 ### Hoisted
 
 What will be hoisted?
-- `var` (**only the declaration part**)
+
+- `var` 
+  - **only the declaration part**
+  - and it'll be initialized as `undefined`
+
   ```js
   console.log(a); // undefined
   var a = 12;
@@ -555,7 +579,13 @@ What will be hoisted?
   };
   ```
 
+- `let const` 
+  - only the delcaration part 
+  - it will be **uninitialized**, trying to use it will cause 'Reference error: y is not defined'. 
+  - This is _temporal dead zone_ (anything above the actual statement). See: https://stackoverflow.com/a/31222689
+
 ### this
+TODO
 
 ---
 

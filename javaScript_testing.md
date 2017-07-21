@@ -1,10 +1,52 @@
 # JavaScript Testing
 
+- [Noun](#noun)
 - [Jasmine Cheatsheet](#jasmine-cheatsheet)
-- [Jasmine + Angular](#jasmine-+-angular)
-- [Read Istanbul Report](#Read-Istanbul-Report)
+- [Jasmine + Angular](#jasmine--angular)
+- [Read Istanbul Report](#read-istanbul-report)
 
 ---
+
+## Noun
+
+Unit Testing
+- test framework + test runner: Jest
+- test runner
+    - Karma. It runs test suite written in Jasmine, Mocha etc.
+    - cucumber
+        ```
+        Feature: Serve coffee
+        Coffee should not be served until paid for
+        Coffee should not be served until the button has been pressed
+        If there is no coffee left then money should be refunded
+        ```
+- test framework
+    - Jasmine
+    - Mocha
+- assertion library
+    - Chai
+    - power-assert "No API is the best API"
+    
+
+
+
+End to End Testing
+- end to end testing framework: Protractor (run against real browser)
+
+#### Which method comes from Mocha and Chai
+We can distinguish between framework (Mocha) methods and assertion library (Chai) methods by looking at the contents of the it block. Methods outside the `it` block are generally derived from the testing framework. Everything within the `it` block is code coming from the assertion library. `beforeEach, describe, context, it`, are all methods extending from Mocha. `expect, equal, and exist`, are all methods extending from Chai.
+
+```
+afterEach(function() {
+    $httpBackend.verifyNoOutstandingExpectation();
+    $httpBackend.verifyNoOutstandingRequest();
+    $window.localStorage.removeItem('com.shortly');
+  });
+
+  it('should have a signup method', function() {
+    expect($scope.signup).to.be.a('function');
+  });
+```
 
 ## Jasmine Cheatsheet
 

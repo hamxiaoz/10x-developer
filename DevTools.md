@@ -34,13 +34,13 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 - `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
 - `monitorEvents(window, "resize")`
 - `table(data)`
-```js
-var names = {
-	0: { firstName: "John", lastName: "Smith" },
-	1: { firstName: "Jane", lastName: "Doe" }
-};
-table(names);
-```
+	```js
+	var names = {
+		0: { firstName: "John", lastName: "Smith" },
+		1: { firstName: "Jane", lastName: "Doe" }
+	};
+	table(names);
+	```
 - store as global variable `temp1`: right click on an object in the console and press “store as global variable”
 - Set breakpoints on events: sources -> Event Listener Breakpoints
 

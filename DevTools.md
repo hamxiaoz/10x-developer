@@ -29,6 +29,8 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 - `$0` is the selected element    
 
 ## Debug
+
+Console
 - `dir(object)`
 - `keys(object)`
 - `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
@@ -42,7 +44,14 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 	table(names);
 	```
 - store as global variable `temp1`: right click on an object in the console and press “store as global variable”
+
+Breakpoints
 - Set breakpoints on events: sources -> Event Listener Breakpoints
+- Blackbox: on stack, you can also blackbox the whole script.
+
+Node
+- `debugger;`
+- [nif](https://github.com/thlorenz/nif)
 
 
 ---

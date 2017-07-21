@@ -14,7 +14,7 @@
     * [JavaScript](javascript.md)
     * [ES6](ES6.md)
     * [TypeScript](typescript.md)
-    * [JavaScript Testing](JavaScript_Testing.md)
+    * [JavaScript Testing](javaScript_testing.md)
     * [JSON](json.md)
     * [coffeescript](coffeescript.md)
     * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)

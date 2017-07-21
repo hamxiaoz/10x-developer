@@ -1,6 +1,8 @@
 # JavaScript Testing
 
 - [Jasmine Cheatsheet](#jasmine-cheatsheet)
+- [Jasmine + Angular](#jasmine-+-angular)
+- [Read Istanbul Report](#Read-Istanbul-Report)
 
 ---
 

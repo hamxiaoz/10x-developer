@@ -83,11 +83,12 @@ Transform
 
 * filter: `array.filter or _.filter or _.select`
 * join to string: `arr.join`
-* reduce and reduceRight\(from end\): `arr.reduce(callback, initial) # call back is (previousValue, currentValue, index, array)=> {})`
+* reduce and reduceRight\(from end\): `arr.reduce(callback, initial) # call back is (accumulator, currentValue, index, array)=> {})`
   * if no initial value given, first call, previousValue is arr\[0\] and currentValue is arr\[1\]
     ```
-    [1,2,3].reduce((pre, cur)=> pre+cur); // 6
+    [1,2,3].reduce((acc, cur)=> acc+cur); // 6
     ```
+  * the callback function returns value that'll pass to next accumulator. There is no need to assign `acc = acc + cur` in the callback function.
 
 Query/Test
 
@@ -403,7 +404,7 @@ Methods:
     - `Array.prototype.slice.call(arguments)`
 * Because of 'arguments', there is no function overloading.
 * `function.length` required params length
-* `Function.prototype.bind(thisArgs, args)` creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+* `Function.prototype.bind(thisArgs, arg1, arg2...)` creates a new function that binds `this` and currying parameters.
   * so 'this' is always 'thisArgs'
   * use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
 * `Funnction.prototype.apply(scope, paramsArr)` apply takes array as second args: **a**pply/**a**rray
@@ -584,8 +585,22 @@ What will be hoisted?
   - it will be **uninitialized**, trying to use it will cause 'Reference error: y is not defined'. 
   - This is _temporal dead zone_ (anything above the actual statement). See: https://stackoverflow.com/a/31222689
 
+## Prototype
+
+What's Array.prototype.push?
+What's prototype chain?
+What's this?
+
 ### this
-TODO
+
+```js
+function speak(line) {
+  console.log(this.type);
+}
+let a = {type: "white", speak: speak};
+a.speak(); // white
+
+```
 
 ---
 

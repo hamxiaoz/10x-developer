@@ -12,7 +12,12 @@ Enable touchpad tap to click:`System Preferences > Trackpad，Point & Click: che
 Enable `System Preferences > Keyboard -> Shortcuts: check All controls` then you can use `SPACE` to choose file dialog:
 
 
+```bash
+# install brew
+# install nvm
 
+brew install tree
+```
 
 ---
 

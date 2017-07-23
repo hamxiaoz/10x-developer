@@ -2,20 +2,39 @@
 
 JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, window.navigator, window.location, window.history, window.screen, etc`)
 
+<!-- TOC -->
 
-- [Type](#type)
-- [Array](#array)
-- [Number](#number)
-- [String](#string)
-- [Date](#date)
-- [boolean](#boolean)
-- [Object](#object)
-- [null undefined](#null-undefined)
-- [Comparison](#comparison)
-- [Map Set](#map-set)
-- [Global Object](#object)
-- [Function](#function)
-- [Pattern](#pattern)
+- [JavaScript](#javascript)
+  - [Type](#type)
+  - [Array](#array)
+  - [Number](#number)
+  - [String](#string)
+    - [Special reference type: String, Boolean, Number](#special-reference-type-string-boolean-number)
+  - [Date](#date)
+  - [Boolean](#boolean)
+  - [null undefined](#null-undefined)
+  - [Comparison](#comparison)
+  - [Global Objects / Methods](#global-objects--methods)
+  - [Object](#object)
+  - [Prototype](#prototype)
+    - [Constructor](#constructor)
+    - [Prototype Chain](#prototype-chain)
+    - [[Inheritence](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance)](#inheritencehttpsdevelopermozillaorgen-usdocslearnjavascriptobjectsinheritance)
+    - [this](#this)
+  - [Function](#function)
+    - [Parameter](#parameter)
+    - [Return value](#return-value)
+    - [Declaration vs Expression](#declaration-vs-expression)
+    - [Closure](#closure)
+  - [Scope](#scope)
+  - [Hoisted](#hoisted)
+  - [Pattern](#pattern)
+    - [default value if it doesn't exist](#default-value-if-it-doesnt-exist)
+    - [Console & Debug](#console--debug)
+    - [How to open a new window without being blocked?](#how-to-open-a-new-window-without-being-blocked)
+    - [How to read binary file from the browser?](#how-to-read-binary-file-from-the-browser)
+
+<!-- /TOC -->
 
 ## Type
 

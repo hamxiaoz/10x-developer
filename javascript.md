@@ -219,93 +219,6 @@ Sometimes you'll need to check boolean, it's better to force converting to boole
 const hasMissingChannels = !!this.props.channels.missingChannels && this.props.channels.missingChannels.length > 0;
 ```
 
-## Object
-
-* the property name will always be string, even you created like this `{a:'b'}`
-
-  * Use dot notation when accessing properties
-  * Use subscript notation \[\] when accessing properties with a variable.
-
-    ```js
-    const isJedi = luke.jedi;
-    // dynamic
-    funciton getProp(obj, prop) { return obj[prop]; }
-    const isJedi = getProp(luke, prop);
-    ```
-
-* `for (let prop in obj)` will iterate all enumerable props (including the prototype ones) in arbitrar order
-
-  * use `hasOwnProperty(key)` to check
-
-* The [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) returns true if the specified property is in the specified object.
-  ```js
-  let obj = {
-    a: 'a'
-  };
-  console.log('a' in obj); // true
-
-  obj.a = undefined;
-  console.log('a' in obj); // true
-
-  delete obj.a;
-  console.log('a' in obj); // false
-  ```
-
-* `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
-
-  * so `typeof [] === 'object`
-  * **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-  * usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
-
-* `a instanceof Constructor`, check if it's a **reference type**
-  * Use constructor, not string: so `[] instanceof Object`, not 'object'
-* \(**TODO**\) Check if an object is a type
-
-  * Why not `instanceof`?
-  * Why not `typeof`? Because typeof returns only those 5 types, and array is Object type. For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)
-
-    ```js
-    function is(type, obj) {
-      var clas = Object.prototype.toString.call(obj).slice(8, -1);
-      // [object String]
-      return obj !== undefined && obj !== null && clas === type;
-    }
-    is('String', 'test'); // true
-    is('String', new String('test')); // true
-    ```
-
-* object detection, check if it has property or method
-
-  ```js
-  if (document.getElementsByName)
-
-        // or
-        if (typeof document.getElementsByName === 'function')
-        if (typeof document.getElementsByName !== 'undefined')
-  ```
-
-* `JSON.stringify(obj, ['fliter', 'list])` can filter
-
-* [`defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) can set 'writable' and custom setter/getter
-
-* FP operations
- - Freeze: `const frozen = Object.freeze(obj)`
- - Create shallow copy:
-    ```js
-    var o = {
-      x: 1,
-      y: 2
-    };
-
-    // in ES2017+, using object spread:
-    var p = { ...o };
-    p.y = 3;
-
-    // in ES2015+:
-    var p = Object.assign( {}, o );
-    p.y = 3;
-    ```
-
 
 ## null undefined
 
@@ -376,15 +289,11 @@ Check null:
 * when comparison includes reference type, the comparison \(both == and ===\) performs pointer comparison.
     `{} != {}`
 
-## Map Set
-
-* Set: unique values of any type
+## Global Objects / Methods
+* Set: unique values of any type, `has`
 * Map: dictionary, any type can be key, `size`, `get/set`
 
-## Global Object
-
 Methods:
-
 * `isNaN, etc`
 * `encodeURI()` replace space to %20
 * `encodeURIComponent()` replace space and others such as '/' and '.', so don't use it for uri, only use it for uri component \(thus its name\)
@@ -392,6 +301,226 @@ Methods:
 * `let id = setInterval(()=>console.log('again'), 1000)`, `clearInterval(id)` Use setTimout to emulate interval, as timeout is pushed to the queue, where interval might run in overlap.
 * `window.print` display print window
 * `location`: window.location is the same as document.location
+
+## Object
+* the property name will always be string, even you created like this `{a:'b'}`
+  * Use dot notation when accessing properties
+  * Use subscript notation \[\] when accessing properties with a variable.
+
+    ```js
+    const isJedi = luke.jedi;
+    // dynamic
+    funciton getProp(obj, prop) { return obj[prop]; }
+    const isJedi = getProp(luke, prop);
+    ```
+
+* `for (let prop in obj)` will iterate all **enumerable** props (including the prototype ones) in **arbitrar** order
+  * All properties that we create by simply assigning to them are enumerable. 
+  * The standard properties in `Object.prototype` are all nonenumerable. Ex, `toString` is in prototype but it's not enumerable `'toString' in {} // -> true`
+  * use `hasOwnProperty(key)` to check if it's in instance
+  ```js
+  for (let name in map) {
+    if (map.hasOwnProperty(name)) {
+      // ... this is an own property
+    }
+  }
+  ```
+
+* The `in` operator check if the specified property is in the specified object.
+  * use `hasOwnProperty(key)` to check if it's in instance
+  ```js
+  let obj = {
+    a: 'a'
+  };
+  console.log('a' in obj); // true
+
+  obj.a = undefined;
+  console.log('a' in obj); // true
+
+  delete obj.a;
+  console.log('a' in obj); // false
+  ```
+
+* `typeof`, check if it's a **basic type plus others**, it only returns those string: 'undefined', 'null', 'boolean', 'string', 'number', 'object', 'symbol', 'function'
+
+  * so `typeof [] === 'object`
+  * **BUT** `typeof null === 'object';` See [MDN explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+  * usage: check method defined in prototype: `if (typeof this.sayName !== 'function')`
+
+* `a instanceof Constructor`, check if it's a **reference type**
+  * Use constructor, not string: so `[] instanceof Object`, not 'object'
+* \(**TODO**\) Check if an object is a type
+
+  * Why not `instanceof`?
+  * Why not `typeof`? Because typeof returns only those 5 types, and array is Object type. For example, `typeof [] === 'object'`, you cannot tell if it's array. [See here](http://web.mit.edu/jwalden/www/isArray.html)
+
+    ```js
+    function is(type, obj) {
+      var clas = Object.prototype.toString.call(obj).slice(8, -1);
+      // [object String]
+      return obj !== undefined && obj !== null && clas === type;
+    }
+    is('String', 'test'); // true
+    is('String', new String('test')); // true
+    ```
+
+* object detection, check if it has property or method
+
+  ```js
+  if (document.getElementsByName)
+
+        // or
+        if (typeof document.getElementsByName === 'function')
+        if (typeof document.getElementsByName !== 'undefined')
+  ```
+
+* `JSON.stringify(obj, ['fliter', 'list])` can filter
+
+* Custom getter setter:
+  ```js
+  var pile = {
+    elements: ["eggshell", "orange peel", "worm"],
+    get height() {
+      return this.elements.length;
+    },
+    set height(value) {
+      console.log("Ignoring attempt to set height to", value);
+    }
+  };
+
+  // or
+  Object.defineProperty(TextCell.prototype, "heightProp", {
+    get: function() { return this.text.length; }
+  });
+  ```
+
+* FP operations
+ - Freeze: `const frozen = Object.freeze(obj)`
+ - Create shallow copy:
+    ```js
+    var o = {
+      x: 1,
+      y: 2
+    };
+
+    // in ES2017+, using object spread:
+    var p = { ...o };
+    p.y = 3;
+
+    // in ES2015+:
+    var p = Object.assign( {}, o );
+    p.y = 3;
+    ```
+
+## Prototype
+
+### Constructor
+A constructor is just a function called with `new`.
+
+```js
+function Paper(type) {
+  this.type = type;
+}
+
+let note = new Paper('notebook');
+```
+
+What happens?
+- create new object
+- this bound to new object
+- call the constructor function
+- return the object
+
+```js
+// let note = new Paper('notebook');
+let note = {};
+Paper.call(note, 'notebook');
+return note;
+```
+
+### Prototype Chain
+- every instance created with the same constructor will share the same prototype: object derived from Object.prototype.
+- create prototype-less object (so for .. in works without check)
+  ```js
+  let map = Object.create(null);
+  console.log("toString" in map); // → false
+  ```
+
+Example
+```js
+function Rabiit() {
+}
+Rabbit.prototype.teeth = "small";
+console.log(killerRabbit.teeth); // → small
+killerRabbit.teeth = "long, sharp, and bloody";
+console.log(killerRabbit.teeth); // → long, sharp, and bloody
+```
+
+Prototype chain:
+```js
+// o ---> Object.prototype ---> null
+// The newly created object o has Object.prototype as its [[Prototype]]
+// o has no own property named 'hasOwnProperty'
+// hasOwnProperty is an own property of Object.prototype. 
+// So o inherits hasOwnProperty from Object.prototype
+// Object.prototype has null as its prototype.
+var o = {a: 1};
+
+// b ---> Array.prototype ---> Object.prototype ---> null
+// Arrays inherit from Array.prototype 
+// (which has methods indexOf, forEach, etc.)
+// The prototype chain looks like:
+var b = ['yo', 'whadup', '?'];
+
+// f ---> Function.prototype ---> Object.prototype ---> null
+// Functions inherit from Function.prototype 
+// (which has methods call, bind, etc.)
+function f() {
+  return 2;
+}
+
+var b = Object.create(o);
+// b ---> o ---> Object.prototype ---> null
+console.log(b.a); // 1 (inherited)
+```
+
+### [Inheritence](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+- call parent constructor
+- set prototype to parent prototype
+
+```js
+function RTextCell(text) {
+  TextCell.call(this, text);
+}
+RTextCell.prototype = Object.create(TextCell.prototype);
+RTextCell.prototype.constructor = RTextCell;
+```
+
+ES6, it's just syntax sugar, remains prototype based.
+```js
+class Polygon {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+
+class Square extends Polygon {
+  constructor(sideLength) {
+    super(sideLength, sideLength);
+  }
+```
+
+### this
+
+```js
+function speak(line) {
+  console.log(this.type);
+}
+let a = {type: "white", speak: speak};
+a.speak(); // white
+
+```
 
 ## Function
 
@@ -407,8 +536,7 @@ Methods:
 * `Function.prototype.bind(thisArgs, arg1, arg2...)` creates a new function that binds `this` and currying parameters.
   * so 'this' is always 'thisArgs'
   * use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
-* `Funnction.prototype.apply(scope, paramsArr)` apply takes array as second args: **a**pply/**a**rray
-* `Function.prototype.call(scope, param1, param2)` the fundamental difference is that call\(\) accepts an argument list, while apply\(\) accepts a single array of arguments.
+* `Funnction.prototype.apply(scope, paramsArray)` and `Function.prototype.call(scope, param1, param2, etc)`
 * Assignment makes a copy of the value only if it's a primitive type \(like Number, Boolean, String, etc...\). Otherwise, assignment just copies a reference to the same object \(Object, Array, etc...\). A new object is not created with assignment.
 
   ```js
@@ -504,8 +632,7 @@ Closure: when the inner function makes reference to a variable from the outer fu
 
 - Usage: promise chain, currying function.
 
-### Scope
-
+## Scope
 Who can create scope?
 - function scope: created by funciton. 
   - `var` is limited in the scope.
@@ -521,6 +648,10 @@ Global scope: each global variable is present as a property of this object.
 var a = 10;
 console.log('a' in window); // true
 console.log(window.a); // 10
+
+b = 11;
+console.log('b' in window); // true
+console.log(window.b); // 10
 ```
 
 How does js lookup variable?  
@@ -546,7 +677,7 @@ x = "global";
 }
 ```
 
-### Hoisted
+## Hoisted
 
 What will be hoisted?
 
@@ -585,22 +716,6 @@ What will be hoisted?
   - it will be **uninitialized**, trying to use it will cause 'Reference error: y is not defined'. 
   - This is _temporal dead zone_ (anything above the actual statement). See: https://stackoverflow.com/a/31222689
 
-## Prototype
-
-What's Array.prototype.push?
-What's prototype chain?
-What's this?
-
-### this
-
-```js
-function speak(line) {
-  console.log(this.type);
-}
-let a = {type: "white", speak: speak};
-a.speak(); // white
-
-```
 
 ---
 

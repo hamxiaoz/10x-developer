@@ -532,8 +532,88 @@ function speak(line) {
 }
 let a = {type: "white", speak: speak};
 a.speak(); // white
+```
+
+How is `this` determined?
+- Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node). However:
+- You can set `this` to a fixed value by `bind`
+- You can also set `this` in ES6 arrow function to the enclosing execution context.
+- Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
+  - Why? See example fx.
+  - How to fix? this-that pattern or arrow function.
+  ```js
+  let john = {
+    name: 'John',
+    greet: function(person) {
+      console.log("Hi " + person + ", my name is " + this.name);
+    },
+    items: [1, 2, 3],
+    processItems: function() {
+      this.items.forEach(function(item) {
+        this.markItemAsProcessed(item);
+      });
+    },
+    processed: [],
+    markItemAsProcessed: function(item) {
+      this.processed.push(item);
+    }
+  };
+
+  john.greet();
+  let fx = john.greet;
+  fx("Mark"); // this.name will be referencing global object because fx is property of global
+
+  john.processItems(); // this.markItemAsProcessed is not a function
+
+
+  // fix: that pattern (using closure)
+    processItems: function() {
+      let that = this;
+      this.items.forEach(function(item) {
+        that.markItemAsProcessed(item);
+      });
+    },
+  // fix: arrow function
+    processItems: function() {
+      this.items.forEach((item)=> {
+        this.markItemAsProcessed(item);
+      });
+    },
+  ```
+- in event handler, it's bind to invoking target.
+
+Examples:
+```js
+// test
+// this binds to window, because it's defined when executing
+Vector.prototype.plus = (other)=> { 
+  return new Vector(this.x + other.x, this.y + other.y);
+}
+
+// test
+var global = function(){ console.log(this); }();
+// 立即执行函数，由于没有给他object，于是this就是global (window)
+
+
+// test
+function Foo() {
+}
+Foo.method = function() {
+  function point(x, y) {
+    console.log(this);
+    this.x = x;
+    this.x = y;
+  }
+  point(3,5); 
+}
+// this is window.
+// Why? because Foo is defined in window.
+Foo.method(); 
 
 ```
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+
 
 ## Function
 
@@ -626,7 +706,7 @@ IIFE: immediately-invoked function expression
   ```
 
 ### Closure
-Closure: when the inner function makes reference to a variable from the outer function, this is called closure.
+Closure: when the inner function makes reference to a variable to the outer/surrounding function, this is called closure.
   ```javascript
   function runningCounter(start) {
     var val = start;
@@ -643,7 +723,20 @@ Closure: when the inner function makes reference to a variable from the outer fu
   score(); // 2
   ```
 
-- Usage: promise chain, currying function.
+- Usage: promise chain, currying function, this-that pattern，'private' data
+
+'private' data:
+```js
+let application = function() {
+  let _components = [];
+
+  return {
+    getComponentCount: function() {
+      return _components.length;
+    }
+  };
+}
+```
 
 ## Scope
 Who can create scope?
@@ -656,7 +749,7 @@ Who can create scope?
 - ES6: lambda scope
   - the scope **does not** implicitly defines a reference to `this`. So `this` refers to enclosing scope.
 
-Global scope: each global variable is present as a property of this object.
+Global scope: if you just define a variable in global scope, it is present as a property of this object. Both `var a = 10; b = 11;` is accessible in global.
 ```js
 var a = 10;
 console.log('a' in window); // true

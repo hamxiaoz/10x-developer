@@ -617,6 +617,8 @@ IIFE: immediately-invoked function expression
 
 ### Closure
 Closure: when the inner function makes reference to a variable to the outer/surrounding function, this is called closure.
+- More formal definition: A closure = a function + lexical environment within which that function was declared.
+- Usage: promise chain, currying function, this-that pattern，'private' data
   ```javascript
   function runningCounter(start) {
     var val = start;
@@ -631,21 +633,43 @@ Closure: when the inner function makes reference to a variable to the outer/surr
 
   score(); // 1
   score(); // 2
+
+  // 'private' data:
+  let application = (function() {
+    let _components = [];
+
+    return {
+      getComponentCount: function() {
+        return _components.length;
+      }
+    };
+  })();
   ```
 
-- Usage: promise chain, currying function, this-that pattern，'private' data
-
-'private' data:
+Common error when creating closure in loop:
 ```js
-let application = function() {
-  let _components = [];
-
-  return {
-    getComponentCount: function() {
-      return _components.length;
-    }
-  };
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+function showHelp(help) {
+  document.getElementById('help').innerHTML = help;
 }
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+    document.getElementById(item.id).onfocus = function() {
+      showHelp(item.help);
+    }
+  }
+}
+setupHelp();
+
+// fix: use let to create local scope
 ```
 
 ## Scope
@@ -780,7 +804,7 @@ How is `this` determined?
 - When using `bind`, `this` is set to a fixed value when it's defined. Or use `apply` or `call` to dynamically change context.
 
 - In ES6 arrow function, it doesn't bind `this`, `arguments`.
-  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern.
+  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify)
     ```js
     //
     // test

@@ -526,18 +526,97 @@ class Square extends Polygon {
 
 ### this
 
-```js
-function speak(line) {
-  console.log(this.type);
-}
-let a = {type: "white", speak: speak};
-a.speak(); // white
-```
-
 How is `this` determined?
-- Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node). However:
-- You can set `this` to a fixed value by `bind`
-- You can also set `this` in ES6 arrow function to the enclosing execution context.
+- Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node).
+  ```js
+  //
+  // Test
+  //
+  function speak(line) {
+    console.log(this.type);
+  }
+  let a = {type: "white", speak: speak};
+  a.speak(); // white
+    
+  //
+  // test
+  //
+  // this binds to window, because it's defined when executing
+  Vector.prototype.plus = (other)=> { 
+    return new Vector(this.x + other.x, this.y + other.y);
+  }
+
+  //
+  // test
+  //
+  var global = function(){ console.log(this); }();
+  // 立即执行函数，由于没有给他object，于是this就是global (window)
+
+  //
+  // test
+  //
+  function Foo() {
+  }
+  Foo.method = function() {
+    function point(x, y) {
+      console.log(this);
+      this.x = x;
+      this.x = y;
+    }
+    point(3,5); 
+  }
+  // this is window.
+  // Why? because Foo is defined in window.
+  Foo.method(); 
+  ```
+
+- When using `bind`, `this` is set to a fixed value
+
+- In ES6 arrow function, `this` refers to the enclosing execution context. Actually in arrow function, it doesn't bind `this` as well as `arguments`.
+  - Arrow function is not suitable to define methods:
+    ```js
+    'use strict';
+    var obj = {
+      i: 10,
+      b: () => console.log(this.i, this),
+      c: function() {
+        console.log(this.i, this);
+      }
+    }
+    obj.b(); // prints undefined, Window {...} (or the global object)
+    obj.c(); // prints 10, Object {...}
+    ```
+
+  ```js
+  //
+  // test
+  //
+  // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
+  function Person() {
+    this.age = 0;
+
+    setInterval(function growUp() {
+      // In non-strict mode, the growUp() function defines `this` 
+      // as the global object, which is different from the `this`
+      // defined by the Person() constructor.
+      console.log(this.age);
+      this.age++;
+    }, 1000);
+  }
+  var p = new Person();
+
+  // fix
+  function Person() {
+    this.age = 0;
+
+    setInterval(()=> {
+      console.log(this.age);
+      this.age++;
+    }, 1000);
+  }
+  var p = new Person();
+  ```
+
 - Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
   - Why? See example fx.
   - How to fix? this-that pattern or arrow function.
@@ -582,35 +661,6 @@ How is `this` determined?
   ```
 - in event handler, it's bind to invoking target.
 
-Examples:
-```js
-// test
-// this binds to window, because it's defined when executing
-Vector.prototype.plus = (other)=> { 
-  return new Vector(this.x + other.x, this.y + other.y);
-}
-
-// test
-var global = function(){ console.log(this); }();
-// 立即执行函数，由于没有给他object，于是this就是global (window)
-
-
-// test
-function Foo() {
-}
-Foo.method = function() {
-  function point(x, y) {
-    console.log(this);
-    this.x = x;
-    this.x = y;
-  }
-  point(3,5); 
-}
-// this is window.
-// Why? because Foo is defined in window.
-Foo.method(); 
-
-```
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 

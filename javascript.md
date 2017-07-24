@@ -18,7 +18,6 @@ JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, windo
   - [Constructor](#constructor)
   - [Prototype Chain](#prototype-chain)
   - [Inheritence](#inheritence)
-  - [this](#this)
 - [Function](#function)
   - [Parameter](#parameter)
   - [Return value](#return-value)
@@ -26,6 +25,7 @@ JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, windo
   - [Closure](#closure)
 - [Scope](#scope)
 - [Hoisted](#hoisted)
+- [this](#this)
 - [Pattern](#pattern)
 
 <!-- /TOC -->
@@ -524,178 +524,6 @@ class Square extends Polygon {
   }
 ```
 
-### this
-
-How is `this` determined?
-- Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node).
-  ```js
-  //
-  // Test
-  //
-  function speak(line) {
-    console.log(this.type);
-  }
-  let a = {type: "white", speak: speak};
-  a.speak(); // white
-    
-  //
-  // test
-  //
-  // this binds to window, because it's defined when executing
-  Vector.prototype.plus = (other)=> { 
-    return new Vector(this.x + other.x, this.y + other.y);
-  }
-
-  //
-  // test
-  //
-  var global = function(){ console.log(this); }();
-  // 立即执行函数，由于没有给他object，于是this就是global (window)
-
-  //
-  // test
-  //
-  function Foo() {
-  }
-  Foo.method = function() {
-    function point(x, y) {
-      console.log(this);
-      this.x = x;
-      this.x = y;
-    }
-    point(3,5); 
-  }
-  // this is window.
-  // Why? because Foo is defined in window.
-  Foo.method(); 
-  ```
-
-- When using `bind`, `this` is set to a fixed value
-
-- In ES6 arrow function, it doesn't bind `this`, `arguments`.
-  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern.
-    ```js
-    //
-    // test
-    //
-    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
-    function Person() {
-      this.age = 0;
-
-      setInterval(function growUp() {
-        // In non-strict mode, the growUp() function defines `this` 
-        // as the global object, which is different from the `this`
-        // defined by the Person() constructor.
-        console.log(this.age);
-        this.age++;
-      }, 1000);
-    }
-    var p = new Person();
-
-    // fix
-    function Person() {
-      this.age = 0;
-
-      setInterval(()=> {
-        console.log(this.age);
-        this.age++;
-      }, 1000);
-    }
-    var p = new Person();
-
-    // ex
-    function foo() {
-      setTimeout(() => {
-        console.log('id:', this.id);
-      }, 100);
-    }
-    foo(); // id: undefined (the execution context is window)
-    foo.call({id: 42}); // id: 42
-
-    // ex
-    foo.prototype.say = () => {  
-      console.log(this === window); // => true
-      // execution is in window.
-    };
-
-    // ex
-    var button = document.getElementById('myButton');  
-    button.addEventListener('click', () => {  
-      console.log(this === window); // => true
-    });
-    ```
-  - Arrow function is not suitable to define methods:
-    ```js
-    'use strict';
-    var obj = {
-      i: 10,
-      b: () => console.log(this.i, this),
-      c: function() {
-        console.log(this.i, this);
-      }
-    }
-    obj.b(); // prints undefined, Window {...} (or the global object)
-    // Why? the execution context for obj.b() is window.
-    obj.c(); // prints 10, Object {...}
-
-    // fix: ES6 shorthand method
-    var obj = {
-      b() {
-        console.log(this.i, this)
-      }
-    };
-    ```
-  - So arrow function cannot be used as constructor, because there is no `this` in it.
-
-- Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
-  - Why? See example fx.
-  - How to fix? this-that pattern or arrow function.
-  ```js
-  let john = {
-    name: 'John',
-    greet: function(person) {
-      console.log("Hi " + person + ", my name is " + this.name);
-    },
-    items: [1, 2, 3],
-    processItems: function() {
-      this.items.forEach(function(item) {
-        this.markItemAsProcessed(item);
-      });
-    },
-    processed: [],
-    markItemAsProcessed: function(item) {
-      this.processed.push(item);
-    }
-  };
-
-  john.greet();
-  let fx = john.greet;
-  fx("Mark"); // this.name will be referencing global object because fx is property of global
-
-  john.processItems(); // this.markItemAsProcessed is not a function
-
-
-  // fix: that pattern (using closure)
-    processItems: function() {
-      let that = this;
-      this.items.forEach(function(item) {
-        that.markItemAsProcessed(item);
-      });
-    },
-  // fix: arrow function
-    processItems: function() {
-      this.items.forEach((item)=> {
-        this.markItemAsProcessed(item);
-      });
-    },
-  ```
-- in event handler, it's bind to invoking target.
-
-
-Reference: 
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
-- http://es6.ruanyifeng.com/#docs/function#箭头函数
-
 
 ## Function
 
@@ -866,7 +694,6 @@ x = "global";
 ```
 
 ## Hoisted
-
 What will be hoisted?
 
 - `var` 
@@ -903,6 +730,198 @@ What will be hoisted?
   - only the delcaration part 
   - it will be **uninitialized**, trying to use it will cause 'Reference error: y is not defined'. 
   - This is _temporal dead zone_ (anything above the actual statement). See: https://stackoverflow.com/a/31222689
+
+
+## this
+How is `this` determined?
+- Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node).
+  ```js
+  //
+  // Test
+  //
+  function speak(line) {
+    console.log(this.type);
+  }
+  let a = {type: "white", speak: speak};
+  a.speak(); // white
+    
+  //
+  // test
+  //
+  // this binds to window, because it's defined when executing
+  Vector.prototype.plus = (other)=> { 
+    return new Vector(this.x + other.x, this.y + other.y);
+  }
+
+  //
+  // test
+  //
+  var global = function(){ console.log(this); }();
+  // 立即执行函数，由于没有给他object，于是this就是global (window)
+
+  //
+  // test
+  //
+  function Foo() {
+  }
+  Foo.method = function() {
+    function point(x, y) {
+      console.log(this);
+      this.x = x;
+      this.x = y;
+    }
+    point(3,5); 
+  }
+  // this is window.
+  // Why? because Foo is defined in window.
+  Foo.method(); 
+  ```
+
+- When using `bind`, `this` is set to a fixed value when it's defined. Or use `apply` or `call` to dynamically change context.
+
+- In ES6 arrow function, it doesn't bind `this`, `arguments`.
+  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern.
+    ```js
+    //
+    // test
+    //
+    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
+    function Person() {
+      this.age = 0;
+
+      setInterval(function growUp() {
+        // In non-strict mode, the growUp() function defines `this` 
+        // as the global object, which is different from the `this`
+        // defined by the Person() constructor.
+        console.log(this.age);
+        this.age++;
+      }, 1000);
+    }
+    var p = new Person();
+
+    // fix
+    function Person() {
+      this.age = 0;
+
+      setInterval(()=> {
+        console.log(this.age);
+        this.age++;
+      }, 1000);
+    }
+    var p = new Person();
+
+    // ex
+    function foo() {
+      setTimeout(() => {
+        console.log('id:', this.id);
+      }, 100);
+    }
+    var id = 21;
+    foo(); // id: undefined ()=> is defined in foo(), which is defined in window
+    foo.call({id: 42}); // id: 42
+
+    // ex
+    function Timer() {
+      this.s1 = 0;
+      this.s2 = 0;
+      setInterval(() => this.s1++, 1000);
+      setInterval(function () {
+        this.s2++;
+      }, 1000);
+    }
+    var timer = new Timer();
+    setTimeout(() => console.log('s1: ', timer.s1), 3100); // 3 (new Timer() defines this for arrow function, and it's the function scope)
+    setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
+
+    // ex
+    foo.prototype.say = () => {  
+      console.log(this === window); // => true
+      // ()=> is defiend in is in window.
+    };
+
+    // ex
+    var button = document.getElementById('myButton');  
+    button.addEventListener('click', () => {  
+      console.log(this === window); // => true
+    });
+
+
+    // ex
+    ```
+  - Arrow function is not suitable to define methods:
+    ```js
+    'use strict';
+    var obj = {
+      i: 10,
+      b: () => console.log(this.i, this),
+      c: function() {
+        console.log(this.i, this);
+      }
+    }
+    obj.b(); // prints undefined, Window {...} (or the global object)
+    // Why? it's defiend in obj =, the enclosing context is window.
+    obj.c(); // prints 10, Object {...}
+
+    // fix: ES6 shorthand method
+    var obj = {
+      b() {
+        console.log(this.i, this)
+      }
+    };
+    ```
+  - So arrow function cannot be used as constructor, because there is no `this` in it.
+
+- Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
+  - Why? See example fx.
+  - How to fix? this-that pattern or arrow function.
+  ```js
+  let john = {
+    name: 'John',
+    // test 1
+    greet: function(person) {
+      console.log("Hi " + person + ", my name is " + this.name);
+    },
+    items: [1, 2, 3],
+    // test 2
+    processItems: function() {
+      this.items.forEach(function(item) {
+        this.markItemAsProcessed(item);
+      });
+    },
+    processed: [],
+    markItemAsProcessed: function(item) {
+      this.processed.push(item);
+    }
+  };
+
+  // test 1
+  john.greet();
+  let fx = john.greet;
+  fx("Mark"); // this.name will be referencing global object because fx is property of global, global is the invoking object.
+
+  // test 2
+  john.processItems(); // this.markItemAsProcessed is not a function
+
+  // fix: that pattern (using closure)
+    processItems: function() {
+      let that = this;
+      this.items.forEach(function(item) {
+        that.markItemAsProcessed(item);
+      });
+    },
+  // fix: arrow function
+    processItems: function() {
+      this.items.forEach((item)=> {
+        this.markItemAsProcessed(item);
+      });
+    },
+  ```
+- in event handler, it's bind to invoking target.
+
+
+Reference: 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+- http://es6.ruanyifeng.com/#docs/function#箭头函数
 
 
 ---

@@ -572,7 +572,58 @@ How is `this` determined?
 
 - When using `bind`, `this` is set to a fixed value
 
-- In ES6 arrow function, `this` refers to the enclosing execution context. Actually in arrow function, it doesn't bind `this` as well as `arguments`.
+- In ES6 arrow function, it doesn't bind `this`, `arguments`.
+  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern.
+    ```js
+    //
+    // test
+    //
+    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
+    function Person() {
+      this.age = 0;
+
+      setInterval(function growUp() {
+        // In non-strict mode, the growUp() function defines `this` 
+        // as the global object, which is different from the `this`
+        // defined by the Person() constructor.
+        console.log(this.age);
+        this.age++;
+      }, 1000);
+    }
+    var p = new Person();
+
+    // fix
+    function Person() {
+      this.age = 0;
+
+      setInterval(()=> {
+        console.log(this.age);
+        this.age++;
+      }, 1000);
+    }
+    var p = new Person();
+
+    // ex
+    function foo() {
+      setTimeout(() => {
+        console.log('id:', this.id);
+      }, 100);
+    }
+    foo(); // id: undefined (the execution context is window)
+    foo.call({id: 42}); // id: 42
+
+    // ex
+    foo.prototype.say = () => {  
+      console.log(this === window); // => true
+      // execution is in window.
+    };
+
+    // ex
+    var button = document.getElementById('myButton');  
+    button.addEventListener('click', () => {  
+      console.log(this === window); // => true
+    });
+    ```
   - Arrow function is not suitable to define methods:
     ```js
     'use strict';
@@ -584,38 +635,17 @@ How is `this` determined?
       }
     }
     obj.b(); // prints undefined, Window {...} (or the global object)
+    // Why? the execution context for obj.b() is window.
     obj.c(); // prints 10, Object {...}
+
+    // fix: ES6 shorthand method
+    var obj = {
+      b() {
+        console.log(this.i, this)
+      }
+    };
     ```
-
-  ```js
-  //
-  // test
-  //
-  // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
-  function Person() {
-    this.age = 0;
-
-    setInterval(function growUp() {
-      // In non-strict mode, the growUp() function defines `this` 
-      // as the global object, which is different from the `this`
-      // defined by the Person() constructor.
-      console.log(this.age);
-      this.age++;
-    }, 1000);
-  }
-  var p = new Person();
-
-  // fix
-  function Person() {
-    this.age = 0;
-
-    setInterval(()=> {
-      console.log(this.age);
-      this.age++;
-    }, 1000);
-  }
-  var p = new Person();
-  ```
+  - So arrow function cannot be used as constructor, because there is no `this` in it.
 
 - Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
   - Why? See example fx.
@@ -662,7 +692,9 @@ How is `this` determined?
 - in event handler, it's bind to invoking target.
 
 
-Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+Reference: 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+- http://es6.ruanyifeng.com/#docs/function#箭头函数
 
 
 ## Function

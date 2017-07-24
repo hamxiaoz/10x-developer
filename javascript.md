@@ -440,12 +440,13 @@ let note = new Paper('notebook');
 
 What happens?
 - create new object
-- this bound to new object
+- this bound to new object 
 - call the constructor function
 - return the object
-
 ```js
 // let note = new Paper('notebook');
+
+// ->
 let note = {};
 Paper.call(note, 'notebook');
 return note;
@@ -540,6 +541,7 @@ class Square extends Polygon {
   * so 'this' is always 'thisArgs'
   * use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
 * `Funnction.prototype.apply(scope, paramsArray)` and `Function.prototype.call(scope, param1, param2, etc)`
+  - `Math.max.apply(null, [1,10,-1])`
 * Assignment makes a copy of the value only if it's a primitive type \(like Number, Boolean, String, etc...\). Otherwise, assignment just copies a reference to the same object \(Object, Array, etc...\). A new object is not created with assignment.
 
   ```js
@@ -683,7 +685,7 @@ Who can create scope?
 - ES6: lambda scope
   - the scope **does not** implicitly defines a reference to `this`. So `this` refers to enclosing scope.
 
-Global scope: if you just define a variable in global scope, it is present as a property of this object. Both `var a = 10; b = 11;` is accessible in global.
+Declared variable is a property of the scope. Undeclared variable too. Ex, both `var a = 10; b = 11;` is accessible in global window.
 ```js
 var a = 10;
 console.log('a' in window); // true

@@ -685,7 +685,7 @@ Who can create scope?
 - ES6: lambda scope
   - the scope **does not** implicitly defines a reference to `this`. So `this` refers to enclosing scope.
 
-Declared variable is a property of the scope. Undeclared variable too. Ex, both `var a = 10; b = 11;` is accessible in global window.
+Declared variable is a property of the scope. Undeclared variable too. So, both `var a = 10; b = 11;` is accessible in global window.
 ```js
 var a = 10;
 console.log('a' in window); // true
@@ -759,7 +759,7 @@ What will be hoisted?
 
 
 ## this
-How is `this` determined?
+How is `this` determined? 'Call-site'.
 - Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node).
   ```js
   //
@@ -806,7 +806,7 @@ How is `this` determined?
 - When using `bind`, `this` is set to a fixed value when it's defined. Or use `apply` or `call` to dynamically change context.
 
 - In ES6 arrow function, it doesn't bind `this`, `arguments`.
-  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify)
+  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
     ```js
     //
     // test
@@ -835,29 +835,6 @@ How is `this` determined?
       }, 1000);
     }
     var p = new Person();
-
-    // ex
-    function foo() {
-      setTimeout(() => {
-        console.log('id:', this.id);
-      }, 100);
-    }
-    var id = 21;
-    foo(); // id: undefined ()=> is defined in foo(), which is defined in window
-    foo.call({id: 42}); // id: 42
-
-    // ex
-    function Timer() {
-      this.s1 = 0;
-      this.s2 = 0;
-      setInterval(() => this.s1++, 1000);
-      setInterval(function () {
-        this.s2++;
-      }, 1000);
-    }
-    var timer = new Timer();
-    setTimeout(() => console.log('s1: ', timer.s1), 3100); // 3 (new Timer() defines this for arrow function, and it's the function scope)
-    setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
 
     // ex
     foo.prototype.say = () => {  
@@ -897,10 +874,12 @@ How is `this` determined?
     ```
   - So arrow function cannot be used as constructor, because there is no `this` in it.
 
-- Binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
-  - Why? See example fx.
+- Default binding. It means binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
+  - Why? Because the invoking site is window.
+  - So it also means, when you pass function as callback (which implicitly do the assignment in local scope, and when invoking, none is invoking it.), it's window.
   - How to fix? this-that pattern or arrow function.
   ```js
+  // test
   let john = {
     name: 'John',
     // test 1
@@ -941,11 +920,37 @@ How is `this` determined?
         this.markItemAsProcessed(item);
       });
     },
+
+  // other examples
+
+  // ex
+  function foo() {
+    setTimeout(() => {
+      console.log('id:', this.id);
+    }, 100);
+  }
+  var id = 21;
+  foo(); // id: undefined ()=> is defined in foo(), which is defined in window
+  foo.call({id: 42}); // id: 42
+
+  // ex
+  function Timer() {
+    this.s1 = 0;
+    this.s2 = 0;
+    setInterval(() => this.s1++, 1000);
+    setInterval(function () {
+      this.s2++;
+    }, 1000);
+  }
+  var timer = new Timer();
+  setTimeout(() => console.log('s1: ', timer.s1), 3100); // 3 (new Timer() defines this for arrow function, and it's the function scope)
+  setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
   ```
 - in event handler, it's bind to invoking target.
 
 
 Reference: 
+- https://github.com/getify/You-Dont-Know-JS/blob/1ed-zh-CN/this%20%26%20object%20prototypes/ch2.md
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 - http://es6.ruanyifeng.com/#docs/function#箭头函数
 

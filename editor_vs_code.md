@@ -54,9 +54,10 @@ Editing
 - Trim trailing whitespace: `CMD+SHIFT+X`
 
 Multi-cursor:
-- In normal mode, use `gb` to select another same word.
-- ~~In normal mode, use default hotkey `ALT+CMD+DOWN`/`ALT+CMD+UP` to add cursors. Then you can press `V` to enter visual mode.~~
+- In Insert mode, use `ALT/OPTION` + click to add multiple cursor, then press `ESC` to go to view mode.
+- In Normal mode, use `CMD+D` to select multiple instances, then press `ESC` to go to view mode.
 - In Insert mode, select lines and use `SHIFT+CMD+L` to turn lines into selections. (Require custom keyboard setup, see eblow)
+
 
 
 Terminal: "ctrl+`"

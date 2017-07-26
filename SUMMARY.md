@@ -20,6 +20,7 @@
     * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
     * [RegEx](RegEx.md)
     * [Functional Programming](functional_programming.md)
+    * [JavaScript Lib](javascript_lib.md)
 * Angular.js
     * [Angular](Angular.md)
     * [Angular Cookbook](Angular_Cookbook.md)

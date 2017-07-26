@@ -99,12 +99,25 @@ Sample task:
     "version": "0.1.0",
     "tasks": [
         {
-          "taskName": "ks",
-          "command": "killall",
-          "args": ["-9", "grunt"],
-          "isShellCommand": true,
-          "suppressTaskName": true,
-          "showOutput": "never"
+            "taskName": "ks",
+            "command": "killall",
+            "args": [
+                "-9",
+                "grunt"
+            ],
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "showOutput": "never"
+        },
+        {
+            "taskName": "lint",
+            "command": "grunt",
+            "args": [
+                "lint"
+            ],
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "showOutput": "silent"
         }
     ]
 }
@@ -119,6 +132,7 @@ Sample task:
 - TSLint
 - Monokai theme
 - VSCodeVim
+- pretty JSON
 
 ## User Settings
 ```

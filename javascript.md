@@ -851,6 +851,7 @@ How is `this` determined? 'Call-site'.
 
     // ex
     ```
+    
   - Arrow function is not suitable to define methods:
     ```js
     'use strict';
@@ -872,6 +873,7 @@ How is `this` determined? 'Call-site'.
       }
     };
     ```
+    
   - So arrow function cannot be used as constructor, because there is no `this` in it.
 
 - Default binding. It means binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
@@ -946,6 +948,7 @@ How is `this` determined? 'Call-site'.
   setTimeout(() => console.log('s1: ', timer.s1), 3100); // 3 (new Timer() defines this for arrow function, and it's the function scope)
   setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
   ```
+  
 - in event handler, it's bind to invoking target.
 
 

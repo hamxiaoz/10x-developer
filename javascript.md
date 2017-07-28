@@ -621,7 +621,7 @@ IIFE: immediately-invoked function expression
 ### Closure
 Closure: when the inner function makes reference to a variable to the outer/surrounding function, this is called closure.
 - More formal definition: A closure = a function + lexical environment within which that function was declared.
-- Usage: promise chain, currying function, this-that pattern，'private' data
+- Usage: promise chain, currying function, this-that pattern，'private' data in module or function (because function creates scope)
   ```javascript
   function runningCounter(start) {
     var val = start;
@@ -637,7 +637,7 @@ Closure: when the inner function makes reference to a variable to the outer/surr
   score(); // 1
   score(); // 2
 
-  // 'private' data:
+  // 'private' data
   let application = (function() {
     let _components = [];
 

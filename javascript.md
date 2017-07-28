@@ -444,6 +444,7 @@ What happens?
 - this bound to new object 
 - call the constructor function
 - return the object
+
 ```js
 // let note = new Paper('notebook');
 
@@ -455,7 +456,8 @@ return note;
 
 ### Prototype Chain
 - every instance created with the same constructor will share the same prototype: object derived from Object.prototype.
-- create prototype-less object (so for .. in works without check)
+- How to create prototype-less object? (so that `for .. in` works without check)
+
   ```js
   let map = Object.create(null);
   console.log("toString" in map); // → false

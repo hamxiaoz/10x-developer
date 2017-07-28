@@ -21,6 +21,7 @@
     * [RegEx](RegEx.md)
     * [Functional Programming](functional_programming.md)
     * [JavaScript Lib](javascript_lib.md)
+    * [Web APIs](web_api.md)
 * Angular.js
     * [Angular](Angular.md)
     * [Angular Cookbook](Angular_Cookbook.md)

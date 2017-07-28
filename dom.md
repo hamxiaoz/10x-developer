@@ -2,13 +2,19 @@
 
 ## DOM Manipulcation
 
-### Get
+### Selector
 `const myElement = document.querySelector('#foo > div.bar')`
 - Returns [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element)
 - It's not live, compare to `getElementsByTagName()`
 
 `const myElements = document.querySelectorAll('.bar')`
 - Returns [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
+
+Others: using above is recommended.
+```js
+const items = document.getElementsByClassName('item');
+const item = document.getElementById('item');
+```
 
 ### CSS
 ```js

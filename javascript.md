@@ -808,6 +808,7 @@ How is `this` determined? 'Call-site'.
 
 - In ES6 arrow function, it doesn't bind `this`, `arguments`.
   - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
+  
     ```js
     //
     // test
@@ -854,6 +855,7 @@ How is `this` determined? 'Call-site'.
     ```
     
   - Arrow function is not suitable to define methods:
+  
     ```js
     'use strict';
     var obj = {
@@ -881,6 +883,7 @@ How is `this` determined? 'Call-site'.
   - Why? Because the invoking site is window.
   - So it also means, when you pass function as callback (which implicitly do the assignment in local scope, and when invoking, none is invoking it.), it's window.
   - How to fix? this-that pattern or arrow function.
+  
   ```js
   // test
   let john = {

@@ -26,6 +26,7 @@ JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, windo
 - [Scope](#scope)
 - [Hoisted](#hoisted)
 - [this](#this)
+- [Error Exception](#error-exception)
 - [Pattern](#pattern)
 
 <!-- /TOC -->
@@ -957,6 +958,31 @@ Reference:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 - http://es6.ruanyifeng.com/#docs/function#箭头函数
 
+## Error Exception
+- catch: there is no selective catch. `catch(e)`
+- You can create your own error and use `instanceOf Constructor`
+  ```js
+  catch (e) {
+    if (e instanceof InputError)
+      console.log("Not a valid direction. Try again.");
+    else
+      throw e;
+  }
+  ```
+- Assertion
+  ```js
+  function AssertionFailed(message) {
+    this.message = message;
+  }
+  AssertionFailed.prototype = Object.create(Error.prototype);
+
+  function assert(test, message) {
+    if (!test)
+      throw new AssertionFailed(message);
+  }
+  
+  assert(1 === 2, 'msg');
+  ```
 
 ---
 

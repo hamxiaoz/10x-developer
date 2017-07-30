@@ -339,6 +339,8 @@ Methods:
     }
   }
   ```
+  
+- `for (let value of arr)` (ES6). It's using iterator (`next: ()=> {value: x, done: false}`)
 
 * The `in` operator check if the specified property is in the specified object.
   * use `hasOwnProperty(key)` to check if it's in instance

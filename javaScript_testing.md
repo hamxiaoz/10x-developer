@@ -22,9 +22,9 @@ Unit Testing
         ```
 - test framework
     - Jasmine
-    - Mocha
+    - Mocha: `beforeEach, describe, context, it`
 - assertion library
-    - Chai
+    - Chai: `expect, equal, and exist`
     - power-assert "No API is the best API"
     
 

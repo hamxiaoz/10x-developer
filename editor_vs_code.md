@@ -84,6 +84,17 @@ Terminal: "ctrl+`"
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
   }
+  
+  // quick switch window: CMD+R
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.quickSwitchWindow"
+  },
+  {
+      "key": "cmd+r",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inWindowsPicker"
+  }
 ]
 ```
 
@@ -172,7 +183,10 @@ Sample task:
   // Controls if the minimap is shown
   "editor.minimap.enabled": false,
 
-  "vim.disableAnnoyingNeovimMessage": true
+  "vim.disableAnnoyingNeovimMessage": true,
+  
+  // markdown
+  "markdown.preview.breaks": true
 }
 ```
 

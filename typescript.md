@@ -26,7 +26,7 @@
 * Function overload, this is possible in TypeScript but it's not supported by JavaScript.
 * Default paramter: `getSum(data: number[], skipNegative: boolean = false)`
 
-* Destructing
+* Destructuring (FP concept)
 
   ```typescript
   // pick only the data we need using destructing

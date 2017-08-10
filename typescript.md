@@ -20,7 +20,7 @@
 
 * We have `static`, `readonly`
   * `const` is for varibale. No one can modifiy it after assigned.
-  * `readonly` is for property (class property to property in interface). properties must be initialized **at their declaration or in the constructor**. It only ensures that it won't be modified by me. Others can still modify it. [See here](https://basarat.gitbooks.io/typescript/content/docs/types/readonly.html)
+  * `readonly` is for property (class property to property in interface). Properties must be initialized **at their declaration or in the constructor**. It only ensures that it won't be modified by me. Others can still modify it. [See here](https://basarat.gitbooks.io/typescript/content/docs/types/readonly.html)
   * `static` must be class member.
 
 * Function overload, this is possible in TypeScript but it's not supported by JavaScript.

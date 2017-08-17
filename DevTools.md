@@ -15,7 +15,7 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 
 ## Network
 - filter the network by using `-domain:*.com`. See full list of filters by typing `-`.
-- How to capture network for new popup link? Go to `chrome://net-internals/#events`
+- How to capture network for new popup link? Go to [`chrome://net-internals/#events`](chrome://net-internals/#events)
 - See XHRs in console: settings -> console -> check 'Log XMLHttpRequests'.
 
 ## Console

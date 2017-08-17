@@ -44,10 +44,12 @@ Console: print and variable
 - store as global variable `temp1`: right click on an object in the console and press “store as global variable”
 
 Find out events:
+- select element -> Event Listeners: find out existing handler for selected element.
+	- for example, with unknown web app, you can find out what's happening after clicking a button.
 - console: `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
 - console: `monitorEvents(window, "resize")`
-- sources -> Event Listener Breakpoints: you can see a list of existing breakpoints for events.
-	- for example, with unknown web app, you can find out what's happening after clicking a button.
+- sources -> Event Listener Breakpoints: you can add breakpoints for all kinds of events.
+
 	
 Block	
 - Blackbox: on stack, you can also blackbox the whole script.

@@ -30,11 +30,9 @@ Remember **all** chrome related hotkeys are trigger with `Option+CMD` or `ALT+CM
 
 ## Debug
 
-Console
+Console: print and variable
 - `dir(object)`
 - `keys(object)`
-- `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
-- `monitorEvents(window, "resize")`
 - `table(data)`
 	```js
 	var names = {
@@ -45,8 +43,13 @@ Console
 	```
 - store as global variable `temp1`: right click on an object in the console and press “store as global variable”
 
-Breakpoints
-- Set breakpoints on events: sources -> Event Listener Breakpoints
+Find out events:
+- console: `monitor(function)` outputs when this function is called and what arguments; `unmonitor`
+- console: `monitorEvents(window, "resize")`
+- sources -> Event Listener Breakpoints: you can see a list of existing breakpoints for events.
+	- for example, with unknown web app, you can find out what's happening after clicking a button.
+	
+Block	
 - Blackbox: on stack, you can also blackbox the whole script.
 
 Node

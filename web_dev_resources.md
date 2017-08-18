@@ -5,7 +5,7 @@
 [https://github.com/255kb/stack-on-a-budget](https://github.com/255kb/stack-on-a-budget)
 
 ## HTTP
-- [Requestly: Chrome extension to Modify network requests](http://www.requestly.in/)
+- view traffic in dev tool like panel by using proxy: https://github.com/kdzwinel/betwixt
 
 ## JSON
 - https://transform.now.sh/json-to-ts-interface

@@ -4,8 +4,11 @@
 
 [https://github.com/255kb/stack-on-a-budget](https://github.com/255kb/stack-on-a-budget)
 
-## Dev
+## HTTP
 - [Requestly: Chrome extension to Modify network requests](http://www.requestly.in/)
+
+## JSON
+- https://transform.now.sh/json-to-ts-interface
 
 ## Data
 

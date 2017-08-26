@@ -309,13 +309,31 @@ Check null:
 
 Methods:
 * `isNaN, etc`
-* `encodeURI()` replace space to %20
-* `encodeURIComponent()` replace space and others such as '/' and '.', so don't use it for uri, only use it for uri component \(thus its name\)
 * `let id = setTimeout(()=>console.log('future'), 1000)`, `clearTimeout(id)`
 * `let id = setInterval(()=>console.log('again'), 1000)`, `clearInterval(id)` Use setTimout to emulate interval, as timeout is pushed to the queue, where interval might run in overlap.
 * `window.print` display print window
 * `location`: window.location is the same as document.location
 
+- encodeURI
+  - replaces all characters except: `; , / ? : @ & = + $ - _ . ! ~ * ' ( ) # a-z 0-9`
+- encodeURIComponent 
+  - replaces all characters except`- _ . ! ~ * ' ( ) a-z 0-9`
+  - Use it to encode the **value** part: because it'll encode `=` and `&` so it's **not** supposed to encode the whole param string `encodeURIComponent("var1=value1&var2=value2")`.
+  ```
+  var arr = [];
+  for(var i=0;i<256;i++) {
+    var char=String.fromCharCode(i);
+    if(encodeURI(char)!==encodeURIComponent(char)) {
+      arr.push({
+        character:char,
+        encodeURI:encodeURI(char),
+        encodeURIComponent:encodeURIComponent(char)
+      });
+    }
+  }
+  console.table(arr);
+  ```
+  
 ## Object
 * the property name will always be string, even you created like this `{a:'b'}`
   * Use dot notation when accessing properties

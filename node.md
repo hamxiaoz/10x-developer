@@ -1,12 +1,19 @@
 # Node.js
 
-## Guide
-http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynchronous-function-in-node-js
+[**Only i/o is async**](http://stackoverflow.com/questions/2878008/how-do-i-create-a-non-blocking-asynchronous-function-in-node-js
+)
 > It's important to understand that node isn't about functions being asynchronous all the time. It's about i/o being asynchronous and non-blocking. If your function doesn't do any i/o, node isn't going to help you make it asynchronous. It provides tools that will allow you to do that though. Like child processes. That's what felix's answer is getting at. Your function can spawn a child process to do your work and it will execute off of the main event loop.
 
-## Node Package
+#### How to catch all?
+[`uncaughtException`](https://nodejs.org/api/process.html#process_event_uncaughtexception)
+```
+process.on('uncaughtException', (err) => {
+  fs.writeSync(1, `Caught exception: ${err}\n`);
+});
+```
 
-### How to use local (private) package?
+
+#### How to use local (private) package?
 Use git submodule
 
 ```bash
@@ -28,7 +35,7 @@ So my workaroud for now is, go to node_moduels folder and delete the package fol
 Reference:
 - http://stackoverflow.com/a/17371987/166286
 
-### File
+### FS
 
 #### How to get the base file name: 'a.ext' -> 'a'?
 ```coffee

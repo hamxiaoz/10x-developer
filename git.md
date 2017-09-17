@@ -8,3 +8,12 @@ Links:
 
 Topics:
 - How to Fork boilerplate to other branch, see examples from: https://github.com/koistya/react-static-boilerplate/tree/master
+
+
+# Alias
+~/.gitconfig
+```
+[alias]
+    ac = !git add -A && git commit -am
+    s = status
+```

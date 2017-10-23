@@ -57,7 +57,8 @@ Multi-cursor:
 - In Insert mode, use `ALT/OPTION` + click to add multiple cursor, then press `ESC` to go to view mode.
 - In Normal mode, use `CMD+D` to select multiple instances, then press `ESC` to go to view mode.
 - In Insert mode, select lines and use `SHIFT+CMD+L` to turn lines into selections. (Require custom keyboard setup, see eblow)
-
+- How to select all in file search result? `CMD+F` -> type search word -> `ALT + ENTER`
+  ![](https://cloud.githubusercontent.com/assets/5047891/20052065/6b5c84b8-a4d2-11e6-8575-d506ebac3fe9.gif)
 
 
 Terminal: "ctrl+`"

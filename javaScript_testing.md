@@ -50,7 +50,7 @@ afterEach(function() {
 
 ## Jasmine Cheatsheet
 
-**Spy \(for methods, can track calls or specify return value\)**
+#### Spy (for methods, can track calls or specify return value)
 
 ```js
 // Spy on existing method
@@ -71,7 +71,7 @@ beforeEach(function() {
     spyOn(foo, "setBar").and.throwError("404");
 });
 
-// Use spy to stub a method
+// Use createSpy to stub a method
 beforeEach(function() {
     foo = {
       setBar: jasmine.createSpy('setBar')
@@ -81,7 +81,7 @@ beforeEach(function() {
     expect(foo.setBar).toHaveBeenCalled();
 });
 
-// Use spy to create bare method
+// Use createSpy to create bare method
 beforeEach(function() {
     let foo = jasmine.createSpy('foo');
 
@@ -90,7 +90,7 @@ beforeEach(function() {
     expect(foo).toHaveBeenCalledWith('you can pass any', 'args');
 });
 
-// Use spy to create an object containing multiple methods
+// Use createSpyObj to create an object containing multiple methods
 // Useful for mocking Angular service
 beforeEach(function() {
     let $window = jasmine.createSpyObj<angular.IWindowService>('$window', ['open', 'alert']);
@@ -116,7 +116,7 @@ beforeEach(function() {
 });
 ```
 
-**Matcher**
+#### Matcher
 
 ```js
 // Match with type
@@ -133,22 +133,26 @@ expect(foo).toEqual(jasmine.objectContaining({
 }));
 ```
 
-**Tips**
+#### Tips
 
-* Remember to call `$scope.$apply();` when testing promise. [Why?](http://davideguida.altervista.org/the-importance-of-scope-apply-when-testing-promises/)
-* Call `done()` to instruct the spec is done for Asynchronous tests.
-* Call the following methods when you testing $httpBackend. See [doc](https://docs.angularjs.org/api/ngMock/service/$httpBackend) and [source code](https://github.com/angular/angular.js/blob/master/src/ngMock/angular-mocks.js#L1860)
+- Remember to call `$scope.$apply();` when testing promise. [Why?](http://davideguida.altervista.org/the-importance-of-scope-apply-when-testing-promises/)
+- Call `done()` to instruct the spec is done for Asynchronous tests.
+- Call the following methods when you testing $httpBackend. See [doc](https://docs.angularjs.org/api/ngMock/service/$httpBackend) and [source code](https://github.com/angular/angular.js/blob/master/src/ngMock/angular-mocks.js#L1860)
 
-    ```typescript
+    ```ts
     afterEach(()=> {
       $httpBackend.verifyNoOutstandingRequest();
       (<any>$httpBackend).verifyNoOutstandingExpectation(false);
     });
     ```
+- Call $httpBackend.flush() or $scope.$digest(), but not both
+- Any spec that calls a promise must execute expectations within a then or catch block (depending if the promise will resolve or reject)
 
-## Jasmine + Angular
+---
 
-Test component:
+## Jasmine + Angular 1.x
+
+#### Test component:
 
 ```js
 describe('My Tests', () => {
@@ -172,7 +176,7 @@ describe('My Tests', () => {
 });
 ```
 
-Test Service itself: mock http
+#### Test Service itself: mock http
 
 ```ts
 import {MyService} from './my-service';
@@ -213,14 +217,30 @@ describe('My Service', ()=> {
 });
 ```
 
-Test service in component:
+#### Test service in component:
 
 ```ts
 let myService = jasmine.createSpyObj('myService', ['getData']);
 (<jasmine.Spy>myService.getData).and.returnValue($q.when({}));
 ```
 
-Mistakes to avoid:
+#### How to use mock data?
+```js
+  beforeEach(() => {
+    angular.mock.module('mock-jasmine/feature/mock-data.json');
+
+    inject(($injector: angular.auto.IInjectorService) => {
+      mockDataPerson = $injector.get('mockJasmineFeatureMockData');
+    });
+  });
+
+
+
+  // mock $language return value
+  spyOn($language, 'get').and.returnValue(na);
+```
+
+#### Mistakes to avoid:
 - Always to remember to return a promise!
 - In test, always do a $scope.$digest() after calling a promise so that it triggers the promise chain.
 

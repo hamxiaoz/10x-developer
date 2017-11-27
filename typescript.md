@@ -1,14 +1,14 @@
 # TypeScript
 
-### References
+## References
 
 * [Learn TypeScript in Y Minutes](https://learnxinyminutes.com/docs/typescript/)
 * [TypeScript Deep Dive](https://www.gitbook.com/book/basarat/typescript/details)
 
-### Tools
+## Tools
 - [A minimal Yeoman Generator for creating NodeJS modules using TypeScript](https://github.com/ospatil/generator-node-typescript#readme)
 
-### Notes
+## TpyeScript Notes/Tips/Patterns
 
 * Scope: by default members in a class are **public**
 * **Enum**: an enum is a way of giving more friendly names to sets of **numeric** values
@@ -26,13 +26,45 @@
 * Function overload, this is possible in TypeScript but it's not supported by JavaScript.
 * Default paramter: `getSum(data: number[], skipNegative: boolean = false)`
 
-* Destructuring (FP concept)
+#### Favor getter over method in TS
 
-  ```typescript
-  // pick only the data we need using destructing
-  // Function signature: getAccountInfo(): {balance: number; cardStatus: string; cardNumber: string; cardHolder: string}
-  const {balance, cardStatus} = this.getAccountInfo();
-  ```
+#### How to declare type to object property and key?
+```ts
+var stuff: { [key: string]: string; } = {};
+stuff['a'] = ''; // ok
+stuff['a'] = 4;  // error
+```
+#### Use Destructuring (FP concept)
+```ts
+// pick only the data we need using destructing
+// Function signature: getAccountInfo(): {balance: number; cardStatus: string; cardNumber: string; cardHolder: string}
+
+// before:
+.then((response:any) => {
+        const data = this.getAccountInfo()
+        return {
+          balance: data.balance,
+          cardStatus: data.cardStatus
+        };
+
+// after
+.then((response:any) => {
+        const {balance, cardStatus} = this.getAccountInfo()
+        return {
+          balance,
+          cardStatus
+        };
+```
+
+#### Be careful: it's too easy to create private member
+If the data is NOT used anywhere, don't put private.
+
+```ts
+constructor(private data?: any) {
+      this.model = this.extract(data);
+    }
+```
+
 
 
 

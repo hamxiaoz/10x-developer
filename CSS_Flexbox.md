@@ -1,19 +1,31 @@
 # Flexbox
 
-#### What is it?
+#### What is Flexbox?
 It's a container used to layout items. We used to use `float` to layout.
+- Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Good article: https://chriswrightdesign.com/experiments/flexbox-adventures/
 
 #### Do I still need to use `max-width`?
 Yes.
 
-#### How to use it ot replace bootstrap?
+#### How to use it to replace bootstrap?
 - For `col-md-3`, use percentage: `flex-basis: 25%`.
 - For `pull` or `push`, use `order: n` (by default is 0, 1 will move the item on main axis)
 - For `visible-xs`, use CSS `display:none` on different breakpoints. Note this has nothing to do with Flexbox
 
-## Notes
-- Use this as reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- Good article: https://chriswrightdesign.com/experiments/flexbox-adventures/
+#### How to 'float' item on main axis?
+- `order`
+- `margin: auto`. > Prior to alignment via justify-content and align-self, any positive free space is distributed to auto margins in that dimension.
+
+[Good reference](https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609)
+
+#### How to center on both direction?
+`margin: auto` is an alternative to `justify-content: center` and `align-items: center`
+
+#### How to 'float' item on vertical axis?
+`align-self`
+
+## Basics
 
 #### Container
 - `display: flex`
@@ -26,6 +38,7 @@ Yes.
 - 2 axis:
   - main: `justify-content`
     - Note when `center` and `wrap`, only the wrapped items in next line will be centered.
+    - when `space-between`: evenly space, with the first item aligned to one edge of the container and the last item aligned to the opposite edge.
   - cross:
     - `align-items`
       - it determines how the items **as a whole** are aligned within the container
@@ -60,6 +73,7 @@ Example on flex:
 
 NOTE: float, clear and vertical-align have no effect on a flex item.
 
+---
 
 ## Other resources
 - practice: https://flexboxfroggy.com/

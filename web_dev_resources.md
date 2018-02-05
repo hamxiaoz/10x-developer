@@ -4,6 +4,10 @@
 
 [https://github.com/255kb/stack-on-a-budget](https://github.com/255kb/stack-on-a-budget)
 
+## DNS Related
+- https://mxtoolbox.com/
+- https://www.whatsmydns.net/
+
 ## HTTP
 - view traffic in dev tool like panel by using proxy: https://github.com/kdzwinel/betwixt
 

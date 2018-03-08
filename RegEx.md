@@ -76,5 +76,16 @@ while(match = pattern.exec("'a','b', 'c'")) {
 console.log(result);
 ```
 
+#### match a word
+- use word boundary: \b
+- be sure to be lazy (+?)
+
+```js
+const re = /^\/(.+?)\b/;
+re.exec('/abc/def')[1] // -> abc
+re.exec('/abc-def')[1] // -> abc
+re.exec('/abc_def')[1] // -> abc_def
+```
+
 
 

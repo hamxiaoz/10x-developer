@@ -146,6 +146,9 @@ Sample task:
 - VSCodeVim
 - pretty JSON
 
+## Code Formatting Setup
+https://medium.com/@hamxiaoz/visual-studio-code-formatting-setup-9f40a95699ce
+
 ## User Settings
 ```
 // Place your settings in this file to overwrite the default settings

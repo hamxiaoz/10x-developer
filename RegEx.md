@@ -21,7 +21,8 @@ See [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_O
 
 * Be careful about the greedy matching `.*`,  try to add `?` to use lazy matching: `.*?`. See [here](https://blog.mariusschulz.com/2014/06/03/why-using-in-regular-expressions-is-almost-never-what-you-actually-want)
 * Positive lookahead (does incldue): `(?=...)`
-* Negative lookahead (not include): `(?!...)`
+* Negative lookahead (not include multiple chars): `(?!...)`
+  * to match a single char that's not in the list, you can use `[^abc]` (means match one char that's not a or b or c)
 * Positive lookbehind: `(?<=...)` **NOTE JavaScript doens't have this**. You can use negative lookahead
 
 ## Examples

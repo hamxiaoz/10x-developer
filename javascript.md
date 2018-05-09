@@ -564,6 +564,8 @@ class Square extends Polygon {
   * so 'this' is always 'thisArgs'
   * use when in `setTimeout` callback to refer this, that's also why `=>` in ES6 don't need to bind anymore
 * `Funnction.prototype.apply(scope, paramsArray)` and `Function.prototype.call(scope, param1, param2, etc)`
+  - **a**apply uses **a**rray
+  - **c**all uses **comma**
   - `Math.max.apply(null, [1,10,-1])`
 * Assignment makes a copy of the value only if it's a primitive type \(like Number, Boolean, String, etc...\). Otherwise, assignment just copies a reference to the same object \(Object, Array, etc...\). A new object is not created with assignment.
 

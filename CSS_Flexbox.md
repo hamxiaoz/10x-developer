@@ -25,6 +25,18 @@ Yes.
 #### How to 'float' item on vertical axis?
 `align-self`
 
+#### Use of `display: inline-flex`
+The container will be inline and inside will be flex. Ex:
+
+```html
+<label>
+  <input type='checkbox'>
+  <h3>Agree</h3>
+</label>
+```
+
+---
+
 ## Basics
 
 #### Container

@@ -129,6 +129,8 @@ pseudo-elements `::before`
 * `mark` for highlight
 * `<progress value="70" max="100">70 %</progress>`
 * `<ruby>` and `<rt>` for 中文注音： [http://codepen.io/hamxiaoz/pen/Nbjjjm](http://codepen.io/hamxiaoz/pen/Nbjjjm)
+* [CSS counter](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+* You can live editing CSS by using `<style contenteditable>`: https://codepen.io/GiorgioMalvone/pen/vHCds
 
 ## Font
 
@@ -243,7 +245,11 @@ background: white url(images/gift.gif) repeat-x; // color image repeat
 
 #### Width
 
-It specifies the content width, **not including padding/margin.**, unless it's `box-sizing: border-box;`
+By default, Box model is `box-sizing: content-box`, means the width specifies the the content only, not including padding and border.
+
+So if you have `width: 100%` and padding, the item will display out of the container.
+
+If you want the width to be the real width of the box, use `box-sizing: border-box;`
 
 ```css
 div {
@@ -254,6 +260,8 @@ div {
   width: 400px;
 }
 ```
+
+By default, it's 
 
 ![](http://learn.shayhowe.com/assets/images/courses/html-css/opening-the-box-model/box-model.png)
 

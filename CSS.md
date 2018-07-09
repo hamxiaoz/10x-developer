@@ -165,7 +165,7 @@ text-decoration: no need to use `,` for multiple value: `text-decoration: underl
 
 ## Background
 
-* Background shortcut: `background-color`, `background-image`, `background-position` and `background-repeat`
+* DO NOT USE Background shortcut: `background-color`, `background-image`, `background-position` and `background-repeat` as you might override
 
   ```
   div {

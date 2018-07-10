@@ -8,7 +8,6 @@ Links:
 
 Playground: https://jsfiddle.net/hamxiaoz/7vo3mzkw/
 
-
 Grid methods:
 
 - row/bootstrap: The reason that our legacy methods need row wrappers is because we are faking a grid by assigning widths to items. We then pull and push the items around to make gaps between them.

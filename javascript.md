@@ -704,6 +704,7 @@ Who can create scope?
 - function scope: created by funciton. 
   - `var` is limited in the scope.
   - the scope implicitly defines a reference to `this`
+  
 - ES6: block scope
   - `let` is local to the block scope, not the function scope.
   - the scope **does not** implicitly defines a reference to `this`
@@ -719,6 +720,19 @@ console.log(window.a); // 10
 b = 11;
 console.log('b' in window); // true
 console.log(window.b); // 10
+```
+
+for loop:
+- `var` creates one binding as well as a variable (and the declaration part will be hoisted), so when i is accessed in a callback function, it always refered to the final i value.
+- `let` creates binding each iteration so it works normally
+
+```js
+let arr = [];
+for (var i=0; i < 3; i++) {
+    arr.push(() => i);
+}
+console.log(arr.map(x => x())); // [3,3,3]
+console.log(i); // 3
 ```
 
 How does js lookup variable?  

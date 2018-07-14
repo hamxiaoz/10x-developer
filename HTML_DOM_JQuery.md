@@ -57,8 +57,28 @@ table
     - table cannot be loaded faster, the whole thing has to be loaded for browser to determine layout. It cannot be easily cached either.
 - You can also use `dl` to display key/value pair, like table
 
-table css:
+table html:
+
+```pug
+table
+  caption
+  thead
+    tr
+      th
+      th
+  tbody
+    tr
+      td
+      td
+  tfoot
+    tr
+      td
+      td
 ```
+
+table css:
+
+```css
 div.tableRow { display: table-row; }
 div.tableRow p { display: cell; }
 ```

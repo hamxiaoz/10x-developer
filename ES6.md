@@ -197,3 +197,26 @@ Programmatic loader API: to configure how modules are loaded and to conditionall
 
 // ES6也规定，函数本身的作用域，在其所在的块级作用域之内。
 ```
+
+## Spread/Rest
+
+Use for collect the rest:
+
+```js
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x; // 1
+y; // 2
+z; // { a: 3, b: 4 }
+```
+
+Use for spread object or array into parameters like:
+
+- shape: {a, b} -> a, b
+- shape: [a, b] -> a, b
+
+```js
+let n = { x, y, ...z };
+n; // { x: 1, y: 2, a: 3, b: 4 }
+
+Math.max(...[1,2,3]);
+```

@@ -1,5 +1,26 @@
 # DOM
 
+## DOM Ready
+
+- `DOMContentLoaded` (`document.addEventListener("DOMContentLoaded", ready);`) – the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures <img> and stylesheets may be not yet loaded.
+  - includes `defer` scripts
+  - might not include `async` scripts
+- `load` (`window.onload = function() {}`) – the browser loaded all resources (images, styles etc).
+- `beforeunload/unload` (`window.unload = function() {}`) – when the user is leaving the page.
+
+```js
+// handle the case when we add the callback after the document is already loaded 
+if (document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  callback();
+} else {
+  document.addEventListener("DOMContentLoaded", callback);
+}
+```
+
+Reference: https://javascript.info/onload-ondomcontentloaded
+
 ## DOM Manipulcation
 
 ### Selector

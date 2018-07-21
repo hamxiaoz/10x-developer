@@ -2,11 +2,14 @@
 
 ## DOM Ready
 
-- `DOMContentLoaded` (`document.addEventListener("DOMContentLoaded", ready);`) – the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures <img> and stylesheets may be not yet loaded.
-  - includes `defer` scripts
-  - might not include `async` scripts
-- `load` (`window.onload = function() {}`) – the browser loaded all resources (images, styles etc).
-- `beforeunload/unload` (`window.unload = function() {}`) – when the user is leaving the page.
+- event `DOMContentLoaded` : the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures `<img>` and stylesheets may be not yet loaded.
+  - `document.addEventListener("DOMContentLoaded", ready);`
+  - the `defer` scripts already loaded
+  - the `async` scripts might NOT be loaded
+- function `load`: the browser loaded all resources (images, styles etc)
+  - `window.onload = function() {}` 
+- function `beforeunload/unload` : when the user is leaving the page
+  - `window.unload = function() {}`
 
 ```js
 // handle the case when we add the callback after the document is already loaded 
@@ -24,7 +27,7 @@ Reference: https://javascript.info/onload-ondomcontentloaded
 ## DOM Manipulcation
 
 ### Selector
-`const myElement = document.querySelector('#foo > div.bar')`
+`const myElement = document.querySelector('#foo > div.bar input[name="login"]')`
 - Returns [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element)
 - It's not live, compare to `getElementsByTagName()`
 

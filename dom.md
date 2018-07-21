@@ -27,7 +27,7 @@ Reference: https://javascript.info/onload-ondomcontentloaded
 ## DOM Manipulcation
 
 ### Selector
-You can use the following selector on `document` or `element`. It's
+You can use the following selector on `document` or `element`.
 
 `const myElement = document.querySelector('#foo > div.bar input[name="login"]')`
 - Returns the first descendant [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element) using DFS + Pre-order traversal

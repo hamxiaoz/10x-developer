@@ -27,8 +27,10 @@ Reference: https://javascript.info/onload-ondomcontentloaded
 ## DOM Manipulcation
 
 ### Selector
+You can use the following selector on `document` or `element`. It's
+
 `const myElement = document.querySelector('#foo > div.bar input[name="login"]')`
-- Returns [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element)
+- Returns the first descendant [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element) using DFS + Pre-order traversal
 - It's not live, compare to `getElementsByTagName()`
 
 `const myElements = document.querySelectorAll('.bar')`

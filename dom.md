@@ -1,5 +1,7 @@
 # DOM
 
+- DOM = `window.document`
+- BOM = `window.document, window.navigator, window.location, window.history, window.screen, etc`
 - [JQuery method with native js](http://youmightnotneedjquery.com/)
 - in DevTool, `$0` returns the selected Element, so you can use normal DOM APIs to access: ex, `$0.classList`
 
@@ -28,9 +30,13 @@ if (document.readyState === "complete" ||
 Reference: https://javascript.info/onload-ondomcontentloaded
 
 Script: async vs defer
-- defer: async downloading scripts, execute after parsing HTML is done
-- asyc: async downloading scripts, execute after downloading is done (will pause parsing HTML)
-- reference: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+- Normally, if browser see `<script>` in `<head>`, it will stop parsing until downloaded
+- script in bottom of the body will not block. But its own problem is, the script won't be downloaded until the full page is parsed.
+- `defer`: async downloading scripts (download in order), execute after parsing HTML is done
+- `asyc`: async downloading scripts (downloading might be out of order), execute after downloading is done (will pause parsing HTML)
+- reference:
+  - http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+  - https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
 
 ## DOM Manipulcation
 

@@ -143,17 +143,7 @@ myElement.textContent = 'abc'
 ```
 
 ## [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
-- Don't use `onclick`: single property, essentially override it
-- `this` usually points to the DOM element where the handler is bound, usually `document`
-
-override:
-- `preventDefault()` stop default handling, it'll still propagate
-- `stopPropagation()` stop bubbling up
-- `stopImmediatePropagation()` stop handling in current layer, stop passing to other event handlers: If several listeners are attached to the same element for the same event type, they are called in order in which they have been added. If during one such call, event.stopImmediatePropagation() is called, no remaining listeners will be called.
-
-e.target vs e.currentTarget
-- `e.currentTarget` alawys refer to the the element to which the event handler has been attached
-- `e.target` identifies the element on which the event occurred
+Don't use `onclick`: single property, essentially override it.
 
 ```js
 // add
@@ -175,6 +165,19 @@ myForm.addEventListener('change', function (event) {
   }
 })
 ```
+
+override:
+- `preventDefault()` stop default handling, it'll still propagate
+- `stopPropagation()` stop bubbling up
+- `stopImmediatePropagation()` stop handling in current layer, stop passing to other event handlers: If several listeners are attached to the same element for the same event type, they are called in order in which they have been added. If during one such call, event.stopImmediatePropagation() is called, no remaining listeners will be called.
+
+e.target vs e.currentTarget:
+- `e.target` identifies the element on which the event occurred
+- `e.currentTarget` alawys refer to the the element to which the event handler has been attached
+
+`this`:
+- usually points to the DOM element where the handler is bound.
+- NOTE if you add event using **arrow function** then it's `document` instead of the element!
 
 ### Keyboard/Mouse events
 See examples from: https://eloquentjavascript.net/15_event.html

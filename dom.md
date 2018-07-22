@@ -57,13 +57,10 @@ const item = document.getElementById('item');
 
 ### Attributes
 
-id:
-
-```js
-// id
-const element = document.querySelector('#app').id;
-element.id;
-```
+Generally, you can do:
+- `element.getAttribute('id')` or `element.getAttribute('data-parent')`
+- `element.setAttribute('tabindex', 3);`
+- `element.id`
 
 [Data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 - js: it's accessible (read/write) from js by the `dataset` property. Note dashes are converted to camelCase)
@@ -192,5 +189,12 @@ e.target vs e.currentTarget:
 - usually points to the DOM element where the handler is bound.
 - NOTE if you add event using **arrow function** then it's `document` instead of the element!
 
-### Keyboard/Mouse events
-See examples from: https://eloquentjavascript.net/15_event.html
+Trigger event manualy:
+- https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+
+Keyboard/Mouse events:
+- See examples from: https://eloquentjavascript.net/15_event.html
+
+Custom events:
+- CustomEvent: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
+- custom implementation of EventEmitter

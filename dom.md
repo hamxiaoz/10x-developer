@@ -24,6 +24,11 @@ if (document.readyState === "complete" ||
 
 Reference: https://javascript.info/onload-ondomcontentloaded
 
+Script: async vs defer
+- defer: async downloading scripts, execute after parsing HTML is done
+- asyc: async downloading scripts, execute after downloading is done (will pause parsing HTML)
+- reference: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+
 ## DOM Manipulcation
 
 ### Selector

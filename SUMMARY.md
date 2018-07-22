@@ -20,11 +20,11 @@
     * [DOM](dom.md)
     * [Web APIs](web_api.md)
     * [JSON](json.md)
-    * [coffeescript](coffeescript.md)
-    * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
     * [RegEx](RegEx.md)
     * [Functional Programming](functional_programming.md)
     * [JavaScript Lib](javascript_lib.md)
+    * [coffeescript](coffeescript.md)
+    * [coffeescript to ES6 cheatsheet](coffeescript_to_es6.md)
 * Angular.js
     * [Angular](Angular.md)
     * [Angular Cookbook](Angular_Cookbook.md)

@@ -43,3 +43,24 @@ console.log('c');
 setTimeout vs setInterval
 - https://javascript.info/settimeout-setinterval
 - setTimeout will guarantees a fixed deplay from each functions
+
+## requestAnimationFrame
+
+http://creativejs.com/resources/requestanimationframe/index.html
+
+```js
+function updateProgress() {
+  progress += 1;
+  if (progress > 100) {
+    return;
+  }
+
+  // update UI
+  progressBarAnimation.style.width = `${progress}%`;
+
+  requestAnimationFrame(updateProgress);
+  // FPS version
+  //setTimeout(() => requestAnimationFrame(updateProgress), 1000 / 60); // 15 FPS
+}
+requestAnimationFrame(updateProgress);
+```

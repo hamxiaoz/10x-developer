@@ -42,6 +42,10 @@ You can use the following selector on `document` or `element`.
 - Returns [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
 - `for .. of` or `forEach`
 
+Check element:
+- `e.target.nodeName == "LI"`
+- `e.target.matches('input')`
+
 Others: using above is recommended.
 ```js
 const items = document.getElementsByClassName('item');

@@ -1,5 +1,8 @@
 # DOM
 
+- [JQuery method with native js](http://youmightnotneedjquery.com/)
+- in DevTool, `$0` returns the selected Element, so you can use normal DOM APIs to access: ex, `$0.classList`
+
 ## DOM Ready
 
 - event `DOMContentLoaded` : the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures `<img>` and stylesheets may be not yet loaded.
@@ -90,10 +93,16 @@ article.dataset.parent = 'makes'; // "cars" -> 'makes'
 On make item invisible as well as clickable: https://css-tricks.com/snippets/css/toggle-visibility-when-hiding-elements/
 
 ```js
-// update class
-myElement.classList.add('foo')
+// CRUD class
+myElement.classList.add('foo', 'bar')
 myElement.classList.remove('bar')
 myElement.classList.toggle('baz')
+myElement.classList.replace('bar', 'baz')
+
+// fetch class
+myElement.className // -> 'foo bar'
+myElement.classList.contains('foo') // -> 'foo bar'
+
 
 // set style (this won't get all styles)
 myElement.style.marginLeft = '2em'

@@ -525,7 +525,7 @@ class Square extends Polygon {
 
 ## Function
 
-### Parameter
+### arguments
 * Always has `arguments` (note it's not `this.arguments`).
   - `arguments` is a build-in object, it's array like.
   - To convert it to array:
@@ -615,6 +615,18 @@ IIFE: immediately-invoked function expression
       alert('in foo');
     })();
   ```
+
+### Function Name
+Why you can pass function name to map function?
+```js
+let getJSON = (url)=>{}
+[].map(getJSON); // see getJSON
+```
+
+Actually you’re NOT omitting function parenthesis, what you mean here is passing the function reference so that the map knows which function to call.
+See http://stackoverflow.com/questions/5520155/settimeout-callback-argument/5520190#5520190
+
+
 
 ### Closure
 Closure: when the inner function makes reference to a variable to the outer/surrounding function, this is called closure.

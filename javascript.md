@@ -5,35 +5,6 @@ JavaScript = ECMAScript + DOM (`window.document`) + BOM (`window.document, windo
 Good Tutorials
 - https://javascript.info/
 
-<!-- TOC -->
-
-- [Type](#type)
-- [Array](#array)
-- [Number](#number)
-- [String](#string)
-- [Date](#date)
-- [Boolean](#boolean)
-- [null undefined](#null-undefined)
-- [Comparison](#comparison)
-- [Global Objects / Methods](#global-objects--methods)
-- [Object](#object)
-- [Prototype](#prototype)
-  - [Constructor](#constructor)
-  - [Prototype Chain](#prototype-chain)
-  - [Inheritence](#inheritence)
-- [Function](#function)
-  - [Parameter](#parameter)
-  - [Return value](#return-value)
-  - [Declaration vs Expression](#declaration-vs-expression)
-  - [Closure](#closure)
-- [Scope](#scope)
-- [Hoisted](#hoisted)
-- [this](#this)
-- [Error Exception](#error-exception)
-- [Pattern](#pattern)
-
-<!-- /TOC -->
-
 ## Type
 
 JavaScript Types = Primitive types + Reference Type
@@ -845,16 +816,17 @@ How is `this` determined? 'Call-site'.
   Foo.method(); 
   ```
 
-- When using `bind`, `this` is set to a fixed value when it's defined. Or use `apply` or `call` to dynamically change context.
+- When using `bind`, `this` is set to a fixed value when **it's defined**. Or use `apply` or `call` to dynamically change context.
 
-- In ES6 arrow function, it doesn't bind `this`, `arguments`.
-  - `this` is determined by where is defined. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
-  
+- `() => {}` In ES6 arrow function, it doesn't bind `this`, `arguments`.
+  - `this` is determined by **where is defined**. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
+
     ```js
     //
     // test
     //
-    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called. 
+    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called.
+
     function Person() {
       this.age = 0;
 

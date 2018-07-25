@@ -784,7 +784,15 @@ What will be hoisted?
 
 
 ## this
-How is `this` determined? 'Call-site'.
+
+Rules:
+
+1. Normally, `this` is bind to 'Call-site', the invoking object.
+2. In arrow function, `this` is bind to the context 'Where is defined'.
+3. You can use `bind` to change `this` manually.
+
+Examples:
+
 - Normally, 'this' is the invoking object. If no invoking object, is the global object. (window or global in Node).
   ```js
   //
@@ -834,9 +842,7 @@ How is `this` determined? 'Call-site'.
   - `this` is determined by **where is defined**. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
 
     ```js
-    //
     // test
-    //
     // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called.
 
     function Person() {
@@ -978,7 +984,7 @@ How is `this` determined? 'Call-site'.
   setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
   ```
   
-- in event handler, it's bind to invoking target.
+- in event handler, `this` is bind to invoking target. (NOTE if you define event handler using arrow function then it's bind to window)
 
 
 Reference: 

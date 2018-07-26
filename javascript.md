@@ -788,8 +788,9 @@ What will be hoisted?
 Rules:
 
 1. Normally, `this` is bind to 'Call-site', the invoking object.
-2. In arrow function, `this` is bind to the context 'Where is defined'.
+2. In arrow function, `this` is bind to the context 'Where is defined'. If no parent defines [scope](##Scope), then the context is `window`
 3. You can use `bind` to change `this` manually.
+4. in event handler, `this` is bind to invoking target. (NOTE if you define event handler using arrow function then it's bind to window)
 
 Examples:
 
@@ -838,77 +839,73 @@ Examples:
 
 - When using `bind`, `this` is set to a fixed value when **it's defined**. Or use `apply` or `call` to dynamically change context.
 
-- `() => {}` In ES6 arrow function, it doesn't bind `this`, `arguments`.
-  - `this` is determined by **where is defined**. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
+- Arrow function doesn't bind `this`, `arguments`.
+- Arrow function `this` is determined by **where is defined**. And it refers to the enclosing execution context. You can think it's using the this-that pattern. (Can use babel to verify) 箭头函数从封闭它的（函数或全局）作用域采用 this 绑定.
 
-    ```js
-    // test
-    // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called.
+  ```js
+  // test
+  // Why? Code executed by setTimeout() is called from an execution context separate from the function from which setTimeout was called.
 
-    function Person() {
-      this.age = 0;
+  function Person() {
+    this.age = 0;
 
-      setInterval(function growUp() {
-        // In non-strict mode, the growUp() function defines `this` 
-        // as the global object, which is different from the `this`
-        // defined by the Person() constructor.
-        console.log(this.age);
-        this.age++;
-      }, 1000);
-    }
-    var p = new Person();
+    setInterval(function growUp() {
+      // In non-strict mode, the growUp() function defines `this` 
+      // as the global object, which is different from the `this`
+      // defined by the Person() constructor.
+      console.log(this.age);
+      this.age++;
+    }, 1000);
+  }
+  var p = new Person();
 
-    // fix
-    function Person() {
-      this.age = 0;
+  // fix
+  function Person() {
+    this.age = 0;
 
-      setInterval(()=> {
-        console.log(this.age);
-        this.age++;
-      }, 1000);
-    }
-    var p = new Person();
+    setInterval(()=> {
+      console.log(this.age);
+      this.age++;
+    }, 1000);
+  }
+  var p = new Person();
 
-    // ex
-    foo.prototype.say = () => {  
-      console.log(this === window); // => true
-      // ()=> is defiend in is in window.
-    };
+  // ex
+  foo.prototype.say = () => {  
+    console.log(this === window); // => true
+    // ()=> is defiend in is in window.
+  };
 
-    // ex
-    var button = document.getElementById('myButton');  
-    button.addEventListener('click', () => {  
-      console.log(this === window); // => true
-    });
-
-
-    // ex
-    ```
+  // ex
+  var button = document.getElementById('myButton');  
+  button.addEventListener('click', () => {  
+    console.log(this === window); // => true
+  });
+  ```
     
-  - Arrow function is not suitable to define methods:
+- Arrow function is not suitable to define methods:
+- So arrow function cannot be used as constructor, because there is no `this` in it.
   
-    ```js
-    'use strict';
-    var obj = {
-      i: 10,
-      b: () => console.log(this.i, this),
-      c: function() {
-        console.log(this.i, this);
-      }
+  ```js
+  var obj = {
+    i: 10,
+    b: () => console.log(this.i, this),
+    c: function() {
+      console.log(this.i, this);
     }
-    obj.b(); // prints undefined, Window {...} (or the global object)
-    // Why? it's defiend in obj =, the enclosing context is window.
-    obj.c(); // prints 10, Object {...}
+  }
+  obj.b(); // prints undefined, Window {...} (or the global object)
+  // Why? it's defiend in obj =, the enclosing context is window.
+  obj.c(); // prints 10, Object {...}
 
-    // fix: ES6 shorthand method
-    var obj = {
-      b() {
-        console.log(this.i, this)
-      }
-    };
-    ```
+  // fix: ES6 shorthand method
+  var obj = {
+    b() {
+      console.log(this.i, this)
+    }
+  };
+  ```
     
-  - So arrow function cannot be used as constructor, because there is no `this` in it.
 
 - Default binding. It means binding loss: it happens whenever you’re accessing a method through a reference instead of directly through its owner object.
   - Why? Because the invoking site is window.
@@ -984,7 +981,6 @@ Examples:
   setTimeout(() => console.log('s2: ', timer.s2), 3100); // 0 (this is the invoking scope)
   ```
   
-- in event handler, `this` is bind to invoking target. (NOTE if you define event handler using arrow function then it's bind to window)
 
 
 Reference: 

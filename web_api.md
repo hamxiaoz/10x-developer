@@ -2,42 +2,57 @@
 
 ## HTTP
 
-```js
-// Fetch
-// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-fetch('./api/some.json')
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
+Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+  ```js
+  fetch('./api/some.json')
+    .then(
+      function(response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+          return;
+        }
+
+        // Examine the text in the response
+        response.json().then(function(data) {
+          console.log(data);
+        });
       }
+    )
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
+  ```
 
-      // Examine the text in the response
-      response.json().then(function(data) {
-        console.log(data);
-      });
-    }
-  )
-  .catch(function(err) {
+XMLHttpRequest:
+
+  ```js
+  // JSON
+  var req = new XMLHttpRequest();
+  req.responseType = 'json';
+  req.open('GET', url, true);
+  req.onload  = function() {
+    var jsonResponse = req.response;
+    // do something with jsonResponse
+  };
+  req.send(null);
+
+
+  // JSON
+  function reqListener() {
+    var data = JSON.parse(this.responseText);
+    console.log(data);
+  }
+  function reqError(err) {
     console.log('Fetch Error :-S', err);
-  });
-
-// XHR (not the latest)
-function reqListener() {
-  var data = JSON.parse(this.responseText);
-  console.log(data);
-}
-function reqError(err) {
-  console.log('Fetch Error :-S', err);
-}
-var oReq = new XMLHttpRequest();
-oReq.onload = reqListener;
-oReq.onerror = reqError;
-oReq.open('get', './api/some.json', true);
-oReq.send();
-```
+  }
+  var oReq = new XMLHttpRequest();
+  oReq.onload = reqListener;
+  oReq.onerror = reqError;
+  oReq.open('get', './api/some.json', true);
+  oReq.send();
+  ```
 
 
 

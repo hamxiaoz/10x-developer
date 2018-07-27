@@ -106,6 +106,8 @@ myElement.classList.replace('bar', 'baz')
 myElement.className // -> 'foo bar'
 myElement.classList.contains('foo') // -> 'foo bar'
 
+// show or hide button
+stopBtn.style.display = 'none'; // '';
 
 // set style (this won't get all styles)
 myElement.style.marginLeft = '2em'
@@ -127,20 +129,19 @@ window.requestAnimationFrame(function fadeIn (now)) {
 }
 ```
 
-### CRUD
+### Element CRUD 
 ```js
 // create
 const myNewElement = document.createElement('div')
 
+// append
+element1.appendChild(element2)
+
 // remove
 myElement.parentNode.removeChild(myElement)
 
-
 // clone
 const myElementClone = myElement.cloneNode()
-
-// append
-element1.appendChild(element2)
 
 // performant version using [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment)
 // It's minimal DOM, similar to StringBuilder
@@ -201,6 +202,45 @@ Trigger event manualy:
 Keyboard/Mouse events:
 - See examples from: https://eloquentjavascript.net/15_event.html
 
-Custom events:
+Custom events (interface for any custom event):
 - CustomEvent: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
 - custom implementation of EventEmitter
+
+Event Delegation: use one event handler to handle all children events
+  ```html
+  <div id="menu">
+    <button data-action="save">Save</button>
+    <button data-action="load">Load</button>
+    <button data-action="search">Search</button>
+  </div>
+
+  <script>
+    class Menu {
+      constructor(elem) {
+        this._elem = elem;
+        elem.addEventListener('click', this.onClick.bind(this)); // (*)
+      }
+
+      save() {
+        alert('saving');
+      }
+
+      load() {
+        alert('loading');
+      }
+
+      search() {
+        alert('searching');
+      }
+
+      onClick(event) {
+        let action = event.target.dataset.action;
+        if (action) {
+          this[action]();
+        }
+      };
+    }
+
+    new Menu(menu);
+  </script>
+  ```

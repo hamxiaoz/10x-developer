@@ -40,6 +40,8 @@ Script: async vs defer
 
 ## DOM Manipulcation
 
+Node (like root Object) -> Document -> Element
+
 ### Selector
 You can use the following selector on `document` or `element`.
 
@@ -49,17 +51,25 @@ You can use the following selector on `document` or `element`.
 
 `const myElements = document.querySelectorAll('.bar')`
 - Returns [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
-- `for .. of` or `forEach`
+- iterate: `for .. of` or `forEach` or `.item(i)`
 
-Check element:
+Compare:
+- `node.contains(element)`
 - `e.target.nodeName == "LI"`
-- `e.target.matches('input')`
+- `e.target.matches('input')` (Element.matches)
+
+Traverse:
+- `element.closest('selector')`
+- how to polyfill? see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
+
+
+
 
 Others: using above is recommended.
-```js
-const items = document.getElementsByClassName('item');
-const item = document.getElementById('item');
-```
+  ```js
+  const items = document.getElementsByClassName('item');
+  const item = document.getElementById('item');
+  ```
 
 ### Attributes
 
@@ -207,6 +217,7 @@ Custom events (interface for any custom event):
 - custom implementation of EventEmitter
 
 Event Delegation: use one event handler to handle all children events
+
   ```html
   <div id="menu">
     <button data-action="save">Save</button>
@@ -243,4 +254,16 @@ Event Delegation: use one event handler to handle all children events
 
     new Menu(menu);
   </script>
+  ```
+
+Event delegation can also be used to add behavior to any element (with data-attr):
+
+  ```js
+  // use with <button data-counter>add</button>
+  document.addEventListener('click', function(event) {
+    if (event.target.dataset.counter != undefined) {
+      // if the attribute exists...
+      event.target.value++;
+    }
+  });
   ```

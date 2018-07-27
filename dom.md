@@ -172,6 +172,7 @@ myElement.textContent = 'abc'
 ## [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 Don't use `onclick`: single property, essentially override it.
 
+## CRUD
 ```js
 // add
 myElement.addEventListener('click', (event)=> {
@@ -193,30 +194,32 @@ myForm.addEventListener('change', function (event) {
 })
 ```
 
-override:
+### Override default
 - `preventDefault()` stop default handling, it'll still propagate
 - `stopPropagation()` stop bubbling up
 - `stopImmediatePropagation()` stop handling in current layer, stop passing to other event handlers: If several listeners are attached to the same element for the same event type, they are called in order in which they have been added. If during one such call, event.stopImmediatePropagation() is called, no remaining listeners will be called.
 
-e.target vs e.currentTarget:
+### e.target vs e.currentTarget:
 - `e.target` identifies the element on which the event occurred
 - `e.currentTarget` alawys refer to the the element to which the event handler has been attached
 
-`this`:
+### `this`
 - usually points to the DOM element where the handler is bound.
 - NOTE if you add event using **arrow function** then it's `document` instead of the element!
 
-Trigger event manualy:
+### Trigger event manualy:
 - https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 
-Keyboard/Mouse events:
+### Keyboard/Mouse events:
 - See examples from: https://eloquentjavascript.net/15_event.html
 
-Custom events (interface for any custom event):
+### Custom events 
+interface for any custom event:
 - CustomEvent: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
 - custom implementation of EventEmitter
 
-Event Delegation: use one event handler to handle all children events
+### Event Delegation
+Use one event handler to handle all children events
 
   ```html
   <div id="menu">

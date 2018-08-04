@@ -9,8 +9,44 @@ Links:
 Topics:
 - How to Fork boilerplate to other branch, see examples from: https://github.com/koistya/react-static-boilerplate/tree/master
 
+## Common comands
 
-# Alias
+```bash
+# merge from staging
+git merge origin/staging
+```
+
+## Custom bash function
+
+```bash
+# add this to .zshrc
+
+# usage: newUS sprint15/US-12345
+function newUS() {
+  git checkout -b feature/$1 --no-track origin/staging
+}
+
+# create PR on bitbucket from current branch to feature/paycard-staging
+# you should publish the branch first: git push -u first
+function newPR() {
+  branch_name="$(git symbolic-ref HEAD 2>/dev/null)"
+  open "https://bitbucket.com/sourceBranch=${branch_name}&targetRepoId=6565" 
+}
+```
+
+
+## Tips: merge base when you have changes already commited locally
+
+```bash
+git reset --soft "HEAD^"
+git stash
+git merge origin/feature/paycard-staging
+git stash apply
+git add .
+git commit
+```
+
+## Alias Command
 ~/.gitconfig
 ```
 [alias]

@@ -1016,6 +1016,14 @@ Reference:
 
 ---
 
+## i18n
+
+- `navigator.languages` returns the user's preferred languages `//["en-US", "zh-CN", "ja-JP"]`
+- `navigator.language` is the first element of the above returned array
+
+### How to test?
+Use chrome://settings/languages#lang and (important) make sure that the language you selected is the top choice (the preferred language). The navigator value will change accordingly
+
 
 ## Pattern
 

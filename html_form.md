@@ -16,15 +16,33 @@ For Angular:
 - use `ng-submit` on the form instead of `button(ng-click)` to make sure ENTER works.
 
 
-## On Mobile
-### Soft Keyboard on Input field
+## Mobile
+
+### 'Go' or 'Search' button on Soft Keyboard
 iOS:
-- The 'Go' button is only shown, if the `input` tag is inside a `form` tag. Otherwise shows a return button. See: http://stackoverflow.com/questions/22986347
+- The 'Go' button is only shown: if the `input` tag is inside a `form` tag with `action` property. Otherwise shows a return button. See: http://stackoverflow.com/questions/22986347
 - The 'Search' button is shown when `<input type='search'>` or name of the input contains 'search'
 
 Android: 
 - Shows 'Go' for text inputs
 - SHows 'Next' to number inputs
+
+### How to use keyboard 'Go' or 'Search' to submit form?
+When you have submit button:
+- by default the key press will submit the form
+
+When you don't have submit button:
+- if you ONLY have one input in the form, it'll work by press the 'Go'.
+- if you have more than one input:
+  - create a submit type button with style="visibility:hidden;position:absolute" (don't show and don't mess container layout)
+Ref:
+- http://stackoverflow.com/questions/5665203/getting-iphone-go-button-to-submit-form
+
+
+
+### How to hide soft keyboard manually?
+Use `blur()` on active element: https://github.com/caiogondim/hide-virtual-keyboard.js/blob/master/src/index.js 
+
 
 ## Library
 - Address auto complete: https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform

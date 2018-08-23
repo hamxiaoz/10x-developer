@@ -4,6 +4,21 @@ References:
 - http://es6.ruanyifeng.com/
 - https://github.com/lukehoban/es6features
 
+## Class
+
+```js
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  toString() {
+    return '(' + this.x + ', ' + this.y + ')';
+  }
+}
+```
+
 ## Style Guide
 Guide: https://github.com/airbnb/javascript
 

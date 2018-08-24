@@ -8,7 +8,7 @@
 ## Tools
 - [A minimal Yeoman Generator for creating NodeJS modules using TypeScript](https://github.com/ospatil/generator-node-typescript#readme)
 
-## TpyeScript Notes/Tips/Patterns
+## TypeScript Notes/Tips/Patterns
 
 * Scope: by default members in a class are **public**
 * **Enum**: an enum is a way of giving more friendly names to sets of **numeric** values
@@ -19,7 +19,7 @@
 * Type assertion: `(<string>someValue).length;`
 
 * We have `static`, `readonly`
-  * `const` is for varibale. No one can modifiy it after assigned.
+  * `const` is for variable. No one can modify it after assigned.
   * `readonly` is for property (class property to property in interface). Properties must be initialized **at their declaration or in the constructor**. It only ensures that it won't be modified by me. Others can still modify it. [See here](https://basarat.gitbooks.io/typescript/content/docs/types/readonly.html)
   * `static` must be class member.
 

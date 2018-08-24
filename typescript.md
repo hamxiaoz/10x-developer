@@ -24,16 +24,22 @@
   * `static` must be class member.
 
 * Function overload, this is possible in TypeScript but it's not supported by JavaScript.
-* Default paramter: `getSum(data: number[], skipNegative: boolean = false)`
+* Default parameter: `getSum(data: number[], skipNegative: boolean = false)`
 
 #### Favor getter over method in TS
 
-#### How to declare type to object property and key?
+#### Type: How to declare type to object property and key?
+
 ```ts
 var stuff: { [key: string]: string; } = {};
 stuff['a'] = ''; // ok
 stuff['a'] = 4;  // error
 ```
+
+#### Type: type of array item based on index
+- `public label(row: {0: string, 1: number}): string {`
+- `var t:[number, string] = [1, "message"]`
+
 #### Use Destructuring (FP concept)
 ```ts
 // pick only the data we need using destructing

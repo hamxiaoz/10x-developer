@@ -202,6 +202,7 @@ https://medium.com/@hamxiaoz/visual-studio-code-formatting-setup-9f40a95699ce
   },
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.iconTheme": "vs-seti",
+  "window.title": "${activeEditorLong}${separator}${rootName}",
 
   // vim
   "vim.disableAnnoyingNeovimMessage": true,

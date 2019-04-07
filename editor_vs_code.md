@@ -93,7 +93,7 @@ Terminal: "ctrl+`"
     "key": "cmd+shift+l",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
-  }
+  },
 
   // quick switch window: CMD+R
   {
@@ -104,7 +104,7 @@ Terminal: "ctrl+`"
       "key": "cmd+r",
       "command": "workbench.action.quickOpenNavigateNext",
       "when": "inWindowsPicker"
-  }
+  },
 
   // focus on terminal
   {

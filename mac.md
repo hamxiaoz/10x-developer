@@ -53,11 +53,10 @@ Essential:
 - MacVim
 
 Dev:
-- git: `git --version`
+- git: `git --version` then `git config --global --edit`
 - [ssh setup](https://help.github.com/en/articles/connecting-to-github-with-ssh)
 - nvm
-- brew
-- `brew install tree`
+- brew and `brew install tree`
 - iTerm
 - zsh
 - terminal profile

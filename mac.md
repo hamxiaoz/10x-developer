@@ -21,18 +21,23 @@ Less common:
 
 ## OS Settings
 
+Finder:
+- Edit toolbar to have: new folder, delete, and info
+- Show file path at the bottom of finder window: 'View -> Show Path bar'
+- show hidden files
+    1. `defaults write com.apple.finder AppleShowAllFiles YES`
+    3. Restart finder: hold the ‘Option/alt’ key, then right click on the Finder icon in the dock and click Relaunch.
+- Copy path service: http://osxdaily.com/2013/06/19/copy-file-folder-path-mac-os-x/
+- Open current folder in terminal: iterm2 has it or customize it from 'System Preferences > Keyboard > Keyboard Shortcuts > Services'. Look for "New Terminal at Folder" and "New Terminal Tab at Folder". You can also assign them shortcut keys.'
+- Quick look plugin https://github.com/whomwah/qlstephen
+- [open with VSCode](https://github.com/hamxiaoz/open-folder-with-vs-code)
+- [open with sublime](https://github.com/hamxiaoz/open-folder-with-sublime)
+
+
+System Preferences:
 - Enable touchpad tap to click:`System Preferences > Trackpad，Point & Click: check Tap to click`
 - Spotlight shortcut: OPTION+SPACE (so that I can use CMD+SPACE for IME)
 - [How to enable keyboard access for "Don't save" on Mac?](http://zurassic.com/blog/TIL-how-to-enable-keyboard-access-for-donot-save-mac.html) "Enable `System Preferences > Keyboard -> Shortcuts: check All controls` then you can use `SPACE` to choose file dialog..."
-- open console in current folder: https://github.com/jbtule/cdto or http://maururu.net/2007/enhanced-open-terminal-here-for-leopard/
-- quick look plugin https://github.com/whomwah/qlstephen
-- [open with VSCode](https://github.com/hamxiaoz/open-folder-with-vs-code)
-- [open with sublime](https://github.com/hamxiaoz/open-folder-with-sublime)
-- show hidden files
-    1. In Terminal, paste the following: `defaults write com.apple.finder AppleShowAllFiles YES`
-    2. Press return
-    3. Hold the ‘Option/alt’ key, then right click on the Finder icon in the dock and click Relaunch.
-- copy path service: http://osxdaily.com/2013/06/19/copy-file-folder-path-mac-os-x/
 
 
 ## Tools

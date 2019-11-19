@@ -156,8 +156,11 @@ window.requestAnimationFrame(function fadeIn (now)) {
 const myNewElement = document.createElement('a');
 myNewElement.setAttribute('href', 'http://zurassic.com/');
 
-// append
+// append as child
 element1.appendChild(element2)
+
+// insert into precise location
+document.querySelector("body").insertAdjacentHTML("beforeend", '<div class="loader"></div>');
 
 // remove
 myElement.parentNode.removeChild(myElement)

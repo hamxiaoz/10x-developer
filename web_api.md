@@ -4,26 +4,38 @@
 
 Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-  ```js
-  fetch('./api/some.json')
-    .then(
-      function(response) {
-        if (response.status !== 200) {
-          console.log('Looks like there was a problem. Status Code: ' +
-            response.status);
-          return;
-        }
-
-        // Examine the text in the response
-        response.json().then(function(data) {
-          console.log(data);
-        });
+```js
+// GET
+fetch('./api/some.json')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
       }
-    )
-    .catch(function(err) {
-      console.log('Fetch Error :-S', err);
-    });
-  ```
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+
+// POST with form data, multipart/form-data
+// More: https://stackoverflow.com/questions/46640024
+let formData = new FormData();
+formData.append('name', 'John');
+formData.append('password', 'John123');
+
+fetch("api/SampleData", {
+  body: formData,
+  method: "post"
+});
+```
 
 XMLHttpRequest:
 
@@ -70,3 +82,7 @@ XMLHttpRequest:
 Communicate from browser to server.
 
 - Socket.IO: A long polling/WebSocket based third party transfer protocol for Node.js.
+
+
+## MutationObserver
+The MutationObserver interface provides the ability to watch for changes being made to the DOM tree.

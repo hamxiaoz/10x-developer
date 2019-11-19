@@ -33,27 +33,35 @@ Script: async vs defer
 - Normally, if browser see `<script>` in `<head>`, it will stop parsing until downloaded
 - script in bottom of the body will not block. But its own problem is, the script won't be downloaded until the full page is parsed.
 - `defer`: async downloading scripts (download in order), execute after parsing HTML is done
-- `asyc`: async downloading scripts (downloading might be out of order), execute after downloading is done (will pause parsing HTML)
+- `async`: async downloading scripts (downloading might be out of order), execute after downloading is done (will pause parsing HTML)
 - reference:
   - http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
   - https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
 
-## DOM Manipulcation
+## DOM Manipulation
 
-Node (like root Object) -> Document -> Element
+Node (like root interface) -> Document -> Element
 
 ### Selector
+
 You can use the following selector on `document` or `element`.
 
-`const myElement = document.querySelector('#foo > div.bar input[name="login"]')`
+NOTE you cannot use pure number in your selector
+- The selector attributes should be CSS identifiers or strings. So you cannot use number there!
+- `var a = document.querySelector('a[data-a="1"]');`
+
+
+Select the first or null (`$(selector)` in DevTools):
+- `const myElement = document.querySelector('#foo > div.bar input[name="login"]')`
 - Returns the first descendant [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element) using DFS + Pre-order traversal
 - It's not live, compare to `getElementsByTagName()`
 
-`const myElements = document.querySelectorAll('.bar')`
+Select all matching (`$$(selector)` in DevTools):
+- `const myElements = document.querySelectorAll('.bar')`
 - Returns [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
 - iterate: `for .. of` or `forEach` or `.item(i)`
 
-Compare:
+Compare/Match:
 - `node.contains(element)`
 - `e.target.nodeName == "LI"`
 - `e.target.matches('input')` (Element.matches)
@@ -122,6 +130,9 @@ stopBtn.style.display = 'none'; // '';
 // set style (this won't get all styles)
 myElement.style.marginLeft = '2em'
 
+// get all styles as text
+var text = myElement.style.cssText; // "color: red;"
+
 // get all styles
 window.getComputedStyle(myElement).getPropertyValue('margin-left')
 
@@ -142,7 +153,8 @@ window.requestAnimationFrame(function fadeIn (now)) {
 ### Element CRUD 
 ```js
 // create
-const myNewElement = document.createElement('div')
+const myNewElement = document.createElement('a');
+myNewElement.setAttribute('href', 'http://zurassic.com/');
 
 // append
 element1.appendChild(element2)
@@ -153,7 +165,7 @@ myElement.parentNode.removeChild(myElement)
 // clone
 const myElementClone = myElement.cloneNode()
 
-// performant version using [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment)
+// preferment version using [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment)
 // It's minimal DOM, similar to StringBuilder
 const fragment = document.createDocumentFragment()
 fragment.appendChild(text)
@@ -169,10 +181,46 @@ myElement.innerHTML = '<div>foo</div>'
 myElement.textContent = 'abc'
 ```
 
+### Common Functions
+
+```js
+// Rename a tag (change tag type). Ex, <div> -> <a>
+function renameTag(target, newNode) {
+  // copy attributes
+  for (var i = 0; i < target.attributes.length; i++) {
+    newNode.setAttribute(
+      target.attributes[i].nodeName,
+      target.attributes[i].nodeValue
+    );
+  }
+
+  // move children. firstChild is a live API so we can 'while' on that
+  while (target.firstChild) {
+    newNode.appendChild(target.firstChild);
+  }
+
+  // copy in-line styles
+  if (target.style.length > 0) {
+    newNode.style.cssText = target.style.cssText;
+  }
+
+  return target.parentNode.replaceChild(newNode, target);
+}
+```
+
+## BOM
+
+- Reload window: `location.reload();`
+- Scroll to top: `window.scrollTo(0, 0);`
+
+
+---
+
 ## [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
 Don't use `onclick`: single property, essentially override it.
 
-## CRUD
+### Event CRUD
 ```js
 // add
 myElement.addEventListener('click', (event)=> {
@@ -194,21 +242,24 @@ myForm.addEventListener('change', function (event) {
 })
 ```
 
-### Override default
+### Override Default Event
 - `preventDefault()` stop default handling, it'll still propagate
 - `stopPropagation()` stop bubbling up
 - `stopImmediatePropagation()` stop handling in current layer, stop passing to other event handlers: If several listeners are attached to the same element for the same event type, they are called in order in which they have been added. If during one such call, event.stopImmediatePropagation() is called, no remaining listeners will be called.
 
 ### e.target vs e.currentTarget:
 - `e.target` identifies the element on which the event occurred
-- `e.currentTarget` alawys refer to the the element to which the event handler has been attached
+- `e.currentTarget` always refer to the the element to which the event handler has been attached
 
 ### `this`
 - usually points to the DOM element where the handler is bound.
 - NOTE if you add event using **arrow function** then it's `document` instead of the element!
 
-### Trigger event manualy:
-- https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+### How to trigger event manually:
+https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+
+How to perform click?
+`element.click()`
 
 ### Keyboard/Mouse events:
 - See examples from: https://eloquentjavascript.net/15_event.html

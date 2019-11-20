@@ -171,6 +171,7 @@ function getRandomInt(min, max) {
   * `String(null) === 'null'`
   * `String(undefined) === 'undefined'`
 * In place sort string with numbers: `'8902'.split('').sort().join('')`
+* Use `String.prototype.localeCompare()` for string comparison in sort. Return negative number if it's before. You can also use `'A' > 'a'`
 
 ### Special reference type: String, Boolean, Number
 

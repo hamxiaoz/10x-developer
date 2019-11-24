@@ -19,6 +19,31 @@ Less common:
 - How to Access Menu like "ALT" in windows? Ctrl+F2, then you can type and hit enter.
 
 
+Mac support emac hotkey for moving cursors (https://jblevins.org/log/kbd):
+- Control-F 光标前进一个字符，相当于右键（F = Forward）
+- Control-B 光标后退一个字符，相当于左键（B = Backward）
+- Control-P 上移一行，相当于上键（P = Previous）
+- Control-N 下移一行，相当于下键（N = Next）
+- Control-A 移动到一行的开头（A = Ahead）
+  - Control-Shift-A 选中从光标开始，到一行开头的所有文字
+- Control-E 移动到一行的结尾（E = End
+  - Control-Shift-E 选中从光标开始，到一行结尾的所有文字
+
+- Control-H 删除光标前面的字符
+- Control-D 删除光标后面的字符
+- Control-K 删除从光标开始，到一行结尾的所有字符
+
+Chrome:
+- history go back: `CMD + [`
+
+
+Remap keys for HHKB:
+- Remmap software: Karabiner-Element
+- create layout: http://www.keyboard-layout-editor.com/
+- use key map so Option 加 IKJL 等於 上下左右
+
+
+
 ## OS Settings
 
 Finder:

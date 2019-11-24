@@ -29,3 +29,19 @@ Good to know:
 - `%`
 - `gu` `gU`
 - `*` `n` `N`
+
+## Use Bookmarks
+- set: ma
+- go: `a (go to exact location) or 'a (to go front of the line)
+
+What can it do:
+
+In-file navigation:
+- Use bookmark: `ma` and then `a
+- or go to last place: ``
+
+Delete text in multiple lines (block):
+- go to start of block
+- ma
+- go to end of block
+- d`a

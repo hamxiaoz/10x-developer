@@ -4,6 +4,11 @@
 
 Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+* a better version of XHR
+* it returns Promise: `fetch(`https://api.github.com/users/${this.name}`) .then(resp => resp.json());`
+* 4xx and 5xx are not considerd as error so it's in then
+* living standard: safari and IE not support it
+
 ```js
 // GET
 fetch('./api/some.json')

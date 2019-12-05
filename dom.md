@@ -179,9 +179,45 @@ myElement.appendChild(fragment)
 ```
 
 ### Update content
+
 ```js
 myElement.innerHTML = '<div>foo</div>'
 myElement.textContent = 'abc'
+```
+
+### Observe Changes
+The `MutationObserver` interface provides the ability to watch for changes being made to the DOM tree.
+
+You can observe changes (child, attributes, style, etc) and pause in dev tools:
+
+```js
+function observe(el) {
+  var MutationObserver = window.WebKitMutationObserver;
+
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      console.log(
+        "old",
+        mutation.oldValue,
+        "new",
+        mutation.target.style.cssText,
+        "mutation",
+        mutation
+      );
+      if (mutation.attributeName == property) debugger;
+    });
+  });
+
+  var config = {
+    attributes: true,
+    attributeFilter: ["class"], // only observe class changes
+    attributeOldValue: true
+  };
+
+  observer.observe(el, config);
+}
+
+observe(document.querySelector(".my-test"));
 ```
 
 ### Common Functions

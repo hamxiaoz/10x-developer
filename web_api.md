@@ -87,7 +87,3 @@ XMLHttpRequest:
 Communicate from browser to server.
 
 - Socket.IO: A long polling/WebSocket based third party transfer protocol for Node.js.
-
-
-## MutationObserver
-The MutationObserver interface provides the ability to watch for changes being made to the DOM tree.

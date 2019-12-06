@@ -67,7 +67,7 @@ Compare/Match:
 - `e.target.matches('input')` (Element.matches)
 
 Traverse:
-- `element.closest('selector')`
+- traverse parents: `element.closest('selector')`
 - how to polyfill? see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
 
 
@@ -158,9 +158,14 @@ myNewElement.setAttribute('href', 'http://zurassic.com/');
 
 // append as child
 element1.appendChild(element2)
+// this can also move existing element
+element1.appendChild(document.querySelecotr('.existing'));
 
-// insert into precise location
+// insert into precise location, can be same level or as children
+// [insertAdjacentHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 document.querySelector("body").insertAdjacentHTML("beforeend", '<div class="loader"></div>');
+// this can also move existing element
+document.querySelector("body").insertAdjacentHTML("beforeend", document.querySelecotr('.existing'));
 
 // remove
 myElement.parentNode.removeChild(myElement)

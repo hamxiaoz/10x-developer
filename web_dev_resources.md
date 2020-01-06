@@ -31,6 +31,7 @@
 
 ## Design
 - screen size and view ports for different devices: http://mydevice.io/devices/
+- favicon: http://realfavicongenerator.net/
 
 ## Diagram
 - Draw in ASCII: http://asciiflow.com/

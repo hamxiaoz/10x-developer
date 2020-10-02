@@ -45,4 +45,9 @@
 
 * Draw in ASCII: [http://asciiflow.com/](http://asciiflow.com/)
 * ASCII to hand drawn diagram: [http://shakydraw.com/](http://shakydraw.com/)
+* Sequence Diagram
+  * Swimlane \(text driven\): [https://swimlanes.io/](https://swimlanes.io/)
+  * PlantUML \(can do more than just sequence diagram\): [https://plantuml.com/](https://plantuml.com/)
+
+
 

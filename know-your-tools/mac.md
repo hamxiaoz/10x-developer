@@ -69,23 +69,22 @@ System Preferences:
 Essential:
 
 * Chrome
-* Chrome Canary
-* VSCode
-  * extension: vim, Prettier, GitLens
-  * settings
-  * install shell so we can do `code .`
+* Chrome Canary / Firefox / Edge
+* VS Code
+  * extensions are sync via Github, turn on sync in vs code
+  * install command line tool so we can do `code .`
 * VSCode insider
 * MacVim
 
 Dev:
 
+* iTerm and import profile from my dot files repo
+* oh my zsh and import zshrc from my dot files repo
+* brew and `brew install tree`
 * git: `git --version` then `git config --global --edit`
 * [ssh setup](https://help.github.com/en/articles/connecting-to-github-with-ssh)
-* nvm
-* brew and `brew install tree`
-* iTerm
-* zsh
-* terminal profile
+* nvm and `nvm install --lts` (install lts version)
+
 
 Cloud:
 
@@ -93,7 +92,7 @@ Cloud:
 
 System Tools
 
-* [Spectacle: window management](https://www.spectacleapp.com/)
+* Windows management tool: [Rectangle](https://github.com/rxhanson/Rectangle) `brew install --cask rectangle`
 * [Keyboard remap: Karabiner-Elements](https://pqrs.org/osx/karabiner/)
   * crate new profile: 'HHKB'
   * remap the build-in keyboard:
@@ -108,8 +107,8 @@ DB GUI
 
 Design Tools:
 
-* Sketch
-* Xmind\(?\)
+* Figma (or Sketch)
+* LucidChart (or Xmind)
 
 Optional:
 

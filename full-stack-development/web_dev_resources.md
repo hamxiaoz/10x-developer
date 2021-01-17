@@ -48,6 +48,7 @@ Check SSL:
 
 ## Design
 
+* [Figma - awesome Sketch replacement and free](https://www.figma.com)
 * screen size and view ports for different devices: [http://mydevice.io/devices/](http://mydevice.io/devices/)
 * favicon: [http://realfavicongenerator.net/](http://realfavicongenerator.net/)
 * App icon generator \(iOS and Android\): [https://appicon.co/](https://appicon.co/)

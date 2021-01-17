@@ -1,5 +1,9 @@
 # Web Dev Resources
 
+## Static Hosting for Free
+- https://vercel.com
+- https://www.digitalocean.com/products/app-platform/
+
 ## Free Tier Services
 
 [https://github.com/255kb/stack-on-a-budget](https://github.com/255kb/stack-on-a-budget)
@@ -8,6 +12,13 @@
 
 * [https://mxtoolbox.com/](https://mxtoolbox.com/)
 * [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
+
+## SSL
+
+Check SSL:
+- From web UI: https://www.ssllabs.com/ssltest/analyze.html
+- Using nmap: nmap — script ssl-enum-ciphers -p 443 www.your-site.com
+- Using openssl: openssl s_client -connect www.your-site.com:443 -tls1 < /dev/null
 
 ## HTTP
 

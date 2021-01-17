@@ -22,6 +22,7 @@ Use this [link](https://m.do.co/c/ddb021b2d64b) to register Digital Ocean with $
 * follow [https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers](https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers)
 * add fail2ban by: [https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04)
 * Don't need to add swap when using SSD
+* Use [unattended-upgrades](https://askubuntu.com/a/412) to only do security updates (Otherwise when you do `apt-get upgrade` it'll update your version to Non-LTS version!)
 
 #### Optional:
 

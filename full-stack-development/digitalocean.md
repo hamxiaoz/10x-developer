@@ -2,7 +2,7 @@
 
 Use this [link](https://m.do.co/c/ddb021b2d64b) to register Digital Ocean with $10 credit.
 
-## Setup
+## Droplet Setup (Ubuntu) for Node.js App (Meteor etc)
 
 * follow [https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04)
 * Follow mup guide:
@@ -108,6 +108,8 @@ Or use `ssl-cert-check` on server \([reference](https://community.letsencrypt.or
 ```text
 sudo ssl-cert-check -c /etc/letsencrypt/live/yourdomain.tld/cert.pem
 ```
+
+### (LATEST 2021) With [Mup](https://github.com/zodern/meteor-up) you don't need to do manual setup SSL anymore
 
 ### Setup SSL using [mupx](https://github.com/arunoda/meteor-up/tree/mupx) and [Let’s Encrypt](https://letsencrypt.org/)
 

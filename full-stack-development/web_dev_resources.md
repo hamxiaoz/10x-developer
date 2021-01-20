@@ -28,6 +28,10 @@ Check SSL:
 
 * [https://transform.now.sh/json-to-ts-interface](https://transform.now.sh/json-to-ts-interface)
 
+## API
+
+* [REST APIs for testing](https://jsonplaceholder.typicode.com/)
+
 ## Data
 
 ### Generate fake data

@@ -27,6 +27,7 @@ Check SSL:
 ## JSON
 
 * [https://transform.now.sh/json-to-ts-interface](https://transform.now.sh/json-to-ts-interface)
+* [size estimation](https://www.debugbear.com/json-size-analyzer)
 
 ## API
 

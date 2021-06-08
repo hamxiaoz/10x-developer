@@ -11,7 +11,8 @@
 ## DNS Related
 
 * [https://mxtoolbox.com/](https://mxtoolbox.com/)
-* [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
+* [https://www.whatsmydns.net/](https://www.whatsmydns.net/) - check DNS propogation
+* [https://www.diggui.com/](https://www.diggui.com/) - online dig command
 
 ## SSL
 
@@ -19,6 +20,11 @@ Check SSL:
 - From web UI: https://www.ssllabs.com/ssltest/analyze.html
 - Using nmap: nmap — script ssl-enum-ciphers -p 443 www.your-site.com
 - Using openssl: openssl s_client -connect www.your-site.com:443 -tls1 < /dev/null
+
+## Performance and Load Testing
+
+* [https://gtmetrix.com/](https://gtmetrix.com/) - Performance, TTFB (time to first byte) and First Contentful Paint
+* Chrome DevTools LightHouse
 
 ## HTTP
 

@@ -10,6 +10,7 @@
 
 ## DNS Related
 
+* [https://www.nslookup.io/dns-checker/](https://www.nslookup.io/dns-checker/)
 * [https://mxtoolbox.com/](https://mxtoolbox.com/)
 * [https://www.whatsmydns.net/](https://www.whatsmydns.net/) - check DNS propogation
 * [https://www.diggui.com/](https://www.diggui.com/) - online dig command
@@ -72,6 +73,3 @@ Check SSL:
 * Sequence Diagram
   * Swimlane \(text driven\): [https://swimlanes.io/](https://swimlanes.io/)
   * PlantUML \(can do more than just sequence diagram\): [https://plantuml.com/](https://plantuml.com/)
-
-
-
